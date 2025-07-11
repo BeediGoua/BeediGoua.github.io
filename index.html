@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portfolio de Goua Beedi Henri - Data Scientist Junior spécialisé NLP et RAG."/>
+  <meta name="author" content="Goua Beedi Henri"/>
+  <title>Goua Beedi Henri | Data Scientist Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/favicon.ico" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Goua Beedi Henri - Data Scientist Portfolio">
+  <meta property="og:description" content="Découvrez mes projets IA, NLP et RAG.">
+  <meta property="og:image" content="assets/img/hero-bg.jpg">
+  <meta property="og:url" content="https://gouahenri.github.io/">
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Goua Beedi Henri",
+    "jobTitle": "Data Scientist",
+    "url": "https://gouahenri.github.io/",
+    "sameAs": [
+      "https://linkedin.com/in/goua-beedi-henri",
+      "https://github.com/gouaHenri"
+    ]
+  }
+  </script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+
+</head>
+<body>
+
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <nav id="mainNav">
+      <a href="#hero" class="nav-link" data-i18n="nav_home">Home</a>
+      <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
+      <a href="#projects" class="nav-link" data-i18n="nav_projects">Projects</a>
+      <a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a>
+      <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
+
+      <select id="langSwitcher">
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+      </select>
+
+      <button id="darkModeToggle" data-i18n="dark_mode"><i class="fas fa-moon"></i></button>
+    </nav>
+  </header>
+
+  <!-- MAIN WRAPPER -->
+  <main class="container">
+
+    <!-- Hero -->
+    <section id="hero" class="section hero hero-section">
+      <div class="hero-content fadeIn">
+        <img src="assets/img/goua.jpg" alt="Portrait Goua Beedi Henri" style="width:110px;border-radius:50%;box-shadow:0 2px 12px rgba(74,144,226,0.15);margin-bottom:1.2rem;">
+        <h1>
+          <span data-i18n="hero_greeting">Hi, I'm</span> Goua Beedi Henri
+          <span class="typed-text"></span>
+        </h1>
+        <p data-i18n="hero_description">Data Scientist Junior | NLP & RAG</p>
+        <a href="#projects" class="btn bounce" data-i18n="btn_projects">See My Projects</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <h2 data-i18n="about_title">About Me</h2>
+      <p data-i18n="about_desc">
+        I am passionate about NLP, Generative AI and robust pipelines. Check out my clean, local NLP pipeline and my advanced EDA notebook.
+      </p>
+      <a href="assets/CV_GouaHenri_FR.pdf" class="btn" data-i18n="btn_cv" download>Download CV (FR)</a>
+      <a href="assets/CV_GouaHenri_EN.pdf" class="btn" data-i18n="btn_cv" download>Download CV (EN)</a>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <h2 data-i18n="projects_title">Projects</h2>
+
+      <!-- Filters -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All</button>
+        <button class="filter-btn" data-filter="nlp" data-i18n="filter_nlp">NLP</button>
+        <button class="filter-btn" data-filter="eda" data-i18n="filter_data">EDA</button>
+      </div>
+
+      <div id="projects-grid">
+        <div class="project-item project-card" data-category="nlp">
+          <img src="assets/img/safe_review.png" alt="Safe Review Pipeline">
+          <h3 data-i18n="project1_title">Safe Review Pipeline</h3>
+          <p data-i18n="project1_desc">An end-to-end local NLP pipeline: classification, summarization, rewriting without external API. 100% local, 100% explainable.</p>
+          <a href="https://github.com/gouaHenri/safe-review-pipeline" target="_blank">GitHub</a>
+        </div>
+
+        <div class="project-item project-card" data-category="eda">
+          <img src="assets/img/eda_reviews.png" alt="EDA Reviews">
+          <h3 data-i18n="project3_title">EDA Amazon & IMDB Reviews</h3>
+          <p data-i18n="project3_desc">A powerful notebook for text exploration: lexical density, n-grams, bigrams, bad words detection, correlation matrix.</p>
+          <a href="https://github.com/gouaHenri/eda-reviews" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <h2 data-i18n="skills_title">My Skills</h2>
+      <div class="skill">
+        <p>Python</p>
+        <div class="progress-bar" data-width="90%"></div>
+      </div>
+      <div class="skill">
+        <p>NLP</p>
+        <div class="progress-bar" data-width="85%"></div>
+      </div>
+      <div class="skill">
+        <p>Machine Learning</p>
+        <div class="progress-bar" data-width="80%"></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h2 data-i18n="contact_title">Contact</h2>
+      <p data-i18n="contact_text">Want to discuss an idea? Let's connect.</p>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn" data-i18n="form_submit">Send Message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="socials">
+      <a href="https://linkedin.com/in/goua-beedi-henri" target="_blank" title="LinkedIn">
+        <img src="assets/img/linkedin.svg" alt="LinkedIn" style="height:1.5em;">
+      </a>
+      <a href="https://github.com/gouaHenri" target="_blank" title="GitHub">
+        <img src="assets/img/github.svg" alt="GitHub" style="height:1.5em;">
+      </a>
+      <a href="mailto:beedi.goua@gmail.com" title="Email">
+        <img src="assets/img/mail.svg" alt="Mail" style="height:1.5em;">
+      </a>
+    </div>
+    <p>© 2024 Goua Beedi Henri | <span data-i18n="footer_rights">All rights reserved.</span></p>
+    <a href="#hero" id="backToTop" data-i18n="btn_scrolltop">Back to Top</a>
+  </footer>
+
+  <!-- JS -->
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/animations.js"></script>
+
+</body>
+</html>
