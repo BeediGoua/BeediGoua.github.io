@@ -76,6 +76,15 @@ function initEventListeners() {
       localStorage.setItem('darkMode', isDarkMode);
     });
   }
+
+  // Ajoute ceci pour le changement de langue
+  const langSwitcher = document.getElementById('langSwitcher');
+  if (langSwitcher) {
+    langSwitcher.value = currentLang; // synchronise le select avec la langue courante
+    langSwitcher.addEventListener('change', (e) => {
+      changeLanguage(e.target.value);
+    });
+  }
 }
 
 // ---------------------------

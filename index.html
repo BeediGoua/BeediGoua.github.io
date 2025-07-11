@@ -70,79 +70,177 @@
     <section id="hero" class="section hero hero-section">
       <div class="hero-content fadeIn">
         <img src="assets/img/goua.jpg" alt="Portrait Goua Beedi Henri" style="width:110px;border-radius:50%;box-shadow:0 2px 12px rgba(74,144,226,0.15);margin-bottom:1.2rem;">
-        <h1>
+        <h1 style="text-align: center;">
           <span data-i18n="hero_greeting">Hi, I'm</span> Goua Beedi Henri
           <span class="typed-text"></span>
         </h1>
-        <p data-i18n="hero_description">Data Scientist Junior | NLP & RAG</p>
-        <a href="#projects" class="btn bounce" data-i18n="btn_projects">See My Projects</a>
+        <p data-i18n="hero_description" style="text-align: center;">Data Scientist Junior | NLP & RAG</p>
+        <a href="#projects" class="btn bounce" data-i18n="btn_projects" style="display: block; margin: 0 auto;">See My Projects</a>
       </div>
     </section>
 
     <!-- About -->
     <section id="about" class="section">
-      <h2 data-i18n="about_title">About Me</h2>
-      <p data-i18n="about_desc">
-        I am passionate about NLP, Generative AI and robust pipelines. Check out my clean, local NLP pipeline and my advanced EDA notebook.
+      <h2 data-i18n="about_title" style="text-align: center;">About Me</h2>
+      <p data-i18n="about_desc" style="text-align: center;">
+        I am a <b>Data Scientist</b> with a strong background in <span>statistical modeling</span>, <b>machine learning</b>, and automation.<br>
+        I specialize in building <strong>robust, modular pipelines</strong> for data analysis, NLP, and Generative AI, combining modern LLM techniques with <span style="background: #23243a; padding: 0 0.3em; border-radius: 4px;">explainable, local solutions</span>.<br>
+        I enjoy solving <b>complex problems end-to-end</b> — from data exploration and feature engineering to model deployment and clear, actionable insights.
       </p>
-      <a href="assets/CV_GouaHenri_FR.pdf" class="btn" data-i18n="btn_cv" download>Download CV (FR)</a>
-      <a href="assets/CV_GouaHenri_EN.pdf" class="btn" data-i18n="btn_cv" download>Download CV (EN)</a>
+      <div style="display: flex; justify-content: center; gap: 1rem;">
+        <a href="assets/CV_GouaHenri_FR.pdf" class="btn" data-i18n="btn_cv" download>Download CV (FR)</a>
+        <a href="assets/CV_GouaHenri_EN.pdf" class="btn" data-i18n="btn_cv" download>Download CV (EN)</a>
+      </div>
     </section>
+    
 
     <!-- Projects -->
     <section id="projects" class="section">
-      <h2 data-i18n="projects_title">Projects</h2>
+      <h2 data-i18n="projects_title" style="text-align: center;">Projects</h2>
 
       <!-- Filters -->
       <div class="project-filters">
-        <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All</button>
-        <button class="filter-btn" data-filter="nlp" data-i18n="filter_nlp">NLP</button>
-        <button class="filter-btn" data-filter="eda" data-i18n="filter_data">EDA</button>
+        <button class="filter-btn active" data-filter="all">
+          <i data-feather="grid"></i>
+          <span data-i18n="filter_all">All</span>
+        </button>
+        <button class="filter-btn" data-filter="nlp">
+          <i data-feather="type"></i>
+          <span data-i18n="filter_nlp">NLP</span>
+        </button>
+        <button class="filter-btn" data-filter="eda">
+          <i data-feather="bar-chart-2"></i>
+          <span data-i18n="filter_data">EDA</span>
+        </button>
       </div>
 
       <div id="projects-grid">
+
+        <!-- ✅ Project 1 : Safe Review Pipeline -->
         <div class="project-item project-card" data-category="nlp">
-          <img src="assets/img/safe_review.png" alt="Safe Review Pipeline">
-          <h3 data-i18n="project1_title">Safe Review Pipeline</h3>
-          <p data-i18n="project1_desc">An end-to-end local NLP pipeline: classification, summarization, rewriting without external API. 100% local, 100% explainable.</p>
-          <a href="https://github.com/gouaHenri/safe-review-pipeline" target="_blank">GitHub</a>
+          <h3>
+            <i data-feather="shield"></i>
+            <span data-i18n="project1_title">Safe Review Pipeline</span>
+          </h3>
+          <p data-i18n="project1_desc">
+            A robust, fully local NLP pipeline for analyzing, classifying, summarizing and rewriting customer reviews.
+            100% local, 100% explainable — no cloud dependency.
+          </p>
+          <ul class="project-tags">
+            <li>NLP</li>
+            <li>Summarization</li>
+            <li>Moderation</li>
+          </ul>
+          <a href="https://github.com/BeediGoua/music-recommender-hybrid" target="_blank" class="btn">
+            <i data-feather="github"></i> View on GitHub
+          </a>
         </div>
 
+        <!-- ✅ Project 2 : Advanced EDA Reviews -->
         <div class="project-item project-card" data-category="eda">
-          <img src="assets/img/eda_reviews.png" alt="EDA Reviews">
-          <h3 data-i18n="project3_title">EDA Amazon & IMDB Reviews</h3>
-          <p data-i18n="project3_desc">A powerful notebook for text exploration: lexical density, n-grams, bigrams, bad words detection, correlation matrix.</p>
-          <a href="https://github.com/gouaHenri/eda-reviews" target="_blank">GitHub</a>
+          <h3>
+            <i data-feather="bar-chart"></i>
+            <span data-i18n="project2_title">Advanced EDA — Amazon & IMDB Reviews</span>
+          </h3>
+          <p data-i18n="project2_desc">
+            A powerful notebook for text data exploration:
+            lexical richness, n-grams, bigrams, toxic words detection,
+            and correlation insights. Perfect for pre-processing NLP datasets.
+          </p>
+          <ul class="project-tags">
+            <li>EDA</li>
+            <li>Text Mining</li>
+            <li>Visualization</li>
+          </ul>
+          <a href="https://github.com/BeediGoua/ReviewGuardian" target="_blank" class="btn">
+            <i data-feather="github"></i> View on GitHub
+          </a>
         </div>
+
       </div>
     </section>
 
     <!-- Skills -->
     <section id="skills" class="section">
-      <h2 data-i18n="skills_title">My Skills</h2>
-      <div class="skill">
-        <p>Python</p>
-        <div class="progress-bar" data-width="90%"></div>
-      </div>
-      <div class="skill">
-        <p>NLP</p>
-        <div class="progress-bar" data-width="85%"></div>
-      </div>
-      <div class="skill">
-        <p>Machine Learning</p>
-        <div class="progress-bar" data-width="80%"></div>
+      <h2 data-i18n="skills_title" style="text-align: center;">My Skills</h2>
+      <div class="skills-advanced">
+        <div class="skills-advanced-grid">
+
+          <div class="skill-adv-item">
+            <div class="skill-adv-icon">
+              <i data-feather="bar-chart-2"></i>
+            </div>
+            <div>
+              <h4 data-i18n="skills_adv_data_science_title">Data Science</h4>
+              <p data-i18n="skills_adv_data_science_desc">Python (pandas, numpy, polars), advanced SQL, statistical modeling, automated EDA.</p>
+            </div>
+          </div>
+
+          <div class="skill-adv-item">
+            <div class="skill-adv-icon">
+              <i data-feather="sliders"></i>
+            </div>
+            <div>
+              <h4 data-i18n="skills_adv_ml_title">Machine Learning</h4>
+              <p data-i18n="skills_adv_ml_desc">Supervised & unsupervised, time series, advanced feature engineering, deep learning (RNN, LSTM), interpretability (SHAP, LIME).</p>
+            </div>
+          </div>
+
+          <div class="skill-adv-item">
+            <div class="skill-adv-icon">
+              <i data-feather="edit-3"></i>
+            </div>
+            <div>
+              <h4 data-i18n="skills_adv_nlp_title">NLP & Generative AI</h4>
+              <p data-i18n="skills_adv_nlp_desc">Hybrid RAG pipelines, LLMs (LangChain, Hugging Face), embeddings, prompt engineering, fine‑tuning, RAG evaluation.</p>
+            </div>
+          </div>
+
+          <div class="skill-adv-item">
+            <div class="skill-adv-icon">
+              <i data-feather="tool"></i>
+            </div>
+            <div>
+              <h4 data-i18n="skills_adv_dataeng_title">Data Engineering & DataOps</h4>
+              <p data-i18n="skills_adv_dataeng_desc">Modular pipelines, ETL, CI/CD, orchestration, Git, Python APIs (FastAPI, Streamlit).</p>
+            </div>
+          </div>
+
+          <div class="skill-adv-item">
+            <div class="skill-adv-icon">
+              <i data-feather="cloud"></i>
+            </div>
+            <div>
+              <h4 data-i18n="skills_adv_cloud_title">Cloud</h4>
+              <p data-i18n="skills_adv_cloud_desc">AWS, Azure, GCP: deployment, storage, pipeline orchestration.</p>
+            </div>
+          </div>
+
+          <div class="skill-adv-item">
+            <div class="skill-adv-icon">
+              <i data-feather="pie-chart"></i>
+            </div>
+            <div>
+              <h4 data-i18n="skills_adv_viz_title">Visualization & Presentation</h4>
+              <p data-i18n="skills_adv_viz_desc">Matplotlib, Plotly, interactive dashboards (Streamlit, Panel), clear documentation.</p>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section">
-      <h2 data-i18n="contact_title">Contact</h2>
-      <p data-i18n="contact_text">Want to discuss an idea? Let's connect.</p>
-      <form id="contactForm">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn" data-i18n="form_submit">Send Message</button>
+    <section id="contact" class="section" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+      <h2 data-i18n="contact_title" style="text-align: center;">Contact</h2>
+      <p data-i18n="contact_text" style="text-align: center; max-width: 500px;">
+        Want to discuss an idea? Let's connect.
+      </p>
+      <form id="contactForm" style="display: flex; flex-direction: column; align-items: center; gap: 1rem; width: 100%; max-width: 400px; background: #fff; padding: 2rem 1.5rem; border-radius: 16px; box-shadow: 0 2px 16px rgba(0,0,0,0.07);">
+        <input type="text" placeholder="Your Name" required style="width: 100%; padding: 0.7rem 1rem; border-radius: 8px; border: 1px solid #ddd;"/>
+        <input type="email" placeholder="Your Email" required style="width: 100%; padding: 0.7rem 1rem; border-radius: 8px; border: 1px solid #ddd;"/>
+        <textarea placeholder="Your Message" required style="width: 100%; padding: 0.7rem 1rem; border-radius: 8px; border: 1px solid #ddd; min-height: 120px;"></textarea>
+        <button type="submit" class="btn" data-i18n="form_submit" style="width: 100%; max-width: 200px;">Send Message</button>
       </form>
     </section>
 
@@ -152,22 +250,39 @@
   <footer>
     <div class="socials">
       <a href="https://linkedin.com/in/goua-beedi-henri" target="_blank" title="LinkedIn">
-        <img src="assets/img/linkedin.svg" alt="LinkedIn" style="height:1.5em;">
+        <i data-feather="linkedin"></i>
       </a>
       <a href="https://github.com/gouaHenri" target="_blank" title="GitHub">
-        <img src="assets/img/github.svg" alt="GitHub" style="height:1.5em;">
+        <i data-feather="github"></i>
       </a>
-      <a href="mailto:beedi.goua@gmail.com" title="Email">
-        <img src="assets/img/mail.svg" alt="Mail" style="height:1.5em;">
+      <a href="mailto:gouabeedi@gmail.com" title="Email">
+        <i data-feather="mail"></i>
       </a>
     </div>
     <p>© 2024 Goua Beedi Henri | <span data-i18n="footer_rights">All rights reserved.</span></p>
-    <a href="#hero" id="backToTop" data-i18n="btn_scrolltop">Back to Top</a>
+    <a href="#hero" id="backToTop" data-i18n="btn_scrolltop" style="cursor:pointer;">
+      <i data-feather="arrow-up"></i> Back to Top
+    </a>
   </footer>
 
   <!-- JS -->
   <script src="assets/js/script.js"></script>
   <script src="assets/js/animations.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.feather) feather.replace();
+
+      // Scroll to top smooth for #backToTop
+      const backToTop = document.getElementById('backToTop');
+      if (backToTop) {
+        backToTop.addEventListener('click', function(e) {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    });
+  </script>
 
 </body>
 </html>
