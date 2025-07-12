@@ -123,16 +123,18 @@
             <span data-i18n="project1_title">Safe Review Pipeline</span>
           </h3>
           <p data-i18n="project1_desc">
-            A robust, fully local NLP pipeline for analyzing, classifying, summarizing and rewriting customer reviews.
-            100% local, 100% explainable — no cloud dependency.
+            Local NLP pipeline to moderate user reviews: BERT-based toxicity detection, summarization, rewriting — no cloud, no compromise on privacy.
           </p>
-          <ul class="project-tags">
-            <li>NLP</li>
-            <li>Summarization</li>
-            <li>Moderation</li>
-          </ul>
-          <a href="https://github.com/BeediGoua/music-recommender-hybrid" target="_blank" class="btn">
-            <i data-feather="github"></i> View on GitHub
+          <details class="project-details">
+            <summary data-i18n="project1_more">Learn more</summary>
+            <p data-i18n="project1_desc_long">
+              This project is a fully local, explainable moderation pipeline that:
+              scrapes reviews, detects harmful content using BERT, generates smart summaries with T5, and rewrites toxic comments for publication — all with no external API. 
+              It includes a Streamlit dashboard and a FastAPI backend, and is designed to be modular, privacy-preserving, and production-ready.
+            </p>
+          </details>
+          <a href="https://github.com/BeediGoua/ReviewGuardian" target="_blank">
+            <i data-feather="github"></i> GitHub
           </a>
         </div>
 
@@ -154,6 +156,28 @@
           </ul>
           <a href="https://github.com/BeediGoua/ReviewGuardian" target="_blank" class="btn">
             <i data-feather="github"></i> View on GitHub
+          </a>
+        </div>
+
+        <!-- ✅ Project 3 : Hybrid Music Recommender -->
+        <div class="project-item project-card" data-category="reco">
+          <h3>
+            <i data-feather="headphones"></i>
+            <span data-i18n="project2_title">Hybrid Music Recommender</span>
+          </h3>
+          <p data-i18n="project2_desc">
+            Intelligent playlist recommender mixing Word2Vec & NLP embeddings. Interactive app, filters by genre & duration, exportable results.
+          </p>
+          <details class="project-details">
+            <summary data-i18n="project2_more">Learn more</summary>
+            <p data-i18n="project2_desc_long">
+              This hybrid music recommender blends collaborative filtering (Word2Vec) and content-based embeddings (SentenceTransformers).
+              It includes a Streamlit interface with search, sliders to adjust semantic weights, and genre/duration filters.
+              The system is 100% local, customizable, and ready for large datasets. Visual explanations and CSV exports are also available.
+            </p>
+          </details>
+          <a href="https://github.com/BeediGoua/music-recommender-hybrid" target="_blank">
+            <i data-feather="github"></i> GitHub
           </a>
         </div>
 

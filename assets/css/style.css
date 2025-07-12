@@ -510,3 +510,30 @@ header {
     font-size: 1rem;
   }
 }
+
+.project-details summary {
+  margin-top: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--accent-color);
+  transition: var(--transition);
+}
+.project-details summary:hover {
+  text-decoration: underline;
+}
+
+.project-details[open] summary::after {
+  content: " ▲";
+  font-size: 0.8rem;
+}
+.project-details:not([open]) summary::after {
+  content: " ▼";
+  font-size: 0.8rem;
+}
+
+.project-details p {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
