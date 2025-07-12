@@ -1,45 +1,52 @@
-// ---------------------------
-// assets/js/script.js
-// ---------------------------
-
-// ✅ Variables globales
+// Variables globales
 let currentLang = localStorage.getItem('lang') || 'fr';
 let isDarkMode = localStorage.getItem('darkMode') === 'true';
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ✅ 1) Loader fade out
+  // Loader fade out
   setTimeout(() => {
     const loader = document.getElementById('loader');
     loader.style.opacity = '0';
     setTimeout(() => loader.style.display = 'none', 500);
   }, 1000);
 
-  // ✅ 2) Mode sombre
+  // Mode sombre
   if (isDarkMode) document.body.classList.add('dark-mode');
 
-  // ✅ 3) Langue par défaut
-  changeLanguage(currentLang);
+  // Langue par défaut ou sauvegardée
+  const langSwitcher = document.getElementById('langSwitcher');
+  if (langSwitcher) {
+    langSwitcher.value = currentLang; // synchronise visuellement
+    changeLanguage(currentLang);      // charge les bonnes traductions
 
-  // ✅ 4) AOS animations
+    langSwitcher.addEventListener('change', (e) => {
+      const selectedLang = e.target.value;
+      localStorage.setItem('lang', selectedLang); 
+      changeLanguage(selectedLang);
+    });
+  } else {
+    changeLanguage(currentLang);
+  }
+
+  // AOS animations
   if (window.AOS) {
     AOS.init({ duration: 1000, once: true, offset: 100 });
   }
 
-  // ✅ 5) Ecouteurs
+  // Ecouteurs généraux
   initEventListeners();
 
-  // ✅ 6) Scroll Spy modern
+  // Scroll Spy modern
   initScrollSpy();
 
-  // ✅ 7) Smooth scroll interne
+  // Smooth scroll interne
   initSmoothScroll();
 
 });
 
-// ---------------------------
-// 📌 Changer la langue
-// ---------------------------
+// Changer la langue dynamiquement
+
 async function changeLanguage(lang) {
   const main = document.querySelector('main');
   main.style.opacity = 0;
@@ -54,7 +61,6 @@ async function changeLanguage(lang) {
     });
 
     document.documentElement.lang = lang;
-    localStorage.setItem('lang', lang);
     currentLang = lang;
 
   } catch (error) {
@@ -64,9 +70,8 @@ async function changeLanguage(lang) {
   }
 }
 
-// ---------------------------
-// 🌙 Toggle Dark Mode
-// ---------------------------
+// Toggle Dark Mode
+
 function initEventListeners() {
   const darkModeBtn = document.getElementById('darkModeToggle');
   if (darkModeBtn) {
@@ -76,20 +81,10 @@ function initEventListeners() {
       localStorage.setItem('darkMode', isDarkMode);
     });
   }
-
-  // Ajoute ceci pour le changement de langue
-  const langSwitcher = document.getElementById('langSwitcher');
-  if (langSwitcher) {
-    langSwitcher.value = currentLang; // synchronise le select avec la langue courante
-    langSwitcher.addEventListener('change', (e) => {
-      changeLanguage(e.target.value);
-    });
-  }
 }
 
-// ---------------------------
-// 🧭 Scroll Spy (Intersection Observer)
-// ---------------------------
+// Scroll Spy (Intersection Observer)
+
 function initScrollSpy() {
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
@@ -108,9 +103,8 @@ function initScrollSpy() {
   sections.forEach(section => observer.observe(section));
 }
 
-// ---------------------------
-// 📌 Smooth scroll interne
-// ---------------------------
+// Smooth scroll interne
+
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

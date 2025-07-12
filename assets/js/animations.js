@@ -1,8 +1,8 @@
-// ✅ assets/js/animations.js — Version Finale PRO Compatible
+//assets/js/animations.js — Version Finale PRO Compatible
 
-// ========== PARTICLES HERO ==========
+// PARTICLES HERO 
 function createFloatingParticles() {
-  const heroSection = document.querySelector('.hero'); // CORRIGÉ ! Doit matcher ta <section class="hero">
+  const heroSection = document.querySelector('.hero'); 
   if (!heroSection) return;
 
   const particlesContainer = document.createElement('div');
@@ -47,7 +47,7 @@ function createParticle(container) {
   animate();
 }
 
-// ========== SCROLL SPY ==========
+// SCROLL SPY 
 function initScrollSpy() {
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
@@ -66,9 +66,9 @@ function initScrollSpy() {
   sections.forEach(section => observer.observe(section));
 }
 
-// ========== PARALLAX HERO BG ==========
+// PARALLAX HERO BG
 function initHeroParallax() {
-  const heroBg = document.querySelector('.hero'); // CORRIGÉ !
+  const heroBg = document.querySelector('.hero');
   if (!heroBg) return;
 
   window.addEventListener('scroll', () => {
@@ -77,7 +77,7 @@ function initHeroParallax() {
   });
 }
 
-// ========== SKILLS BAR ANIMATION ==========
+// SKILLS BAR ANIMATION 
 function animateSkillBars() {
   const skills = document.querySelectorAll('.progress-bar');
   const observer = new IntersectionObserver(entries => {
@@ -96,7 +96,7 @@ function animateSkillBars() {
   });
 }
 
-// ========== HERO TYPING EFFECT ==========
+// HERO TYPING EFFECT
 function initTypingEffect() {
   const el = document.querySelector('.typed-text');
   if (!el) return;
@@ -130,7 +130,7 @@ function initTypingEffect() {
   type();
 }
 
-// ========== INIT GLOBAL ==========
+//  INIT GLOBAL 
 document.addEventListener('DOMContentLoaded', () => {
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTypingEffect();
 });
 
-// ✅ Export propre si besoin pour débogage
+// Export propre si besoin pour débogage
 window.portfolioAnimations = {
   createFloatingParticles,
   initHeroParallax,

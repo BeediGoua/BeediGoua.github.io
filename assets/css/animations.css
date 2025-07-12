@@ -1,10 +1,10 @@
 /* -------------------------------------------------
-   🎬 Animations & Transitions Globales
+   Animations & Transitions Globales
    Complète style.css et index.html
 -------------------------------------------------- */
 
 /* -----------------------------------
-   ✨ Fade In
+   Fade In
 ------------------------------------ */
 .fadeIn {
   animation: fadeIn 1s ease forwards;
@@ -22,7 +22,7 @@
 }
 
 /* -----------------------------------
-   ✨ Slide Up
+   Slide Up
 ------------------------------------ */
 .slideUp {
   animation: slideUp 0.8s ease forwards;
@@ -40,7 +40,7 @@
 }
 
 /* -----------------------------------
-   🟢 Bounce (pour Hero button ou CTA)
+   Bounce (pour Hero button ou CTA)
 ------------------------------------ */
 .bounce {
   animation: bounce 2s infinite;
@@ -56,7 +56,7 @@
 }
 
 /* -----------------------------------
-   ✨ AOS (optionnel si activé)
+   AOS (optionnel si activé)
 ------------------------------------ */
 [data-aos] {
   opacity: 0;
@@ -68,14 +68,14 @@
 }
 
 /* -----------------------------------
-   ✅ Smooth Scroll Behavior (bonus)
+   Smooth Scroll Behavior (bonus)
 ------------------------------------ */
 html {
   scroll-behavior: smooth;
 }
 
 /* -----------------------------------
-   ⬆️ Back To Top Hover
+  Back To Top Hover
 ------------------------------------ */
 #backToTop:hover {
   transform: translateY(-3px);
@@ -83,7 +83,7 @@ html {
 }
 
 /* -----------------------------------
-   🗂️ Nav Active Link Smooth Underline
+  Nav Active Link Smooth Underline
 ------------------------------------ */
 .nav-link.active {
   position: relative;
@@ -101,7 +101,7 @@ html {
 }
 
 /* -----------------------------------
-   🌀 Loader Spinner Custom
+Loader Spinner Custom
 ------------------------------------ */
 #loader {
   display: flex;

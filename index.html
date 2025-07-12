@@ -80,25 +80,45 @@
     </section>
 
     <!-- About -->
-    <section id="about" class="section">
-      <h2 data-i18n="about_title" style="text-align: center;">About Me</h2>
-      <p data-i18n="about_desc" style="text-align: center;">
-        I am a <b>Data Scientist</b> with a strong background in <span>statistical modeling</span>, <b>machine learning</b>, and automation.<br>
-        I specialize in building <strong>robust, modular pipelines</strong> for data analysis, NLP, and Generative AI, combining modern LLM techniques with <span style="background: #23243a; padding: 0 0.3em; border-radius: 4px;">explainable, local solutions</span>.<br>
-        I enjoy solving <b>complex problems end-to-end</b> — from data exploration and feature engineering to model deployment and clear, actionable insights.
-      </p>
-      <div style="display: flex; justify-content: center; gap: 1rem;">
-        <a href="assets/CV_GouaHenri_FR.pdf" class="btn" data-i18n="btn_cv" download>Download CV (FR)</a>
-        <a href="assets/CV_GouaHenri_EN.pdf" class="btn" data-i18n="btn_cv" download>Download CV (EN)</a>
+    <section id="about" class="section" style="padding-top: 3rem; padding-bottom: 3rem;">
+      <div class="about-wrapper" style="max-width: 800px; margin: 0 auto; background: rgba(35,36,58,0.85); border-radius: 18px; box-shadow: 0 4px 24px rgba(74,110,226,0.10); padding: 2.5rem 2rem;">
+        <h2 data-i18n="about_title" style="text-align: center; margin-bottom: 0.5rem;">About Me</h2>
+        <h3 data-i18n="about_subtitle" style="text-align: center; color: var(--accent-color); font-size: 1.25rem; margin-bottom: 2rem; letter-spacing: 0.03em;">Versatile and Rigorous Data Scientist</h3>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2.5rem;">
+            <div style="min-width: 260px; max-width: 340px;">
+              <p data-i18n="about_intro" style="font-size: 1.13rem; margin-bottom: 1.1rem; text-align: left;">
+                Final-year Data Science student at ENSAI, with a strong focus on NLP, Generative AI and robust, modular pipelines.
+              </p>
+              <p data-i18n="about_text" style="font-size: 1.13rem; margin-bottom: 1.1rem; text-align: left;">
+                I am a <b>Data Scientist</b> with a strong background in <span style="color: var(--accent-color); font-weight: 600;">statistical modeling</span>, <b>machine learning</b> and automation.<br>
+                I specialize in building <strong>robust, modular pipelines</strong> for data analysis, NLP, and Generative AI, combining modern LLM techniques with 
+                <span style="background: #23243a; padding: 0 0.3em; border-radius: 4px;">explainable, local solutions</span>.
+              </p>
+              <p data-i18n="about_desc" style="font-size: 1.13rem; text-align: left;">
+                I enjoy solving <b style="color: var(--primary-color);">complex problems end-to-end</b> — from data exploration and feature engineering to model deployment and clear, actionable insights.
+              </p>
+            </div>
+            <div style="min-width: 220px; max-width: 320px; background: rgba(40,42,54,0.18); border-radius: 12px; padding: 1.5rem 1.2rem; display: flex; flex-direction: column; align-items: flex-start; justify-content: center;">
+              <ul class="about-details" style="list-style: none; padding: 0; margin: 0 0 1.2rem 0; color: var(--text-secondary); font-size: 1.05rem;">
+                <li style="margin-bottom: 0.7em;"><strong data-i18n="about_education" style="color: var(--accent-color);">ENSAI — Data Science & Artificial Intelligence</strong></li>
+                <li data-i18n="about_status" style="margin-bottom: 0.5em;">Currently interning at Square Management (Paris)</li>
+                <li data-i18n="about_location" style="margin-bottom: 0.5em;">Paris, France</li>
+                <li data-i18n="about_focus">Machine Learning, NLP, RAG, LLMs, scalable pipelines</li>
+              </ul>
+              <div style="display: flex; flex-direction: column; gap: 0.7rem; width: 100%;">
+                <a href="assets/CV_GouaHenri_FR.pdf" class="btn" data-i18n="btn_cv_fr" download style="width: 100%;">Télécharger le CV (FR)</a>
+                <a href="assets/CV_GouaHenri_EN.pdf" class="btn" data-i18n="btn_cv_en" download style="width: 100%;">Télécharger le CV (EN)</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    
 
     <!-- Projects -->
-    <section id="projects" class="section">
-      <h2 data-i18n="projects_title" style="text-align: center;">Projects</h2>
-
-      <!-- Filters -->
+    <section id="projects" class="section" style="padding-top: 3rem; padding-bottom: 3rem;">
+      <h2 data-i18n="projects_title" style="text-align: center; margin-bottom: 2.5rem;">Projects</h2>
       <div class="project-filters">
         <button class="filter-btn active" data-filter="all">
           <i data-feather="grid"></i>
@@ -113,12 +133,10 @@
           <span data-i18n="filter_data">EDA</span>
         </button>
       </div>
-
-      <div id="projects-grid">
-
+      <div id="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2.5rem;">
         <!-- Project 1 : Safe Review Pipeline -->
-        <div class="project-item project-card" data-category="nlp">
-          <h3>
+        <div class="project-item project-card" data-category="nlp" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <h3 style="display: flex; align-items: center; gap: 0.6em;">
             <i data-feather="shield"></i>
             <span data-i18n="project1_title">Safe Review Pipeline</span>
           </h3>
@@ -133,14 +151,13 @@
               It includes a Streamlit dashboard and a FastAPI backend, and is designed to be modular, privacy-preserving, and production-ready.
             </p>
           </details>
-          <a href="https://github.com/BeediGoua/ReviewGuardian" target="_blank" class="btn">
+          <a href="https://github.com/BeediGoua/ReviewGuardian" target="_blank" class="btn" style="margin-top: 1.2rem;">
             <i data-feather="github"></i> View on GitHub
           </a>
         </div>
-
         <!-- Project 2 : Hybrid Music Recommender -->
-        <div class="project-item project-card" data-category="reco">
-          <h3>
+        <div class="project-item project-card" data-category="reco" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <h3 style="display: flex; align-items: center; gap: 0.6em;">
             <i data-feather="headphones"></i>
             <span data-i18n="project2_title">Hybrid Music Recommender</span>
           </h3>
@@ -155,11 +172,10 @@
               The system is 100% local, customizable, and ready for large datasets. Visual explanations and CSV exports are also available.
             </p>
           </details>
-          <a href="https://github.com/BeediGoua/music-recommender-hybrid" target="_blank" class="btn">
+          <a href="https://github.com/BeediGoua/music-recommender-hybrid" target="_blank" class="btn" style="margin-top: 1.2rem;">
             <i data-feather="github"></i> View on GitHub
           </a>
         </div>
-
       </div>
     </section>
 
@@ -252,13 +268,14 @@
   <!-- Footer -->
   <footer>
     <div class="socials">
-      <a href="https://linkedin.com/in/goua-beedi-henri" target="_blank" title="LinkedIn">
+      <a href="https://linkedin.com/in/goua-beedi-henri" target="_blank" title="" data-i18n="footer_linkedin">
         <i data-feather="linkedin"></i>
       </a>
-      <a href="https://github.com/gouaHenri" target="_blank" title="GitHub">
+
+      <a href="https://github.com/gouaHenri" target="_blank" title="" data-i18n="footer_github">
         <i data-feather="github"></i>
       </a>
-      <a href="mailto:gouabeedi@gmail.com" title="Email">
+      <a href="mailto:gouabeedi@gmail.com" title="" data-i18n="footer_email">
         <i data-feather="mail"></i>
       </a>
     </div>
@@ -288,4 +305,10 @@
   </script>
 
 </body>
+</html>
+</html>
+  </script>
+
+</body>
+</html>
 </html>

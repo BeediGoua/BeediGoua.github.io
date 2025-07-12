@@ -5,13 +5,14 @@
   "nav_projects": "Projets",
   "nav_experience": "Expérience",
   "nav_contact": "Contact",
-  
+
   "hero_greeting": "Bonjour, je suis",
   "hero_title": "Data Scientist spécialisé en IA et NLP",
   "hero_description": "Je transforme les données en solutions concrètes de bout en bout, en combinant machine learning, IA générative, modélisation avancée et conception de pipelines robustes.",
   "btn_projects": "Mes projets",
   "btn_contact": "Contact",
   "btn_darkmode": "Mode sombre",
+
   "about_title": "À propos de moi",
   "about_subtitle": "Data Scientist polyvalent et rigoureux",
   "about_intro": "Étudiant en dernière année à l’ENSAI, je me spécialise en science des données, avec un fort intérêt pour le NLP, l’IA générative et les pipelines robustes.",
@@ -24,7 +25,6 @@
   "btn_cv": "Télécharger le CV",
   "btn_discuss": "Discutons",
 
-  
   "skills_title": "Compétences",
   "skills_languages": "Langages & Frameworks",
   "skills_ml": "Machine Learning & IA",
@@ -38,29 +38,28 @@
   "skills_adv_dataeng_title": "Data Engineering & DataOps",
   "skills_adv_dataeng_desc": "Pipelines modulaires, ETL, CI/CD, orchestration, Git, APIs Python (FastAPI, Streamlit).",
   "skills_adv_cloud_title": "Cloud",
-  "skills_adv_cloud_desc": "AWS,GCP : déploiement, stockage, orchestration de pipelines.",
+  "skills_adv_cloud_desc": "AWS, GCP : déploiement, stockage, orchestration de pipelines.",
   "skills_adv_viz_title": "Visualisation & Présentation",
   "skills_adv_viz_desc": "Matplotlib, Plotly, dashboards interactifs (Streamlit), documentation claire.",
   "btn_scrolltop": "Haut de page",
-  
+
   "projects_title": "Mes Projets",
   "filter_all": "Tous",
   "filter_nlp": "NLP",
   "filter_ml": "Machine Learning",
   "filter_data": "Data Analysis",
-  
+
   "project1_title": "Pipeline de Modération d'Avis",
   "project1_desc": "Pipeline NLP local pour modérer les avis : détection de toxicité, résumé, réécriture — sans cloud, 100% respectueux de la vie privée.",
   "project1_more": "En savoir plus",
   "project1_desc_long": "Ce projet est un pipeline de modération local et explicable : il collecte des avis, détecte les contenus problématiques avec BERT, génère des résumés (T5), et réécrit automatiquement les commentaires toxiques. Aucun appel API : tout fonctionne en local, avec interface utilisateur (Streamlit) et API REST (FastAPI).",
+
   "project2_title": "Système de Recommandation Musicale Hybride",
-  "project2_desc": "Un moteur de playlists intelligent combinant Word2Vec et NLP. Application interactive, filtres dynamiques et export CSV.",
+  "project2_desc": "Recommander intelligemment des morceaux avec Word2Vec + embeddings NLP. Application locale interactive et export de playlists.",
   "project2_more": "En savoir plus",
-  "project2_desc_long": "Ce système de recommandation hybride combine filtrage collaboratif (Word2Vec) et analyse de contenu (embeddings SentenceTransformers). Il propose une interface Streamlit intuitive, avec recherche, curseurs de pondération sémantique, filtres par genre et durée. Le moteur fonctionne localement, gère de gros volumes de données et permet l’export CSV et la visualisation des résultats.",
-  
-  "project3_title": "EDA Amazon & IMDB Reviews",
-  "project3_desc": "Analyse exploratoire et détection de toxicité sur millions d'avis",
-  
+  "project2_desc_long": "Ce système de recommandation musicale associe deux approches complémentaires : (1) filtrage collaboratif via Word2Vec (coécoute) et (2) similarité sémantique via embeddings NLP. Il permet de rechercher des morceaux, ajuster les pondérations entre les moteurs, filtrer par genre ou durée, et visualiser les recommandations dans une interface Streamlit conviviale. Tout fonctionne en local, sans dépendance cloud, avec possibilité d’export CSV pour les playlists générées.",
+
+
   "experience_title": "Expérience & Formation",
   "exp1_title": "Stage Data Scientist",
   "exp1_date": "Sept 2024 - Mars 2025",
@@ -69,7 +68,7 @@
   "exp1_task1": "Développement pipeline OCR → chunking → enrichissement",
   "exp1_task2": "Implémentation résumés automatiques avec LLMs",
   "exp1_task3": "Benchmark multi-configurations avec RAGAS",
-  
+
   "edu1_title": "Ingénieur Data Science",
   "edu1_date": "2022 - 2025",
   "edu1_school": "ENSAI",
@@ -77,7 +76,7 @@
   "edu1_course1": "Machine Learning avancé",
   "edu1_course2": "Deep Learning & NLP",
   "edu1_course3": "Big Data & Cloud Computing",
-  
+
   "contact_title": "Contact",
   "contact_subtitle": "Restons en contact",
   "contact_text": "Je suis toujours ouvert aux nouvelles opportunités et collaborations. N'hésitez pas à me contacter !",
@@ -87,7 +86,14 @@
   "form_subject": "Sujet",
   "form_message": "Message",
   "form_submit": "Envoyer le message",
-  
+
   "footer_rights": "Tous droits réservés.",
-  "close": "Fermer"
+  "close": "Fermer",
+
+  "btn_cv_fr": "Télécharger le CV (FR)",
+  "btn_cv_en": "Télécharger le CV (EN)",
+  "footer_linkedin": "LinkedIn",
+  "footer_github": "GitHub",
+  "footer_email": "Email"
+
 }
