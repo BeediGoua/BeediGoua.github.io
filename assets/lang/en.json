@@ -24,7 +24,7 @@
   "about_text": "I'm a Data Scientist with experience in statistical modeling, supervised and unsupervised learning, deep learning, NLP, and Generative AI. My academic path shaped a rigorous and analytical mindset.",
   "about_desc": "I design scalable, modular pipelines — from preprocessing to deployment — with a focus on robustness, automation, and interpretability.",
   "about_extra": "I enjoy solving end-to-end real-world problems, blending classic ML with modern tools like LLMs, embeddings, and vector databases, always aiming for clarity and clean, maintainable code.",
-  "about_status": "Currently interning at Square Management (Paris), working on applied research projects combining AI, NLP, and enterprise knowledge modeling.",
+  "about_status": "",
   "about_education": "ENSAI – National School for Statistics and Information Analysis",
   "about_degree": "Master's in Data Science & Artificial Intelligence",
   "about_location": "Rennes, France",
