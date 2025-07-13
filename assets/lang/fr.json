@@ -9,7 +9,7 @@
 
   "hero_greeting": "Bonjour, je suis",
   "hero_title": "Data Scientist spécialisé en IA et NLP",
-  "hero_description": "Je transforme les données en solutions concrètes de bout en bout, en combinant machine learning, IA générative, modélisation avancée et conception de pipelines robustes.",
+  "hero_description": "Data Scientist — explorer, construire et relier les idées des données au cloud",
   "btn_projects": "Mes projets",
   "btn_contact": "Contact",
   "btn_darkmode": "Mode sombre",
@@ -18,13 +18,14 @@
   "about_subtitle": "Data Scientist polyvalent et rigoureux",
   "projects_subtitle": "Quelques projets data & IA réalisés de bout en bout",
   "skills_subtitle": "Forces clés en data, ML, NLP & ingénierie",
-  "about_intro": "Étudiant en dernière année à l’ENSAI, je me spécialise en science des données, avec un fort intérêt pour le NLP, l’IA générative et les pipelines robustes.",
-  "about_text": "Je suis Data Scientist avec une bonne formation en modélisation statistique, machine learning et automatisation. Je conçois des pipelines modulaires et explicables pour l’analyse de données, le traitement du langage naturel et les systèmes RAG. Mon approche combine rigueur scientifique, souci de la reproductibilité et intégration de solutions modernes basées sur les LLMs.",
-  "about_desc": "Je conçois des solutions de bout en bout : de l'exploration de données à la mise en production de modèles, en combinant IA générative, NLP et ingénierie logicielle.",
-  "about_education": "ENSAI — Data Science & Intelligence Artificielle",
-  "about_status": "Actuellement en stage chez Square Management (Paris)",
-  "about_location": "Paris, France",
-  "about_focus": "Machine Learning, NLP, RAG, LLMs, pipelines industrialisables",
+  "about_intro": "Étudiant en dernière année à l’ENSAI, avec une solide formation en mathématiques, statistiques et machine learning.",
+  "about_text": "Je suis Data Scientist avec des compétences larges en modélisation statistique, apprentissage supervisé/non supervisé, deep learning, NLP et IA générative. Mon parcours académique m’a apporté rigueur et esprit analytique.",
+  "about_desc": "Je conçois des pipelines modulaires et scalables — du prétraitement des données au déploiement — avec un souci de robustesse, d’interprétabilité et d’automatisation.",
+  "about_extra": "J’aime résoudre des problèmes concrets de bout en bout, en combinant ML classique et outils modernes comme les LLMs, embeddings et bases vectorielles. J’accorde aussi de l’importance au code propre et à la vulgarisation des modèles complexes.",
+  "about_education": "ENSAI – École Nationale de la Statistique et de l’Analyse de l’Information",
+  "about_degree": "Master Data Science & Intelligence Artificielle",
+  "about_location": "Rennes, France",
+  "about_focus": "Mots-clés : Statistiques, Machine Learning, Deep Learning, NLP, RAG, LLMs, IA explicable, Pipelines scalables, MLOps",
   "btn_cv": "Télécharger le CV",
   "btn_discuss": "Discutons",
 
@@ -116,3 +117,4 @@
   "techskills_viz": "Visualisation",
   "techskills_viz_list": "Matplotlib, Seaborn, Plotly, Dash, Power BI (notions)"
 }
+

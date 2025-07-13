@@ -9,7 +9,7 @@
 
   "hero_greeting": "Hi, I'm",
   "hero_title": "Data Scientist specialized in AI and NLP",
-  "hero_description": "I turn data into actionable solutions from end to end, combining machine learning, generative AI, advanced modeling, and the design of robust pipelines.",
+  "hero_description": "Data Scientist — exploring, building, and connecting ideas from data to cloud",
   "btn_projects": "My Projects",
   "btn_contact": "Contact",
 
@@ -20,13 +20,15 @@
   "about_subtitle": "Versatile and Rigorous Data Scientist",
   "projects_subtitle": "A selection of my end-to-end data & AI projects",
   "skills_subtitle": "Core strengths in data, ML, NLP & engineering",
-  "about_intro": "Final-year Data Science student at ENSAI, with a strong focus on NLP, Generative AI and robust, modular pipelines.",
-  "about_text": "I am a Data Scientist with a strong background in statistical modeling, machine learning and automation. I design modular, explainable pipelines for data analysis, NLP and RAG systems. My approach combines scientific rigor, reproducibility, and modern techniques based on LLMs.",
-  "about_desc": "I build end-to-end solutions — from data exploration to model deployment — combining Generative AI, NLP and software engineering.",
-  "about_education": "ENSAI — Data Science & Artificial Intelligence",
-  "about_status": "Currently interning at Square Management (Paris)",
-  "about_location": "Paris, France",
-  "about_focus": "Machine Learning, NLP, RAG, LLMs, scalable pipelines",
+  "about_intro": "Final-year Data Science student at ENSAI, with a strong background in mathematics, statistics, and machine learning.",
+  "about_text": "I'm a Data Scientist with experience in statistical modeling, supervised and unsupervised learning, deep learning, NLP, and Generative AI. My academic path shaped a rigorous and analytical mindset.",
+  "about_desc": "I design scalable, modular pipelines — from preprocessing to deployment — with a focus on robustness, automation, and interpretability.",
+  "about_extra": "I enjoy solving end-to-end real-world problems, blending classic ML with modern tools like LLMs, embeddings, and vector databases, always aiming for clarity and clean, maintainable code.",
+  "about_status": "Currently interning at Square Management (Paris), working on applied research projects combining AI, NLP, and enterprise knowledge modeling.",
+  "about_education": "ENSAI – National School for Statistics and Information Analysis",
+  "about_degree": "Master's in Data Science & Artificial Intelligence",
+  "about_location": "Rennes, France",
+  "about_focus": "Key topics: Statistics, Machine Learning, Deep Learning, NLP, RAG, LLMs, Explainable AI, Scalable Pipelines, MLOps",
   "btn_cv": "Download CV",
   "btn_cv_fr": "Download CV (FR)",
   "btn_cv_en": "Download CV (EN)",
@@ -127,3 +129,4 @@
   "techskills_viz": "Visualization",
   "techskills_viz_list": "Matplotlib, Seaborn, Plotly, Dash, Power BI (basic)"
 }
+

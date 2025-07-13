@@ -75,7 +75,9 @@
           <span data-i18n="hero_greeting">Hi, I'm</span> Goua Beedi Henri
           <span class="typed-text"></span>
         </h1>
-        <p data-i18n="hero_description" style="text-align: center;">Data Scientist Junior | NLP & RAG</p>
+        <p data-i18n="hero_description" style="text-align: center; max-width: 600px; margin: 0 auto 1.2rem auto;">
+          Data Scientist — exploring, building, and connecting ideas from data to cloud
+        </p>
         <a href="#projects" class="btn bounce" data-i18n="btn_projects" style="display: block; margin: 0 auto;">See My Projects</a>
       </div>
     </section>
@@ -91,28 +93,24 @@
         <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
           <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2.5rem;">
             <div style="min-width: 260px; max-width: 340px;">
-              <p data-i18n="about_intro" style="font-size: 1.13rem; margin-bottom: 1.1rem; text-align: left;">
-                Final-year Data Science student at ENSAI, with a strong focus on NLP, Generative AI and robust, modular pipelines.
-              </p>
-              <p data-i18n="about_text" style="font-size: 1.13rem; margin-bottom: 1.1rem; text-align: left;">
-                I am a <b>Data Scientist</b> with a strong background in <span style="color: var(--accent-color); font-weight: 600;">statistical modeling</span>, <b>machine learning</b> and automation.<br>
-                I specialize in building <strong>robust, modular pipelines</strong> for data analysis, NLP, and Generative AI, combining modern LLM techniques with 
-                <span style="background: #23243a; padding: 0 0.3em; border-radius: 4px;">explainable, local solutions</span>.
-              </p>
-              <p data-i18n="about_desc" style="font-size: 1.13rem; text-align: left;">
-                I enjoy solving <b style="color: var(--primary-color);">complex problems end-to-end</b> — from data exploration and feature engineering to model deployment and clear, actionable insights.
-              </p>
+              <!-- Use textContent fallback for static HTML if JS translation not yet loaded -->
+              <p class="about-intro" style="font-size: 1.13rem; margin-bottom: 1.1rem; text-align: left;" data-i18n="about_intro">Final-year Data Science student at ENSAI, with a strong background in mathematics, statistics, and machine learning.</p>
+              <p class="about-text" style="font-size: 1.13rem; margin-bottom: 1.1rem; text-align: left;" data-i18n="about_text">I'm a Data Scientist with experience in statistical modeling, supervised and unsupervised learning, deep learning, NLP, and Generative AI. My academic path shaped a rigorous and analytical mindset.</p>
+              <p class="about-desc" style="font-size: 1.13rem; margin-bottom: 1.1rem; text-align: left;" data-i18n="about_desc">I design scalable, modular pipelines — from preprocessing to deployment — with a focus on robustness, automation, and interpretability.</p>
+              <p class="about-extra" style="font-size: 1.13rem; text-align: left;" data-i18n="about_extra">I enjoy solving end-to-end real-world problems, blending classic ML with modern tools like LLMs, embeddings, and vector databases, always aiming for clarity and clean, maintainable code.</p>
             </div>
             <div style="min-width: 220px; max-width: 320px; background: rgba(40,42,54,0.18); border-radius: 12px; padding: 1.5rem 1.2rem; display: flex; flex-direction: column; align-items: flex-start; justify-content: center;">
               <ul class="about-details" style="list-style: none; padding: 0; margin: 0 0 1.2rem 0; color: var(--text-secondary); font-size: 1.05rem;">
-                <li style="margin-bottom: 0.7em;"><strong data-i18n="about_education" style="color: var(--accent-color);">ENSAI — Data Science & Artificial Intelligence</strong></li>
-                <li data-i18n="about_status" style="margin-bottom: 0.5em;">Currently interning at Square Management (Paris)</li>
-                <li data-i18n="about_location" style="margin-bottom: 0.5em;">Paris, France</li>
-                <li data-i18n="about_focus">Machine Learning, NLP, RAG, LLMs, scalable pipelines</li>
+                <li style="margin-bottom: 0.7em;"><strong data-i18n="about_education" style="color: var(--accent-color);">ENSAI – National School for Statistics and Information Analysis</strong></li>
+                <li data-i18n="about_degree" style="margin-bottom: 0.5em;">Master's in Data Science & Artificial Intelligence</li>
+                <li style="margin-bottom: 0.7em;"><span data-i18n="about_focus" style="color: var(--accent-color); font-weight: 600;">Key topics</span><br><span style="color: var(--text-secondary);">Statistics, Machine Learning, Deep Learning, NLP, RAG, LLMs, Explainable AI, Scalable Pipelines, MLOps</span></li>
+
+                <li style="margin-bottom: 0.7em;"><span data-i18n="about_status" style="color: var(--accent-color); font-weight: 600;">Internship — Square Management (Paris)</span><br><span style="color: var(--text-secondary);">Applied research on AI, NLP, and enterprise knowledge modeling.</span></li>
+
               </ul>
               <div style="display: flex; flex-direction: column; gap: 0.7rem; width: 100%;">
-                <a href="assets/CV_GouaHenri_FR.pdf" class="btn" data-i18n="btn_cv_fr" download style="width: 100%;">Télécharger le CV (FR)</a>
-                <a href="assets/CV_GouaHenri_EN.pdf" class="btn" data-i18n="btn_cv_en" download style="width: 100%;">Télécharger le CV (EN)</a>
+                <a href="assets/CV_GouaHenri_FR.pdf" class="btn" data-i18n="btn_cv_fr" download style="width: 100%;">Download CV (FR)</a>
+                <a href="assets/CV_GouaHenri_EN.pdf" class="btn" data-i18n="btn_cv_en" download style="width: 100%;">Download CV (EN)</a>
               </div>
             </div>
           </div>
@@ -421,5 +419,12 @@
   </script>
 
 </body>
+</html>
+</html>
+</html>
+  </script>
+
+</body>
+</html>
 </html>
 </html>
