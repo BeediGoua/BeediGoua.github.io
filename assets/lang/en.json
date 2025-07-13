@@ -5,6 +5,7 @@
   "nav_projects": "Projects",
   "nav_experience": "Experience",
   "nav_contact": "Contact",
+  "nav_techskills": "Technical Skills",
 
   "hero_greeting": "Hi, I'm",
   "hero_title": "Data Scientist specialized in AI and NLP",
@@ -17,6 +18,8 @@
 
   "about_title": "About Me",
   "about_subtitle": "Versatile and Rigorous Data Scientist",
+  "projects_subtitle": "A selection of my end-to-end data & AI projects",
+  "skills_subtitle": "Core strengths in data, ML, NLP & engineering",
   "about_intro": "Final-year Data Science student at ENSAI, with a strong focus on NLP, Generative AI and robust, modular pipelines.",
   "about_text": "I am a Data Scientist with a strong background in statistical modeling, machine learning and automation. I design modular, explainable pipelines for data analysis, NLP and RAG systems. My approach combines scientific rigor, reproducibility, and modern techniques based on LLMs.",
   "about_desc": "I build end-to-end solutions — from data exploration to model deployment — combining Generative AI, NLP and software engineering.",
@@ -105,5 +108,22 @@
   "footer_github": "GitHub",
   "footer_email": "Email",
 
-  "close": "Close"
+  "close": "Close",
+
+  "techskills_title": "Technical Skills",
+  "techskills_subtitle": "Main technologies, libraries & tools I use daily",
+  "techskills_langs": "Languages",
+  "techskills_langs_list": "Python (advanced), SQL (advanced), Bash, Java (basic)",
+  "techskills_libs": "Data & ML Libraries",
+  "techskills_libs_list": "Pandas, NumPy, Scikit-learn, Polars, XGBoost, LightGBM, PyTorch, TensorFlow",
+  "techskills_nlp": "NLP & LLMs",
+  "techskills_nlp_list": "spaCy, NLTK, Hugging Face Transformers, LangChain, SentenceTransformers, BERT, T5",
+  "techskills_mlops": "MLOps & API",
+  "techskills_mlops_list": "FastAPI, Streamlit, MLflow (basic), Docker, Git, CI/CD (GitHub Actions)",
+  "techskills_cloud": "Cloud & DevOps",
+  "techskills_cloud_list": "AWS (S3, Lambda, EC2), GCP (Vertex AI, BigQuery), Azure (OpenAI), Terraform (basics)",
+  "techskills_db": "Databases",
+  "techskills_db_list": "PostgreSQL, SQLite, NoSQL (MongoDB), Firebase (basic)",
+  "techskills_viz": "Visualization",
+  "techskills_viz_list": "Matplotlib, Seaborn, Plotly, Dash, Power BI (basic)"
 }

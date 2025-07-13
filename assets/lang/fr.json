@@ -5,6 +5,7 @@
   "nav_projects": "Projets",
   "nav_experience": "Expérience",
   "nav_contact": "Contact",
+  "nav_techskills": "Comp. Techniques",
 
   "hero_greeting": "Bonjour, je suis",
   "hero_title": "Data Scientist spécialisé en IA et NLP",
@@ -15,6 +16,8 @@
 
   "about_title": "À propos de moi",
   "about_subtitle": "Data Scientist polyvalent et rigoureux",
+  "projects_subtitle": "Quelques projets data & IA réalisés de bout en bout",
+  "skills_subtitle": "Forces clés en data, ML, NLP & ingénierie",
   "about_intro": "Étudiant en dernière année à l’ENSAI, je me spécialise en science des données, avec un fort intérêt pour le NLP, l’IA générative et les pipelines robustes.",
   "about_text": "Je suis Data Scientist avec une bonne formation en modélisation statistique, machine learning et automatisation. Je conçois des pipelines modulaires et explicables pour l’analyse de données, le traitement du langage naturel et les systèmes RAG. Mon approche combine rigueur scientifique, souci de la reproductibilité et intégration de solutions modernes basées sur les LLMs.",
   "about_desc": "Je conçois des solutions de bout en bout : de l'exploration de données à la mise en production de modèles, en combinant IA générative, NLP et ingénierie logicielle.",
@@ -94,6 +97,22 @@
   "btn_cv_en": "Télécharger le CV (EN)",
   "footer_linkedin": "LinkedIn",
   "footer_github": "GitHub",
-  "footer_email": "Email"
+  "footer_email": "Email",
 
+  "techskills_title": "Compétences Techniques",
+  "techskills_subtitle": "Technologies, bibliothèques et outils principaux que j'utilise au quotidien",
+  "techskills_langs": "Langages",
+  "techskills_langs_list": "Python (avancé), SQL (avancé), Bash, Java (basique)",
+  "techskills_libs": "Librairies Data & ML",
+  "techskills_libs_list": "Pandas, NumPy, Scikit-learn, Polars, XGBoost, LightGBM, PyTorch, TensorFlow",
+  "techskills_nlp": "NLP & LLMs",
+  "techskills_nlp_list": "spaCy, NLTK, Hugging Face Transformers, LangChain, SentenceTransformers, BERT, T5",
+  "techskills_mlops": "MLOps & API",
+  "techskills_mlops_list": "FastAPI, Streamlit, MLflow (basique), Docker, Git, CI/CD (GitHub Actions)",
+  "techskills_cloud": "Cloud & DevOps",
+  "techskills_cloud_list": "AWS (S3, Lambda, EC2), GCP (Vertex AI, BigQuery), Azure (OpenAI), Terraform (notions)",
+  "techskills_db": "Bases de données",
+  "techskills_db_list": "PostgreSQL, SQLite, NoSQL (MongoDB), Firebase (basique)",
+  "techskills_viz": "Visualisation",
+  "techskills_viz_list": "Matplotlib, Seaborn, Plotly, Dash, Power BI (notions)"
 }

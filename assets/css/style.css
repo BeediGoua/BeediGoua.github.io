@@ -537,3 +537,197 @@ header {
   color: var(--text-secondary);
   line-height: 1.6;
 }
+
+/* === TECHNICAL SKILLS CARD === */
+.techskills-card {
+  background: linear-gradient(120deg, #23243a 60%, #20222a 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(74,110,226,0.10);
+  padding: 2.5rem 2rem;
+  margin: 0 auto 2.5rem auto;
+}
+.techskills-card h2 {
+  color: var(--accent-color);
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.01em;
+}
+.techskills-card h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.5em;
+  font-size: 1.13rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.techskills-card ul {
+  list-style: disc inside;
+  margin: 0 0 1em 0.5em;
+  padding: 0;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+.techskills-card li {
+  margin-bottom: 0.4em;
+}
+.techskills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+@media (max-width: 700px) {
+  .techskills-card {
+    padding: 1.2rem 0.7rem;
+  }
+  .techskills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+}
+
+/* === ENHANCED TECHNICAL SKILLS === */
+.enhanced-techskills-card {
+  background: linear-gradient(120deg, #23243a 60%, #20222a 100%);
+  border-radius: 22px;
+  box-shadow: 0 6px 32px rgba(74,110,226,0.13);
+  padding: 2.7rem 2.2rem 2.2rem 2.2rem;
+  margin: 0 auto 2.5rem auto;
+  position: relative;
+  overflow: hidden;
+}
+.techskills-header {
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+.techskills-mainicon {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary-color) 60%, var(--accent-color) 100%);
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.7em;
+  font-size: 2.3rem;
+  box-shadow: 0 2px 12px rgba(74,144,226,0.18);
+  margin-bottom: 0.7em;
+}
+.techskills-title {
+  font-size: 2.1rem;
+  color: var(--accent-color);
+  margin: 0.2em 0 0.1em 0;
+  letter-spacing: 0.01em;
+}
+.techskills-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.13rem;
+  margin-bottom: 0.5em;
+}
+
+.techskills-enhanced-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.7rem;
+  margin-top: 1.2rem;
+}
+
+.techskill-mini-card {
+  background: rgba(40,42,54,0.22);
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(74,110,226,0.07);
+  padding: 1.3rem 1.1rem 1.1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: box-shadow 0.2s, transform 0.2s;
+  min-height: 170px;
+  position: relative;
+  overflow: hidden;
+}
+.techskill-mini-card:hover {
+  box-shadow: 0 6px 24px rgba(74,144,226,0.17);
+  transform: translateY(-4px) scale(1.025);
+}
+.mini-card-icon {
+  font-size: 1.7rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+}
+.techskill-mini-card h4 {
+  color: var(--accent-color);
+  font-size: 1.11rem;
+  font-weight: 600;
+  margin: 0 0 0.7em 0;
+  letter-spacing: 0.01em;
+}
+.techskills-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+.badge {
+  display: inline-block;
+  padding: 0.32em 0.95em;
+  border-radius: 16px;
+  font-size: 0.97rem;
+  font-weight: 500;
+  background: rgba(74,110,226,0.13);
+  color: var(--primary-color);
+  margin-bottom: 0.3em;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(74,110,226,0.10);
+  transition: background 0.2s, color 0.2s;
+}
+.badge-main {
+  background: linear-gradient(90deg, var(--primary-color) 60%, var(--accent-color) 100%);
+  color: #fff;
+  border: none;
+}
+.badge-alt {
+  background: rgba(58,134,255,0.13);
+  color: var(--accent-color);
+}
+@media (max-width: 900px) {
+  .techskills-enhanced-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .enhanced-techskills-card {
+    padding: 1.1rem 0.5rem;
+  }
+  .techskills-enhanced-grid {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+  .techskill-mini-card {
+    min-height: unset;
+    padding: 1rem 0.7rem;
+  }
+}
+
+/* === SECTION HEADER HARMONIZED === */
+.section-header {
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+.section-mainicon {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary-color) 60%, var(--accent-color) 100%);
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.7em;
+  font-size: 2.1rem;
+  box-shadow: 0 2px 12px rgba(74,144,226,0.18);
+  margin-bottom: 0.7em;
+}
+.section-title {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin: 0.2em 0 0.1em 0;
+  letter-spacing: 0.01em;
+}
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.13rem;
+  margin-bottom: 0.5em;
+}
