@@ -22,10 +22,22 @@
   "about_text": "Je suis Data Scientist avec des compétences larges en modélisation statistique, apprentissage supervisé/non supervisé, deep learning, NLP et IA générative. Mon parcours académique m’a apporté rigueur et esprit analytique.",
   "about_desc": "Je conçois des pipelines modulaires et scalables — du prétraitement des données au déploiement — avec un souci de robustesse, d’interprétabilité et d’automatisation.",
   "about_extra": "J’aime résoudre des problèmes concrets de bout en bout, en combinant ML classique et outils modernes comme les LLMs, embeddings et bases vectorielles. J’accorde aussi de l’importance au code propre et à la vulgarisation des modèles complexes.",
-  "about_education": "ENSAI – École Nationale de la Statistique et de l’Analyse de l’Information",
-  "about_degree": "Master Data Science & Intelligence Artificielle",
+
+  "education_title": "Formation",
+  "education_subtitle": "Parcours académique & cours clés",
+  "edu1_title": "Diplôme d'ingénieur – Data Science & IA",
+  "edu1_date": "2022 – 2025",
+  "edu1_school": "ENSAI – École Nationale de la Statistique et de l'Analyse de l'Information",
+  "edu1_desc": "Spécialisation en Intelligence Artificielle et NLP. Cours majeurs :",
+  "edu1_course1": "Machine Learning, Deep Learning, NLP (avancé)",
+  "edu1_course2": "LLMs, architectures RAG, bases vectorielles",
+  "edu1_course3": "GLM, séries temporelles, inférence bayésienne, calcul stochastique",
+  "edu1_course4": "Big Data (Hadoop, Spark), SQL, APIs, Python, Java",
+
+
+  
   "about_location": "Rennes, France",
-  "about_focus": "Mots-clés :",
+  
   "btn_cv": "Télécharger le CV", 
   "btn_discuss": "Discutons",
 

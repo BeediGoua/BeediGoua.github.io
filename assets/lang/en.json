@@ -24,11 +24,11 @@
   "about_text": "I'm a Data Scientist with experience in statistical modeling, supervised and unsupervised learning, deep learning, NLP, and Generative AI. My academic path shaped a rigorous and analytical mindset.",
   "about_desc": "I design scalable, modular pipelines — from preprocessing to deployment — with a focus on robustness, automation, and interpretability.",
   "about_extra": "I enjoy solving end-to-end real-world problems, blending classic ML with modern tools like LLMs, embeddings, and vector databases, always aiming for clarity and clean, maintainable code.",
-  "about_status": "Currently interning at Square Management (Paris), working on ",
-  "about_education": "ENSAI – National School for Statistics and Information Analysis",
-  "about_degree": "Master's in Data Science & Artificial Intelligence",
+  
+  
+  
   "about_location": "Rennes, France",
-  "about_focus": "Key topics: ",
+  
   "btn_cv": "Download CV",
   "btn_cv_fr": "Download CV (FR)",
   "btn_cv_en": "Download CV (EN)",
@@ -59,6 +59,19 @@
   "skills_adv_cloud_desc": "AWS, GCP: deployment, storage, pipeline orchestration.",
   "skills_adv_viz_title": "Visualization & Presentation",
   "skills_adv_viz_desc": "Matplotlib, Plotly, interactive dashboards (Streamlit), clear documentation.",
+
+  "education_title": "Education",
+  "education_subtitle": "Academic background & key courses",
+  "edu1_title": "Engineer’s Degree – Data Science & AI",
+  "edu1_date": "2022 – 2025",
+  "edu1_school": "ENSAI – National School for Statistics and Information Analysis",
+  "edu1_desc": "Specialized in Artificial Intelligence and NLP. Key topics included:",
+  "edu1_course1": "Machine Learning, Deep Learning, NLP (advanced)",
+  "edu1_course2": "LLMs, RAG architectures, vector stores",
+  "edu1_course3": "GLMs, time series, Bayesian inference, stochastic calculus",
+  "edu1_course4": "Big Data (Hadoop, Spark), SQL, APIs, Python, Java",
+
+
 
   "projects_title": "My Projects",
   "filter_all": "All",
