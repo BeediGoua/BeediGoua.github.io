@@ -57,6 +57,7 @@
   "project1_desc": "Pipeline NLP local pour modérer les avis : détection de toxicité, résumé, réécriture — sans cloud, 100% respectueux de la vie privée.",
   "project1_more": "En savoir plus",
   "project1_desc_long": "Ce projet est un pipeline de modération local et explicable : il collecte des avis, détecte les contenus problématiques avec BERT, génère des résumés (T5), et réécrit automatiquement les commentaires toxiques. Aucun appel API : tout fonctionne en local, avec interface utilisateur (Streamlit) et API REST (FastAPI).",
+  "project_techs": "Technologies utilisées",
 
   "project2_title": "Système de Recommandation Musicale Hybride",
   "project2_desc": "Recommander intelligemment des morceaux avec Word2Vec + embeddings NLP. Application locale interactive et export de playlists.",

@@ -65,6 +65,7 @@
   "filter_nlp": "NLP",
   "filter_ml": "Machine Learning",
   "filter_data": "Data Analysis",
+  "project_techs": "Technologies used",
 
   "project1_title": "Safe Review Pipeline",
   "project1_desc": "Local NLP pipeline to moderate user reviews: BERT-based toxicity detection, summarization, rewriting — no cloud, no compromise on privacy.",
