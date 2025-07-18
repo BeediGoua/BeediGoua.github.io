@@ -83,33 +83,46 @@
     </section>
 
     <!-- About -->
+    
     <section id="about" class="section" style="padding-top: 3rem; padding-bottom: 3rem;">
-      <div class="section-header">
+      <div class="section-header section-centered">
         <span class="section-mainicon"><i data-feather="user"></i></span>
         <h2 data-i18n="about_title" class="section-title">About Me</h2>
         <p data-i18n="about_subtitle" class="section-subtitle">Versatile and Rigorous Data Scientist</p>
       </div>
-      <div class="about-wrapper" style="max-width: 800px; margin: 0 auto; background: rgba(35,36,58,0.85); border-radius: 18px; box-shadow: 0 4px 24px rgba(74,110,226,0.10); padding: 2.5rem 2rem;">
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
-          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2.5rem;">
-            <div style="min-width: 260px; max-width: 340px;">
-              <!-- Use textContent fallback for static HTML if JS translation not yet loaded -->
-              <p class="about-intro" style="font-size: 1.13rem; margin-bottom: 1.1rem; text-align: left;" data-i18n="about_intro">Final-year Data Science student at ENSAI, with a strong background in mathematics, statistics, and machine learning.</p>
-              <p class="about-text" style="font-size: 1.13rem; margin-bottom: 1.1rem; text-align: left;" data-i18n="about_text">I'm a Data Scientist with experience in statistical modeling, supervised and unsupervised learning, deep learning, NLP, and Generative AI. My academic path shaped a rigorous and analytical mindset.</p>
-              <p class="about-desc" style="font-size: 1.13rem; margin-bottom: 1.1rem; text-align: left;" data-i18n="about_desc">I design scalable, modular pipelines — from preprocessing to deployment — with a focus on robustness, automation, and interpretability.</p>
-              <p class="about-extra" style="font-size: 1.13rem; text-align: left;" data-i18n="about_extra">I enjoy solving end-to-end real-world problems, blending classic ML with modern tools like LLMs, embeddings, and vector databases, always aiming for clarity and clean, maintainable code.</p>
-            </div>
-            <div style="min-width: 220px; max-width: 320px; background: rgba(40,42,54,0.18); border-radius: 12px; padding: 1.5rem 1.2rem; display: flex; flex-direction: column; align-items: flex-start; justify-content: center;">
-              <div style="display: flex; flex-direction: column; gap: 0.7rem; width: 100%;">
-                <a href="assets/CV_GouaHenri_FR.pdf" class="btn" data-i18n="btn_cv_fr" download style="width: 100%;">Download CV (FR)</a>
-                <a href="assets/CV_GouaHenri_EN.pdf" class="btn" data-i18n="btn_cv_en" download style="width: 100%;">Download CV (EN)</a>
-              </div>
-            </div>
 
+      <div class="about-wrapper" style="max-width: 800px; margin: 0 auto; background: rgba(35,36,58,0.85); border-radius: 18px; box-shadow: 0 4px 24px rgba(74,110,226,0.10); padding: 2.5rem 2rem;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
+          
+          <!-- Texte -->
+          <div style="display: flex; flex-direction: column; gap: 1rem; text-align: left;">
+            <p class="about-intro" style="font-size: 1.13rem;" data-i18n="about_intro">
+              Final-year Data Science student at ENSAI, with a strong background in mathematics, statistics, and machine learning.
+            </p>
+            <p class="about-text" style="font-size: 1.13rem;" data-i18n="about_text">
+              I'm a Data Scientist with experience in statistical modeling, supervised and unsupervised learning, deep learning, NLP, and Generative AI. My academic path shaped a rigorous and analytical mindset.
+            </p>
+            <p class="about-desc" style="font-size: 1.13rem;" data-i18n="about_desc">
+              I design scalable, modular pipelines — from preprocessing to deployment — with a focus on robustness, automation, and interpretability.
+            </p>
+            <p class="about-extra" style="font-size: 1.13rem;" data-i18n="about_extra">
+              I enjoy solving end-to-end real-world problems, blending classic ML with modern tools like LLMs, embeddings, and vector databases, always aiming for clarity and clean, maintainable code.
+            </p>
+          </div>
+
+          <!-- Boutons CV -->
+          <div class="cv-buttons">
+            <a href="assets/CV_GouaHenri_FR.pdf" class="btn btn-primary" data-i18n="btn_cv_fr" download>
+              Download CV (FR)
+            </a>
+            <a href="assets/CV_GouaHenri_EN.pdf" class="btn btn-secondary" data-i18n="btn_cv_en" download>
+              Download CV (EN)
+            </a>
           </div>
         </div>
       </div>
     </section>
+
     <!-- Education -->
     <section id="education" class="section">
       <div class="section-header section-centered">

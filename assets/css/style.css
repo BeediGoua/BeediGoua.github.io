@@ -1,10 +1,10 @@
-/* -------------------------------
-   🌟 Variables Globales
--------------------------------- */
+/* ===============================================
+   🌟 VARIABLES GLOBALES
+=============================================== */
 :root {
-  --primary-color: #4a6ee2;  /* Bleu plus profond & tech */
+  --primary-color: #4a6ee2;
   --secondary-color: #23243a;
-  --accent-color: #3a86ff;   /* Accent frais */
+  --accent-color: #3a86ff;
   --background-gradient: linear-gradient(180deg, #20222a 0%, #23243a 100%);
   --background-color: #20222a;
   --text-color: #f1f1f1;
@@ -13,10 +13,29 @@
   --glass-blur: blur(12px);
   --transition: all 0.3s cubic-bezier(.4, 0, .2, 1);
   --font-main: 'Inter', 'Poppins', sans-serif;
+  
+  /* Breakpoints standardisés */
+  --mobile: 480px;
+  --tablet: 768px;
+  --desktop: 1024px;
+  --large: 1200px;
 }
 
-/* 🌙 Mode sombre */
-body, body.dark-mode {
+/* ===============================================
+   🔄 RESET & NORMALISATION
+=============================================== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   background: var(--background-gradient);
   color: var(--text-color);
   font-family: var(--font-main);
@@ -24,21 +43,222 @@ body, body.dark-mode {
   transition: var(--transition);
 }
 
-/* -------------------------------
-   🧊 Glassmorphism
--------------------------------- */
-.hero-content,
-.project-card {
-  background: var(--card-bg);
-  backdrop-filter: var(--glass-blur);
-  box-shadow: 0 8px 32px rgba(74, 144, 226, 0.10);
-  border-radius: 18px;
-  border: 1px solid rgba(74, 144, 226, 0.08);
+/* Reset des éléments de base */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  color: #fff;
 }
 
-/* -------------------------------
-   📌 Hero Section + Halo
--------------------------------- */
+p {
+  margin: 0;
+  padding: 0;
+  color: var(--text-secondary);
+}
+
+/* Reset des listes (avec exceptions spécifiques) */
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Exception pour les listes avec puces */
+.edu-courses,
+.techskills-card ul {
+  list-style: disc;
+  padding-left: 1.3rem;
+}
+
+.edu-courses {
+  padding-left: 1.3rem;
+}
+
+/* ===============================================
+   🔗 LIENS & BOUTONS DE BASE
+=============================================== */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Boutons génériques */
+button {
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  background: none;
+  font-family: inherit;
+}
+
+button:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* ===============================================
+   🎨 COMPOSANTS PRINCIPAUX
+=============================================== */
+
+/* Container principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Sections */
+.section {
+  padding: 4rem 0;
+}
+
+.section:nth-child(even) {
+  background: rgba(35, 36, 58, 0.7);
+}
+
+.section-centered {
+  text-align: center;
+}
+
+/* Headers de sections harmonisés */
+.section-header {
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+
+.section-mainicon {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary-color) 60%, var(--accent-color) 100%);
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.7em;
+  font-size: 2.1rem;
+  box-shadow: 0 2px 12px rgba(74,144,226,0.18);
+  margin-bottom: 0.7em;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin: 0.2em 0 0.1em 0;
+  letter-spacing: 0.01em;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.13rem;
+  margin-bottom: 0.5em;
+}
+
+/* ===============================================
+   🎯 BOUTONS & CTA
+=============================================== */
+.btn {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color) 80%);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(74, 144, 226, 0.15);
+  transition: var(--transition);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover {
+  filter: brightness(1.2);
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+.btn:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.btn-primary {
+  background: var(--accent-color);
+  color: white;
+}
+
+.btn-secondary {
+  background: #444;
+  color: white;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  opacity: 0.9;
+}
+
+/* ===============================================
+   📌 NAVIGATION
+=============================================== */
+header {
+  width: 100%;
+  background: var(--secondary-color);
+  box-shadow: 0 2px 16px rgba(74, 110, 226, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+#mainNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.2rem 2rem;
+  font-size: 1.18rem;
+  border-radius: 0 0 18px 18px;
+  background: transparent;
+}
+
+#mainNav .nav-link {
+  padding: 0.4rem 1.1rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+  color: var(--text-color);
+}
+
+#mainNav .nav-link:hover,
+#mainNav .nav-link.active {
+  background: var(--primary-color);
+  color: #fff;
+  text-decoration: none;
+}
+
+#mainNav select,
+#mainNav button {
+  margin-left: 1.2rem;
+  font-size: 1rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 5px;
+  border: none;
+  background: var(--card-bg);
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+/* ===============================================
+   🏠 HERO SECTION
+=============================================== */
 .hero {
   position: relative;
   background: linear-gradient(120deg, #23243a 0%, #15161a 100%), url('../img/hero-bg.jpg') center/cover no-repeat fixed;
@@ -64,15 +284,37 @@ body, body.dark-mode {
 .hero-content {
   position: relative;
   z-index: 1;
+  background: var(--card-bg);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: 0 8px 32px rgba(74, 144, 226, 0.10);
+  border-radius: 18px;
+  border: 1px solid rgba(74, 144, 226, 0.08);
+  padding: 2rem;
 }
 
 .hero h1 {
   font-size: 3rem;
   margin: 1rem 0;
+  color: #fff;
 }
 
 .hero p {
   font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+.hero-description-multiline {
+  font-size: 1.22rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.hero-description-multiline span {
+  display: block;
+  margin-bottom: 0.1em;
 }
 
 .typed-text {
@@ -81,70 +323,68 @@ body, body.dark-mode {
   margin-left: 0.4rem;
 }
 
-/* -------------------------------
-   📌 Liens
--------------------------------- */
-a {
+/* ===============================================
+   📚 EDUCATION
+=============================================== */
+.education-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2.5rem;
+  background: rgba(35, 36, 58, 0.65);
+  border-radius: 14px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 4px 20px rgba(74, 110, 226, 0.1);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.education-card {
+  background: rgba(40, 42, 54, 0.18);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(74, 144, 226, 0.08);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+}
+
+.education-card h4 {
+  font-size: 1.25rem;
+  color: var(--accent-color);
+  margin-bottom: 0.4rem;
+}
+
+.edu-dates {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.edu-school {
+  font-weight: 500;
   color: var(--primary-color);
-  text-decoration: none;
-  transition: var(--transition);
+  margin-bottom: 0.7rem;
 }
 
-a:hover {
-  text-decoration: underline;
+.edu-desc {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
 }
 
-/* -------------------------------
-   ✨ Boutons & CTA
--------------------------------- */
-.btn {
-  display: inline-block;
-  background: linear-gradient(90deg, var(--primary-color), var(--accent-color) 80%);
-  color: #fff;
-  border: none;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  padding: 0.8rem 1.5rem;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(74, 144, 226, 0.15);
-  transition: var(--transition);
-  cursor: pointer;
+.edu-courses {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
-.btn:hover {
-  filter: brightness(1.2);
-  transform: scale(1.05);
-}
-
-.btn:focus {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
-}
-
-.btn.bounce {
-  animation: bounce 2s infinite;
-}
-
-/* -------------------------------
-   📌 Container & Sections
--------------------------------- */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-.section {
-  padding: 4rem 0;
-}
-
-.section:nth-child(even) {
-  background: rgba(35, 36, 58, 0.7);
-}
-
-/* -------------------------------
-   🗂️ Projects Grid & Filters
--------------------------------- */
+/* ===============================================
+   🗂️ PROJETS
+=============================================== */
 .project-filters {
   text-align: center;
   margin-bottom: 2rem;
@@ -169,17 +409,23 @@ a:hover {
 
 #projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2.5rem;
 }
 
 .project-card {
+  background: var(--card-bg);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: 0 8px 32px rgba(74, 144, 226, 0.10);
+  border-radius: 18px;
+  border: 1px solid rgba(74, 144, 226, 0.08);
   padding: 2rem;
+  transition: var(--transition);
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(74, 144, 226, 0.2);
 }
 
 .project-card img {
@@ -189,61 +435,336 @@ a:hover {
 
 .project-card h3 {
   margin-top: 0;
+  color: #fff;
 }
 
-/* -------------------------------
-   💪 Skills Bar
--------------------------------- */
+.project-card p {
+  color: var(--text-secondary);
+}
+
+.project-details summary {
+  margin-top: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--accent-color);
+  transition: var(--transition);
+}
+
+.project-details summary:hover {
+  text-decoration: underline;
+}
+
+.project-details[open] summary::after {
+  content: " ▲";
+  font-size: 0.8rem;
+}
+
+.project-details:not([open]) summary::after {
+  content: " ▼";
+  font-size: 0.8rem;
+}
+
+.project-details p {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Technologies des projets */
+.project-techs-title {
+  color: var(--primary-color);
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.project-techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tech-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  background: rgba(74,110,226,0.15);
+  color: var(--primary-color);
+  border: 1px solid rgba(74,110,226,0.2);
+}
+
+/* ===============================================
+   💪 COMPÉTENCES
+=============================================== */
 .skill {
   margin-bottom: 1.5rem;
 }
 
 .skill p {
   margin: 0 0 0.3rem;
+  color: var(--text-secondary);
 }
 
 .progress-bar {
   width: 0;
   height: 8px;
-  background: linear-gradient(90deg, var(--primary-color), #23243a 80%);
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color) 80%);
   border-radius: 4px;
   transition: width 1.2s cubic-bezier(.4, 0, .2, 1);
 }
 
-/* -------------------------------
-   ✉️ Formulaire Contact
--------------------------------- */
+/* Compétences avancées */
+.skills-advanced {
+  margin-top: 2.5rem;
+  background: rgba(35,36,58,0.65);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  color: var(--text-color);
+  box-shadow: 0 2px 12px rgba(74,110,226,0.08);
+  font-size: 1.08rem;
+}
+
+.skills-advanced ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-advanced li {
+  margin-bottom: 1.1em;
+  line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+}
+
+.skills-advanced li b {
+  color: var(--accent-color);
+}
+
+.skills-advanced-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.7rem;
+  margin-top: 2.5rem;
+  background: rgba(35,36,58,0.65);
+  border-radius: 14px;
+  padding: 2rem 2.2rem;
+  box-shadow: 0 2px 12px rgba(74,110,226,0.08);
+}
+
+.skill-adv-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  background: rgba(40,42,54,0.18);
+  border-radius: 10px;
+  padding: 1.1rem 1rem;
+  transition: var(--transition);
+}
+
+.skill-adv-item:hover {
+  box-shadow: 0 4px 18px rgba(74,144,226,0.13);
+}
+
+.skill-adv-icon {
+  font-size: 2.1rem;
+  margin-top: 0.1em;
+  flex-shrink: 0;
+  color: var(--primary-color);
+}
+
+.skill-adv-item h4 {
+  margin: 0 0 0.3em 0;
+  color: var(--accent-color);
+  font-size: 1.13rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.skill-adv-item p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 1.01rem;
+  line-height: 1.5;
+}
+
+/* ===============================================
+   🔧 COMPÉTENCES TECHNIQUES
+=============================================== */
+.techskills-card,
+.enhanced-techskills-card {
+  background: linear-gradient(120deg, #23243a 60%, #20222a 100%);
+  border-radius: 22px;
+  box-shadow: 0 6px 32px rgba(74,110,226,0.13);
+  padding: 2.7rem 2.2rem;
+  margin: 0 auto 2.5rem auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.techskills-header {
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+
+.techskills-mainicon {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary-color) 60%, var(--accent-color) 100%);
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.7em;
+  font-size: 2.3rem;
+  box-shadow: 0 2px 12px rgba(74,144,226,0.18);
+  margin-bottom: 0.7em;
+}
+
+.techskills-title {
+  font-size: 2.1rem;
+  color: var(--accent-color);
+  margin: 0.2em 0 0.1em 0;
+  letter-spacing: 0.01em;
+}
+
+.techskills-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.13rem;
+  margin-bottom: 0.5em;
+}
+
+.techskills-card h2 {
+  color: var(--accent-color);
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.01em;
+}
+
+.techskills-card h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.5em;
+  font-size: 1.13rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.techskills-card li {
+  margin-bottom: 0.4em;
+  color: var(--text-secondary);
+}
+
+.techskills-grid,
+.techskills-enhanced-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.7rem;
+  margin-top: 1.2rem;
+}
+
+.techskill-mini-card {
+  background: rgba(40,42,54,0.22);
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(74,110,226,0.07);
+  padding: 1.3rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: var(--transition);
+  min-height: 170px;
+  position: relative;
+  overflow: hidden;
+}
+
+.techskill-mini-card:hover {
+  box-shadow: 0 6px 24px rgba(74,144,226,0.17);
+  transform: translateY(-4px) scale(1.025);
+}
+
+.mini-card-icon {
+  font-size: 1.7rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+}
+
+.techskill-mini-card h4 {
+  color: var(--accent-color);
+  font-size: 1.11rem;
+  font-weight: 600;
+  margin: 0 0 0.7em 0;
+  letter-spacing: 0.01em;
+}
+
+.techskills-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.32em 0.95em;
+  border-radius: 16px;
+  font-size: 0.97rem;
+  font-weight: 500;
+  background: rgba(74,110,226,0.13);
+  color: var(--primary-color);
+  margin-bottom: 0.3em;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(74,110,226,0.10);
+  transition: var(--transition);
+}
+
+.badge-main {
+  background: linear-gradient(90deg, var(--primary-color) 60%, var(--accent-color) 100%);
+  color: #fff;
+  border: none;
+}
+
+.badge-alt {
+  background: rgba(58,134,255,0.13);
+  color: var(--accent-color);
+}
+
+/* ===============================================
+   ✉️ CONTACT
+=============================================== */
 #contactForm {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 500px;
+  max-width: 400px;
+  width: 100%;
 }
 
 #contactForm input,
 #contactForm textarea {
   padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   width: 100%;
+  font-family: inherit;
 }
 
 #contactForm button {
-  align-self: flex-start;
+  align-self: center;
 }
 
-/* -------------------------------
-   🗂️ Navigation Active
--------------------------------- */
-.nav-link.active {
-  color: var(--primary-color);
-  font-weight: bold;
-  border-bottom: 2px solid var(--primary-color);
+.cv-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
-/* -------------------------------
-   🔗 Footer & Socials
--------------------------------- */
+/* ===============================================
+   🔗 FOOTER
+=============================================== */
 footer {
   background: #23243a;
   color: #e6e6e6;
@@ -271,20 +792,22 @@ footer .socials a {
 #backToTop {
   display: block;
   margin-top: 1rem;
+  cursor: pointer;
+  color: var(--primary-color);
 }
 
-/* -------------------------------
-   📸 Images
--------------------------------- */
+/* ===============================================
+   📸 MÉDIAS & ÉLÉMENTS
+=============================================== */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* -------------------------------
-   ✅ Loader
--------------------------------- */
+/* ===============================================
+   ⚡ LOADER
+=============================================== */
 #loader {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -295,571 +818,9 @@ img {
   z-index: 9999;
 }
 
-/* -------------------------------
-   🔍 Animations
--------------------------------- */
-.fadeIn {
-  animation: fadeIn 1s ease forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.bounce {
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-/* -------------------------------
-   ✅ Scrollbar Custom
--------------------------------- */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--primary-color);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--card-bg);
-}
-
-/* -------------------------------
-   ✅ Focus states
--------------------------------- */
-a:focus,
-button:focus,
-input:focus {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
-}
-
-/* -------------------------------
-   ✅ Text Selection
--------------------------------- */
-::selection {
-  background: var(--primary-color);
-  color: #fff;
-}
-
-/* -------------------------------
-   ✅ Responsive tweaks
--------------------------------- */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-  .container {
-    padding: 0 1rem;
-  }
-}
-
-h1, h2, h3, h4 {
-  color: #fff;
-}
-
-.section p, .project-card p, .skill p {
-  color: var(--text-secondary);
-}
-
-/* === NAVBAR CUSTOM === */
-header {
-  width: 100%;
-  background: var(--secondary-color);
-  box-shadow: 0 2px 16px rgba(74, 110, 226, 0.08);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-#mainNav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2.5rem; /* espace horizontal entre les liens */
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 1.2rem 2rem;
-  font-size: 1.18rem;
-  border-radius: 0 0 18px 18px;
-  background: transparent;
-}
-
-#mainNav .nav-link {
-  padding: 0.4rem 1.1rem;
-  border-radius: 6px;
-  transition: background 0.2s;
-}
-
-#mainNav .nav-link:hover,
-#mainNav .nav-link.active {
-  background: var(--primary-color);
-  color: #fff;
-}
-
-#mainNav select,
-#mainNav button {
-  margin-left: 1.2rem;
-  font-size: 1rem;
-  padding: 0.3rem 0.7rem;
-  border-radius: 5px;
-  border: none;
-  background: var(--card-bg);
-  color: var(--text-color);
-  cursor: pointer;
-}
-
-/* Compétences avancées - Skills */
-.skills-advanced {
-  margin-top: 2.5rem;
-  background: rgba(35,36,58,0.65);
-  border-radius: 12px;
-  padding: 1.5rem 2rem;
-  color: var(--text-color);
-  box-shadow: 0 2px 12px rgba(74,110,226,0.08);
-  font-size: 1.08rem;
-}
-.skills-advanced ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.skills-advanced li {
-  margin-bottom: 1.1em;
-  line-height: 1.6;
-  display: flex;
-  align-items: flex-start;
-}
-.skills-advanced li b {
-  color: var(--accent-color);
-}
-@media (max-width: 600px) {
-  .skills-advanced {
-    padding: 1rem 0.7rem;
-    font-size: 0.98rem;
-  }
-}
-
-/* -------------------------------
-   📊 Grille Compétences Avancées
--------------------------------- */
-.skills-advanced-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.7rem;
-  margin-top: 2.5rem;
-  background: rgba(35,36,58,0.65);
-  border-radius: 14px;
-  padding: 2rem 2.2rem;
-  box-shadow: 0 2px 12px rgba(74,110,226,0.08);
-}
-.skill-adv-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.1rem;
-  background: rgba(40,42,54,0.18);
-  border-radius: 10px;
-  padding: 1.1rem 1rem;
-  transition: box-shadow 0.2s;
-}
-.skill-adv-item:hover {
-  box-shadow: 0 4px 18px rgba(74,144,226,0.13);
-}
-.skill-adv-icon {
-  font-size: 2.1rem;
-  margin-top: 0.1em;
-  flex-shrink: 0;
-}
-.skill-adv-item h4 {
-  margin: 0 0 0.3em 0;
-  color: var(--accent-color);
-  font-size: 1.13rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-}
-.skill-adv-item p {
-  margin: 0;
-  color: var(--text-secondary);
-  font-size: 1.01rem;
-  line-height: 1.5;
-}
-@media (max-width: 700px) {
-  .skills-advanced-grid {
-    grid-template-columns: 1fr;
-    padding: 1.1rem 0.5rem;
-  }
-  .skill-adv-item {
-    padding: 0.9rem 0.7rem;
-  }
-}
-
-/* Responsive: nav en colonne sur mobile */
-@media (max-width: 768px) {
-  #mainNav {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
-    font-size: 1rem;
-  }
-}
-
-.project-details summary {
-  margin-top: 0.5rem;
-  font-weight: 500;
-  cursor: pointer;
-  color: var(--accent-color);
-  transition: var(--transition);
-}
-.project-details summary:hover {
-  text-decoration: underline;
-}
-
-.project-details[open] summary::after {
-  content: " ▲";
-  font-size: 0.8rem;
-}
-.project-details:not([open]) summary::after {
-  content: " ▼";
-  font-size: 0.8rem;
-}
-
-.project-details p {
-  margin-top: 0.5rem;
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-/* === TECHNICAL SKILLS CARD === */
-.techskills-card {
-  background: linear-gradient(120deg, #23243a 60%, #20222a 100%);
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(74,110,226,0.10);
-  padding: 2.5rem 2rem;
-  margin: 0 auto 2.5rem auto;
-}
-.techskills-card h2 {
-  color: var(--accent-color);
-  margin-bottom: 0.7rem;
-  letter-spacing: 0.01em;
-}
-.techskills-card h4 {
-  color: var(--primary-color);
-  margin-bottom: 0.5em;
-  font-size: 1.13rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-}
-.techskills-card ul {
-  list-style: disc inside;
-  margin: 0 0 1em 0.5em;
-  padding: 0;
-  color: var(--text-secondary);
-  font-size: 1.05rem;
-}
-.techskills-card li {
-  margin-bottom: 0.4em;
-}
-.techskills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-}
-@media (max-width: 700px) {
-  .techskills-card {
-    padding: 1.2rem 0.7rem;
-  }
-  .techskills-grid {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
-  }
-}
-
-/* === ENHANCED TECHNICAL SKILLS === */
-.enhanced-techskills-card {
-  background: linear-gradient(120deg, #23243a 60%, #20222a 100%);
-  border-radius: 22px;
-  box-shadow: 0 6px 32px rgba(74,110,226,0.13);
-  padding: 2.7rem 2.2rem 2.2rem 2.2rem;
-  margin: 0 auto 2.5rem auto;
-  position: relative;
-  overflow: hidden;
-}
-.techskills-header {
-  text-align: center;
-  margin-bottom: 2.2rem;
-}
-.techskills-mainicon {
-  display: inline-block;
-  background: linear-gradient(135deg, var(--primary-color) 60%, var(--accent-color) 100%);
-  color: #fff;
-  border-radius: 50%;
-  padding: 0.7em;
-  font-size: 2.3rem;
-  box-shadow: 0 2px 12px rgba(74,144,226,0.18);
-  margin-bottom: 0.7em;
-}
-.techskills-title {
-  font-size: 2.1rem;
-  color: var(--accent-color);
-  margin: 0.2em 0 0.1em 0;
-  letter-spacing: 0.01em;
-}
-.techskills-subtitle {
-  color: var(--text-secondary);
-  font-size: 1.13rem;
-  margin-bottom: 0.5em;
-}
-
-.techskills-enhanced-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.7rem;
-  margin-top: 1.2rem;
-}
-
-.techskill-mini-card {
-  background: rgba(40,42,54,0.22);
-  border-radius: 14px;
-  box-shadow: 0 2px 12px rgba(74,110,226,0.07);
-  padding: 1.3rem 1.1rem 1.1rem 1.1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  transition: box-shadow 0.2s, transform 0.2s;
-  min-height: 170px;
-  position: relative;
-  overflow: hidden;
-}
-.techskill-mini-card:hover {
-  box-shadow: 0 6px 24px rgba(74,144,226,0.17);
-  transform: translateY(-4px) scale(1.025);
-}
-.mini-card-icon {
-  font-size: 1.7rem;
-  color: var(--primary-color);
-  margin-bottom: 0.5em;
-  display: flex;
-  align-items: center;
-}
-.techskill-mini-card h4 {
-  color: var(--accent-color);
-  font-size: 1.11rem;
-  font-weight: 600;
-  margin: 0 0 0.7em 0;
-  letter-spacing: 0.01em;
-}
-.techskills-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5em;
-}
-.badge {
-  display: inline-block;
-  padding: 0.32em 0.95em;
-  border-radius: 16px;
-  font-size: 0.97rem;
-  font-weight: 500;
-  background: rgba(74,110,226,0.13);
-  color: var(--primary-color);
-  margin-bottom: 0.3em;
-  letter-spacing: 0.01em;
-  border: 1px solid rgba(74,110,226,0.10);
-  transition: background 0.2s, color 0.2s;
-}
-.badge-main {
-  background: linear-gradient(90deg, var(--primary-color) 60%, var(--accent-color) 100%);
-  color: #fff;
-  border: none;
-}
-.badge-alt {
-  background: rgba(58,134,255,0.13);
-  color: var(--accent-color);
-}
-@media (max-width: 900px) {
-  .techskills-enhanced-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (max-width: 600px) {
-  .enhanced-techskills-card {
-    padding: 1.1rem 0.5rem;
-  }
-  .techskills-enhanced-grid {
-    grid-template-columns: 1fr;
-    gap: 1.1rem;
-  }
-  .techskill-mini-card {
-    min-height: unset;
-    padding: 1rem 0.7rem;
-  }
-}
-
-/* === SECTION HEADER HARMONIZED === */
-.section-header {
-  text-align: center;
-  margin-bottom: 2.2rem;
-}
-.section-mainicon {
-  display: inline-block;
-  background: linear-gradient(135deg, var(--primary-color) 60%, var(--accent-color) 100%);
-  color: #fff;
-  border-radius: 50%;
-  padding: 0.7em;
-  font-size: 2.1rem;
-  box-shadow: 0 2px 12px rgba(74,144,226,0.18);
-  margin-bottom: 0.7em;
-}
-.section-title {
-  font-size: 2rem;
-  color: var(--accent-color);
-  margin: 0.2em 0 0.1em 0;
-  letter-spacing: 0.01em;
-}
-.section-subtitle {
-  color: var(--text-secondary);
-  font-size: 1.13rem;
-  margin-bottom: 0.5em;
-}
-
-/* -------------------------------
-   Harmonisation générale
--------------------------------- */
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-  font-weight: normal;
-}
-
-p {
-  margin: 0;
-  padding: 0;
-}
-
-ul, ol {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button {
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 0;
-}
-
-/* -------------------------------
-   Accessibilité
--------------------------------- */
-:focus {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
-}
-
-/* -------------------------------
-   Hero Description Multilignes
--------------------------------- */
-.hero-description-multiline {
-  font-size: 1.22rem;
-  color: var(--text-secondary);
-  line-height: 1.5;
-  margin-bottom: 1.1rem;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-}
-
-.hero-description-multiline span {
-  display: block;
-  margin-bottom: 0.1em;
-}
-
-/* -------------------------------
-   Education Section
--------------------------------- */
-.education-grid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  margin-top: 2.5rem;
-  background: rgba(35, 36, 58, 0.65);
-  border-radius: 14px;
-  padding: 3rem 2.5rem;
-  box-shadow: 0 4px 20px rgba(74, 110, 226, 0.1);
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.education-card {
-  background: rgba(40, 42, 54, 0.18);
-  border-radius: 12px;
-  padding: 2rem 2rem;
-  box-shadow: 0 2px 12px rgba(74, 144, 226, 0.08);
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  width: 100%;
-}
-
-
-.education-card h4 {
-  font-size: 1.25rem;
-  color: var(--accent-color);
-  margin-bottom: 0.4rem;
-}
-
-.edu-dates {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  margin-bottom: 0.5rem;
-}
-
-.edu-school {
-  font-weight: 500;
-  color: var(--primary-color);
-  margin-bottom: 0.7rem;
-}
-
-.edu-desc {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.edu-courses {
-  list-style: disc;
-  padding-left: 1.3rem;
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
+/* ===============================================
+   🎭 ANIMATIONS
+=============================================== */
 .fadeIn {
   opacity: 0;
   transform: translateY(30px);
@@ -873,3 +834,135 @@ button {
   }
 }
 
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ===============================================
+   🎨 PERSONNALISATIONS
+=============================================== */
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--card-bg);
+}
+
+/* Sélection de texte */
+::selection {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+/* Focus states harmonisés */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* ===============================================
+   📱 RESPONSIVE DESIGN
+=============================================== */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  #mainNav {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  .education-grid {
+    padding: 2rem 1rem;
+  }
+  
+  .skills-advanced {
+    padding: 1rem 0.7rem;
+    font-size: 0.98rem;
+  }
+  
+  .enhanced-techskills-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .techskills-enhanced-grid {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+  
+  .techskill-mini-card {
+    min-height: unset;
+    padding: 1rem 0.7rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .skills-advanced-grid {
+    grid-template-columns: 1fr;
+    padding: 1.1rem 0.5rem;
+  }
+  
+  .skill-adv-item {
+    padding: 0.9rem 0.7rem;
+  }
+  
+  .techskills-card {
+    padding: 1.2rem 0.7rem;
+  }
+  
+  .techskills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 2rem 0;
+  }
+  
+  .section-title {
+    font-size: 1.7rem;
+  }
+  
+  .hero-content {
+    padding: 1.5rem;
+  }
+  
+  .project-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .techskills-enhanced-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: var(--large);
+  }
+}
