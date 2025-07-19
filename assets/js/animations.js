@@ -1,4 +1,3 @@
-//assets/js/animations.js — Version Finale PRO Compatible
 
 // PARTICLES HERO 
 function createFloatingParticles() {

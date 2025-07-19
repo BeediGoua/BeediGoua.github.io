@@ -1,52 +1,62 @@
 {
   "nav_home": "Home",
   "nav_about": "About",
+  "nav_education": "Education",
   "nav_skills": "Skills",
   "nav_projects": "Projects",
-  "nav_experience": "Experience",
-  "nav_contact": "Contact",
   "nav_techskills": "Technical Skills",
-
+  "nav_contact": "Contact",
+  
   "hero_greeting": "Hi, I'm",
   "hero_title": "Data Scientist specialized in AI and NLP",
   "hero_description": "Data Scientist — exploring, building, and connecting ideas from data to cloud",
+  
   "btn_projects": "My Projects",
   "btn_contact": "Contact",
-
+  "btn_cv_fr": "Download CV (FR)",
+  "btn_cv_en": "Download CV (EN)",
   "btn_darkmode": "Dark mode",
   "btn_scrolltop": "Back to Top",
-
+  
   "about_title": "About Me",
   "about_subtitle": "Versatile and Rigorous Data Scientist",
-  "projects_subtitle": "A selection of my end-to-end data & AI projects",
-  "skills_subtitle": "Core strengths in data, ML, NLP & engineering",
   "about_intro": "Final-year Data Science student at ENSAI, with a strong background in mathematics, statistics, and machine learning.",
   "about_text": "I'm a Data Scientist with experience in statistical modeling, supervised and unsupervised learning, deep learning, NLP, and Generative AI. My academic path shaped a rigorous and analytical mindset.",
   "about_desc": "I design scalable, modular pipelines — from preprocessing to deployment — with a focus on robustness, automation, and interpretability.",
   "about_extra": "I enjoy solving end-to-end real-world problems, blending classic ML with modern tools like LLMs, embeddings, and vector databases, always aiming for clarity and clean, maintainable code.",
-  
-  
-  
   "about_location": "Rennes, France",
   
-  "btn_cv": "Download CV",
-  "btn_cv_fr": "Download CV (FR)",
-  "btn_cv_en": "Download CV (EN)",
-  "btn_discuss": "Contact me",
-
+  "education_title": "Education",
+  "education_subtitle": "Academic background & key courses",
+  "edu1_title": "Engineer's Degree – Data Science & AI",
+  "edu1_date": "2022 – 2025",
+  "edu1_school": "ENSAI – National School for Statistics and Information Analysis (Ker Lann, Rennes)",
+  "edu1_desc": "Grande École under the INSEE – Top-tier program in statistics & AI",
+  "edu1_course1": "Key courses: Supervised & unsupervised learning, deep learning (PyTorch, TensorFlow), NLP with Transformers, generative AI (LLMs, RAG), time series, Bayesian inference, stochastic calculus",
+  "edu1_course2": "Big Data & Engineering: Spark, Hadoop, SQL, APIs, Docker, MLOps, cloud deployment",
+  "edu1_course3": "Applied work: Real-world projects in fraud detection, recommendation systems, and NLP",
+  "edu1_course4": "Bilingual curriculum (FR/EN) – International exposure (Erasmus+ eligible)",
+  
+  "projects_title": "My Projects",
+  "projects_subtitle": "A selection of my end-to-end data & AI projects",
+  "filter_all": "All",
+  "filter_nlp": "NLP",
+  "filter_ml": "Machine Learning",
+  "filter_data": "Data Analysis",
+  "project_techs": "Technologies used",
+  
+  "project1_title": "Safe Review Pipeline",
+  "project1_desc": "Local NLP pipeline to moderate user reviews: BERT-based toxicity detection, summarization, rewriting — no cloud, no compromise on privacy.",
+  "project1_more": "Learn more",
+  "project1_desc_long": "This project is a fully local, explainable moderation pipeline that scrapes reviews, detects harmful content using BERT, generates smart summaries with T5, and rewrites toxic comments for publication — all with no external API. It includes a Streamlit dashboard and a FastAPI backend, and is designed to be modular, privacy-preserving, and production-ready.",
+  
+  "project2_title": "Hybrid Music Recommender",
+  "project2_desc": "Intelligent playlist recommender mixing Word2Vec & NLP embeddings. Interactive app, filters by genre & duration, exportable results.",
+  "project2_more": "Learn more",
+  "project2_desc_long": "This hybrid music recommender blends collaborative filtering (Word2Vec) and content-based embeddings (SentenceTransformers). It includes a Streamlit interface with search, sliders to adjust semantic weights, and genre/duration filters. The system is 100% local, customizable, and ready for large datasets. Visual explanations and CSV exports are also available.",
+  
   "skills_title": "Skills",
-  "skills_languages": "Languages & Frameworks",
-  "skills_ml": "Machine Learning & AI",
-  "skills_soft": "Soft Skills",
-  "skill_innovation": "Innovation",
-  "skill_innovation_desc": "Creative problem solving",
-  "skill_teamwork": "Teamwork",
-  "skill_teamwork_desc": "Effective team collaboration",
-  "skill_analysis": "Analysis",
-  "skill_analysis_desc": "Analytical and critical thinking",
-  "skill_communication": "Communication",
-  "skill_communication_desc": "Clear result presentation",
-
+  "skills_subtitle": "Core strengths in data, ML, NLP & engineering",
   "skills_adv_data_science_title": "Data Science",
   "skills_adv_data_science_desc": "Python (pandas, numpy, polars), SQL, statistical modeling, automated EDA.",
   "skills_adv_ml_title": "Machine Learning",
@@ -59,38 +69,17 @@
   "skills_adv_cloud_desc": "AWS, GCP: deployment, storage, pipeline orchestration.",
   "skills_adv_viz_title": "Visualization & Presentation",
   "skills_adv_viz_desc": "Matplotlib, Plotly, interactive dashboards (Streamlit), clear documentation.",
-
-  "education_title": "Education",
-  "education_subtitle": "Academic background & key courses",
-  "edu1_title": "Engineer’s Degree – Data Science & AI",
-  "edu1_date": "2022 – 2025",
-  "edu1_school": "ENSAI – National School for Statistics and Information Analysis",
-  "edu1_desc": "Specialized in Artificial Intelligence and NLP. Key topics included:",
-  "edu1_course1": "Machine Learning, Deep Learning, NLP (advanced)",
-  "edu1_course2": "LLMs, RAG architectures, vector stores",
-  "edu1_course3": "GLMs, time series, Bayesian inference, stochastic calculus",
-  "edu1_course4": "Big Data (Hadoop, Spark), SQL, APIs, Python, Java",
-
-
-
-  "projects_title": "My Projects",
-  "filter_all": "All",
-  "filter_nlp": "NLP",
-  "filter_ml": "Machine Learning",
-  "filter_data": "Data Analysis",
-  "project_techs": "Technologies used",
-
-  "project1_title": "Safe Review Pipeline",
-  "project1_desc": "Local NLP pipeline to moderate user reviews: BERT-based toxicity detection, summarization, rewriting — no cloud, no compromise on privacy.",
-  "project1_more": "Learn more",
-  "project1_desc_long": "This project is a fully local, explainable moderation pipeline that scrapes reviews, detects harmful content using BERT, generates smart summaries with T5, and rewrites toxic comments for publication — all with no external API. It includes a Streamlit dashboard and a FastAPI backend, and is designed to be modular, privacy-preserving, and production-ready.",
-
-  "project2_title": "Hybrid Music Recommender",
-  "project2_desc": "Intelligent playlist recommender mixing Word2Vec & NLP embeddings. Interactive app, filters by genre & duration, exportable results.",
-  "project2_more": "Learn more",
-  "project2_desc_long": "This hybrid music recommender blends collaborative filtering (Word2Vec) and content-based embeddings (SentenceTransformers). It includes a Streamlit interface with search, sliders to adjust semantic weights, and genre/duration filters. The system is 100% local, customizable, and ready for large datasets. Visual explanations and CSV exports are also available.",
-
-
+  
+  "techskills_title": "Technical Skills",
+  "techskills_subtitle": "Main technologies, libraries & tools I use daily",
+  "techskills_langs": "Languages",
+  "techskills_libs": "Data & ML Libraries",
+  "techskills_nlp": "NLP & LLMs",
+  "techskills_mlops": "MLOps & API",
+  "techskills_cloud": "Cloud & DevOps",
+  "techskills_db": "Databases",
+  "techskills_viz": "Visualization",
+  
   "experience_title": "Experience & Education",
   "exp1_title": "Data Scientist Intern",
   "exp1_date": "Sept 2024 - March 2025",
@@ -99,15 +88,7 @@
   "exp1_task1": "OCR → chunking → enrichment pipeline",
   "exp1_task2": "Automatic summarization with LLMs",
   "exp1_task3": "Multi-setup benchmark with RAGAS",
-
-  "edu1_title": "Data Science Engineer",
-  "edu1_date": "2022 - 2025",
-  "edu1_school": "ENSAI",
-  "edu1_desc": "Specialized in Data Science & AI",
-  "edu1_course1": "Advanced Machine Learning",
-  "edu1_course2": "Deep Learning & NLP",
-  "edu1_course3": "Big Data & Cloud",
-
+  
   "contact_title": "Contact",
   "contact_subtitle": "Let's connect",
   "contact_text": "I'm always open to new opportunities and collaborations. Drop me a message!",
@@ -117,30 +98,12 @@
   "form_subject": "Subject",
   "form_message": "Message",
   "form_submit": "Send Message",
-
+  
   "footer_rights": "All rights reserved.",
   "footer_copyright": "© Goua Beedi Henri",
   "footer_linkedin": "LinkedIn",
   "footer_github": "GitHub",
   "footer_email": "Email",
-
-  "close": "Close",
-
-  "techskills_title": "Technical Skills",
-  "techskills_subtitle": "Main technologies, libraries & tools I use daily",
-  "techskills_langs": "Languages",
-  "techskills_langs_list": "Python (advanced), SQL (advanced), Bash, Java (basic)",
-  "techskills_libs": "Data & ML Libraries",
-  "techskills_libs_list": "Pandas, NumPy, Scikit-learn, Polars, XGBoost, LightGBM, PyTorch, TensorFlow",
-  "techskills_nlp": "NLP & LLMs",
-  "techskills_nlp_list": "spaCy, NLTK, Hugging Face Transformers, LangChain, SentenceTransformers, BERT, T5",
-  "techskills_mlops": "MLOps & API",
-  "techskills_mlops_list": "FastAPI, Streamlit, MLflow (basic), Docker, Git, CI/CD (GitHub Actions)",
-  "techskills_cloud": "Cloud & DevOps",
-  "techskills_cloud_list": "AWS (S3, Lambda, EC2), GCP (Vertex AI, BigQuery), Azure (OpenAI), Terraform (basics)",
-  "techskills_db": "Databases",
-  "techskills_db_list": "PostgreSQL, SQLite, NoSQL (MongoDB), Firebase (basic)",
-  "techskills_viz": "Visualization",
-  "techskills_viz_list": "Matplotlib, Seaborn, Plotly, Dash, Power BI (basic)"
+  
+  "close": "Close"
 }
-

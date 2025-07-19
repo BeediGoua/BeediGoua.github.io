@@ -50,6 +50,8 @@
     <nav id="mainNav">
       <a href="#hero" class="nav-link" data-i18n="nav_home">Home</a>
       <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
+      
+      <a href="#education" class="nav-link" data-i18n="nav_education">Education</a>
       <a href="#projects" class="nav-link" data-i18n="nav_projects">Projects</a>
       <a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a>
       <a href="#technical-skills" class="nav-link" data-i18n="nav_techskills">Technical Skills</a>
@@ -88,25 +90,25 @@
       <div class="section-header section-centered">
         <span class="section-mainicon"><i data-feather="user"></i></span>
         <h2 data-i18n="about_title" class="section-title">About Me</h2>
-        <p data-i18n="about_subtitle" class="section-subtitle">Versatile and Rigorous Data Scientist</p>
+        <p data-i18n="about_subtitle" class="section-subtitle">Versatile and Impact-Driven Data Scientist</p>
       </div>
 
-      <div class="about-wrapper" style="max-width: 800px; margin: 0 auto; background: rgba(35,36,58,0.85); border-radius: 18px; box-shadow: 0 4px 24px rgba(74,110,226,0.10); padding: 2.5rem 2rem;">
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
+      <div class="about-wrapper">
+        <div class="about-content">
           
           <!-- Texte -->
-          <div style="display: flex; flex-direction: column; gap: 1rem; text-align: left;">
-            <p class="about-intro" style="font-size: 1.13rem;" data-i18n="about_intro">
-              Final-year Data Science student at ENSAI, with a strong background in mathematics, statistics, and machine learning.
+          <div class="about-text-block">
+            <p class="about-intro" data-i18n="about_intro">
+              Final-year Data Science student at <strong>ENSAI</strong> (Grande École in Statistics & AI), with a strong foundation in <strong>applied mathematics</strong>, <strong>statistics</strong>, and <strong>machine learning</strong>.
             </p>
-            <p class="about-text" style="font-size: 1.13rem;" data-i18n="about_text">
-              I'm a Data Scientist with experience in statistical modeling, supervised and unsupervised learning, deep learning, NLP, and Generative AI. My academic path shaped a rigorous and analytical mindset.
+            <p class="about-text" data-i18n="about_text">
+              I specialize in <strong>supervised/unsupervised learning</strong>, <strong>deep learning</strong> (PyTorch, TensorFlow), and <strong>Natural Language Processing</strong> (Transformers, RAG, LLMs), with a rigorous and analytical mindset shaped by academic excellence.
             </p>
-            <p class="about-desc" style="font-size: 1.13rem;" data-i18n="about_desc">
-              I design scalable, modular pipelines — from preprocessing to deployment — with a focus on robustness, automation, and interpretability.
+            <p class="about-desc" data-i18n="about_desc">
+              I build scalable and modular pipelines — from preprocessing and vector indexing to LLM-powered generation — focusing on <strong>robustness</strong>, <strong>interpretability</strong>, and <strong>clean architecture</strong>.
             </p>
-            <p class="about-extra" style="font-size: 1.13rem;" data-i18n="about_extra">
-              I enjoy solving end-to-end real-world problems, blending classic ML with modern tools like LLMs, embeddings, and vector databases, always aiming for clarity and clean, maintainable code.
+            <p class="about-extra" data-i18n="about_extra">
+              Passionate about delivering real-world impact, I blend classic ML with modern tools like <strong>embeddings</strong>, <strong>vector databases</strong>, and <strong>Generative AI</strong>, always aiming for clarity, maintainability, and efficiency.
             </p>
           </div>
 
@@ -123,41 +125,41 @@
       </div>
     </section>
 
+
     <!-- Education -->
     <section id="education" class="section">
-      <div class="section-header section-centered">
+      <div class="section-header">
         <span class="section-mainicon"><i data-feather="book-open"></i></span>
-        <h2 data-i18n="education_title" class="section-title">Education</h2>
-        <p data-i18n="education_subtitle" class="section-subtitle">Academic background & key courses</p>
+        <h2 class="section-title" data-i18n="education_title">Education</h2>
+        <p class="section-subtitle" data-i18n="education_subtitle">Academic background & key courses</p>
       </div>
 
-      <div class="education-grid">
-        <div class="education-card fadeIn">
-          <h4 data-i18n="edu1_title">Engineer’s Degree – Data Science & AI</h4>
-          <span data-i18n="edu1_date" class="edu-dates">2022 – 2025</span>
-          <p data-i18n="edu1_school" class="edu-school">ENSAI – National School for Statistics and Information Analysis</p>
-          <p data-i18n="edu1_desc" class="edu-desc">Specialized in Artificial Intelligence and NLP. Key topics included:</p>
-          <ul class="edu-courses">
-            <li data-i18n="edu1_course1">Machine Learning, Deep Learning, NLP (advanced)</li>
-            <li data-i18n="edu1_course2">LLMs, RAG architectures, vector stores</li>
-            <li data-i18n="edu1_course3">GLMs, time series, Bayesian inference, stochastic calculus</li>
-            <li data-i18n="edu1_course4">Big Data (Hadoop, Spark), SQL, APIs, Python, Java</li>
-          </ul>
-        </div>
+      <div class="education-card">
+        <h3 class="edu-title">Engineer’s Degree – Data Science & AI</h3>
+        <p class="edu-years">2022 – 2025</p>
+        <p class="edu-school-badge">
+          ENSAI – École Nationale de la Statistique et de l’Analyse de l’Information (Ker Lann, Rennes)
+        </p>
+        <p class="edu-subtext">
+          Grande École française rattachée à l’INSEE – Top-tier program in statistics & AI
+        </p>
+        <ul class="edu-courses">
+          <li><i data-feather="book-open" class="icon-bullet"></i> Key courses: Supervised & unsupervised learning, deep learning (PyTorch, TensorFlow), NLP with Transformers, generative AI (LLMs, RAG), time series, Bayesian inference, stochastic calculus</li>
+          <li><i data-feather="settings" class="icon-bullet"></i> Big Data & Engineering: Spark, Hadoop, SQL, APIs, Docker, MLOps, cloud deployment</li>
+          <li><i data-feather="activity" class="icon-bullet"></i> Applied work: Real-world projects in fraud detection, recommendation systems, Ml and NLP</li>
+          <li><i data-feather="globe" class="icon-bullet"></i> Bilingual curriculum (FR/EN) – International exposure (Erasmus+ eligible)</li>
+        </ul>
       </div>
     </section>
-
-
-
-
     <!-- Projects -->
- 
+    
     <section id="projects" class="section" style="padding-top: 3rem; padding-bottom: 3rem;">
       <div class="section-header">
         <span class="section-mainicon"><i data-feather="folder"></i></span>
         <h2 data-i18n="projects_title" class="section-title">Projects</h2>
         <p data-i18n="projects_subtitle" class="section-subtitle">A selection of my end-to-end data & AI projects</p>
       </div>
+      
       <div class="project-filters">
         <button class="filter-btn active" data-filter="all">
           <i data-feather="grid"></i>
@@ -167,78 +169,92 @@
           <i data-feather="type"></i>
           <span data-i18n="filter_nlp">NLP</span>
         </button>
+        <button class="filter-btn" data-filter="ml">
+          <i data-feather="cpu"></i>
+          <span data-i18n="filter_ml">ML</span>
+        </button>
         <button class="filter-btn" data-filter="eda">
           <i data-feather="bar-chart-2"></i>
           <span data-i18n="filter_data">EDA</span>
         </button>
       </div>
-      <div id="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2.5rem;">
+      
+      
+      <div id="projects-grid">
 
         <!-- Project 1 : Safe Review Pipeline -->
-        <div class="project-item project-card" data-category="nlp" style="display: flex; flex-direction: column; justify-content: space-between;">
-          <h3 style="display: flex; align-items: center; gap: 0.6em;">
-            <i data-feather="shield"></i>
-            <span data-i18n="project1_title">Safe Review Pipeline</span>
-          </h3>
-          <p data-i18n="project1_desc">
-            Local NLP pipeline to moderate user reviews: BERT-based toxicity detection, summarization, rewriting — no cloud, no compromise on privacy.
-          </p>
-          <details class="project-details">
-            <summary data-i18n="project1_more">Learn more</summary>
-            <p data-i18n="project1_desc_long">
-              This project is a fully local, explainable moderation pipeline that:
-              scrapes reviews, detects harmful content using BERT, generates smart summaries with T5, and rewrites toxic comments for publication — all with no external API. 
-              It includes a Streamlit dashboard and a FastAPI backend, and is designed to be modular, privacy-preserving, and production-ready.
+        
+        <div class="project-item project-card" data-category="nlp">
+          <div>
+            <h3 style="display: flex; align-items: center; gap: 0.6em;">
+              <i data-feather="shield"></i>
+              <span data-i18n="project1_title">Safe Review Pipeline</span>
+            </h3>
+            <p data-i18n="project1_desc">
+              Local NLP pipeline to moderate user reviews: BERT-based toxicity detection, summarization, rewriting — no cloud, no compromise on privacy.
             </p>
-          </details>
+            <details class="project-details">
+              <summary data-i18n="project1_more">Learn more</summary>
+              <p data-i18n="project1_desc_long">
+                This project is a fully local, explainable moderation pipeline that:
+                scrapes reviews, detects harmful content using BERT, generates smart summaries with T5, and rewrites toxic comments for publication — all with no external API. 
+                It includes a Streamlit dashboard and a FastAPI backend, and is designed to be modular, privacy-preserving, and production-ready.
+              </p>
+            </details>
 
-          <!-- Technologies utilisées -->
-          <h4 class="project-techs-title" data-i18n="project_techs">Technologies used</h4>
-
-          <div class="project-techs">
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">BERT</span>
-            <span class="tech-badge">T5</span>
-            <span class="tech-badge">FastAPI</span>
-            <span class="tech-badge">Streamlit</span>
-            <span class="tech-badge">scikit-learn</span>
-            <span class="tech-badge">No Cloud</span>
-          </div>          
-          <a href="https://github.com/BeediGoua/ReviewGuardian" target="_blank" class="btn" style="margin-top: 1.2rem;">
+            <!-- Technologies utilisées -->
+            <h4 class="project-techs-title" data-i18n="project_techs">Technologies used</h4>
+            <div class="project-techs">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">BERT</span>
+              <span class="tech-badge">T5</span>
+              <span class="tech-badge">FastAPI</span>
+              <span class="tech-badge">Streamlit</span>
+              <span class="tech-badge">scikit-learn</span>
+              <span class="tech-badge">No Cloud</span>
+            </div>
+          </div>
+          
+          
+          <a href="https://github.com/BeediGoua/ReviewGuardian" target="_blank" class="btn">
             <i data-feather="github"></i> View on GitHub
           </a>
         </div>
 
-
         <!-- Project 2 : Hybrid Music Recommender -->
-        <div class="project-item project-card" data-category="reco" style="display: flex; flex-direction: column; justify-content: space-between;">
-          <h3 style="display: flex; align-items: center; gap: 0.6em;">
-            <i data-feather="headphones"></i>
-            <span data-i18n="project2_title">Hybrid Music Recommender</span>
-          </h3>
-          <p data-i18n="project2_desc">
-            Intelligent playlist recommender mixing Word2Vec & NLP embeddings. Interactive app, filters by genre & duration, exportable results.
-          </p>
-          <details class="project-details">
-            <summary data-i18n="project2_more">Learn more</summary>
-            <p data-i18n="project2_desc_long">
-              This hybrid music recommender blends collaborative filtering (Word2Vec) and content-based embeddings (SentenceTransformers).
-              It includes a Streamlit interface with search, sliders to adjust semantic weights, and genre/duration filters.
-              The system is 100% local, customizable, and ready for large datasets. Visual explanations and CSV exports are also available.
+        
+        <div class="project-item project-card" data-category="ml">
+          <div>
+            <h3 style="display: flex; align-items: center; gap: 0.6em;">
+              <i data-feather="headphones"></i>
+              <span data-i18n="project2_title">Hybrid Music Recommender</span>
+            </h3>
+            <p data-i18n="project2_desc">
+              Intelligent playlist recommender mixing Word2Vec & NLP embeddings. Interactive app, filters by genre & duration, exportable results.
             </p>
-          </details>
-          <!-- Technologies utilisées -->
-          <h4 class="project-techs-title" data-i18n="project_techs">Technologies used</h4>
-
-          <div class="project-techs">
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">Word2Vec</span>
-            <span class="tech-badge">SentenceTransformers</span>
-            <span class="tech-badge">pandas</span>
-            <span class="tech-badge">scikit-learn</span>
-            <span class="tech-badge">Streamlit</span>
-          </div>          
-          <a href="https://github.com/BeediGoua/music-recommender-hybrid" target="_blank" class="btn" style="margin-top: 1.2rem;">
+            <details class="project-details">
+              <summary data-i18n="project2_more">Learn more</summary>
+              <p data-i18n="project2_desc_long">
+                This hybrid music recommender blends collaborative filtering (Word2Vec) and content-based embeddings (SentenceTransformers).
+                It includes a Streamlit interface with search, sliders to adjust semantic weights, and genre/duration filters.
+                The system is 100% local, customizable, and ready for large datasets. Visual explanations and CSV exports are also available.
+              </p>
+            </details>
+            
+            <!-- Technologies utilisées -->
+            <h4 class="project-techs-title" data-i18n="project_techs">Technologies used</h4>
+            <div class="project-techs">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">Word2Vec</span>
+              <span class="tech-badge">SentenceTransformers</span>
+              <span class="tech-badge">pandas</span>
+              <span class="tech-badge">scikit-learn</span>
+              <span class="tech-badge">Streamlit</span>
+            </div>
+          </div>
+          
+          
+          <a href="https://github.com/BeediGoua/music-recommender-hybrid" target="_blank" class="btn">
             <i data-feather="github"></i> View on GitHub
           </a>
         </div>
@@ -415,6 +431,7 @@
     </section>
 
     <!-- Contact -->
+    
     <section id="contact" class="section" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
       <div class="section-header">
         <span class="section-mainicon"><i data-feather="mail"></i></span>
@@ -424,10 +441,19 @@
       <p data-i18n="contact_text" style="text-align: center; max-width: 500px;">
         Want to discuss an idea? Let's connect.
       </p>
-      <form id="contactForm" style="display: flex; flex-direction: column; align-items: center; gap: 1rem; width: 100%; max-width: 400px; background: #fff; padding: 2rem 1.5rem; border-radius: 16px; box-shadow: 0 2px 16px rgba(0,0,0,0.07);">
-        <input type="text" placeholder="Your Name" required style="width: 100%; padding: 0.7rem 1rem; border-radius: 8px; border: 1px solid #ddd;"/>
-        <input type="email" placeholder="Your Email" required style="width: 100%; padding: 0.7rem 1rem; border-radius: 8px; border: 1px solid #ddd;"/>
-        <textarea placeholder="Your Message" required style="width: 100%; padding: 0.7rem 1rem; border-radius: 8px; border: 1px solid #ddd; min-height: 120px;"></textarea>
+      
+      <!-- FORMULAIRE MODIFIÉ POUR FORMSUBMIT -->
+      <form action="https://formsubmit.co/gouabeedi@gmail.com" method="POST" id="contactForm" style="display: flex; flex-direction: column; align-items: center; gap: 1rem; width: 100%; max-width: 400px; background: #fff; padding: 2rem 1.5rem; border-radius: 16px; box-shadow: 0 2px 16px rgba(0,0,0,0.07);">
+        
+        <!-- Configuration FormSubmit (invisibles) -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Nouveau message depuis ton portfolio Data Science">
+        <input type="hidden" name="_next" value="https://gouahenri.github.io/#contact">
+        
+        <!-- Champs visibles avec attributs name ajoutés -->
+        <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 0.7rem 1rem; border-radius: 8px; border: 1px solid #ddd;"/>
+        <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 0.7rem 1rem; border-radius: 8px; border: 1px solid #ddd;"/>
+        <textarea name="message" placeholder="Your Message" required style="width: 100%; padding: 0.7rem 1rem; border-radius: 8px; border: 1px solid #ddd; min-height: 120px;"></textarea>
         <button type="submit" class="btn" data-i18n="form_submit" style="width: 100%; max-width: 200px;">Send Message</button>
       </form>
     </section>

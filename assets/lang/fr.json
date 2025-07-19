@@ -1,50 +1,62 @@
 {
   "nav_home": "Accueil",
   "nav_about": "À propos",
+  "nav_education": "Formation",
   "nav_skills": "Compétences",
   "nav_projects": "Projets",
-  "nav_experience": "Expérience",
-  "nav_contact": "Contact",
   "nav_techskills": "Comp. Techniques",
-
+  "nav_contact": "Contact",
+  
   "hero_greeting": "Bonjour, je suis",
   "hero_title": "Data Scientist spécialisé en IA et NLP",
   "hero_description": "Data Scientist — explorer, construire et relier les idées des données au cloud",
+  
   "btn_projects": "Mes projets",
   "btn_contact": "Contact",
+  "btn_cv_fr": "Télécharger le CV (FR)",
+  "btn_cv_en": "Télécharger le CV (EN)",
   "btn_darkmode": "Mode sombre",
-
+  "btn_scrolltop": "Haut de page",
+  
   "about_title": "À propos de moi",
   "about_subtitle": "Data Scientist polyvalent et rigoureux",
-  "projects_subtitle": "Quelques projets data & IA réalisés de bout en bout",
-  "skills_subtitle": "Forces clés en data, ML, NLP & ingénierie",
-  "about_intro": "Étudiant en dernière année à l’ENSAI, avec une solide formation en mathématiques, statistiques et machine learning.",
-  "about_text": "Je suis Data Scientist avec des compétences larges en modélisation statistique, apprentissage supervisé/non supervisé, deep learning, NLP et IA générative. Mon parcours académique m’a apporté rigueur et esprit analytique.",
-  "about_desc": "Je conçois des pipelines modulaires et scalables — du prétraitement des données au déploiement — avec un souci de robustesse, d’interprétabilité et d’automatisation.",
-  "about_extra": "J’aime résoudre des problèmes concrets de bout en bout, en combinant ML classique et outils modernes comme les LLMs, embeddings et bases vectorielles. J’accorde aussi de l’importance au code propre et à la vulgarisation des modèles complexes.",
-
+  "about_intro": "Étudiant en dernière année à l'ENSAI, avec une solide formation en mathématiques, statistiques et machine learning.",
+  "about_text": "Je suis Data Scientist avec des compétences larges en modélisation statistique, apprentissage supervisé/non supervisé, deep learning, NLP et IA générative. Mon parcours académique m'a apporté rigueur et esprit analytique.",
+  "about_desc": "Je conçois des pipelines modulaires et scalables — du prétraitement des données au déploiement — avec un souci de robustesse, d'interprétabilité et d'automatisation.",
+  "about_extra": "J'aime résoudre des problèmes concrets de bout en bout, en combinant ML classique et outils modernes comme les LLMs, embeddings et bases vectorielles. J'accorde aussi de l'importance au code propre et à la vulgarisation des modèles complexes.",
+  "about_location": "Rennes, France",
+  
   "education_title": "Formation",
   "education_subtitle": "Parcours académique & cours clés",
   "edu1_title": "Diplôme d'ingénieur – Data Science & IA",
   "edu1_date": "2022 – 2025",
-  "edu1_school": "ENSAI – École Nationale de la Statistique et de l'Analyse de l'Information",
-  "edu1_desc": "Spécialisation en Intelligence Artificielle et NLP. Cours majeurs :",
-  "edu1_course1": "Machine Learning, Deep Learning, NLP (avancé)",
-  "edu1_course2": "LLMs, architectures RAG, bases vectorielles",
-  "edu1_course3": "GLM, séries temporelles, inférence bayésienne, calcul stochastique",
-  "edu1_course4": "Big Data (Hadoop, Spark), SQL, APIs, Python, Java",
-
-
+  "edu1_school": "ENSAI – École Nationale de la Statistique et de l'Analyse de l'Information (Ker Lann, Rennes)",
+  "edu1_desc": "Grande École française rattachée à l'INSEE – Programme d'excellence en statistiques et IA",
+  "edu1_course1": "Cours clés : apprentissage supervisé & non supervisé, deep learning (PyTorch, TensorFlow), NLP avec Transformers, IA générative (LLMs, RAG), séries temporelles, inférence bayésienne, calcul stochastique",
+  "edu1_course2": "Big Data & Ingénierie : Spark, Hadoop, SQL, APIs, Docker, MLOps, déploiement cloud",
+  "edu1_course3": "Projets appliqués : détection de fraude, systèmes de recommandation, NLP",
+  "edu1_course4": "Programme bilingue (FR/EN) – Ouverture internationale (éligible Erasmus+)",
   
-  "about_location": "Rennes, France",
+  "projects_title": "Mes Projets",
+  "projects_subtitle": "Quelques projets data & IA réalisés de bout en bout",
+  "filter_all": "Tous",
+  "filter_nlp": "NLP",
+  "filter_ml": "Machine Learning",
+  "filter_data": "Data Analysis",
+  "project_techs": "Technologies utilisées",
   
-  "btn_cv": "Télécharger le CV", 
-  "btn_discuss": "Discutons",
-
+  "project1_title": "Pipeline de Modération d'Avis",
+  "project1_desc": "Pipeline NLP local pour modérer les avis : détection de toxicité, résumé, réécriture — sans cloud, 100% respectueux de la vie privée.",
+  "project1_more": "En savoir plus",
+  "project1_desc_long": "Ce projet est un pipeline de modération local et explicable : il collecte des avis, détecte les contenus problématiques avec BERT, génère des résumés (T5), et réécrit automatiquement les commentaires toxiques. Aucun appel API : tout fonctionne en local, avec interface utilisateur (Streamlit) et API REST (FastAPI).",
+  
+  "project2_title": "Système de Recommandation Musicale Hybride",
+  "project2_desc": "Recommander intelligemment des morceaux avec Word2Vec + embeddings NLP. Application locale interactive et export de playlists.",
+  "project2_more": "En savoir plus",
+  "project2_desc_long": "Ce système de recommandation musicale associe deux approches complémentaires : (1) filtrage collaboratif via Word2Vec (coécoute) et (2) similarité sémantique via embeddings NLP. Il permet de rechercher des morceaux, ajuster les pondérations entre les moteurs, filtrer par genre ou durée, et visualiser les recommandations dans une interface Streamlit conviviale. Tout fonctionne en local, sans dépendance cloud, avec possibilité d'export CSV pour les playlists générées.",
+  
   "skills_title": "Compétences",
-  "skills_languages": "Langages & Frameworks",
-  "skills_ml": "Machine Learning & IA",
-  "skills_soft": "Compétences transversales",
+  "skills_subtitle": "Forces clés en data, ML, NLP & ingénierie",
   "skills_adv_data_science_title": "Data Science",
   "skills_adv_data_science_desc": "Python (pandas, numpy, polars), SQL, modélisation statistique, EDA automatisée.",
   "skills_adv_ml_title": "Machine Learning",
@@ -57,26 +69,17 @@
   "skills_adv_cloud_desc": "AWS, GCP : déploiement, stockage, orchestration de pipelines.",
   "skills_adv_viz_title": "Visualisation & Présentation",
   "skills_adv_viz_desc": "Matplotlib, Plotly, dashboards interactifs (Streamlit), documentation claire.",
-  "btn_scrolltop": "Haut de page",
-
-  "projects_title": "Mes Projets",
-  "filter_all": "Tous",
-  "filter_nlp": "NLP",
-  "filter_ml": "Machine Learning",
-  "filter_data": "Data Analysis",
-
-  "project1_title": "Pipeline de Modération d'Avis",
-  "project1_desc": "Pipeline NLP local pour modérer les avis : détection de toxicité, résumé, réécriture — sans cloud, 100% respectueux de la vie privée.",
-  "project1_more": "En savoir plus",
-  "project1_desc_long": "Ce projet est un pipeline de modération local et explicable : il collecte des avis, détecte les contenus problématiques avec BERT, génère des résumés (T5), et réécrit automatiquement les commentaires toxiques. Aucun appel API : tout fonctionne en local, avec interface utilisateur (Streamlit) et API REST (FastAPI).",
-  "project_techs": "Technologies utilisées",
-
-  "project2_title": "Système de Recommandation Musicale Hybride",
-  "project2_desc": "Recommander intelligemment des morceaux avec Word2Vec + embeddings NLP. Application locale interactive et export de playlists.",
-  "project2_more": "En savoir plus",
-  "project2_desc_long": "Ce système de recommandation musicale associe deux approches complémentaires : (1) filtrage collaboratif via Word2Vec (coécoute) et (2) similarité sémantique via embeddings NLP. Il permet de rechercher des morceaux, ajuster les pondérations entre les moteurs, filtrer par genre ou durée, et visualiser les recommandations dans une interface Streamlit conviviale. Tout fonctionne en local, sans dépendance cloud, avec possibilité d’export CSV pour les playlists générées.",
-
-
+  
+  "techskills_title": "Compétences Techniques",
+  "techskills_subtitle": "Technologies, bibliothèques et outils principaux que j'utilise au quotidien",
+  "techskills_langs": "Langages",
+  "techskills_libs": "Librairies Data & ML",
+  "techskills_nlp": "NLP & LLMs",
+  "techskills_mlops": "MLOps & API",
+  "techskills_cloud": "Cloud & DevOps",
+  "techskills_db": "Bases de données",
+  "techskills_viz": "Visualisation",
+  
   "experience_title": "Expérience & Formation",
   "exp1_title": "Stage Data Scientist",
   "exp1_date": "Sept 2024 - Mars 2025",
@@ -85,15 +88,7 @@
   "exp1_task1": "Développement pipeline OCR → chunking → enrichissement",
   "exp1_task2": "Implémentation résumés automatiques avec LLMs",
   "exp1_task3": "Benchmark multi-configurations avec RAGAS",
-
-  "edu1_title": "Ingénieur Data Science",
-  "edu1_date": "2022 - 2025",
-  "edu1_school": "ENSAI",
-  "edu1_desc": "Spécialisation Data Science & Intelligence Artificielle",
-  "edu1_course1": "Machine Learning avancé",
-  "edu1_course2": "Deep Learning & NLP",
-  "edu1_course3": "Big Data & Cloud Computing",
-
+  
   "contact_title": "Contact",
   "contact_subtitle": "Restons en contact",
   "contact_text": "Je suis toujours ouvert aux nouvelles opportunités et collaborations. N'hésitez pas à me contacter !",
@@ -103,31 +98,11 @@
   "form_subject": "Sujet",
   "form_message": "Message",
   "form_submit": "Envoyer le message",
-
+  
   "footer_rights": "Tous droits réservés.",
-  "close": "Fermer",
-
-  "btn_cv_fr": "Télécharger le CV (FR)",
-  "btn_cv_en": "Télécharger le CV (EN)",
   "footer_linkedin": "LinkedIn",
   "footer_github": "GitHub",
   "footer_email": "Email",
-
-  "techskills_title": "Compétences Techniques",
-  "techskills_subtitle": "Technologies, bibliothèques et outils principaux que j'utilise au quotidien",
-  "techskills_langs": "Langages",
-  "techskills_langs_list": "Python (avancé), SQL (avancé), Bash, Java (basique)",
-  "techskills_libs": "Librairies Data & ML",
-  "techskills_libs_list": "Pandas, NumPy, Scikit-learn, Polars, XGBoost, LightGBM, PyTorch, TensorFlow",
-  "techskills_nlp": "NLP & LLMs",
-  "techskills_nlp_list": "spaCy, NLTK, Hugging Face Transformers, LangChain, SentenceTransformers, BERT, T5",
-  "techskills_mlops": "MLOps & API",
-  "techskills_mlops_list": "FastAPI, Streamlit, MLflow (basique), Docker, Git, CI/CD (GitHub Actions)",
-  "techskills_cloud": "Cloud & DevOps",
-  "techskills_cloud_list": "AWS (S3, Lambda, EC2), GCP (Vertex AI, BigQuery), Azure (OpenAI), Terraform (notions)",
-  "techskills_db": "Bases de données",
-  "techskills_db_list": "PostgreSQL, SQLite, NoSQL (MongoDB), Firebase (basique)",
-  "techskills_viz": "Visualisation",
-  "techskills_viz_list": "Matplotlib, Seaborn, Plotly, Dash, Power BI (notions)"
+  
+  "close": "Fermer"
 }
-

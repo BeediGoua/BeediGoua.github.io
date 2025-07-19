@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Langue par défaut ou sauvegardée
   const langSwitcher = document.getElementById('langSwitcher');
   if (langSwitcher) {
-    langSwitcher.value = currentLang; // synchronise visuellement
-    changeLanguage(currentLang);      // charge les bonnes traductions
+    langSwitcher.value = currentLang; 
+    changeLanguage(currentLang);      
 
     langSwitcher.addEventListener('change', (e) => {
       const selectedLang = e.target.value;
