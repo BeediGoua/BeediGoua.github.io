@@ -1181,3 +1181,22 @@ select:focus {
     max-width: var(--large);
   }
 }
+
+.project-summary {
+  padding: 0.5rem 0;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--project-subtitle-color);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.project-summary:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.project-details-content {
+  padding-top: 0.8rem;
+  line-height: 1.6;
+}
