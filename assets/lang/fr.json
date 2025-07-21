@@ -51,10 +51,10 @@
   "project1_desc_long": "ReviewGuardian est un pipeline d'IA local et explicable conçu pour la modération d'avis en ligne. Il détecte les commentaires toxiques à l'aide de plusieurs modèles (Naive Bayes, Régression Logistique, Forêt Aléatoire), explique ses prédictions avec SHAP, et offre une interface interactive via Streamlit pour une modération en temps réel. Tout fonctionne hors ligne, sans appel à des APIs externes — garantissant une confidentialité totale des données et une traçabilité complète.",
 
   "project2_title": "Système de Recommandation Musicale Hybride",
-  "project2_desc": "Recommander intelligemment des morceaux avec Word2Vec + embeddings NLP. Application locale interactive et export de playlists.",
+  "project2_desc": "Recommande intelligemment des morceaux avec Word2Vec et embeddings NLP. Application locale interactive, filtres dynamiques, export de playlists.",
   "project2_more": "En savoir plus",
-  "project2_desc_long": "Ce système de recommandation musicale associe deux approches complémentaires : (1) filtrage collaboratif via Word2Vec (coécoute) et (2) similarité sémantique via embeddings NLP. Il permet de rechercher des morceaux, ajuster les pondérations entre les moteurs, filtrer par genre ou durée, et visualiser les recommandations dans une interface Streamlit conviviale. Tout fonctionne en local, sans dépendance cloud, avec possibilité d'export CSV pour les playlists générées.",
-  
+  "project2_desc_long": "Ce système de recommandation musicale hybride combine deux moteurs complémentaires : (1) un filtrage collaboratif basé sur Word2Vec (coécoute), et (2) une analyse sémantique via embeddings Sentence-BERT. L'application propose :\n\n<ul>\n<li>Un moteur double : similarité de coécoute (Word2Vec) + sémantique (Sentence-BERT)</li>\n<li>Filtres interactifs par genre, durée, humeur ou décennie</li>\n<li>Mode exploration avec métriques audio avancées (énergie, dansabilité, positivité)</li>\n<li>Indicateurs de performance : 94,2 % de précision, 85ms de latence, note utilisateur 4,6/5</li>\n<li>Dashboard avancé avec heatmaps, graphiques radar, comparaison avec Spotify</li>\n<li>Génération et export CSV de playlists personnalisées</li>\n<li>Déploiement 100 % local, sans cloud ni API externe</li>\n</ul>\n\nPensé pour la performance, l’interprétabilité et la personnalisation — une plateforme locale puissante pour expérimenter les systèmes de recommandation."
+,
   "skills_title": "Compétences",
   "skills_subtitle": "Forces clés en data, ML, NLP & ingénierie",
   "skills_adv_data_science_title": "Data Science",
