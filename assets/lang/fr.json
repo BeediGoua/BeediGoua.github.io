@@ -45,11 +45,11 @@
   "filter_data": "Data Analysis",
   "project_techs": "Technologies utilisées",
   
-  "project1_title": "Pipeline de Modération d'Avis",
-  "project1_desc": "Pipeline NLP local pour modérer les avis : détection de toxicité, résumé, réécriture — sans cloud, 100% respectueux de la vie privée.",
+  "project1_title": "ReviewGuardian – Pipeline de Modération Sécurisé",
+  "project1_desc": "Pipeline local pour modérer les avis utilisateurs : détection de toxicité, explicabilité et évaluation des performances — sans cloud, respectueux de la vie privée.",
   "project1_more": "En savoir plus",
-  "project1_desc_long": "Ce projet est un pipeline de modération local et explicable : il collecte des avis, détecte les contenus problématiques avec BERT, génère des résumés (T5), et réécrit automatiquement les commentaires toxiques. Aucun appel API : tout fonctionne en local, avec interface utilisateur (Streamlit) et API REST (FastAPI).",
-  
+  "project1_desc_long": "ReviewGuardian est un pipeline d'IA local et explicable conçu pour la modération d'avis en ligne. Il détecte les commentaires toxiques à l'aide de plusieurs modèles (Naive Bayes, Régression Logistique, Forêt Aléatoire), explique ses prédictions avec SHAP, et offre une interface interactive via Streamlit pour une modération en temps réel. Tout fonctionne hors ligne, sans appel à des APIs externes — garantissant une confidentialité totale des données et une traçabilité complète.",
+
   "project2_title": "Système de Recommandation Musicale Hybride",
   "project2_desc": "Recommander intelligemment des morceaux avec Word2Vec + embeddings NLP. Application locale interactive et export de playlists.",
   "project2_more": "En savoir plus",

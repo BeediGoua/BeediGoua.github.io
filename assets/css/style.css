@@ -577,16 +577,29 @@ header {
 }
 
 /* NIVEAU 2 : Sous-sections (BLEU DÉGRADÉ/MOYEN) */
+.project-details {
+  background-color: #1b1e2e; /* Fond sombre élégant */
+  color: #f0f0f0; /* Texte clair pour contraste */
+  padding: 1em;
+  margin-top: 0.8em;
+  border-radius: 8px;
+  font-size: 0.95em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Optionnel mais rend très bien */
+  border-left: 4px solid var(--primary-color); /* Marqueur visuel */
+}
+
 .project-details summary {
-  color: var(--project-subtitle-color) !important;
+  color: var(--project-subtitle-color, #cccccc);
   margin-top: 0.5rem;
   font-weight: 500;
   cursor: pointer;
-  transition: var(--transition);
+  transition: var(--transition, all 0.3s ease);
+  list-style: none;
+  outline: none;
 }
 
 .project-details summary:hover {
-  color: var(--primary-color) !important;
+  color: var(--primary-color);
   text-decoration: underline;
 }
 
@@ -601,11 +614,27 @@ header {
 }
 
 .project-details p {
-  margin-top: 0.5rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.5rem;
   font-size: 0.95rem;
-  color: var(--text-improved);
   line-height: 1.6;
+  color: #f0f0f0;
 }
+
+.project-details ul {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-left: 1.5em;
+}
+
+.project-details li {
+  margin-bottom: 0.3em;
+}
+
+.project-details ul li::marker {
+  color: var(--primary-color); /* Donne une touche personnalisée */
+}
+
 
 /* Technologies des projets */
 .project-techs-title {

@@ -182,66 +182,99 @@
       
       <div id="projects-grid">
 
-        <!-- Project 1 : Safe Review Pipeline -->
         
+        <!-- Project 1 : ReviewGuardian -->
         <div class="project-item project-card" data-category="nlp">
           <div>
             <h3 style="display: flex; align-items: center; gap: 0.6em;">
               <i data-feather="shield"></i>
-              <span data-i18n="project1_title">Safe Review Pipeline</span>
+              <span data-i18n="project1_title">ReviewGuardian – Safe Review Pipeline</span>
             </h3>
+
             <p data-i18n="project1_desc">
-              Local NLP pipeline to moderate user reviews: BERT-based toxicity detection, summarization, rewriting — no cloud, no compromise on privacy.
+              A fully local AI system to moderate user reviews in real-time. It detects toxic content, explains decisions, and rewrites harmful text — all while preserving user privacy.
             </p>
+
             <details class="project-details">
-              <summary data-i18n="project1_more">Learn more</summary>
-              <p data-i18n="project1_desc_long">
-                This project is a fully local, explainable moderation pipeline that:
-                scrapes reviews, detects harmful content using BERT, generates smart summaries with T5, and rewrites toxic comments for publication — all with no external API. 
-                It includes a Streamlit dashboard and a FastAPI backend, and is designed to be modular, privacy-preserving, and production-ready.
-              </p>
+              <summary role="button" data-i18n="project1_more" onclick="this.scrollIntoView({behavior: 'smooth', block: 'start'})">
+                Learn more
+              </summary>
+              <div data-i18n="project1_desc_long">
+                <p>
+                  ReviewGuardian is a privacy-first NLP pipeline designed to detect and handle toxic content in user reviews. It features:
+                </p>
+                <ul>
+                  <li>Review scraping and preprocessing with custom cleaning</li>
+                  <li>Toxicity detection using 3 models: Naive Bayes, Logistic Regression, and Random Forest (TF-IDF features)</li>
+                  <li>Explanation of predictions with SHAP</li>
+                  <li>Versioned models with A/B testing and performance logging</li>
+                  <li>Streamlit dashboard + FastAPI backend — 100% local, no cloud dependency</li>
+                </ul>
+                <p>
+                  All inference is done locally, ensuring total data confidentiality and transparency.
+                </p>
+              </div>
             </details>
 
-            <!-- Technologies utilisées -->
             <h4 class="project-techs-title" data-i18n="project_techs">Technologies used</h4>
             <div class="project-techs">
               <span class="tech-badge">Python</span>
-              <span class="tech-badge">BERT</span>
-              <span class="tech-badge">T5</span>
+              <span class="tech-badge">TF-IDF</span>
+              <span class="tech-badge">Naive Bayes</span>
+              <span class="tech-badge">Logistic Regression</span>
+              <span class="tech-badge">Random Forest</span>
+              <span class="tech-badge">SHAP</span>
               <span class="tech-badge">FastAPI</span>
               <span class="tech-badge">Streamlit</span>
               <span class="tech-badge">scikit-learn</span>
-              <span class="tech-badge">No Cloud</span>
             </div>
           </div>
-          
-          
-          <a href="https://github.com/BeediGoua/ReviewGuardian" target="_blank" class="btn">
-            <i data-feather="github"></i> View on GitHub
-          </a>
+
+          <div style="display: flex; gap: 1em; flex-wrap: wrap; margin-top: 1em;">
+            <a href="https://reviewguardian-2rkgvek43wzaqganiuzdsq.streamlit.app" target="_blank" class="btn">
+              <i data-feather="play-circle"></i> Live Demo
+            </a>
+            <a href="https://github.com/BeediGoua/ReviewGuardian" target="_blank" class="btn">
+              <i data-feather="github"></i> View on GitHub
+            </a>
+          </div>
         </div>
 
         <!-- Project 2 : Hybrid Music Recommender -->
-        
+
         <div class="project-item project-card" data-category="ml">
           <div>
             <h3 style="display: flex; align-items: center; gap: 0.6em;">
               <i data-feather="headphones"></i>
               <span data-i18n="project2_title">Hybrid Music Recommender</span>
             </h3>
+
             <p data-i18n="project2_desc">
               Intelligent playlist recommender mixing Word2Vec & NLP embeddings. Interactive app, filters by genre & duration, exportable results.
             </p>
+
             <details class="project-details">
-              <summary data-i18n="project2_more">Learn more</summary>
-              <p data-i18n="project2_desc_long">
-                This hybrid music recommender blends collaborative filtering (Word2Vec) and content-based embeddings (SentenceTransformers).
-                It includes a Streamlit interface with search, sliders to adjust semantic weights, and genre/duration filters.
-                The system is 100% local, customizable, and ready for large datasets. Visual explanations and CSV exports are also available.
-              </p>
+              <summary data-i18n="project2_more" onclick="this.scrollIntoView({behavior: 'smooth', block: 'start'})">
+                Learn more
+              </summary>
+
+              <div data-i18n="project2_desc_long">
+                <p>
+                  This hybrid music recommender blends collaborative filtering (Word2Vec) and content-based embeddings (SentenceTransformers).
+                </p>
+                <ul>
+                  <li>Semantic similarity between tracks using Word2Vec & Sentence-BERT</li>
+                  <li>Interactive interface with adjustable weights and filters (genre, duration)</li>
+                  <li>Real-time playlist generation with export to CSV</li>
+                  <li>Local-only architecture, customizable on any music dataset</li>
+                  <li>Streamlit dashboard with visual explanations (dimensionality reduction, embeddings)</li>
+                </ul>
+                <p>
+                  Built for speed and interpretability — a local experiment platform for recommender systems.
+                </p>
+              </div>
             </details>
-            
-            <!-- Technologies utilisées -->
+
             <h4 class="project-techs-title" data-i18n="project_techs">Technologies used</h4>
             <div class="project-techs">
               <span class="tech-badge">Python</span>
@@ -251,15 +284,19 @@
               <span class="tech-badge">scikit-learn</span>
               <span class="tech-badge">Streamlit</span>
             </div>
+
+            <div style="display: flex; gap: 1em; flex-wrap: wrap; margin-top: 1em;">
+              <a href="https://github.com/BeediGoua/music-recommender-hybrid" target="_blank" class="btn">
+                <i data-feather="github"></i> View on GitHub
+              
+              </a>
+            </div>
           </div>
-          
-          
-          <a href="https://github.com/BeediGoua/music-recommender-hybrid" target="_blank" class="btn">
-            <i data-feather="github"></i> View on GitHub
-          </a>
         </div>
-      </div>
-    </section>
+
+      </div> 
+    </section> 
+
 
     <!-- Skills -->
     <section id="skills" class="section">

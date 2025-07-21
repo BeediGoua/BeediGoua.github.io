@@ -45,11 +45,11 @@
   "filter_data": "Data Analysis",
   "project_techs": "Technologies used",
   
-  "project1_title": "Safe Review Pipeline",
-  "project1_desc": "Local NLP pipeline to moderate user reviews: BERT-based toxicity detection, summarization, rewriting — no cloud, no compromise on privacy.",
+  "project1_title": "ReviewGuardian – Safe Review Pipeline",
+  "project1_desc": "Fully local pipeline for moderating user reviews: toxicity detection, explainability, and performance evaluation — privacy-friendly and cloud-free.",
   "project1_more": "Learn more",
-  "project1_desc_long": "This project is a fully local, explainable moderation pipeline that scrapes reviews, detects harmful content using BERT, generates smart summaries with T5, and rewrites toxic comments for publication — all with no external API. It includes a Streamlit dashboard and a FastAPI backend, and is designed to be modular, privacy-preserving, and production-ready.",
-  
+  "project1_desc_long": "ReviewGuardian is a fully local and explainable AI pipeline for moderating user-generated reviews. It detects toxic comments using multiple models (Naive Bayes, Logistic Regression, Random Forest), explains predictions with SHAP, and provides a Streamlit-based interface for real-time moderation. All components run offline, with no external API calls — ensuring complete data privacy and auditability."
+  ,
   "project2_title": "Hybrid Music Recommender",
   "project2_desc": "Intelligent playlist recommender mixing Word2Vec & NLP embeddings. Interactive app, filters by genre & duration, exportable results.",
   "project2_more": "Learn more",
