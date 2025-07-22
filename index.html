@@ -48,21 +48,29 @@
   <!-- Header -->
   <header>
     <nav id="mainNav">
-      <a href="#hero" class="nav-link" data-i18n="nav_home">Home</a>
-      <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
-      
-      <a href="#education" class="nav-link" data-i18n="nav_education">Education</a>
-      <a href="#projects" class="nav-link" data-i18n="nav_projects">Projects</a>
-      <a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a>
-      <a href="#technical-skills" class="nav-link" data-i18n="nav_techskills">Technical Skills</a>
-      <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
+      <div class="nav-links">
+        <a href="#hero" class="nav-link" data-i18n="nav_home">Home</a>
+        <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
+        <a href="#education" class="nav-link" data-i18n="nav_education">Education</a>
+        <a href="#projects" class="nav-link" data-i18n="nav_projects">Projects</a>
+        <a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a>
+        <a href="#technical-skills" class="nav-link" data-i18n="nav_techskills">Technical Skills</a>
+        <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
+      </div>
 
-      <select id="langSwitcher">
-        <option value="en">EN</option>
-        <option value="fr">FR</option>
-      </select>
+      <div class="nav-controls">
+        <select id="langSwitcher">
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+        </select>
+        <button id="darkModeToggle" data-i18n="dark_mode"><i class="fas fa-moon"></i></button>
+      </div>
 
-      <button id="darkModeToggle" data-i18n="dark_mode"><i class="fas fa-moon"></i></button>
+      <div class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
   </header>
 
@@ -73,11 +81,15 @@
     <section id="hero" class="section hero hero-section">
       <div class="hero-content fadeIn">
         <img src="assets/img/goua.jpg" alt="Portrait Goua Beedi Henri" style="width:110px;border-radius:50%;box-shadow:0 2px 12px rgba(74,144,226,0.15);margin-bottom:1.2rem;">
-        <h1 style="text-align: center;">
-          <span data-i18n="hero_greeting">Hi, I'm</span> Goua Beedi Henri
-          <span class="typed-text"></span>
+        <h1 style="text-align: center; line-height: 1.3;">
+          <span class="hero-name" style="display: block; margin-bottom: 0.5rem;">
+            <span data-i18n="hero_greeting">Hi, I'm</span> Goua Beedi Henri
+          </span>
+          <span class="hero-title" style="display: block; font-size: 0.7em; color: var(--accent-color); font-weight: 500;">
+            <span class="typed-text"></span>
+          </span>
         </h1>
-        <p data-i18n="hero_description" style="text-align: center; max-width: 600px; margin: 0 auto 1.2rem auto;">
+        <p data-i18n="hero_description" style="text-align: center; max-width: 100%; margin: 1.5rem auto 1.2rem auto; font-size: 1.1rem;">
           Data Scientist — exploring, building, and connecting ideas from data to cloud
         </p>
         <a href="#projects" class="btn bounce" data-i18n="btn_projects" style="display: block; margin: 0 auto;">See My Projects</a>
@@ -194,25 +206,29 @@
             </p>
 
             <details class="project-details">
-              <summary role="button" data-i18n="project1_more" onclick="this.scrollIntoView({behavior: 'smooth', block: 'start'})">
+            
+              <summary class="project-summary" onclick="this.scrollIntoView({behavior: 'smooth', block: 'start'})">
                 Learn more
               </summary>
-              <div data-i18n="project1_desc_long">
+              <div class="project-details-content">
                 <p>
-                  ReviewGuardian is a privacy-first NLP pipeline designed to detect and handle toxic content in user reviews. It features:
+                  ReviewGuardian is a privacy-focused NLP system for identifying and managing toxic content in user reviews. It includes:
                 </p>
+
                 <ul>
-                  <li>Review scraping and preprocessing with custom cleaning</li>
-                  <li>Toxicity detection using 3 models: Naive Bayes, Logistic Regression, and Random Forest (TF-IDF features)</li>
-                  <li>Explanation of predictions with SHAP</li>
-                  <li>Versioned models with A/B testing and performance logging</li>
-                  <li>Streamlit dashboard + FastAPI backend — 100% local, no cloud dependency</li>
+                  <li><strong>End-to-end review pipeline</strong> — scraping, preprocessing, and custom text cleaning</li>
+                  <li><strong>Multi-model toxicity detection</strong> using <em>Naive Bayes</em>, <em>Logistic Regression</em>, and <em>Random Forest</em> with TF-IDF</li>
+                  <li><strong>Explainability layer</strong> powered by <em>SHAP</em> for local interpretation of predictions</li>
+                  <li><strong>Model versioning and evaluation</strong> with built-in A/B testing and performance tracking</li>
+                  <li><strong>Fully local deployment</strong> — Streamlit front-end and FastAPI backend, no cloud, full control</li>
                 </ul>
+
                 <p>
-                  All inference is done locally, ensuring total data confidentiality and transparency.
+                  All inference runs locally to guarantee complete data privacy and maximum transparency.
                 </p>
               </div>
             </details>
+
 
             <h4 class="project-techs-title" data-i18n="project_techs">Technologies used</h4>
             <div class="project-techs">
@@ -527,7 +543,16 @@
   <script src="https://unpkg.com/feather-icons"></script>
   <script>
     window.addEventListener('DOMContentLoaded', () => {
-      if (window.feather) feather.replace();
+      // Initialiser Feather Icons
+      if (window.feather) {
+        feather.replace();
+        console.log('Feather Icons initialisées');
+      }
+
+      // S'assurer que les icônes se chargent même si le script principal a des délais
+      setTimeout(() => {
+        if (window.feather) feather.replace();
+      }, 100);
 
       // Scroll to top smooth for #backToTop
       const backToTop = document.getElementById('backToTop');
@@ -541,17 +566,4 @@
   </script>
 
 </body>
-</html>
-</html>
-  </script>
-
-</body>
-</html>
-</html>
-</html>
-  </script>
-
-</body>
-</html>
-</html>
 </html>
