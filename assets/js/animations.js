@@ -100,10 +100,7 @@ function initTypingEffect() {
   const el = document.querySelector('.typed-text');
   if (!el) return;
   const roles = [
-    "Data Scientist",
-    "NLP Engineer",
-    "RAG Specialist",
-    "LLM Enthusiast"
+    "Data Scientist"
   ];
   let i = 0, j = 0, isDeleting = false, txt = '';
 
