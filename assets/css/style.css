@@ -10,31 +10,60 @@
    VARIABLES GLOBALES (Design System)
 =============================================== */
 :root{
-  /* Couleurs Mode Nuit (par défaut) */
-  --primary-color:#4a6ee2;
-  --secondary-color:#23243a;
-  --accent-color:#3a86ff;
+  /* Palette Premium Mode Nuit */
+  --primary-color:#5b73f5;
+  --secondary-color:#1a1d2e;
+  --accent-color:#6366f1;
 
-  --background-gradient:linear-gradient(180deg,#20222a 0%,#23243a 100%);
-  --background-color:#20222a;
+  /* Accents sophistiqués pour hiérarchisation */
+  --accent-warm:#ff6b35;         /* Orange élégant pour CTAs */
+  --accent-cool:#00d4aa;         /* Cyan pour succès/skills */
+  --accent-purple:#8b5cf6;       /* Violet pour projets premium */
+  --accent-gold:#ffd700;         /* Or pour highlights spéciaux */
+  --accent-pink:#f472b6;         /* Rose pour détails féminins */
 
-  --text-color:#f1f1f1;
-  --text-secondary:#b0b3c6;
-  --text-improved:#c9ccd4;
+  /* Backgrounds avec profondeur */
+  --background-gradient:linear-gradient(135deg, #0f0f23 0%, #1a1d2e 25%, #23243a 75%, #2a2d47 100%);
+  --background-color:#0f0f23;
+  --background-mesh:
+    radial-gradient(circle at 20% 20%, rgba(91,115,245,.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(139,92,246,.02) 0%, transparent 50%),
+    radial-gradient(circle at 40% 60%, rgba(255,107,53,.01) 0%, transparent 40%);
 
-  --card-bg:rgba(35,36,58,0.85);
-  --chip-bg:#0f1216;
-  --border: #1e2231;
+  /* Textes avec hiérarchie renforcée */
+  --text-color:#f8fafc;
+  --text-secondary:#94a3b8;
+  --text-improved:#cbd5e1;
+  --text-premium:#e2e8f0;
 
-  /* Hiérarchie couleurs projets/skills */
-  --project-title-color:#4a6ee2;
-  --project-subtitle-color:#7a93e8;
-  --project-badge-color:#b3c1ed;
-  --project-badge-hover:#9bb0e6;
+  /* Surfaces sophistiquées */
+  --card-bg:linear-gradient(145deg, rgba(26,29,46,0.9) 0%, rgba(35,36,58,0.85) 100%);
+  --card-bg-premium:linear-gradient(145deg, rgba(35,36,58,0.95) 0%, rgba(42,45,71,0.9) 100%);
+  --card-bg-hero:linear-gradient(145deg, rgba(26,29,46,0.7) 0%, rgba(35,36,58,0.6) 100%);
+  --chip-bg:#1e2231;
+  --border:#334155;
+  --border-glow:rgba(91,115,245,0.3);
 
-  /* Ombres & blur */
-  --glass-blur:blur(12px);
-  --shadow:0 10px 30px rgba(0,0,0,.25);
+  /* Système avancé d'ombres */
+  --shadow-soft:0 4px 20px rgba(15,15,35,0.4);
+  --shadow-medium:0 8px 32px rgba(15,15,35,0.5);
+  --shadow-strong:0 16px 48px rgba(15,15,35,0.6);
+  --shadow-colored:0 8px 32px rgba(91,115,245,0.15), 0 2px 8px rgba(139,92,246,0.1);
+  --shadow-premium:0 12px 40px rgba(15,15,35,0.7), 0 4px 16px rgba(91,115,245,0.2);
+  --shadow:var(--shadow-medium);
+
+  /* Effects premium */
+  --glow-primary:0 0 30px rgba(91,115,245,0.4);
+  --glow-accent:0 0 20px rgba(139,92,246,0.3);
+  --glow-warm:0 0 25px rgba(255,107,53,0.3);
+  --inner-glow:inset 0 1px 2px rgba(248,250,252,0.1);
+  --glass-blur:blur(16px);
+
+  /* Hiérarchie couleurs projets/skills premium */
+  --project-title-color:#5b73f5;
+  --project-subtitle-color:#8b5cf6;
+  --project-badge-color:#e2e8f0;
+  --project-badge-hover:#f472b6;
 
   /* Typo & scale */
   --font-main: 'Inter','Poppins',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
@@ -69,30 +98,67 @@
    MODE JOUR (Light Theme)
 =============================================== */
 body.light-theme{
-  /* Couleurs Mode Jour */
-  --primary-color:#2563eb;
-  --secondary-color:#f7f8fc;
-  --accent-color:#1d4ed8;
+  /* Palette Premium Mode Jour */
+  --primary-color:#4f46e5;
+  --secondary-color:#f8fafc;
+  --accent-color:#6366f1;
 
-  --background-gradient:linear-gradient(180deg,#f8fafc 0%,#ffffff 100%);
-  --background-color:#ffffff;
+  /* Accents sophistiqués mode jour */
+  --accent-warm:#f97316;         /* Orange vibrant pour CTAs */
+  --accent-cool:#06b6d4;         /* Cyan moderne pour succès/skills */
+  --accent-purple:#8b5cf6;       /* Violet élégant pour projets premium */
+  --accent-gold:#f59e0b;         /* Ambre pour highlights spéciaux */
+  --accent-pink:#ec4899;         /* Rose moderne pour détails */
+  --accent-emerald:#10b981;      /* Émeraude pour succès */
 
-  --text-color:#1f2937;
-  --text-secondary:#6b7280;
-  --text-improved:#374151;
+  /* Backgrounds sophistiqués avec profondeur */
+  --background-gradient:linear-gradient(135deg, #f8fafc 0%, #f1f5f9 25%, #e2e8f0 75%, #f8fafc 100%);
+  --background-color:#f8fafc;
+  --background-mesh:
+    radial-gradient(circle at 20% 20%, rgba(79,70,229,.02) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(139,92,246,.015) 0%, transparent 50%),
+    radial-gradient(circle at 40% 60%, rgba(249,115,22,.01) 0%, transparent 40%);
 
-  --card-bg:rgba(255,255,255,0.95);
-  --chip-bg:#f1f5f9;
-  --border: #e5e7eb;
+  /* Hiérarchie de textes premium */
+  --text-color:#0f172a;
+  --text-secondary:#475569;
+  --text-improved:#1e293b;
+  --text-premium:#020617;
 
-  /* Hiérarchie couleurs projets/skills mode jour */
-  --project-title-color:#1d4ed8;
-  --project-subtitle-color:#3b82f6;
-  --project-badge-color:#4f46e5;
-  --project-badge-hover:#6366f1;
+  /* Surfaces avec sophistication */
+  --card-bg:linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.8) 100%);
+  --card-bg-premium:linear-gradient(145deg, rgba(255,255,255,0.95) 0%, rgba(241,245,249,0.9) 100%);
+  --card-bg-hero:linear-gradient(145deg, rgba(255,255,255,0.7) 0%, rgba(248,250,252,0.6) 100%);
+  --card-bg-alt:linear-gradient(145deg, #f8fafc 0%, #f1f5f9 100%);
+  --chip-bg:#e2e8f0;
+  --border:#cbd5e1;
+  --border-glow:rgba(79,70,229,0.2);
 
-  /* Ombres & blur mode jour */
-  --shadow:0 10px 30px rgba(0,0,0,.08);
+  /* Système avancé d'ombres mode jour */
+  --shadow-soft:0 4px 25px rgba(15, 23, 42, 0.08);
+  --shadow-medium:0 8px 35px rgba(15, 23, 42, 0.12);
+  --shadow-strong:0 16px 50px rgba(15, 23, 42, 0.15);
+  --shadow-colored:0 8px 32px rgba(79,70,229,0.08), 0 2px 8px rgba(139,92,246,0.05);
+  --shadow-premium:0 12px 45px rgba(15, 23, 42, 0.18), 0 4px 16px rgba(79,70,229,0.1);
+  --shadow:var(--shadow-medium);
+
+  /* Effects premium mode jour */
+  --glow-primary:0 0 30px rgba(79,70,229,0.2);
+  --glow-accent:0 0 25px rgba(139,92,246,0.15);
+  --glow-warm:0 0 20px rgba(249,115,22,0.15);
+  --inner-glow:inset 0 1px 2px rgba(255,255,255,0.8);
+  --glass-effect:rgba(255, 255, 255, 0.85);
+  --glass-blur:blur(20px);
+
+  /* Couleurs projets/skills premium mode jour */
+  --project-title-color:#4f46e5;
+  --project-subtitle-color:#8b5cf6;
+  --project-badge-color:#1e293b;
+  --project-badge-hover:#ec4899;
+
+  /* Nouvelles variables pour les détails */
+  --accent-soft:#eef2ff;
+  --divider:rgba(15, 23, 42, 0.1);
 }
 
 /* ===============================================
@@ -220,7 +286,9 @@ body.light-theme footer {
 html{ scroll-behavior:smooth; }
 body{
   margin:0; padding:0; overflow-x:hidden;
-  background:var(--background-gradient);
+  background:
+    var(--background-mesh),
+    var(--background-gradient);
   color:var(--text-color);
   font-family:var(--font-main);
   line-height:1.6;
@@ -228,6 +296,22 @@ body{
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
   transition:var(--transition);
+  position:relative;
+}
+
+/* Texture subtile en overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(91,115,245,.02) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(139,92,246,.02) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -262,15 +346,48 @@ button{
 button:focus{ outline:2px solid var(--primary-color); outline-offset:2px; }
 
 .btn{
-  display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
-  border-radius:8px; padding:.6rem 1.2rem; font-weight:600;
+  display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
+  border-radius:12px; padding:.8rem 1.6rem; font-weight:600;
   font-size:1rem; letter-spacing:.03em;
-  color:#fff; background:linear-gradient(90deg,var(--primary-color),var(--accent-color) 80%);
-  border:none; box-shadow:0 2px 8px rgba(74,144,226,.15);
-  transition:var(--transition); text-decoration:none;
+  color:#fff; 
+  background:linear-gradient(135deg,var(--primary-color) 0%, var(--accent-color) 50%, var(--accent-purple) 100%);
+  border:1px solid var(--border-glow);
+  box-shadow:
+    var(--shadow-colored),
+    var(--inner-glow);
+  transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+  text-decoration:none;
+  position: relative;
+  overflow: hidden;
 }
-.btn:hover{ filter:brightness(1.1); transform:translateY(-2px); text-decoration:none; }
-.btn:focus{ outline:2px solid var(--primary-color); outline-offset:2px; }
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn:hover{ 
+  transform:translateY(-3px) scale(1.02); 
+  text-decoration:none;
+  box-shadow:
+    var(--shadow-premium),
+    var(--glow-primary);
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn:focus{ 
+  outline:2px solid var(--accent-gold); 
+  outline-offset:3px; 
+}
 
 .btn-primary{ background:linear-gradient(180deg,#4a6ee2,#3a5bcc); color:#fff; }
 .btn-secondary{ background:var(--secondary-color); color:#fff; }
@@ -299,8 +416,13 @@ button:focus{ outline:2px solid var(--primary-color); outline-offset:2px; }
    NAVIGATION
 =============================================== */
 header{
-  width:100%; background:var(--secondary-color);
-  box-shadow:0 2px 16px rgba(74,110,226,.08);
+  width:100%; 
+  background:linear-gradient(135deg, rgba(26,29,46,0.8) 0%, rgba(35,36,58,0.9) 100%);
+  backdrop-filter:var(--glass-blur);
+  box-shadow:
+    0 4px 32px rgba(15,15,35,0.3),
+    0 1px 0 rgba(91,115,245,0.1);
+  border-bottom:1px solid var(--border);
   position:sticky; top:0; z-index:100;
 }
 #mainNav{
@@ -343,19 +465,75 @@ header{
 =============================================== */
 .hero{
   position:relative;
-  background: linear-gradient(120deg,#23243a 0%,#15161a 100%), url('../img/hero-bg.jpg') center/cover no-repeat fixed;
+  background: 
+    linear-gradient(135deg, rgba(15,15,35,0.95) 0%, rgba(26,29,46,0.9) 50%, rgba(35,36,58,0.95) 100%), 
+    url('../img/hero-bg.jpg') center/cover no-repeat fixed;
   min-height:100vh; display:flex; align-items:center; justify-content:center;
-  text-align:center; padding:2rem 0;
+  text-align:center; padding:2rem 0; overflow:hidden;
 }
+
 .hero::before{
   content:""; position:absolute; inset:0;
-  background:radial-gradient(600px at 50% 40%, rgba(74,144,226,.12), transparent 60%);
+  background:
+    radial-gradient(800px circle at 50% 40%, rgba(91,115,245,.12) 0%, transparent 50%),
+    radial-gradient(600px circle at 20% 80%, rgba(139,92,246,.08) 0%, transparent 50%),
+    radial-gradient(400px circle at 80% 20%, rgba(255,107,53,.06) 0%, transparent 50%);
+  animation: heroGlow 8s ease-in-out infinite alternate;
 }
+
+@keyframes heroGlow {
+  0% {
+    filter: brightness(1) hue-rotate(0deg);
+  }
+  100% {
+    filter: brightness(1.1) hue-rotate(10deg);
+  }
+}
+
 .hero-content{
-  position:relative; z-index:1; background:var(--card-bg); backdrop-filter:var(--glass-blur);
-  box-shadow:0 8px 32px rgba(74,144,226,.10);
-  border-radius:18px; border:1px solid rgba(74,144,226,.08);
-  padding:clamp(1.5rem,4vw,3rem); max-width:min(750px,95vw); width:100%;
+  position:relative; z-index:1; 
+  background:var(--card-bg-hero); 
+  backdrop-filter:var(--glass-blur);
+  box-shadow:
+    var(--shadow-premium),
+    var(--inner-glow);
+  border-radius:24px; 
+  border:1px solid var(--border-glow);
+  padding:clamp(2rem,5vw,3.5rem); 
+  max-width:min(800px,95vw); width:100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+  opacity: 0.6;
+}
+
+.hero-content::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(91,115,245,.03), transparent);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
 }
 .hero h1{ margin:1rem 0; color:#fff; }
 .hero-name{ font-weight:700; color:#fff; white-space:nowrap; }
@@ -394,9 +572,9 @@ header{
 
 /* Bloc générique de contenu */
 .section-content{
-  max-width:800px; margin:0 auto; background-color:rgba(35,36,58,.85);
+  max-width:800px; margin:0 auto; background-color:var(--card-bg);
   padding:2rem; border-radius:18px; box-shadow:0 4px 24px rgba(74,110,226,.1);
-  font-size:1.05rem; line-height:1.7; color:#f5f5f5;
+  font-size:1.05rem; line-height:1.7; color:var(--text-improved);
 }
 
 /* CV buttons */
@@ -444,18 +622,52 @@ header{
 }
 
 .project-card{
-  background:var(--card-bg); backdrop-filter:var(--glass-blur);
-  box-shadow:0 8px 32px rgba(74,144,226,.10);
-  border-radius:18px; border:1px solid rgba(74,144,226,.08);
-  padding:2rem; transition:var(--transition);
-  border-left:3px solid transparent;
+  background:var(--card-bg-premium); 
+  backdrop-filter:var(--glass-blur);
+  box-shadow:var(--shadow-colored);
+  border-radius:20px; 
+  border:1px solid var(--border);
+  padding:2.5rem; 
+  transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-left:4px solid var(--accent-purple);
+  position: relative;
+  overflow: hidden;
 
-  min-height:450px; display:flex; flex-direction:column; justify-content:space-between;
+  min-height:480px; display:flex; flex-direction:column; justify-content:space-between;
 }
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-purple), var(--accent-pink), var(--accent-purple));
+  opacity: 0.7;
+}
+
 .project-card:hover{
-  border-left:3px solid var(--primary-color);
-  transform:translateX(8px) translateY(-5px);
-  box-shadow:0 12px 40px rgba(74,144,226,.25);
+  border-left:4px solid var(--accent-pink);
+  transform:translateY(-8px) scale(1.02);
+  box-shadow:
+    var(--shadow-premium),
+    var(--glow-accent);
+}
+
+.project-card:hover::before {
+  animation: borderGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes borderGlow {
+  0% {
+    opacity: 0.7;
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    filter: hue-rotate(20deg);
+  }
 }
 .project-card img{ border-radius:4px; margin-bottom:1rem; }
 .project-card h3{ color:var(--project-title-color)!important; margin-top:0; }
@@ -517,7 +729,7 @@ header{
 
 /* Avancées */
 .skills-advanced{
-  margin-top:2.5rem; background:rgba(35,36,58,.65); border-radius:12px;
+  margin-top:2.5rem; background:var(--card-bg); border-radius:12px;
   padding:1.5rem 2rem; color:var(--text-color);
   box-shadow:0 2px 12px rgba(74,110,226,.08);
   font-size:1.08rem;
@@ -529,19 +741,60 @@ header{
 .skills-advanced-grid{
   display:grid; grid-template-columns:repeat(auto-fit, minmax(min(260px,100%),1fr));
   gap:clamp(1rem,3vw,1.7rem); margin-top:2.5rem;
-  background:rgba(35,36,58,.65); border-radius:14px;
+  background:var(--card-bg); border-radius:14px;
   padding:clamp(1rem,4vw,2.2rem); box-shadow:0 2px 12px rgba(74,110,226,.08);
 }
 
 .skill-adv-item{
-  display:flex; align-items:flex-start; gap:1.1rem;
-  background:rgba(40,42,54,.18); border-radius:10px;
-  padding:1.1rem 1rem; transition:var(--transition);
-  border-left:2px solid rgba(74,110,226,.3);
+  display:flex; align-items:flex-start; gap:1.2rem;
+  background:var(--card-bg-premium); border-radius:16px;
+  padding:1.5rem 1.2rem; 
+  transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-left:3px solid var(--accent-cool);
+  position: relative;
+  overflow: hidden;
 }
+
+.skill-adv-item:nth-child(2n) {
+  border-left:3px solid var(--accent-warm);
+}
+
+.skill-adv-item:nth-child(3n) {
+  border-left:3px solid var(--accent-purple);
+}
+
+.skill-adv-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-cool), transparent);
+  opacity: 0.5;
+}
+
+.skill-adv-item:nth-child(2n)::before {
+  background: linear-gradient(90deg, transparent, var(--accent-warm), transparent);
+}
+
+.skill-adv-item:nth-child(3n)::before {
+  background: linear-gradient(90deg, transparent, var(--accent-purple), transparent);
+}
+
 .skill-adv-item:hover{
-  border-left:2px solid var(--primary-color);
-  transform:translateY(-3px); box-shadow:0 6px 24px rgba(74,144,226,.17);
+  transform:translateY(-4px) scale(1.03);
+  box-shadow:var(--shadow-premium);
+}
+
+.skill-adv-item:hover::before {
+  opacity: 1;
+  animation: skillGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes skillGlow {
+  0% { opacity: 0.5; }
+  100% { opacity: 1; }
 }
 .skill-adv-icon{ font-size:2.1rem; margin-top:.1em; flex-shrink:0; color:var(--primary-color); }
 .skill-adv-item h4{ margin:0 0 .3em 0; color:var(--accent-color); font-size:1.13rem; font-weight:600; letter-spacing:.01em; }
@@ -795,103 +1048,941 @@ input:focus, textarea:focus, select:focus{ outline:2px solid var(--primary-color
 }
 
 /* ===============================================
-   OVERRIDES MODE JOUR (Light Mode)
+   OVERRIDES MODE JOUR PREMIUM
 =============================================== */
-body.light-theme header,
+
+/* Background principal avec texture sophistiquée */
+body.light-theme {
+  background:
+    var(--background-mesh),
+    var(--background-gradient);
+}
+
+/* Texture subtile en overlay mode jour */
+body.light-theme::before {
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(79,70,229,.015) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(139,92,246,.01) 0%, transparent 50%);
+}
+
+/* Header premium avec glass morphism */
+body.light-theme header{
+  background: var(--glass-effect);
+  backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--divider);
+  color: var(--text-color);
+  box-shadow: 
+    var(--shadow-medium),
+    0 1px 0 rgba(255,255,255,0.8);
+  position: relative;
+}
+
+body.light-theme header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+  opacity: 0.3;
+}
+
 body.light-theme footer{
-  background: var(--secondary-color);
+  background: var(--card-bg-alt);
   color: var(--text-color);
+  border-top: 1px solid var(--divider);
+  box-shadow: 
+    0 -8px 32px rgba(15, 23, 42, 0.08),
+    var(--inner-glow);
 }
 
-/* Panneau <details> en clair */
-body.light-theme .project-details{
-  background: var(--card-bg);
-  color: var(--text-improved);
-  border-left: 4px solid var(--primary-color);
-}
-body.light-theme .project-details p{ color: var(--text-improved); }
-body.light-theme .project-details summary{
-  color: var(--project-subtitle-color);
-}
-
-/* Boutons secondaires en clair (surfaces neutres) */
-body.light-theme .btn-secondary,
-body.light-theme .btn-dark{
-  background: var(--secondary-color);
-  color: var(--text-color);
-  border: 1px solid var(--border);
-}
-body.light-theme .btn-secondary:hover,
-body.light-theme .btn-dark:hover{
-  filter: brightness(0.98);
-  transform: translateY(-1px);
-}
-
-/* Hero plus flat en light */
+/* Hero spectaculaire mode jour */
 body.light-theme .hero{
-  background: linear-gradient(120deg,#f7f8fc 0%, #ffffff 100%), url('../img/hero-bg.jpg') center/cover no-repeat fixed;
-}
-body.light-theme .hero::before{
-  background: radial-gradient(600px at 50% 40%, rgba(74,144,226,.10), transparent 60%);
+  background: 
+    linear-gradient(135deg, rgba(248,250,252,0.95) 0%, rgba(241,245,249,0.9) 50%, rgba(248,250,252,0.95) 100%),
+    url('../img/hero-bg.jpg') center/cover no-repeat fixed;
+  overflow: hidden;
 }
 
-/* Menu mobile : même surface claire */
-@media (max-width: 768px){
-  body.light-theme .nav-links,
-  body.light-theme .nav-controls{
-    background: var(--secondary-color);
+body.light-theme .hero::before{
+  background:
+    radial-gradient(800px circle at 50% 40%, rgba(79,70,229,.06) 0%, transparent 50%),
+    radial-gradient(600px circle at 20% 80%, rgba(139,92,246,.04) 0%, transparent 50%),
+    radial-gradient(400px circle at 80% 20%, rgba(249,115,22,.03) 0%, transparent 50%);
+  animation: heroGlowLight 10s ease-in-out infinite alternate;
+}
+
+@keyframes heroGlowLight {
+  0% {
+    filter: brightness(1) hue-rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    filter: brightness(1.05) hue-rotate(5deg);
+    opacity: 0.8;
   }
 }
 
-/* Light mode: uniformiser TOUTES les surfaces encore sombres */
+/* Cartes Hero avec effet glass morphism premium */
+body.light-theme .hero-content{
+  background: var(--card-bg-hero);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-glow);
+  box-shadow: 
+    var(--shadow-premium),
+    var(--inner-glow);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+body.light-theme .hero-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+  opacity: 0.4;
+}
+
+body.light-theme .hero-content::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(79,70,229,.02), transparent);
+  animation: shimmerLight 4s infinite;
+}
+
+@keyframes shimmerLight {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Cartes premium avec effets sophistiqués */
 body.light-theme .about-wrapper,
-body.light-theme .section-content,
+body.light-theme .education-card {
+  background: var(--card-bg-premium) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: 
+    var(--shadow-colored),
+    var(--inner-glow) !important;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px !important;
+}
+
+body.light-theme .project-card {
+  background: var(--card-bg-premium) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow-colored) !important;
+  border-left: 4px solid var(--accent-purple) !important;
+  border-radius: 20px !important;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Bordures colorées premium avec alternance */
+body.light-theme .about-wrapper::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-cool), var(--accent-purple), var(--accent-cool));
+  opacity: 0.8;
+}
+
+body.light-theme .education-card::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-warm), var(--accent-gold), var(--accent-warm));
+  opacity: 0.8;
+}
+
+body.light-theme .project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-purple), var(--accent-pink), var(--accent-purple));
+  opacity: 0.7;
+}
+
+/* Hover effects spectaculaires */
+body.light-theme .project-card:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  box-shadow: 
+    var(--shadow-premium),
+    var(--glow-accent) !important;
+  border-left: 4px solid var(--accent-pink) !important;
+}
+
+body.light-theme .project-card:hover::before,
+body.light-theme .about-wrapper:hover::before,
+body.light-theme .education-card:hover::before {
+  animation: borderGlowLight 2s ease-in-out infinite alternate;
+}
+
+@keyframes borderGlowLight {
+  0% {
+    opacity: 0.7;
+    filter: brightness(1) hue-rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1.2) hue-rotate(10deg);
+  }
+}
+
+/* Skills & Tech premium avec accents colorés */
 body.light-theme .skills-advanced,
-body.light-theme .skills-advanced-grid,
-body.light-theme .skill-adv-item,
-body.light-theme .techskills-card,
-body.light-theme .techskill-mini-card,
-body.light-theme .education-card {
-  background: var(--card-bg) !important;
+body.light-theme .techskills-card {
+  background: var(--card-bg-alt) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow-colored) !important;
+  border-radius: 18px !important;
+}
+
+body.light-theme .skill-adv-item {
+  background: var(--card-bg-premium) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: 
+    var(--shadow-soft),
+    var(--inner-glow) !important;
+  backdrop-filter: var(--glass-blur);
+  border-left: 3px solid var(--accent-cool) !important;
+  border-radius: 16px !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+body.light-theme .skill-adv-item:nth-child(2n) {
+  border-left: 3px solid var(--accent-warm) !important;
+}
+
+body.light-theme .skill-adv-item:nth-child(3n) {
+  border-left: 3px solid var(--accent-emerald) !important;
+}
+
+body.light-theme .skill-adv-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-cool), transparent);
+  opacity: 0.4;
+}
+
+body.light-theme .skill-adv-item:nth-child(2n)::before {
+  background: linear-gradient(90deg, transparent, var(--accent-warm), transparent);
+}
+
+body.light-theme .skill-adv-item:nth-child(3n)::before {
+  background: linear-gradient(90deg, transparent, var(--accent-emerald), transparent);
+}
+
+body.light-theme .techskill-mini-card {
+  background: var(--card-bg-premium) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: 
+    var(--shadow-soft),
+    var(--inner-glow) !important;
+  backdrop-filter: var(--glass-blur);
+  border-radius: 16px !important;
+}
+
+/* Hover effects élégants */
+body.light-theme .skill-adv-item:hover,
+body.light-theme .techskill-mini-card:hover {
+  transform: translateY(-2px) scale(1.01) !important;
+  box-shadow: 
+    var(--shadow-medium),
+    inset 0 1px 0 rgba(255,255,255,0.9) !important;
+}
+
+body.light-theme .project-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 
+    var(--shadow-strong),
+    inset 0 1px 0 rgba(255,255,255,0.8) !important;
+  border-color: rgba(79,70,229,0.2) !important;
+}
+
+/* Détails projets avec glass effect */
+body.light-theme .project-details{
+  background: var(--glass-effect) !important;
+  backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(203, 213, 225, 0.4) !important;
+  border-left: 4px solid var(--primary-color) !important;
+  color: var(--text-improved);
+  box-shadow: 0 4px 20px rgba(148, 163, 184, 0.12);
+}
+
+body.light-theme .project-details summary{
+  color: var(--project-subtitle-color);
+  font-weight: 600;
+}
+
+/* Timeline avec style */
+body.light-theme .timeline::before { 
+  background: linear-gradient(to bottom, 
+    var(--primary-color) 0%, 
+    var(--accent-color) 50%, 
+    var(--border) 100%
+  );
+  width: 3px;
+}
+
+body.light-theme .timeline-item .dot {
+  background: var(--primary-color);
+  box-shadow: 
+    0 0 0 4px rgba(79,70,229,.1),
+    0 2px 8px rgba(79,70,229,.2);
+}
+
+/* Section headers avec accent subtil */
+body.light-theme .section {
+  border-top: 1px solid var(--divider);
+  position: relative;
+}
+
+body.light-theme .section::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+}
+
+/* Boutons avec sophistication */
+body.light-theme .btn-secondary,
+body.light-theme .btn-dark{
+  background: var(--glass-effect);
   color: var(--text-color);
-  border-color: var(--border);
-  box-shadow: var(--shadow);
+  border: 1px solid rgba(203, 213, 225, 0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(148, 163, 184, 0.1);
 }
 
-/* Section Education spécifique en mode jour */
-body.light-theme .education-card {
-  background: var(--card-bg) !important;
-  border: 1px solid var(--border);
-  box-shadow: 0 4px 20px rgba(0,0,0,.04);
+body.light-theme .btn-secondary:hover,
+body.light-theme .btn-dark:hover{
+  background: rgba(255,255,255,0.9);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(148, 163, 184, 0.15);
 }
 
+/* Navigation mobile glass */
+@media (max-width: 768px){
+  body.light-theme .nav-links,
+  body.light-theme .nav-controls{
+    background: var(--glass-effect);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--divider);
+  }
+}
+
+/* Textes avec hiérarchie renforcée */
 body.light-theme .edu-years,
 body.light-theme .edu-subtext,
-body.light-theme .edu-courses li {
+body.light-theme .edu-courses li,
+body.light-theme .timeline-item .muted {
   color: var(--text-improved) !important;
 }
 
-/* Details (si une version sombre traîne plus bas dans le fichier) */
-body.light-theme .project-details{
+/* Sections spécifiques : Parcours et Skills */
+body.light-theme .section-content {
   background: var(--card-bg) !important;
-  color: var(--text-improved);
-  border-left: 4px solid var(--primary-color);
+  color: var(--text-improved) !important;
+  border: 1px solid rgba(203, 213, 225, 0.6);
+  box-shadow: 
+    var(--shadow-soft),
+    inset 0 1px 0 rgba(255,255,255,0.8);
 }
-body.light-theme .project-details p{ color: var(--text-improved); }
-body.light-theme .project-details summary{ color: var(--project-subtitle-color); }
 
-/* Timeline (ligne + texte) */
-body.light-theme .timeline::before { background: var(--border); }
-body.light-theme .timeline-item .muted { color: var(--text-secondary); }
+body.light-theme .skills-advanced,
+body.light-theme .skills-advanced-grid {
+  background: var(--card-bg-alt) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--divider);
+  box-shadow: var(--shadow-soft) !important;
+}
 
-/* (Optionnel) cartes projets en base claire homogène */
-body.light-theme .project-card { background: var(--card-bg); }
+/* Éléments de liste dans Skills */
+body.light-theme .skills-advanced li,
+body.light-theme .skills-advanced li b {
+  color: var(--text-improved) !important;
+}
 
-/* Navigation mobile surfaces claires */
-@media (max-width: 768px){
-  body.light-theme .nav-links,
-  body.light-theme .nav-controls{
-    background: var(--secondary-color);
+body.light-theme .skills-advanced li b {
+  color: var(--accent-color) !important;
+}
+
+/* Ajout d'une texture subtile sur le background principal */
+body.light-theme {
+  background-image: 
+    var(--background-gradient),
+    radial-gradient(circle at 20% 20%, rgba(79,70,229,.02) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(99,102,241,.02) 0%, transparent 50%);
+}
+
+/* Premium Hero Effects pour Light Mode */
+body.light-theme .hero-content::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(79,70,229,.02), transparent);
+  animation: shimmer 3s infinite;
+  pointer-events: none;
+  border-radius: 24px;
+}
+
+body.light-theme .hero-content::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, 
+    var(--accent-warm), 
+    var(--accent-cool), 
+    var(--accent-purple), 
+    var(--accent-gold)
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+  border-radius: 26px;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+body.light-theme .hero-content {
+  position: relative;
+  background: var(--card-bg-premium);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(203, 213, 225, 0.6);
+  border-radius: 24px;
+  padding: 3rem 2rem;
+  box-shadow: 
+    var(--shadow-premium),
+    inset 0 1px 0 rgba(255,255,255,0.9);
+}
+
+body.light-theme .btn.bounce {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-cool));
+  color: white;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  box-shadow: 
+    0 8px 32px rgba(79,70,229,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.2);
+}
+
+body.light-theme .btn.bounce::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: shimmer 2.5s infinite;
+}
+
+body.light-theme .btn.bounce:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 
+    0 12px 40px rgba(79,70,229,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.3);
+}
+
+/* Micro-animations et détails sophistiqués Light Mode */
+body.light-theme .section-mainicon {
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.light-theme .section-mainicon::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  background: linear-gradient(45deg, var(--accent-cool), var(--accent-warm));
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+body.light-theme .section-mainicon:hover::before {
+  opacity: 0.1;
+}
+
+body.light-theme .section-mainicon:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Badges technos avec animations */
+body.light-theme .badge {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+body.light-theme .badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+body.light-theme .badge:hover::before {
+  left: 100%;
+}
+
+body.light-theme .badge:hover {
+  transform: translateY(-1px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(79,70,229,0.15);
+}
+
+/* Navigation avec subtle glow */
+body.light-theme .nav-link {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.light-theme .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-cool), var(--accent-warm));
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+body.light-theme .nav-link:hover::after,
+body.light-theme .nav-link.active::after {
+  width: 100%;
+}
+
+body.light-theme .nav-link:hover {
+  color: var(--primary-color);
+  text-shadow: 0 0 8px rgba(79,70,229,0.2);
+}
+
+/* CV buttons avec shimmer */
+body.light-theme .cv-buttons .btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.light-theme .cv-buttons .btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: shimmerSlow 3s infinite;
+}
+
+body.light-theme .cv-buttons .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(79,70,229,0.2);
+}
+
+/* Theme toggle avec animation */
+body.light-theme .theme-toggle {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+body.light-theme .theme-toggle::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(45deg, var(--accent-cool), var(--accent-warm));
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+body.light-theme .theme-toggle:hover::before {
+  opacity: 0.1;
+}
+
+body.light-theme .theme-toggle:hover {
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: 0 4px 15px rgba(79,70,229,0.2);
+}
+
+/* Animations personnalisées */
+@keyframes shimmerSlow {
+  0% { left: -100%; }
+  50% { left: 100%; }
+  100% { left: 100%; }
+}
+
+body.light-theme .reveal-up {
+  animation: revealUpLight 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes revealUpLight {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Premium Project Cards avec hiérarchisation Light Mode */
+body.light-theme .project-card {
+  background: var(--card-bg-premium) !important;
+  border: 1px solid rgba(203, 213, 225, 0.4) !important;
+  border-radius: 20px !important;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 
+    var(--shadow-soft),
+    inset 0 1px 0 rgba(255,255,255,0.8) !important;
+}
+
+body.light-theme .project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-warm), var(--accent-cool), var(--accent-purple));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+body.light-theme .project-card:hover::before {
+  opacity: 1;
+}
+
+body.light-theme .project-card:hover {
+  transform: translateY(-6px) scale(1.02) !important;
+  box-shadow: 
+    var(--shadow-strong),
+    inset 0 1px 0 rgba(255,255,255,0.9),
+    0 0 40px rgba(79,70,229,0.08) !important;
+  border-color: rgba(79,70,229,0.3) !important;
+}
+
+body.light-theme .project-card:nth-child(1)::before {
+  background: linear-gradient(90deg, var(--accent-warm), var(--accent-gold));
+}
+
+body.light-theme .project-card:nth-child(2)::before {
+  background: linear-gradient(90deg, var(--accent-cool), var(--accent-purple));
+}
+
+body.light-theme .project-card:nth-child(3)::before {
+  background: linear-gradient(90deg, var(--accent-purple), var(--accent-pink));
+}
+
+/* Tech badges avec couleurs alternées */
+body.light-theme .project-card:nth-child(1) .tech-badge {
+  border-color: rgba(249, 115, 22, 0.3);
+  color: rgb(234, 88, 12);
+  background: rgba(249, 115, 22, 0.05);
+}
+
+body.light-theme .project-card:nth-child(1) .tech-badge:hover {
+  background: rgba(249, 115, 22, 0.1);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.2);
+}
+
+body.light-theme .project-card:nth-child(2) .tech-badge {
+  border-color: rgba(6, 182, 212, 0.3);
+  color: rgb(8, 145, 178);
+  background: rgba(6, 182, 212, 0.05);
+}
+
+body.light-theme .project-card:nth-child(2) .tech-badge:hover {
+  background: rgba(6, 182, 212, 0.1);
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.2);
+}
+
+/* Titres de projets avec accent */
+body.light-theme .project-card h3 {
+  position: relative;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+body.light-theme .project-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: var(--accent-warm);
+  border-radius: 1px;
+}
+
+body.light-theme .project-card:nth-child(2) h3::after {
+  background: var(--accent-cool);
+}
+
+body.light-theme .project-card:nth-child(3) h3::after {
+  background: var(--accent-purple);
+}
+
+/* Boutons projets avec effets */
+body.light-theme .project-card .btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(203, 213, 225, 0.4);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+body.light-theme .project-card .btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(79,70,229,0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+body.light-theme .project-card .btn:hover::before {
+  left: 100%;
+}
+
+body.light-theme .project-card .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(79,70,229,0.15);
+  border-color: rgba(79,70,229,0.3);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Effets visuels avancés finaux Light Mode */
+
+/* Footer avec glass morphism */
+body.light-theme footer {
+  background: var(--glass-effect) !important;
+  backdrop-filter: blur(20px) !important;
+  border-top: 1px solid var(--divider) !important;
+  box-shadow: 
+    0 -4px 20px rgba(148, 163, 184, 0.08),
+    inset 0 1px 0 rgba(255,255,255,0.8) !important;
+}
+
+body.light-theme footer .socials a {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(203, 213, 225, 0.4);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.light-theme footer .socials a:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-2px) scale(1.1);
+  box-shadow: 0 8px 25px rgba(79,70,229,0.15);
+  border-color: rgba(79,70,229,0.3);
+}
+
+/* Header avec glass effect sophistiqué */
+body.light-theme header {
+  background: var(--glass-effect) !important;
+  backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid var(--divider) !important;
+  box-shadow: 
+    0 4px 20px rgba(148, 163, 184, 0.08),
+    inset 0 -1px 0 rgba(255,255,255,0.8) !important;
+}
+
+/* Education card avec style premium */
+body.light-theme .education-card {
+  background: var(--card-bg-premium) !important;
+  border: 1px solid rgba(203, 213, 225, 0.4) !important;
+  border-left: 4px solid var(--accent-cool) !important;
+  border-radius: 16px !important;
+  box-shadow: 
+    var(--shadow-soft),
+    inset 0 1px 0 rgba(255,255,255,0.8) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.light-theme .education-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    var(--shadow-medium),
+    inset 0 1px 0 rgba(255,255,255,0.9);
+  border-left-color: var(--accent-warm);
+}
+
+/* Contact form avec glass morphism */
+body.light-theme #contactForm {
+  background: var(--glass-effect) !important;
+  backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(203, 213, 225, 0.4) !important;
+  border-radius: 20px !important;
+  box-shadow: 
+    var(--shadow-soft),
+    inset 0 1px 0 rgba(255,255,255,0.8) !important;
+}
+
+body.light-theme #contactForm input,
+body.light-theme #contactForm textarea {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(203, 213, 225, 0.5) !important;
+  color: var(--text-color) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.light-theme #contactForm input:focus,
+body.light-theme #contactForm textarea:focus {
+  border-color: var(--primary-color) !important;
+  box-shadow: 
+    0 0 0 3px rgba(79,70,229,0.1),
+    0 4px 12px rgba(79,70,229,0.15) !important;
+  background: rgba(255, 255, 255, 1) !important;
+}
+
+/* Filter buttons avec accents */
+body.light-theme .filter-btn {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(203, 213, 225, 0.4);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.light-theme .filter-btn:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(79,70,229,0.12);
+  border-color: rgba(79,70,229,0.3);
+}
+
+body.light-theme .filter-btn.active {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-cool));
+  color: white;
+  border: none;
+  box-shadow: 0 6px 20px rgba(79,70,229,0.25);
+}
+
+/* Mobile menu toggle avec style */
+body.light-theme .mobile-menu-toggle {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(203, 213, 225, 0.4);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.light-theme .mobile-menu-toggle:hover {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 15px rgba(79,70,229,0.1);
+  border-color: rgba(79,70,229,0.3);
+}
+
+/* Loader avec style light */
+body.light-theme #loader {
+  background: var(--glass-effect);
+  backdrop-filter: blur(20px);
+}
+
+body.light-theme .spinner-border {
+  border-top-color: var(--primary-color);
+  border-right-color: var(--accent-cool);
+}
+
+/* Parallax effect subtil sur les sections */
+body.light-theme .section {
+  position: relative;
+  overflow: hidden;
+}
+
+body.light-theme .section::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(79,70,229,0.005) 0%, transparent 70%);
+  animation: floatSlow 20s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33% { transform: translateY(-10px) rotate(1deg); }
+  66% { transform: translateY(5px) rotate(-0.5deg); }
+}
+
+/* Amélioration des scrollbars */
+body.light-theme ::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.light-theme ::-webkit-scrollbar-track {
+  background: rgba(241, 245, 249, 0.8);
+  border-radius: 4px;
+}
+
+body.light-theme ::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--accent-cool), var(--accent-warm));
+  border-radius: 4px;
+}
+
+body.light-theme ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, var(--primary-color), var(--accent-purple));
 }
 }
