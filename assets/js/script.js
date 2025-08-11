@@ -90,6 +90,12 @@
         if (translations[key]) el.innerHTML = translations[key];
       });
 
+      // Placeholders
+      $$('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (translations[key]) el.placeholder = translations[key];
+      });
+
       // Typing effect alimenté par i18n si présent
       if (window.portfolioAnimations?.initTypingEffect) {
         window.portfolioAnimations.initTypingEffect(

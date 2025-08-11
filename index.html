@@ -42,7 +42,7 @@
         <a href="#hero" class="nav-link" data-i18n="nav_home">Home</a>
         <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
         <a href="#education" class="nav-link" data-i18n="nav_education">Education</a>
-        <a href="#timeline" class="nav-link">Expérience</a>
+        <a href="#timeline" class="nav-link" data-i18n="nav_experience">Expérience</a>
         <a href="#projects" class="nav-link" data-i18n="nav_projects">Projects</a>
         <a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a>
         <a href="#technical-skills" class="nav-link" data-i18n="nav_techskills">Technical Skills</a>
@@ -142,19 +142,19 @@
       </div>
 
       <div class="education-card reveal-up">
-        <h3 class="edu-title">Engineer’s Degree – Data Science & AI</h3>
-        <p class="edu-years">2022 – 2025</p>
-        <p class="edu-school-badge">
-          ENSAI – École Nationale de la Statistique et de l’Analyse de l’Information (Ker Lann, Rennes)
+        <h3 class="edu-title" data-i18n="edu1_title">Engineer's Degree – Data Science & AI</h3>
+        <p class="edu-years" data-i18n="edu1_date">2022 – 2025</p>
+        <p class="edu-school-badge" data-i18n="edu1_school">
+          ENSAI – École Nationale de la Statistique et de l'Analyse de l'Information (Ker Lann, Rennes)
         </p>
-        <p class="edu-subtext">
-          Grande École française rattachée à l’INSEE – Top-tier program in statistics & AI
+        <p class="edu-subtext" data-i18n="edu1_desc">
+          Grande École française rattachée à l'INSEE – Top-tier program in statistics & AI
         </p>
         <ul class="edu-courses">
-          <li><i data-feather="book-open" class="icon-bullet"></i> Key courses: Supervised & unsupervised learning, deep learning (PyTorch, TensorFlow), NLP with Transformers, generative AI (LLMs, RAG), time series, Bayesian inference, stochastic calculus</li>
-          <li><i data-feather="settings" class="icon-bullet"></i> Big Data & Engineering: Spark, Hadoop, SQL, APIs, Docker, MLOps, cloud deployment</li>
-          <li><i data-feather="activity" class="icon-bullet"></i> Applied work: Real-world projects in fraud detection, recommendation systems, ML and NLP</li>
-          <li><i data-feather="globe" class="icon-bullet"></i> Bilingual curriculum (FR/EN) – International exposure (Erasmus+ eligible)</li>
+          <li><i data-feather="book-open" class="icon-bullet"></i> <span data-i18n="edu1_course1">Key courses: Supervised & unsupervised learning, deep learning (PyTorch, TensorFlow), NLP with Transformers, generative AI (LLMs, RAG), time series, Bayesian inference, stochastic calculus</span></li>
+          <li><i data-feather="settings" class="icon-bullet"></i> <span data-i18n="edu1_course2">Big Data & Engineering: Spark, Hadoop, SQL, APIs, Docker, MLOps, cloud deployment</span></li>
+          <li><i data-feather="activity" class="icon-bullet"></i> <span data-i18n="edu1_course3">Applied work: Real-world projects in fraud detection, recommendation systems, ML and NLP</span></li>
+          <li><i data-feather="globe" class="icon-bullet"></i> <span data-i18n="edu1_course4">Bilingual curriculum (FR/EN) – International exposure (Erasmus+ eligible)</span></li>
         </ul>
       </div>
     </section>
@@ -164,8 +164,8 @@
     <section id="timeline" class="section">
       <div class="section-header reveal-up">
         <span class="section-mainicon"><i data-feather="map"></i></span>
-        <h2 class="section-title">Expérience</h2>
-        <p class="section-subtitle">Stages, projets & formation</p>
+        <h2 class="section-title" data-i18n="experience_title">Expérience</h2>
+        <p class="section-subtitle" data-i18n="experience_subtitle">Stages, projets & formation</p>
       </div>
 
       <div class="container">
@@ -175,18 +175,18 @@
           <li class="timeline-item reveal-up">
             <div class="dot"></div>
             <div class="section-content">
-              <h3>Square Management — Stage M2</h3>
-              <p class="muted">2025 • IA Générative, RAG, OCR & Document Intelligence</p>
-              <p>
-                Conception d’un <strong>pipeline RAG modulaire et traçable</strong> pour documents métiers longs, 
-                avec une <strong>analyse systématique de l’impact de chaque choix technique</strong> 
+              <h3 data-i18n="exp1_title">Square Management — Stage M2</h3>
+              <p class="muted" data-i18n="exp1_date">2025 • IA Générative, RAG, OCR & Document Intelligence</p>
+              <p data-i18n-html="exp1_desc">
+                Conception d'un <strong>pipeline RAG modulaire et traçable</strong> pour documents métiers longs, 
+                avec une <strong>analyse systématique de l'impact de chaque choix technique</strong> 
                 (OCR, segmentation, embeddings, indexation) sur la qualité des réponses.
               </p>
               <ul>
-                <li><strong>+180 configurations comparées</strong> afin de quantifier leur effet sur la fidélité, pertinence et traçabilité.</li>
-                <li><strong>Évaluation scientifique</strong> combinant <span>RAGAS</span> et <span>LLM-as-a-Judge</span> pour mesurer la performance des réponses générées.</li>
-                <li><strong>Structuration enrichie</strong> avec <span>Docling</span> pour intégrer hiérarchie, tableaux, images et métadonnées.</li>
-                <li><strong>Cadre expérimental reproductible</strong> conçu pour être réutilisé dans d’autres projets RAG internes.</li>
+                <li data-i18n-html="exp1_task1"><strong>+180 configurations comparées</strong> afin de quantifier leur effet sur la fidélité, pertinence et traçabilité.</li>
+                <li data-i18n-html="exp1_task2"><strong>Évaluation scientifique</strong> combinant <span>RAGAS</span> et <span>LLM-as-a-Judge</span> pour mesurer la performance des réponses générées.</li>
+                <li data-i18n-html="exp1_task3"><strong>Structuration enrichie</strong> avec <span>Docling</span> pour intégrer hiérarchie, tableaux, images et métadonnées.</li>
+                <li data-i18n-html="exp1_task4"><strong>Cadre expérimental reproductible</strong> conçu pour être réutilisé dans d'autres projets RAG internes.</li>
               </ul>
             </div>
           </li>
@@ -234,7 +234,7 @@
             </p>
 
             <details class="project-details">
-              <summary class="project-summary" onclick="this.scrollIntoView({behavior:'smooth', block:'start'})">
+              <summary class="project-summary" onclick="this.scrollIntoView({behavior:'smooth', block:'start'})" data-i18n="project_learn_more">
                 Learn more
               </summary>
               <div class="project-details-content">
@@ -287,7 +287,7 @@
             </p>
 
             <details class="project-details">
-              <summary class="project-summary" onclick="this.scrollIntoView({behavior:'smooth', block:'start'})">
+              <summary class="project-summary" onclick="this.scrollIntoView({behavior:'smooth', block:'start'})" data-i18n="project_learn_more">
                 Learn more
               </summary>
               <div class="project-details-content">
@@ -517,9 +517,9 @@
         <input type="hidden" name="_next" value="https://gouahenri.github.io/#contact">
 
         <!-- Fields -->
-        <input type="text"   name="name"    placeholder="Your Name"  autocomplete="name"   required>
-        <input type="email"  name="email"   placeholder="Your Email" autocomplete="email"  required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
+        <input type="text"   name="name"    data-i18n-placeholder="form_name" placeholder="Your Name"  autocomplete="name"   required>
+        <input type="email"  name="email"   data-i18n-placeholder="form_email" placeholder="Your Email" autocomplete="email"  required>
+        <textarea name="message" data-i18n-placeholder="form_message" placeholder="Your Message" required></textarea>
 
         <button type="submit" class="btn" data-i18n="form_submit" style="align-self:center; max-width:200px;">
           Send Message
