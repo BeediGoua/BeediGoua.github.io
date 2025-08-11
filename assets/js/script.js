@@ -34,32 +34,35 @@
   }
 
   /* -----------------------
-     Thème clair (light-mode)
-     - Migration depuis ancien localStorage 'darkMode'
+     Système de Thème Jour/Nuit
   ----------------------- */
-  function migrateThemeStorage() {
-    const legacy = localStorage.getItem('darkMode');
-    const hasNew = localStorage.getItem('lightMode');
-    if (legacy !== null && hasNew === null) {
-      // Ancienne sémantique: darkMode=true => thème sombre
-      // Nouveau modèle: body.light-mode => thème clair
-      // Donc: lightMode = !darkMode
-      const lightMode = (legacy === 'true') ? 'false' : 'true';
-      localStorage.setItem('lightMode', lightMode);
-    }
+
+  // --- THEME ---
+  function applyTheme(theme) {
+    const isLight = theme === 'light';
+    document.body.classList.toggle('light-theme', isLight);
+    localStorage.setItem('theme', theme);
+    // (optionnel) teinte d'UI navigateur mobile
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', getComputedStyle(document.body).getPropertyValue('--background-color').trim());
   }
 
-  function initThemeToggle() {
-    const toggle = $('#darkModeToggle'); // Conserve l’ID existant
-    const isLightStored = localStorage.getItem('lightMode') === 'true';
-    if (isLightStored) document.body.classList.add('light-mode');
+  function initThemeToggle(){
+    // Migration depuis l'ancien stockage, si existait
+    if (localStorage.getItem('darkMode') !== null) {
+      const wasDark = localStorage.getItem('darkMode') === 'true';
+      localStorage.removeItem('darkMode');
+      localStorage.setItem('theme', wasDark ? 'dark' : 'light');
+    }
 
-    if (toggle) {
-      toggle.setAttribute('aria-label', 'Basculer le thème');
-      toggle.addEventListener('click', () => {
-        const nowLight = !document.body.classList.contains('light-mode');
-        document.body.classList.toggle('light-mode');
-        localStorage.setItem('lightMode', String(nowLight));
+    const saved = localStorage.getItem('theme') || 'dark';
+    applyTheme(saved);
+
+    const btn = document.getElementById('themeToggle'); // <— correspond à l'HTML actuel
+    if (btn) {
+      btn.addEventListener('click', () => {
+        const next = document.body.classList.contains('light-theme') ? 'dark' : 'light';
+        applyTheme(next);
       });
     }
   }
@@ -312,7 +315,6 @@
   document.addEventListener('DOMContentLoaded', () => {
     fadeOutLoader();
 
-    migrateThemeStorage();
     initThemeToggle();
 
     initI18n();

@@ -55,7 +55,12 @@
           <option value="en">EN</option>
           <option value="fr">FR</option>
         </select>
-        <button id="darkModeToggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+        <button id="themeToggle" class="theme-toggle" aria-label="Basculer entre mode jour et nuit">
+          <div class="toggle-icon">
+            <i data-feather="moon" class="moon-icon"></i>
+            <i data-feather="sun" class="sun-icon"></i>
+          </div>
+        </button>
       </div>
 
       <button class="mobile-menu-toggle" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu">

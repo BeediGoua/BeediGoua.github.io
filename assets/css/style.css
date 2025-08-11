@@ -10,7 +10,7 @@
    VARIABLES GLOBALES (Design System)
 =============================================== */
 :root{
-  /* Couleurs */
+  /* Couleurs Mode Nuit (par défaut) */
   --primary-color:#4a6ee2;
   --secondary-color:#23243a;
   --accent-color:#3a86ff;
@@ -65,20 +65,149 @@
   --large:1200px;
 }
 
-/* Light mode optionnel (activé via body.light-mode) */
-body.light-mode{
-  --background-gradient:linear-gradient(180deg,#f6f7fb 0%,#ffffff 100%);
+/* ===============================================
+   MODE JOUR (Light Theme)
+=============================================== */
+body.light-theme{
+  /* Couleurs Mode Jour */
+  --primary-color:#2563eb;
+  --secondary-color:#f7f8fc;
+  --accent-color:#1d4ed8;
+
+  --background-gradient:linear-gradient(180deg,#f8fafc 0%,#ffffff 100%);
   --background-color:#ffffff;
 
-  --text-color:#0b0c10;
-  --text-secondary:#4a5568;
-  --text-improved:#2c3341;
+  --text-color:#1f2937;
+  --text-secondary:#6b7280;
+  --text-improved:#374151;
 
-  --card-bg:rgba(255,255,255,0.9);
-  --chip-bg:#f3f4f7;
-  --border:#e5e7ef;
+  --card-bg:rgba(255,255,255,0.95);
+  --chip-bg:#f1f5f9;
+  --border: #e5e7eb;
 
-  --shadow:0 10px 25px rgba(15,23,42,.08);
+  /* Hiérarchie couleurs projets/skills mode jour */
+  --project-title-color:#1d4ed8;
+  --project-subtitle-color:#3b82f6;
+  --project-badge-color:#4f46e5;
+  --project-badge-hover:#6366f1;
+
+  /* Ombres & blur mode jour */
+  --shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+/* ===============================================
+   STYLES DU BOUTON DE TOGGLE THEME
+=============================================== */
+.theme-toggle {
+  position: relative;
+  width: 50px;
+  height: 26px;
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.theme-toggle:hover {
+  border-color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+.toggle-icon {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.moon-icon, .sun-icon {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--primary-color);
+}
+
+/* État par défaut (mode nuit) */
+.moon-icon {
+  opacity: 1;
+  transform: translateY(0) rotate(0deg);
+}
+
+.sun-icon {
+  opacity: 0;
+  transform: translateY(20px) rotate(180deg);
+}
+
+/* État mode jour */
+body.light-theme .moon-icon {
+  opacity: 0;
+  transform: translateY(-20px) rotate(-180deg);
+}
+
+body.light-theme .sun-icon {
+  opacity: 1;
+  transform: translateY(0) rotate(0deg);
+}
+
+/* Adaptations supplémentaires pour le mode jour */
+body.light-theme .hero {
+  background: linear-gradient(120deg,#ffffff 0%,#f8fafc 100%), url('../img/hero-bg.jpg') center/cover no-repeat fixed;
+}
+
+body.light-theme .hero::before {
+  background: radial-gradient(600px at 50% 40%, rgba(37,99,235,.08), transparent 60%);
+}
+
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme h4,
+body.light-theme h5,
+body.light-theme h6 {
+  color: var(--text-color) !important;
+}
+
+body.light-theme .hero-name {
+  color: var(--text-color) !important;
+}
+
+/* Adaptations supplémentaires des cartes et éléments en mode jour */
+body.light-theme .project-card {
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0,0,0,.04);
+}
+
+body.light-theme .project-card:hover {
+  box-shadow: 0 8px 30px rgba(0,0,0,.12);
+}
+
+body.light-theme .education-card {
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0,0,0,.04);
+}
+
+body.light-theme .about-wrapper {
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0,0,0,.04);
+}
+
+body.light-theme .techskills-card,
+body.light-theme .enhanced-techskills-card {
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0,0,0,.04);
+}
+
+body.light-theme footer {
+  background: var(--secondary-color);
+  border-top: 1px solid var(--border);
 }
 
 /* Harmonisation de certains blocs existants */
@@ -144,8 +273,8 @@ button:focus{ outline:2px solid var(--primary-color); outline-offset:2px; }
 .btn:focus{ outline:2px solid var(--primary-color); outline-offset:2px; }
 
 .btn-primary{ background:linear-gradient(180deg,#4a6ee2,#3a5bcc); color:#fff; }
-.btn-secondary{ background:#23243a; color:#fff; }
-.btn-dark{ background:#23243a; color:#fff; }
+.btn-secondary{ background:var(--secondary-color); color:#fff; }
+.btn-dark{ background:var(--secondary-color); color:#fff; }
 
 /* ===============================================
    LAYOUT
@@ -187,9 +316,13 @@ header{
 #mainNav .nav-link:hover, #mainNav .nav-link.active{
   background:var(--primary-color); color:#fff; text-decoration:none;
 }
-#mainNav select, #mainNav button{
+#mainNav select{
   margin-left:1.2rem; font-size:1rem; padding:.3rem .7rem; border-radius:5px;
   border:none; background:var(--card-bg); color:var(--text-color); cursor:pointer;
+}
+
+#mainNav .theme-toggle{
+  margin-left:1rem; 
 }
 
 /* Menu hamburger */
@@ -279,20 +412,20 @@ header{
    EDUCATION
 =============================================== */
 .education-card{
-  background:linear-gradient(135deg, rgba(35,36,58,.95), rgba(40,42,65,.9));
+  background:var(--card-bg);
   border-left:4px solid var(--primary-color); border-radius:16px;
   padding:2rem; box-shadow:0 4px 24px rgba(74,110,226,.15);
   transition:transform .3s ease; max-width:850px; margin:0 auto;
 }
 .education-card:hover{ transform:translateY(-4px); }
 .edu-title{ color:var(--primary-color); font-weight:600; font-size:1.25rem; margin-bottom:.3rem; }
-.edu-years{ font-size:1.05rem; color:#bbb; margin-bottom:.2rem; }
+.edu-years{ font-size:1.05rem; color:var(--text-secondary); margin-bottom:.2rem; }
 .edu-school-badge{
   background-color:rgba(122,147,232,.12); color:var(--project-subtitle-color)!important;
   padding:.4rem .8rem; border-radius:12px; font-weight:500; display:inline-block; margin-bottom:.6rem;
 }
-.edu-subtext{ font-size:1.05rem; margin-bottom:1rem; color:#ccc; }
-.edu-courses li{ margin-bottom:.8rem; font-size:1.05rem; line-height:1.6; color:#ddd; }
+.edu-subtext{ font-size:1.05rem; margin-bottom:1rem; color:var(--text-secondary); }
+.edu-courses li{ margin-bottom:.8rem; font-size:1.05rem; line-height:1.6; color:var(--text-improved); }
 .icon-bullet{ margin-right:8px; stroke-width:2; vertical-align:middle; color:var(--project-subtitle-color)!important; }
 
 /* ===============================================
@@ -330,7 +463,7 @@ header{
 
 /* Détails (details/summary) */
 .project-details{
-  background:#1b1e2e; color:#f0f0f0; padding:1em; margin-top:.8em;
+  background:var(--card-bg); padding:1em; margin-top:.8em;
   border-radius:8px; font-size:.95em; box-shadow:0 2px 8px rgba(0,0,0,.2);
   border-left:4px solid var(--primary-color);
 }
@@ -340,7 +473,7 @@ header{
 .project-details summary:hover{ color:var(--primary-color); text-decoration:underline; }
 .project-details[open] summary::after{ content:" ▲"; font-size:.8rem; }
 .project-details:not([open]) summary::after{ content:" ▼"; font-size:.8rem; }
-.project-details p{ margin-top:.8rem; margin-bottom:.5rem; font-size:.95rem; line-height:1.6; color:#f0f0f0; }
+.project-details p{ margin-top:.8rem; margin-bottom:.5rem; font-size:.95rem; line-height:1.6; }
 .project-details ul{ margin:.5em 0; padding-left:1.5em; }
 .project-details li{ margin-bottom:.3em; }
 .project-details ul li::marker{ color:var(--primary-color); }
@@ -537,7 +670,7 @@ header{
    FOOTER
 =============================================== */
 footer{
-  background:#23243a; color:#e6e6e6;
+  background:var(--secondary-color); color:#e6e6e6;
   border-top-left-radius:24px; border-top-right-radius:24px;
   margin-top:3rem; text-align:center; padding:2rem; font-size:1.1rem;
 }
@@ -659,5 +792,106 @@ input:focus, textarea:focus, select:focus{ outline:2px solid var(--primary-color
 /* 3) Encoches (iPhone) : petite marge de sécurité sur le header */
 @supports (padding: max(0px)){
   header{ padding-top: max(1rem, env(safe-area-inset-top)); }
+}
+
+/* ===============================================
+   OVERRIDES MODE JOUR (Light Mode)
+=============================================== */
+body.light-theme header,
+body.light-theme footer{
+  background: var(--secondary-color);
+  color: var(--text-color);
+}
+
+/* Panneau <details> en clair */
+body.light-theme .project-details{
+  background: var(--card-bg);
+  color: var(--text-improved);
+  border-left: 4px solid var(--primary-color);
+}
+body.light-theme .project-details p{ color: var(--text-improved); }
+body.light-theme .project-details summary{
+  color: var(--project-subtitle-color);
+}
+
+/* Boutons secondaires en clair (surfaces neutres) */
+body.light-theme .btn-secondary,
+body.light-theme .btn-dark{
+  background: var(--secondary-color);
+  color: var(--text-color);
+  border: 1px solid var(--border);
+}
+body.light-theme .btn-secondary:hover,
+body.light-theme .btn-dark:hover{
+  filter: brightness(0.98);
+  transform: translateY(-1px);
+}
+
+/* Hero plus flat en light */
+body.light-theme .hero{
+  background: linear-gradient(120deg,#f7f8fc 0%, #ffffff 100%), url('../img/hero-bg.jpg') center/cover no-repeat fixed;
+}
+body.light-theme .hero::before{
+  background: radial-gradient(600px at 50% 40%, rgba(74,144,226,.10), transparent 60%);
+}
+
+/* Menu mobile : même surface claire */
+@media (max-width: 768px){
+  body.light-theme .nav-links,
+  body.light-theme .nav-controls{
+    background: var(--secondary-color);
+  }
+}
+
+/* Light mode: uniformiser TOUTES les surfaces encore sombres */
+body.light-theme .about-wrapper,
+body.light-theme .section-content,
+body.light-theme .skills-advanced,
+body.light-theme .skills-advanced-grid,
+body.light-theme .skill-adv-item,
+body.light-theme .techskills-card,
+body.light-theme .techskill-mini-card,
+body.light-theme .education-card {
+  background: var(--card-bg) !important;
+  color: var(--text-color);
+  border-color: var(--border);
+  box-shadow: var(--shadow);
+}
+
+/* Section Education spécifique en mode jour */
+body.light-theme .education-card {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0,0,0,.04);
+}
+
+body.light-theme .edu-years,
+body.light-theme .edu-subtext,
+body.light-theme .edu-courses li {
+  color: var(--text-improved) !important;
+}
+
+/* Details (si une version sombre traîne plus bas dans le fichier) */
+body.light-theme .project-details{
+  background: var(--card-bg) !important;
+  color: var(--text-improved);
+  border-left: 4px solid var(--primary-color);
+}
+body.light-theme .project-details p{ color: var(--text-improved); }
+body.light-theme .project-details summary{ color: var(--project-subtitle-color); }
+
+/* Timeline (ligne + texte) */
+body.light-theme .timeline::before { background: var(--border); }
+body.light-theme .timeline-item .muted { color: var(--text-secondary); }
+
+/* (Optionnel) cartes projets en base claire homogène */
+body.light-theme .project-card { background: var(--card-bg); }
+
+/* Navigation mobile surfaces claires */
+@media (max-width: 768px){
+  body.light-theme .nav-links,
+  body.light-theme .nav-controls{
+    background: var(--secondary-color);
+  }
 }
 }
