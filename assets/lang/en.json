@@ -10,7 +10,8 @@
   "hero_greeting": "Hi, I'm",
   "hero_title": "Data Scientist specialized in AI and NLP",
   "hero_description": "Data Scientist — exploring, building, and connecting ideas from data to cloud",
-  
+  "hero_roles": ["Data Scientist", "NLP & RAG", "MLOps"],
+
   "btn_projects": "My Projects",
   "btn_contact": "Contact",
   "btn_cv_fr": "Download CV (FR)",
