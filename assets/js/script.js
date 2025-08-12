@@ -316,6 +316,70 @@
   }
 
   /* -----------------------
+     Formulaire de contact AJAX
+  ----------------------- */
+  function initContactForm() {
+    const form = $('#contactForm');
+    const messageDiv = $('#contactMessage');
+    
+    if (!form) return;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      
+      // Désactiver le bouton pendant l'envoi
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Envoi...';
+      
+      try {
+        const formData = new FormData(form);
+        
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+        
+        if (response.ok) {
+          // Réinitialiser le formulaire avant de le masquer
+          form.reset();
+          
+          // Masquer le formulaire et afficher le message
+          form.style.display = 'none';
+          messageDiv.style.display = 'block';
+          messageDiv.classList.remove('fade-out');
+          
+          // Masquer le message et réafficher le formulaire après 30 secondes
+          setTimeout(() => {
+            messageDiv.classList.add('fade-out');
+            setTimeout(() => {
+              messageDiv.style.display = 'none';
+              messageDiv.classList.remove('fade-out');
+              form.style.display = 'flex'; // Réafficher le formulaire
+            }, 500);
+          }, 30000);
+          
+        } else {
+          throw new Error('Erreur lors de l\'envoi');
+        }
+        
+      } catch (error) {
+        alert('Erreur lors de l\'envoi du message. Veuillez réessayer.');
+        console.error('Erreur:', error);
+      }
+      
+      // Réactiver le bouton
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalText;
+    });
+  }
+
+  /* -----------------------
      INIT
   ----------------------- */
   document.addEventListener('DOMContentLoaded', () => {
@@ -330,6 +394,7 @@
     initReveal();
     initProjectFilters();
     initContactValidation();
+    initContactForm();
     initAOS();
   });
 

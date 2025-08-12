@@ -102,6 +102,7 @@
   "form_subject": "Subject",
   "form_message": "Message",
   "form_submit": "Send Message",
+  "contact_success": "Message sent successfully! I'll get back to you soon.",
   
   "footer_rights": "All rights reserved.",
   "footer_copyright": "© Goua Beedi Henri",

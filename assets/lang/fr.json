@@ -102,6 +102,7 @@
   "form_subject": "Sujet",
   "form_message": "Message",
   "form_submit": "Envoyer le message",
+  "contact_success": "Message envoyé avec succès ! Je vous répondrai rapidement.",
   
   "footer_rights": "Tous droits réservés.",
   "footer_linkedin": "LinkedIn",
