@@ -3570,4 +3570,4 @@ body.light-theme ::-webkit-scrollbar-thumb {
 body.light-theme ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to bottom, var(--primary-color), var(--accent-purple));
 }
-}
+
