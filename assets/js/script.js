@@ -58,9 +58,19 @@
     const saved = localStorage.getItem('theme') || 'dark';
     applyTheme(saved);
 
-    const btn = document.getElementById('themeToggle'); // <— correspond à l'HTML actuel
+    // Bouton thème desktop
+    const btn = document.getElementById('themeToggle');
     if (btn) {
       btn.addEventListener('click', () => {
+        const next = document.body.classList.contains('light-theme') ? 'dark' : 'light';
+        applyTheme(next);
+      });
+    }
+    
+    // Bouton thème mobile intégré
+    const btnMobile = document.getElementById('themeToggleMobile');
+    if (btnMobile) {
+      btnMobile.addEventListener('click', () => {
         const next = document.body.classList.contains('light-theme') ? 'dark' : 'light';
         applyTheme(next);
       });
@@ -107,9 +117,11 @@
       localStorage.setItem('lang', lang);
       document.documentElement.lang = lang;
 
-      // Sync sélecteur si dispo
+      // Sync sélecteurs si dispo (desktop et mobile)
       const select = $('#langSwitcher');
+      const selectMobile = $('#langSwitcherMobile');
       if (select) select.value = lang;
+      if (selectMobile) selectMobile.value = lang;
 
     } catch (e) {
       console.warn('i18n load error', e);
@@ -120,14 +132,24 @@
 
   function initI18n() {
     const select = $('#langSwitcher');
+    const selectMobile = $('#langSwitcherMobile');
     const defaultLang =
       localStorage.getItem('lang') ||
       document.documentElement.lang ||
       'fr';
 
+    // Sélecteur desktop
     if (select) {
       select.value = defaultLang;
       select.addEventListener('change', (e) => {
+        changeLanguage(e.target.value);
+      });
+    }
+    
+    // Sélecteur mobile intégré
+    if (selectMobile) {
+      selectMobile.value = defaultLang;
+      selectMobile.addEventListener('change', (e) => {
         changeLanguage(e.target.value);
       });
     }

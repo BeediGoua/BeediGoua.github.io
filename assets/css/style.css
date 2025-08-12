@@ -1269,50 +1269,75 @@ input:focus, textarea:focus, select:focus{ outline:2px solid var(--primary-color
     box-shadow: 0 4px 15px rgba(99,102,241,.4);
   }
   
-  /* Contrôles (langue + thème) intégrés dans le menu */
-  .nav-controls{
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    transform: none !important;
-    
-    background: rgba(255,255,255,.05);
-    border: 1px solid rgba(255,255,255,.1);
-    border-radius: 12px;
-    padding: 1rem;
-    margin-top: 1rem;
-    
+  /* Séparateur dans le menu */
+  .nav-links .nav-separator {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.2), transparent);
+    margin: 1rem 0;
+    border: none;
+  }
+  
+  /* Contrôles intégrés comme liens dans le menu principal */
+  .nav-links .nav-control-item {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    
-    opacity: 1 !important;
-    visibility: visible !important;
+    justify-content: space-between;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(255,255,255,.08);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    margin-bottom: 0.8rem;
+  }
+  
+  .nav-links .nav-control-item:hover {
+    background: rgba(255,255,255,.08);
+    border-color: rgba(255,255,255,.15);
+  }
+  
+  .nav-links .nav-control-item .control-label {
+    font-weight: 500;
+    color: var(--text-color);
+  }
+  
+  /* Sélecteur de langue dans le menu */
+  .nav-links .nav-control-item select {
+    background: rgba(255,255,255,.1) !important;
+    color: var(--text-color) !important;
+    border: 1px solid rgba(255,255,255,.2) !important;
+    border-radius: 6px !important;
+    padding: 0.4rem 0.6rem !important;
+    font-size: 0.9rem !important;
+    min-width: 60px;
+    cursor: pointer;
+  }
+  
+  .nav-links .nav-control-item select option {
+    background: var(--secondary-color) !important;
+    color: var(--text-color) !important;
+  }
+  
+  /* Bouton thème dans le menu */
+  .nav-links .nav-control-item .theme-toggle {
+    background: rgba(255,255,255,.1) !important;
+    border: 1px solid rgba(255,255,255,.2) !important;
+    width: 45px !important;
+    height: 25px !important;
+    border-radius: 15px !important;
+    cursor: pointer;
     transition: all 0.3s ease;
   }
   
-  .nav-controls:hover {
-    background: rgba(255,255,255,.1);
+  .nav-links .nav-control-item .theme-toggle:hover {
+    background: rgba(255,255,255,.15) !important;
+    border-color: rgba(255,255,255,.3) !important;
   }
   
-  /* Sélecteur de langue mobile */
-  .nav-controls select {
-    background: var(--card-bg) !important;
-    color: var(--text-color) !important;
-    border: 1px solid var(--border) !important;
-    border-radius: 8px !important;
-    padding: 0.5rem 0.8rem !important;
-    font-size: 1rem !important;
-    min-width: 60px;
-  }
-  
-  /* Bouton thème mobile */
-  .nav-controls .theme-toggle {
-    background: var(--card-bg) !important;
-    border: 1px solid var(--border) !important;
-    width: 48px !important;
-    height: 28px !important;
+  /* Masquer l'ancien nav-controls sur mobile */
+  .nav-controls {
+    display: none !important;
   }
 
   #mainNav{ 
@@ -1920,23 +1945,30 @@ body.light-theme::before {
 
 /* Header premium avec glass morphism - PRIORITÉ MAXIMALE */
 body.light-theme header{
-  background: var(--glass-effect) !important;
-  backdrop-filter: var(--glass-blur) !important;
-  border-bottom: 1px solid var(--divider) !important;
+  background: rgba(248, 250, 252, 0.95) !important;
+  backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(203, 213, 225, 0.6) !important;
   color: var(--text-color) !important;
   box-shadow: 
-    var(--shadow-medium),
+    0 4px 20px rgba(148, 163, 184, 0.12),
     0 1px 0 rgba(255,255,255,0.8) !important;
 }
 
-/* CORRECTION CRITIQUE MOBILE : Header mode jour avec priorité absolue */
+/* CORRECTION ULTRA-CRITIQUE : Header mobile mode jour - PRIORITÉ ABSOLUE */
 @media (max-width: 768px) {
-  body.light-theme header {
+  html body.light-theme header {
     background: rgba(248, 250, 252, 0.95) !important;
+    background-image: none !important;
     backdrop-filter: blur(20px) !important;
     border-bottom: 1px solid rgba(203, 213, 225, 0.6) !important;
     box-shadow: 0 4px 20px rgba(148, 163, 184, 0.12) !important;
   }
+  
+  /* Force la suppression du gradient de base */
+  html body.light-theme header {
+    background: rgba(248, 250, 252, 0.95) !important;
+  }
+}
   
   /* ===============================================
      MENU HAMBURGER MODE JOUR - ADAPTATION COMPLÈTE
@@ -1994,36 +2026,48 @@ body.light-theme header{
     box-shadow: 0 4px 15px rgba(99,102,241,.3) !important;
   }
   
-  /* Contrôles mode jour */
-  body.light-theme .nav-controls {
-    background: rgba(248, 250, 252, 0.8) !important;
+  /* Séparateur mode jour */
+  body.light-theme .nav-links .nav-separator {
+    background: linear-gradient(90deg, transparent, rgba(203, 213, 225, 0.4), transparent) !important;
+  }
+  
+  /* Contrôles intégrés mode jour */
+  body.light-theme .nav-links .nav-control-item {
+    background: rgba(248, 250, 252, 0.6) !important;
+    border: 1px solid rgba(203, 213, 225, 0.3) !important;
+    color: var(--text-color) !important;
+  }
+  
+  body.light-theme .nav-links .nav-control-item:hover {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border-color: rgba(203, 213, 225, 0.5) !important;
+  }
+  
+  body.light-theme .nav-links .nav-control-item .control-label {
+    color: var(--text-color) !important;
+  }
+  
+  /* Sélecteur langue mode jour intégré */
+  body.light-theme .nav-links .nav-control-item select {
+    background: rgba(255, 255, 255, 0.9) !important;
+    color: var(--text-color) !important;
     border: 1px solid rgba(203, 213, 225, 0.4) !important;
   }
   
-  body.light-theme .nav-controls:hover {
+  body.light-theme .nav-links .nav-control-item select option {
+    background: white !important;
+    color: var(--text-color) !important;
+  }
+  
+  /* Bouton thème mode jour intégré */
+  body.light-theme .nav-links .nav-control-item .theme-toggle {
     background: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid rgba(203, 213, 225, 0.4) !important;
   }
   
-  /* Sélecteur langue mode jour */
-  body.light-theme .nav-controls select {
+  body.light-theme .nav-links .nav-control-item .theme-toggle:hover {
     background: white !important;
-    color: var(--text-color) !important;
-    border: 1px solid rgba(203, 213, 225, 0.5) !important;
-  }
-  
-  body.light-theme .nav-controls select option {
-    background: white !important;
-    color: var(--text-color) !important;
-  }
-  
-  /* Bouton thème mode jour */
-  body.light-theme .nav-controls .theme-toggle {
-    background: white !important;
-    border: 1px solid rgba(203, 213, 225, 0.5) !important;
-  }
-  
-  body.light-theme .nav-controls .theme-toggle:hover {
-    background: rgba(248, 250, 252, 1) !important;
+    border-color: rgba(203, 213, 225, 0.6) !important;
     box-shadow: 0 2px 8px rgba(79,70,229,0.1) !important;
   }
 }
