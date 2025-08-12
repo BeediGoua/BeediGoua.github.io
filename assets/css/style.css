@@ -3588,21 +3588,34 @@ body.light-theme ::-webkit-scrollbar-thumb:hover {
     display: flex !important; /* affiche l'icône "burger" */
   }
 
-  /* (optionnel) menu déroulant propre */
+  /* Menu déroulant mobile (overlay sous le header) */
   .nav-links {
-    position: fixed;
-    top: 64px; /* hauteur header */
+    position: fixed;           /* overlay collé à l’écran */
+    top: 64px;                 /* hauteur du header (ajuste si besoin) */
     left: 0;
     right: 0;
+    z-index: 1000;             /* au-dessus du header/contenu */
     background: var(--secondary-color);
+    backdrop-filter: var(--glass-blur);
+    border-top: 1px solid var(--border);
     flex-direction: column;
     gap: 1rem;
     padding: 1rem 1.25rem;
+    max-height: calc(100vh - 64px); /* scroll si trop long */
+    overflow-y: auto;
+
+    /* Anim d’apparition */
     transform: translateY(-110%);
-    transition: transform .3s ease;
+    opacity: 0;
+    visibility: hidden;
+    transition: transform .3s ease, opacity .2s ease, visibility .2s;
   }
+
   .nav-links.active {
     transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
   }
 }
+
 
