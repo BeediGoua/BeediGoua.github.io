@@ -628,7 +628,7 @@ header {
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 10000;
 }
 #mainNav {
   display: flex;
@@ -1925,7 +1925,7 @@ select:focus {
   /* Bouton hamburger */
   .mobile-menu-toggle {
     display: flex;
-    z-index: 1001;
+    z-index: 10002;
     position: relative;
   }
 
@@ -1950,7 +1950,7 @@ select:focus {
     transform: translateY(-15px);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
-    z-index: 999;
+    z-index: 10001;
     max-height: calc(100vh - 80px);
     overflow-y: auto;
   }
@@ -2231,7 +2231,7 @@ select:focus {
     position: relative;
     top: auto;
     transform: none;
-    z-index: 1101;
+    z-index: 10002;
   }
 
   .nav-links {
@@ -2251,7 +2251,7 @@ select:focus {
     max-height: calc(100vh - 64px);
     overflow-y: auto;
 
-    z-index: 1100;
+    z-index: 10001;
     transform: translateY(-110%);
     opacity: 0;
     visibility: hidden;
@@ -2289,7 +2289,7 @@ select:focus {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 10000;
   }
 }
 
@@ -4696,7 +4696,7 @@ body.light-theme ::-webkit-scrollbar-thumb:hover {
     top: 64px; /* hauteur du header (ajuste si besoin) */
     left: 0;
     right: 0;
-    z-index: 1000; /* au-dessus du header/contenu */
+    z-index: 10001; /* au-dessus du header/contenu */
     background: var(--secondary-color);
     backdrop-filter: var(--glass-blur);
     border-top: 1px solid var(--border);
