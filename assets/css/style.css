@@ -3570,4 +3570,39 @@ body.light-theme ::-webkit-scrollbar-thumb {
 body.light-theme ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to bottom, var(--primary-color), var(--accent-purple));
 }
+/* --- Cacher les contrôles "mobile" en desktop/tablette --- */
+@media (min-width: 769px) {
+  /* éléments mobiles insérés dans .nav-links */
+  .nav-links .nav-control-item,
+  .nav-links .nav-separator {
+    display: none !important;
+  }
+}
+
+/* --- Mode mobile : cacher les contrôles desktop, montrer le burger --- */
+@media (max-width: 768px) {
+  .nav-controls {
+    display: none !important; /* cache le sélecteur langue + toggle thème desktop */
+  }
+  .mobile-menu-toggle {
+    display: flex !important; /* affiche l'icône "burger" */
+  }
+
+  /* (optionnel) menu déroulant propre */
+  .nav-links {
+    position: fixed;
+    top: 64px; /* hauteur header */
+    left: 0;
+    right: 0;
+    background: var(--secondary-color);
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    transform: translateY(-110%);
+    transition: transform .3s ease;
+  }
+  .nav-links.active {
+    transform: translateY(0);
+  }
+}
 

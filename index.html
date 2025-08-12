@@ -32,7 +32,7 @@
       overflow-x: hidden !important;
       max-width: 100vw;
     }
-    /* Optionnel : empêcher la nav de déborder */
+    /* Optionnel : empêcher la nav de déborder */
     nav#mainNav {
       max-width: 100vw;
       overflow-x: auto;
@@ -60,7 +60,7 @@
         <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
         
         <!-- Séparateur -->
-        <hr class="nav-separator">
+        <hr class="nav-separator" aria-hidden="true">
         
         <!-- Contrôles intégrés dans le menu mobile -->
         <div class="nav-control-item">
@@ -156,7 +156,6 @@
             </p>
           </div>
 
-
           <!-- CV buttons -->
           <div class="cv-buttons">
             <a href="assets/CV_GouaHenri_FR.pdf" class="btn btn-primary" data-i18n="btn_cv_fr" download>Download CV (FR)</a>
@@ -193,7 +192,6 @@
     </section>
 
     <!-- Timeline (Parcours) -->
-    <!-- Timeline (Parcours) -->
     <section id="timeline" class="section">
       <div class="section-header reveal-up">
         <span class="section-mainicon"><i data-feather="map"></i></span>
@@ -227,7 +225,6 @@
         </ol>
       </div>
     </section>
-
 
     <!-- Projects -->
     <section id="projects" class="section">
@@ -646,7 +643,7 @@
       });
     });
 
-    // Fonction debounce pour optimiser les performances
+    // Fonction debounce pour optimiser les performances 
     function debounce(func, wait) {
       let timeout;
       return function executedFunction(...args) {
