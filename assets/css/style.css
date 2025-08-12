@@ -267,8 +267,9 @@ body.light-theme .about-wrapper {
 
 body.light-theme .techskills-card,
 body.light-theme .enhanced-techskills-card {
-  border: 1px solid var(--border);
-  box-shadow: 0 4px 20px rgba(0,0,0,.04);
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 body.light-theme footer {
@@ -404,9 +405,12 @@ button:focus{ outline:2px solid var(--primary-color); outline-offset:2px; }
 /* Headers de section */
 .section-header{ text-align:center; margin-bottom:2.2rem; }
 .section-mainicon{
-  display:inline-block;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
   background:linear-gradient(135deg,var(--primary-color) 60%,var(--accent-color) 100%);
-  color:#fff; border-radius:50%; padding:.7em; font-size:2.1rem;
+  color:#fff; border-radius:50%; 
+  width:3.5rem; height:3.5rem; font-size:1.5rem;
   box-shadow:0 2px 12px rgba(74,144,226,.18); margin-bottom:.7em;
 }
 .section-title{ font-size:2rem; color:var(--accent-color); margin:.2em 0 .1em 0; letter-spacing:.01em; }
@@ -441,6 +445,12 @@ header{
 #mainNav select{
   margin-left:1.2rem; font-size:1rem; padding:.3rem .7rem; border-radius:5px;
   border:none; background:var(--card-bg); color:var(--text-color); cursor:pointer;
+}
+
+#mainNav select option{
+  background:var(--card-bg); 
+  color:var(--text-color);
+  padding:.3rem .7rem;
 }
 
 #mainNav .theme-toggle{
@@ -811,9 +821,12 @@ header{
 }
 .techskills-header{ text-align:center; margin-bottom:2.2rem; }
 .techskills-mainicon{
-  display:inline-block;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
   background:linear-gradient(135deg,var(--primary-color) 60%, var(--accent-color) 100%);
-  color:#fff; border-radius:50%; padding:.7em; font-size:2.3rem;
+  color:#fff; border-radius:50%; 
+  width:3.5rem; height:3.5rem; font-size:1.5rem;
   box-shadow:0 2px 12px rgba(74,144,226,.18); margin-bottom:.7em;
 }
 .techskills-title{ font-size:2.1rem; color:var(--accent-color); margin:.2em 0 .1em 0; letter-spacing:.01em; }
@@ -899,9 +912,21 @@ header{
 /* ===============================================
    CONTACT
 =============================================== */
+#contact {
+  padding: clamp(2rem,5vw,3rem);
+  margin: clamp(1rem,3vw,2rem) auto;
+  max-width: 600px;
+}
+
 #contactForm{
   display:flex; flex-direction:column; gap:clamp(.8rem,2vw,1.2rem);
-  max-width:min(400px,90vw); width:100%; margin:0 auto;
+  max-width:min(400px,90vw); width:100%; margin:2rem auto 0;
+  padding: clamp(1.5rem,4vw,2.5rem);
+  background:var(--card-bg-premium); 
+  backdrop-filter:var(--glass-blur);
+  box-shadow:var(--shadow-colored);
+  border-radius:20px; 
+  border:1px solid var(--border);
 }
 #contactForm input, #contactForm textarea{
   padding:clamp(.6rem,2vw,1rem);
@@ -1076,7 +1101,6 @@ body.light-theme header{
   box-shadow: 
     var(--shadow-medium),
     0 1px 0 rgba(255,255,255,0.8);
-  position: relative;
 }
 
 body.light-theme header::before {
@@ -1255,12 +1279,24 @@ body.light-theme .education-card:hover::before {
 }
 
 /* Skills & Tech premium avec accents colorés */
-body.light-theme .skills-advanced,
+body.light-theme .skills-advanced {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
 body.light-theme .techskills-card {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+body.light-theme .techskills-enhanced-grid {
   background: var(--card-bg-alt) !important;
-  border: 1px solid var(--border) !important;
-  box-shadow: var(--shadow-colored) !important;
+  border: 1px solid var(--divider) !important;
+  box-shadow: var(--shadow-soft) !important;
   border-radius: 18px !important;
+  padding: clamp(1.5rem,4vw,2.5rem) !important;
 }
 
 body.light-theme .skill-adv-item {
@@ -1425,12 +1461,12 @@ body.light-theme .section-content {
     inset 0 1px 0 rgba(255,255,255,0.8);
 }
 
-body.light-theme .skills-advanced,
 body.light-theme .skills-advanced-grid {
   background: var(--card-bg-alt) !important;
   color: var(--text-color) !important;
   border: 1px solid var(--divider);
   box-shadow: var(--shadow-soft) !important;
+  padding: clamp(1.5rem,4vw,2.5rem) !important;
 }
 
 /* Éléments de liste dans Skills */
@@ -1657,8 +1693,9 @@ body.light-theme .theme-toggle:hover::before {
 }
 
 body.light-theme .theme-toggle:hover {
-  transform: scale(1.1) rotate(15deg);
+  transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(79,70,229,0.2);
+  border-color: var(--primary-color);
 }
 
 /* Animations personnalisées */
@@ -1893,14 +1930,22 @@ body.light-theme .education-card:hover {
 }
 
 /* Contact form avec glass morphism */
+body.light-theme #contact {
+  background: transparent;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
 body.light-theme #contactForm {
-  background: var(--glass-effect) !important;
-  backdrop-filter: blur(15px) !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(10px) !important;
   border: 1px solid rgba(203, 213, 225, 0.4) !important;
-  border-radius: 20px !important;
   box-shadow: 
-    var(--shadow-soft),
-    inset 0 1px 0 rgba(255,255,255,0.8) !important;
+    0 4px 20px rgba(0,0,0,.04),
+    inset 0 1px 0 rgba(255,255,255,0.9) !important;
 }
 
 body.light-theme #contactForm input,
