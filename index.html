@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"/>
   <meta name="description" content="Portfolio de Goua Beedi Henri - Data Scientist Junior spécialisé NLP et RAG."/>
   <meta name="author" content="Goua Beedi Henri"/>
   <meta name="theme-color" content="#23243a">
@@ -568,7 +568,59 @@
           window.scrollTo({ top: 0, behavior: 'smooth' });
         });
       }
+
+      // Détection et protection tablettes exotiques
+      function checkTabletNavOverflow() {
+        const nav = document.getElementById('mainNav');
+        const navLinks = document.querySelector('.nav-links');
+        const navControls = document.querySelector('.nav-controls');
+        
+        if (!nav || !navLinks || !navControls) return;
+        
+        // Vérifier si on est sur une tablette (largeur entre 600px et 1400px, tactile)
+        const isTablet = window.innerWidth >= 600 && window.innerWidth <= 1400 && 
+                        ('ontouchstart' in window || navigator.maxTouchPoints > 0);
+        
+        if (isTablet) {
+          setTimeout(() => {
+            // Vérifier si la navigation déborde
+            const navRect = nav.getBoundingClientRect();
+            const linksRect = navLinks.getBoundingClientRect();
+            const controlsRect = navControls.getBoundingClientRect();
+            
+            // Si les éléments débordent
+            if (linksRect.right + controlsRect.width > navRect.right - 10) {
+              document.body.classList.add('tablet-overflow-protection');
+            }
+            
+            // Protection d'urgence pour écrans très courts
+            if (window.innerHeight < 500 && window.innerWidth > window.innerHeight) {
+              document.body.classList.add('emergency-vertical');
+            }
+          }, 100);
+        }
+      }
+      
+      // Vérifier au chargement et au redimensionnement
+      checkTabletNavOverflow();
+      window.addEventListener('resize', debounce(checkTabletNavOverflow, 250));
+      window.addEventListener('orientationchange', () => {
+        setTimeout(checkTabletNavOverflow, 300);
+      });
     });
+
+    // Fonction debounce pour optimiser les performances
+    function debounce(func, wait) {
+      let timeout;
+      return function executedFunction(...args) {
+        const later = () => {
+          clearTimeout(timeout);
+          func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+      };
+    }
   </script>
 </body>
 </html>
