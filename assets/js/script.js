@@ -157,58 +157,88 @@
   }
 
   /* -----------------------
-     Menu mobile (access + UX)
+     Nouveau Menu Mobile Moderne
   ----------------------- */
-  function initMobileMenu() {
-    const mobileToggle = $('.mobile-menu-toggle');
-    const navLinks = $('.nav-links');
-    const navControls = $('.nav-controls');
+  function initNewMobileMenu() {
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const menuOverlay = document.querySelector('.mobile-menu-overlay');
+    const navLinks = document.querySelectorAll('.mobile-menu-nav .nav-link');
+    
+    if (!menuBtn || !menuOverlay) return;
 
-    if (!mobileToggle || !navLinks) return;
-
-    // Accessibilité
-    mobileToggle.setAttribute('aria-expanded', 'false');
-    mobileToggle.setAttribute('aria-label', 'Ouvrir le menu');
+    // Ouvrir/fermer le menu
+    const toggleMenu = () => {
+      const isOpen = menuBtn.classList.contains('active');
+      
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    };
 
     const openMenu = () => {
-      mobileToggle.classList.add('active');
-      navLinks.classList.add('active');
-      navControls?.classList.add('active');
-      mobileToggle.setAttribute('aria-expanded', 'true');
-      mobileToggle.setAttribute('aria-label', 'Fermer le menu');
-      document.body.style.overflow = 'hidden';
+      menuBtn.classList.add('active');
+      menuOverlay.classList.add('active');
+      menuBtn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden'; // Bloquer le scroll
     };
 
     const closeMenu = () => {
-      mobileToggle.classList.remove('active');
-      navLinks.classList.remove('active');
-      navControls?.classList.remove('active');
-      mobileToggle.setAttribute('aria-expanded', 'false');
-      mobileToggle.setAttribute('aria-label', 'Ouvrir le menu');
-      document.body.style.overflow = '';
+      menuBtn.classList.remove('active');
+      menuOverlay.classList.remove('active');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = ''; // Rétablir le scroll
     };
 
-    mobileToggle.addEventListener('click', () => {
-      const isOpen = mobileToggle.classList.contains('active');
-      isOpen ? closeMenu() : openMenu();
+    // Event listeners
+    menuBtn.addEventListener('click', toggleMenu);
+    
+    // Fermer le menu en cliquant sur un lien
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        closeMenu();
+      });
     });
 
-    // Ferme au clic sur un lien
-    $$('.nav-link').forEach(link => {
-      link.addEventListener('click', closeMenu);
-    });
-
-    // Clic à l’extérieur
-    document.addEventListener('click', (e) => {
-      if (!mobileToggle.contains(e.target) && !navLinks.contains(e.target)) {
+    // Fermer le menu en cliquant en dehors (sur l'overlay)
+    menuOverlay.addEventListener('click', (e) => {
+      if (e.target === menuOverlay) {
         closeMenu();
       }
     });
 
-    // ESC pour fermer
+    // Fermer avec la touche Escape
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeMenu();
+      if (e.key === 'Escape' && menuOverlay.classList.contains('active')) {
+        closeMenu();
+      }
     });
+
+    // Gestion des contrôles dans le menu mobile
+    const langSwitcherMobile2 = document.getElementById('langSwitcherMobile2');
+    const themeToggleMobile2 = document.getElementById('themeToggleMobile2');
+
+    // Synchroniser le sélecteur de langue mobile avec le desktop
+    if (langSwitcherMobile2) {
+      langSwitcherMobile2.addEventListener('change', (e) => {
+        changeLanguage(e.target.value);
+      });
+    }
+
+    // Gestion du bouton thème mobile
+    if (themeToggleMobile2) {
+      themeToggleMobile2.addEventListener('click', () => {
+        const next = document.body.classList.contains('light-theme') ? 'dark' : 'light';
+        applyTheme(next);
+      });
+    }
+
+    // Synchroniser les valeurs initiales
+    const currentLang = localStorage.getItem('lang') || 'fr';
+    if (langSwitcherMobile2) {
+      langSwitcherMobile2.value = currentLang;
+    }
   }
 
   /* -----------------------
@@ -410,7 +440,7 @@
     initThemeToggle();
 
     initI18n();
-    initMobileMenu();
+    initNewMobileMenu();
     initScrollSpy();
     initSmoothScroll();
     initReveal();

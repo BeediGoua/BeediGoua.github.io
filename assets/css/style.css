@@ -687,34 +687,6 @@ header {
   margin-left: 1rem;
 }
 
-/* Menu hamburger */
-.mobile-menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  padding: 0.5rem;
-  position: absolute;
-  right: 2rem;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.mobile-menu-toggle span {
-  width: 25px;
-  height: 3px;
-  background: var(--text-color);
-  margin: 3px 0;
-  transition: 0.3s;
-  border-radius: 2px;
-}
-.mobile-menu-toggle.active span:nth-child(1) {
-  transform: rotate(-45deg) translate(-5px, 6px);
-}
-.mobile-menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-.mobile-menu-toggle.active span:nth-child(3) {
-  transform: rotate(45deg) translate(-5px, -6px);
-}
 
 /* ===============================================
    HERO
@@ -1918,172 +1890,7 @@ select:focus {
     font-size: 2.2rem;
   }
 
-  /* ===============================================
-     MENU HAMBURGER MOBILE AMÉLIORÉ - SANS CHEVAUCHEMENTS
-  =============================================== */
-
-  /* Bouton hamburger */
-  .mobile-menu-toggle {
-    display: flex;
-    z-index: 10002;
-    position: relative;
-  }
-
-  /* Menu principal déroulant */
-  .nav-links {
-    position: fixed;
-    top: 100%;
-    left: 0;
-    right: 0;
-    width: 100%;
-    background: var(--secondary-color);
-    backdrop-filter: blur(20px);
-    border-top: 1px solid var(--border);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-
-    flex-direction: column;
-    padding: 2rem 1rem;
-    gap: 1.2rem;
-
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-15px);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-
-    z-index: 10001;
-    max-height: calc(100vh - 80px);
-    overflow-y: auto;
-  }
-
-  .nav-links.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
-  /* Liens de navigation améliorés */
-  .nav-links .nav-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 1.5rem;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--text-color);
-    font-size: 1.1rem;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .nav-links .nav-link::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.1),
-      transparent
-    );
-    transition: left 0.5s ease;
-  }
-
-  .nav-links .nav-link:hover {
-    background: var(--primary-color);
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(91, 115, 245, 0.3);
-  }
-
-  .nav-links .nav-link:hover::before {
-    left: 100%;
-  }
-
-  .nav-links .nav-link.active {
-    background: var(--accent-color);
-    color: white;
-    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
-  }
-
-  /* Séparateur dans le menu */
-  .nav-links .nav-separator {
-    height: 1px;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.2),
-      transparent
-    );
-    margin: 1rem 0;
-    border: none;
-  }
-
-  /* Contrôles intégrés comme liens dans le menu principal */
-  .nav-links .nav-control-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.8rem 1.5rem;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    color: var(--text-color);
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    margin-bottom: 0.8rem;
-  }
-
-  .nav-links .nav-control-item:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.15);
-  }
-
-  .nav-links .nav-control-item .control-label {
-    font-weight: 500;
-    color: var(--text-color);
-  }
-
-  /* Sélecteur de langue dans le menu */
-  .nav-links .nav-control-item select {
-    background: rgba(255, 255, 255, 0.1) !important;
-    color: var(--text-color) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    border-radius: 6px !important;
-    padding: 0.4rem 0.6rem !important;
-    font-size: 0.9rem !important;
-    min-width: 60px;
-    cursor: pointer;
-  }
-
-  .nav-links .nav-control-item select option {
-    background: var(--secondary-color) !important;
-    color: var(--text-color) !important;
-  }
-
-  /* Bouton thème dans le menu */
-  .nav-links .nav-control-item .theme-toggle {
-    background: rgba(255, 255, 255, 0.1) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    width: 45px !important;
-    height: 25px !important;
-    border-radius: 15px !important;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-
-  .nav-links .nav-control-item .theme-toggle:hover {
-    background: rgba(255, 255, 255, 0.15) !important;
-    border-color: rgba(255, 255, 255, 0.3) !important;
-  }
-
-  /* Masquer l'ancien nav-controls sur mobile */
+  /* Masquer les contrôles desktop sur mobile */
   .nav-controls {
     display: none !important;
   }
@@ -2220,52 +2027,6 @@ select:focus {
   }
 }
 
-/* ====== MENU MOBILE (unique, à garder) ====== */
-@media (max-width: 768px) {
-  .nav-controls {
-    display: none !important;
-  }
-
-  .mobile-menu-toggle {
-    display: flex !important;
-    position: relative;
-    top: auto;
-    transform: none;
-    z-index: 10002;
-  }
-
-  .nav-links {
-    position: fixed;
-    top: 64px; /* ajuste si ton header est plus haut/bas */
-    left: 0;
-    right: 0;
-    background: var(--secondary-color);
-    backdrop-filter: var(--glass-blur);
-    border-top: 1px solid var(--border);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem 1.25rem;
-
-    max-height: calc(100vh - 64px);
-    overflow-y: auto;
-
-    z-index: 10001;
-    transform: translateY(-110%);
-    opacity: 0;
-    visibility: hidden;
-    transition:
-      transform 0.3s ease,
-      opacity 0.2s ease,
-      visibility 0.2s;
-  }
-  .nav-links.active {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
-  }
-}
 
 /* 4) Spécifications iPad pour éviter le zoom automatique */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
@@ -2640,12 +2401,6 @@ select:focus {
   #mainNav {
     padding: 0.8rem 1rem;
   }
-  .mobile-menu-toggle {
-    right: 1rem;
-  }
-  .nav-links {
-    padding: 1.5rem 0;
-  }
   .nav-controls {
     padding: 0.8rem;
   }
@@ -2656,12 +2411,6 @@ select:focus {
   #mainNav {
     padding: 0.6rem 0.8rem;
   }
-  .mobile-menu-toggle {
-    right: 0.8rem;
-  }
-  .nav-links {
-    padding: 1.2rem 0;
-  }
 }
 
 /* Téléphones pliables et larges */
@@ -2669,9 +2418,6 @@ select:focus {
   /* Galaxy S série, iPhone Pro Max, OnePlus */
   #mainNav {
     padding: 1rem 1.5rem;
-  }
-  .mobile-menu-toggle {
-    right: 1.5rem;
   }
 }
 
@@ -4586,19 +4332,6 @@ body.light-theme .filter-btn.active {
   box-shadow: 0 6px 20px rgba(79, 70, 229, 0.25);
 }
 
-/* Mobile menu toggle avec style */
-body.light-theme .mobile-menu-toggle {
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(203, 213, 225, 0.4);
-  backdrop-filter: blur(10px);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-body.light-theme .mobile-menu-toggle:hover {
-  background: rgba(255, 255, 255, 1);
-  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.1);
-  border-color: rgba(79, 70, 229, 0.3);
-}
 
 /* Loader avec style light */
 body.light-theme #loader {
@@ -4681,44 +4414,221 @@ body.light-theme ::-webkit-scrollbar-thumb:hover {
   }
 }
 
-/* --- Mode mobile : cacher les contrôles desktop, montrer le burger --- */
+
+/* ===============================================
+   NOUVEAU MENU HAMBURGER MODERNE ET ROBUSTE
+=============================================== */
+
+/* Bouton hamburger - design moderne */
+.mobile-menu-btn {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+  z-index: 100001;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu-btn:hover {
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Lignes du hamburger */
+.mobile-menu-btn .hamburger-line {
+  width: 20px;
+  height: 2px;
+  background: var(--text-color);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-btn .hamburger-line:nth-child(1) {
+  top: 14px;
+}
+
+.mobile-menu-btn .hamburger-line:nth-child(2) {
+  top: 23px;
+}
+
+.mobile-menu-btn .hamburger-line:nth-child(3) {
+  top: 32px;
+}
+
+/* Animation quand le menu est ouvert */
+.mobile-menu-btn.active .hamburger-line:nth-child(1) {
+  top: 23px;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.mobile-menu-btn.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-btn.active .hamburger-line:nth-child(3) {
+  top: 23px;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+/* Overlay menu fullscreen */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(var(--background-rgb), 0.95);
+  backdrop-filter: blur(20px);
+  z-index: 100000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Menu navigation */
+.mobile-menu-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+  padding: 2rem;
+  max-width: 90vw;
+  width: 100%;
+}
+
+.mobile-menu-nav .nav-link {
+  padding: 1rem 1.5rem;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card-bg);
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.mobile-menu-nav .nav-link:hover,
+.mobile-menu-nav .nav-link.active {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(var(--primary-rgb), 0.3);
+}
+
+/* Contrôles (thème et langue) dans le menu mobile */
+.mobile-menu-controls {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.mobile-menu-control-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  min-width: 200px;
+  justify-content: space-between;
+}
+
+.mobile-menu-control-item label {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.mobile-menu-control-item select {
+  background: var(--background-color);
+  color: var(--text-color);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+}
+
+.mobile-menu-control-item .theme-toggle {
+  width: 50px;
+  height: 26px;
+  background: var(--background-color);
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Affichage mobile uniquement */
 @media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block;
+  }
+  
+  /* Masquer la navigation desktop */
   .nav-controls {
-    display: none !important; /* cache le sélecteur langue + toggle thème desktop */
+    display: none !important;
   }
-  .mobile-menu-toggle {
-    display: flex !important; /* affiche l'icône "burger" */
-  }
-
-  /* Menu déroulant mobile (overlay sous le header) */
+  
   .nav-links {
-    position: fixed; /* overlay collé à l’écran */
-    top: 64px; /* hauteur du header (ajuste si besoin) */
-    left: 0;
-    right: 0;
-    z-index: 10001; /* au-dessus du header/contenu */
-    background: var(--secondary-color);
-    backdrop-filter: var(--glass-blur);
-    border-top: 1px solid var(--border);
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem 1.25rem;
-    max-height: calc(100vh - 64px); /* scroll si trop long */
-    overflow-y: auto;
-
-    /* Anim d’apparition */
-    transform: translateY(-110%);
-    opacity: 0;
-    visibility: hidden;
-    transition:
-      transform 0.3s ease,
-      opacity 0.2s ease,
-      visibility 0.2s;
+    display: none !important;
   }
+}
 
-  .nav-links.active {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
-  }
+/* Styles pour mode jour */
+body.light-theme .mobile-menu-btn {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(203, 213, 225, 0.6);
+  box-shadow: 0 4px 12px rgba(148, 163, 184, 0.1);
+}
+
+body.light-theme .mobile-menu-btn:hover {
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.15);
+}
+
+body.light-theme .mobile-menu-overlay {
+  background: rgba(248, 250, 252, 0.95);
+}
+
+body.light-theme .mobile-menu-nav .nav-link {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(203, 213, 225, 0.4);
+}
+
+body.light-theme .mobile-menu-control-item {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(203, 213, 225, 0.4);
+}
+
+body.light-theme .mobile-menu-control-item select {
+  background: white;
+}
+
+body.light-theme .mobile-menu-control-item .theme-toggle {
+  background: white;
+  border-color: rgba(203, 213, 225, 0.4);
 }
