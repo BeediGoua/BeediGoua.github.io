@@ -17,7 +17,7 @@
   /* -----------------------
      Utils DOM
   ----------------------- */
-  const $  = (s, r = document) => r.querySelector(s);
+  const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => r.querySelectorAll(s);
 
   /* -----------------------
@@ -47,7 +47,7 @@
     if (meta) meta.setAttribute('content', getComputedStyle(document.body).getPropertyValue('--background-color').trim());
   }
 
-  function initThemeToggle(){
+  function initThemeToggle() {
     // Migration depuis l'ancien stockage, si existait
     if (localStorage.getItem('darkMode') !== null) {
       const wasDark = localStorage.getItem('darkMode') === 'true';
@@ -66,7 +66,7 @@
         applyTheme(next);
       });
     }
-    
+
     // Bouton thème mobile intégré
     const btnMobile = document.getElementById('themeToggleMobile');
     if (btnMobile) {
@@ -145,7 +145,7 @@
         changeLanguage(e.target.value);
       });
     }
-    
+
     // Sélecteur mobile intégré
     if (selectMobile) {
       selectMobile.value = defaultLang;
@@ -163,13 +163,13 @@
     const menuBtn = document.querySelector('.mobile-menu-btn');
     const menuOverlay = document.querySelector('.mobile-menu-overlay');
     const navLinks = document.querySelectorAll('.mobile-menu-nav .nav-link');
-    
+
     if (!menuBtn || !menuOverlay) return;
 
     // Ouvrir/fermer le menu
     const toggleMenu = () => {
       const isOpen = menuBtn.classList.contains('active');
-      
+
       if (isOpen) {
         closeMenu();
       } else {
@@ -193,7 +193,7 @@
 
     // Event listeners
     menuBtn.addEventListener('click', toggleMenu);
-    
+
     // Fermer le menu en cliquant sur un lien
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
@@ -374,22 +374,22 @@
   function initContactForm() {
     const form = $('#contactForm');
     const messageDiv = $('#contactMessage');
-    
+
     if (!form) return;
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      
+
       const submitBtn = form.querySelector('button[type="submit"]');
       const originalText = submitBtn.textContent;
-      
+
       // Désactiver le bouton pendant l'envoi
       submitBtn.disabled = true;
       submitBtn.textContent = 'Envoi...';
-      
+
       try {
         const formData = new FormData(form);
-        
+
         const response = await fetch(form.action, {
           method: 'POST',
           body: formData,
@@ -397,16 +397,16 @@
             'Accept': 'application/json'
           }
         });
-        
+
         if (response.ok) {
           // Réinitialiser le formulaire avant de le masquer
           form.reset();
-          
+
           // Masquer le formulaire et afficher le message
           form.style.display = 'none';
           messageDiv.style.display = 'block';
           messageDiv.classList.remove('fade-out');
-          
+
           // Masquer le message et réafficher le formulaire après 30 secondes
           setTimeout(() => {
             messageDiv.classList.add('fade-out');
@@ -416,19 +416,65 @@
               form.style.display = 'flex'; // Réafficher le formulaire
             }, 500);
           }, 30000);
-          
+
         } else {
           throw new Error('Erreur lors de l\'envoi');
         }
-        
+
       } catch (error) {
         alert('Erreur lors de l\'envoi du message. Veuillez réessayer.');
         console.error('Erreur:', error);
       }
-      
+
       // Réactiver le bouton
       submitBtn.disabled = false;
       submitBtn.textContent = originalText;
+    });
+  }
+
+  /* -----------------------
+     Effet Tilt 3D (Premium)
+  ----------------------- */
+  function initTiltEffect() {
+    const cards = $$('.project-card, .skill-adv-item, .education-card');
+
+    cards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        // Calcul du centre
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        // Angle de rotation (max +/- 5deg pour rester subtil)
+        const rotateX = ((y - centerY) / centerY) * -4; // Magnet X
+        const rotateY = ((x - centerX) / centerX) * -4; // Magnet Y
+
+        // Application du style (conserve le scale/translate du hover CSS)
+        card.style.transform = `
+          perspective(1000px)
+          rotateX(${rotateX}deg)
+          rotateY(${rotateY}deg)
+          scale3d(1.02, 1.02, 1.02)
+          translateY(-5px)
+        `;
+
+        // Effet de lumière (Glare)
+        card.style.transition = 'none'; // Fluidité instantanée au mouvement
+      });
+
+      card.addEventListener('mouseleave', () => {
+        // Reset avec transition douce
+        card.style.transition = 'transform 0.5s ease';
+        card.style.transform = '';
+      });
+
+      // Réactive la transition à l'entrée pour éviter les "saurs"
+      card.addEventListener('mouseenter', () => {
+        card.style.transition = 'transform 0.1s ease';
+      });
     });
   }
 
@@ -449,6 +495,7 @@
     initContactValidation();
     initContactForm();
     initAOS();
+    initTiltEffect();
   });
 
 })();

@@ -920,6 +920,7 @@ header {
   transition: transform 0.3s ease;
   max-width: 850px;
   margin: 0 auto;
+  transform-style: preserve-3d;
 }
 
 .education-card:hover {
@@ -1017,6 +1018,8 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transform-style: preserve-3d;
+  /* Active la 3D pour les enfants */
 }
 
 .project-card::before {
@@ -1063,6 +1066,8 @@ header {
 .project-card h3 {
   color: var(--project-title-color) !important;
   margin-top: 0;
+  transform: translateZ(20px);
+  /* Profondeur */
 }
 
 .project-card p {
@@ -1260,17 +1265,18 @@ header {
   border-radius: 16px;
   padding: 1.5rem 1.2rem;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border-left: 2px solid rgba(0, 212, 170, 0.2);
+  border-left: 2px solid rgba(0, 212, 170, 1);
   position: relative;
   overflow: hidden;
+  transform-style: preserve-3d;
 }
 
 .skill-adv-item:nth-child(2n) {
-  border-left: 2px solid rgba(255, 107, 53, 0.2);
+  border-left: 2px solid rgba(255, 107, 53, 1);
 }
 
 .skill-adv-item:nth-child(3n) {
-  border-left: 2px solid rgba(139, 92, 246, 0.2);
+  border-left: 2px solid rgba(139, 92, 246, 1);
 }
 
 .skill-adv-item::before {
@@ -1282,22 +1288,22 @@ header {
   height: 1px;
   background: linear-gradient(90deg,
       transparent,
-      rgba(0, 212, 170, 0.1),
+      rgba(0, 212, 170, 0.15),
       transparent);
-  opacity: 0.5;
+  opacity: 1;
 }
 
 .skill-adv-item:nth-child(2n)::before {
   background: linear-gradient(90deg,
       transparent,
-      rgba(255, 107, 53, 0.1),
+      rgba(255, 107, 53, 0.15),
       transparent);
 }
 
 .skill-adv-item:nth-child(3n)::before {
   background: linear-gradient(90deg,
       transparent,
-      rgba(139, 92, 246, 0.1),
+      rgba(139, 92, 246, 0.15),
       transparent);
 }
 
@@ -1326,6 +1332,7 @@ header {
   margin-top: 0.1em;
   flex-shrink: 0;
   color: var(--primary-color);
+  transform: translateZ(20px);
 }
 
 .skill-adv-item h4 {
