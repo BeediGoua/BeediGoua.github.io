@@ -328,7 +328,8 @@
 
         const filter = btn.dataset.filter;
         cards.forEach(card => {
-          const show = filter === 'all' || card.dataset.category === filter;
+          const categories = card.dataset.category.split(' ');
+          const show = filter === 'all' || categories.includes(filter);
           card.style.display = show ? '' : 'none';
         });
         // Remise en contexte de la grille

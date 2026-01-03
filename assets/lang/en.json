@@ -9,19 +9,22 @@
   "nav_contact": "Contact",
   "nav_language": "Language",
   "nav_theme": "Theme",
-  
   "hero_greeting": "Hi, I'm",
   "hero_title": "Data Scientist specialized in AI and NLP",
   "hero_description": "Data Scientist — exploring, building, and connecting ideas from data to cloud",
-  "hero_roles": ["Data Scientist", "NLP & RAG", "MLOps"],
-
+  "hero_roles": [
+    "Data Scientist",
+    "NLP & RAG",
+    "MLOps"
+  ],
   "btn_projects": "My Projects",
   "btn_contact": "Contact",
   "btn_cv_fr": "Download CV (FR)",
   "btn_cv_en": "Download CV (EN)",
   "btn_darkmode": "Dark mode",
   "btn_scrolltop": "Back to Top",
-  
+  "btn_live_demo": "Live Demo",
+  "btn_github_repo": "View on GitHub",
   "about_title": "About Me",
   "about_subtitle": "Versatile and Rigorous Data Scientist",
   "about_intro": "Final-year Data Science student at ENSAI, with a strong background in mathematics, statistics, and machine learning.",
@@ -29,7 +32,6 @@
   "about_desc": "I design scalable, modular pipelines — from preprocessing to deployment — with a focus on robustness, automation, and interpretability.",
   "about_extra": "I enjoy solving end-to-end real-world problems, blending classic ML with modern tools like LLMs, embeddings, and vector databases, always aiming for clarity and clean, maintainable code.",
   "about_location": "Rennes, France",
-  
   "education_title": "Education",
   "education_subtitle": "Academic background & key courses",
   "edu1_title": "Engineer's Degree – Data Science & AI",
@@ -40,7 +42,6 @@
   "edu1_course2": "Big Data & Engineering: Spark, Hadoop, SQL, APIs, Docker, MLOps, cloud deployment",
   "edu1_course3": "Applied work: Real-world projects in fraud detection, recommendation systems, and NLP",
   "edu1_course4": "Bilingual curriculum (FR/EN) – International exposure (Erasmus+ eligible)",
-  
   "projects_title": "My Projects",
   "projects_subtitle": "A selection of my end-to-end data & AI projects",
   "filter_all": "All",
@@ -48,17 +49,18 @@
   "filter_ml": "Machine Learning",
   "filter_data": "Data Analysis",
   "project_techs": "Technologies used",
-  
   "project1_title": "ReviewGuardian – Safe Review Pipeline",
   "project1_desc": "Fully local pipeline for moderating user reviews: toxicity detection, explainability, and performance evaluation — privacy-friendly and cloud-free.",
   "project1_more": "Learn more",
-  "project1_desc_long": "ReviewGuardian is a fully local and explainable AI pipeline for moderating user-generated reviews. It detects toxic comments using multiple models (Naive Bayes, Logistic Regression, Random Forest), explains predictions with SHAP, and provides a Streamlit-based interface for real-time moderation. All components run offline, with no external API calls — ensuring complete data privacy and auditability."
-  ,
+  "project1_desc_long": "ReviewGuardian is a fully local and explainable AI pipeline for moderating user-generated reviews. It detects toxic comments using multiple models (Naive Bayes, Logistic Regression, Random Forest), explains predictions with SHAP, and provides a Streamlit-based interface for real-time moderation. All components run offline, with no external API calls — ensuring complete data privacy and auditability.",
   "project2_title": "Hybrid Music Recommender System",
   "project2_desc": "Intelligently recommends tracks using Word2Vec and NLP embeddings. Fully local app with interactive filters and playlist export.",
   "project2_more": "Learn more",
   "project2_desc_long": "This hybrid music recommender system combines two powerful engines: (1) collaborative filtering based on Word2Vec (co-listening patterns), and (2) semantic similarity using Sentence-BERT embeddings. The application offers:\n\n<ul>\n<li>Dual similarity engine: co-occurrence (Word2Vec) + semantic matching (Sentence-BERT)</li>\n<li>Interactive filters for genre, duration, mood, and decade</li>\n<li>Exploration mode with audio features (energy, danceability, positivity)</li>\n<li>Real-time KPIs: 94.2% precision, 85ms latency, 4.6/5 user rating</li>\n<li>Advanced dashboard with heatmaps, radar charts, and Spotify benchmarks</li>\n<li>Smart playlist generator with CSV export and feedback integration</li>\n<li>Fully local deployment — no cloud, no API dependency</li>\n</ul>\n\nBuilt with performance, explainability, and personalization in mind — a powerful sandbox for experimenting with music recommender systems.",
-  
+  "project3_title": "Insurance Recommendation System (Zimnat)",
+  "project3_desc": "Hybrid approach (Machine Learning + Statistical Rules) optimizing Cross-Sell. Streamlit application with dashboards and market simulation.",
+  "project3_more": "Learn more",
+  "project3_desc_long": "This project addresses the <strong>Zimnat Insurance Recommendation</strong> challenge (Zindi): predicting a client's missing products using a snapshot of their current portfolio.\n\n<ul>\n<li><strong>Hybrid Approach (Dual Engine)</strong>: Combines a <em>Statistical Baseline (Bayesian)</em> for robustness with a <em>CatBoost</em> model for fine-grained personalization.</li>\n<li><strong>Anti-Cheat Filter</strong>: Strict business rules ensuring no already-owned products are recommended (zero commercial errors).</li>\n<li><strong>Modular Streamlit App</strong>: 5 dedicated interfaces (Executive Dashboard, Business Insights, Client Inspector for agents, Market Simulator).</li>\n<li><strong>Business Impact</strong>: Transition from Mass Marketing to <em>Precision Marketing</em> to maximize LTV and reduce churn.</li>\n</ul>\n\nDesigned for operational efficiency, this system transforms a product list into a targeted client strategy.",
   "project_learn_more": "Learn more",
   "skills_title": "Skills",
   "skills_subtitle": "Core strengths in data, ML, NLP & engineering",
@@ -74,7 +76,6 @@
   "skills_adv_cloud_desc": "AWS, GCP: deployment, storage, pipeline orchestration.",
   "skills_adv_viz_title": "Visualization & Presentation",
   "skills_adv_viz_desc": "Matplotlib, Plotly, interactive dashboards (Streamlit), clear documentation.",
-  
   "techskills_title": "Technical Skills",
   "techskills_subtitle": "Main technologies, libraries & tools I use daily",
   "techskills_langs": "Languages",
@@ -84,17 +85,22 @@
   "techskills_cloud": "Cloud & DevOps",
   "techskills_db": "Databases",
   "techskills_viz": "Visualization",
-  
   "experience_title": "Experience",
   "experience_subtitle": "Internships, projects & training",
-  "exp1_title": "Square Management — M2 Internship",
-  "exp1_date": "2025 • Generative AI, RAG, OCR & Document Intelligence",
-  "exp1_desc": "Design of a <strong>modular and traceable RAG pipeline</strong> for long business documents, with <strong>systematic analysis of each technical choice's impact</strong> (OCR, segmentation, embeddings, indexing) on response quality.",
-  "exp1_task1": "<strong>+180 configurations compared</strong> to quantify their effect on fidelity, relevance and traceability.",
-  "exp1_task2": "<strong>Scientific evaluation</strong> combining <span>RAGAS</span> and <span>LLM-as-a-Judge</span> to measure generated response performance.",
-  "exp1_task3": "<strong>Enhanced structuring</strong> with <span>Docling</span> to integrate hierarchy, tables, images and metadata.",
-  "exp1_task4": "<strong>Reproducible experimental framework</strong> designed to be reused in other internal RAG projects.",
-  
+  "exp1_title": "Square Management — Applied Research Intern (GenAI & RAG)",
+  "exp1_date": "May 2025 – Present • Paris (Hybrid)",
+  "exp1_desc": "I joined the R&D Lab to tackle a major challenge: **unlocking the value of unexploited strategic documents (Finance, CSR)**. These documents, often long and complex, were difficult to query. My mission was to build a **Retrieval-Augmented Generation (RAG)** system capable not only of retrieving information but also ensuring **total traceability** for consultants.",
+  "exp1_task1": "I conducted a <strong>rigorous comparative study</strong> of all technical components (from OCR to LLMs) to isolate the perfect combination for each document type.",
+  "exp1_task2": "I designed a <strong>'Document-Centric' architecture</strong> that respects the native structure of reports (tables, summaries) to preserve every semantic nuance.",
+  "exp1_task3": "Finally, I delivered a <strong>reproducible experimental framework</strong> with over 150 tested configurations, scientifically measuring the impact of each choice on response quality.",
+  "exp1_task4": "<em>Stack: Python, LangChain, Hugging Face, FAISS, Azure OpenAI, Ragas.</em>",
+  "exp2_title": "City of Paris — Data Scientist (Mobility & Environment)",
+  "exp2_date": "June 2024 – August 2024 • Paris",
+  "exp2_desc": "I joined the Roads Department for a mission with high public impact: **enlightening sustainable mobility policies with data**. The goal was to precisely identify which company fleets contribute most to urban pollution to better target city actions.",
+  "exp2_task1": "I built a <strong>massive data pipeline</strong> cross-referencing scattered sources (registrations, public registries, traffic data) while ensuring intensive cleaning to guarantee diagnostic reliability.",
+  "exp2_task2": "I developed an <strong>Explainable Composite Pollution Score</strong>, factoring in every technical characteristic (engine type, age, critically) to segment economic actors.",
+  "exp2_task3": "To finish, I transformed these analyses into <strong>decision-support tools</strong> (dashboards, reports) enabling policymakers to prioritize the most effective levers for action.",
+  "exp2_task4": "<em>Stack: Python, Pandas, Clustering, REST API, Data Visualization.</em>",
   "contact_title": "Contact",
   "contact_subtitle": "Let's connect",
   "contact_text": "I'm always open to new opportunities and collaborations. Drop me a message!",
@@ -105,12 +111,10 @@
   "form_message": "Message",
   "form_submit": "Send Message",
   "contact_success": "Message sent successfully! I'll get back to you soon.",
-  
   "footer_rights": "All rights reserved.",
   "footer_copyright": "© Goua Beedi Henri",
   "footer_linkedin": "LinkedIn",
   "footer_github": "GitHub",
   "footer_email": "Email",
-  
   "close": "Close"
 }

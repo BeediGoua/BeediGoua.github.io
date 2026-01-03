@@ -9,19 +9,22 @@
   "nav_contact": "Contact",
   "nav_language": "Langue",
   "nav_theme": "Thème",
-  
   "hero_greeting": "Bonjour, je suis",
   "hero_title": "Data Scientist spécialisé en IA et NLP",
   "hero_description": "Data Scientist — explorer, construire et relier les idées des données au cloud",
-  "hero_roles": ["Data Scientiste", "NLP & RAG", "MLOps"],
-  
+  "hero_roles": [
+    "Data Scientiste",
+    "NLP & RAG",
+    "MLOps"
+  ],
   "btn_projects": "Mes projets",
   "btn_contact": "Contact",
   "btn_cv_fr": "Télécharger le CV (FR)",
   "btn_cv_en": "Télécharger le CV (EN)",
   "btn_darkmode": "Mode sombre",
   "btn_scrolltop": "Haut de page",
-  
+  "btn_live_demo": "Démo Live",
+  "btn_github_repo": "Voir le repo GitHub",
   "about_title": "À propos de moi",
   "about_subtitle": "Data Scientist polyvalent et rigoureux",
   "about_intro": "Étudiant en dernière année à l'ENSAI, avec une solide formation en mathématiques, statistiques et machine learning.",
@@ -29,7 +32,6 @@
   "about_desc": "Je conçois des pipelines modulaires et scalables — du prétraitement des données au déploiement — avec un souci de robustesse, d'interprétabilité et d'automatisation.",
   "about_extra": "J'aime résoudre des problèmes concrets de bout en bout, en combinant ML classique et outils modernes comme les LLMs, embeddings et bases vectorielles. J'accorde aussi de l'importance au code propre et à la vulgarisation des modèles complexes.",
   "about_location": "Rennes, France",
-  
   "education_title": "Formation",
   "education_subtitle": "Parcours académique & cours clés",
   "edu1_title": "Diplôme d'ingénieur – Data Science & IA",
@@ -40,7 +42,6 @@
   "edu1_course2": "Big Data & Ingénierie : Spark, Hadoop, SQL, APIs, Docker, MLOps, déploiement cloud",
   "edu1_course3": "Projets appliqués : détection de fraude, systèmes de recommandation, NLP",
   "edu1_course4": "Programme bilingue (FR/EN) – Ouverture internationale (éligible Erasmus+)",
-  
   "projects_title": "Mes Projets",
   "projects_subtitle": "Quelques projets data & IA réalisés de bout en bout",
   "filter_all": "Tous",
@@ -48,17 +49,18 @@
   "filter_ml": "Machine Learning",
   "filter_data": "Data Analysis",
   "project_techs": "Technologies utilisées",
-  
   "project1_title": "ReviewGuardian – Pipeline de Modération Sécurisé",
   "project1_desc": "Pipeline local pour modérer les avis utilisateurs : détection de toxicité, explicabilité et évaluation des performances — sans cloud, respectueux de la vie privée.",
   "project1_more": "En savoir plus",
   "project1_desc_long": "ReviewGuardian est un pipeline d'IA local et explicable conçu pour la modération d'avis en ligne. Il détecte les commentaires toxiques à l'aide de plusieurs modèles (Naive Bayes, Régression Logistique, Forêt Aléatoire), explique ses prédictions avec SHAP, et offre une interface interactive via Streamlit pour une modération en temps réel. Tout fonctionne hors ligne, sans appel à des APIs externes — garantissant une confidentialité totale des données et une traçabilité complète.",
-
   "project2_title": "Système de Recommandation Musicale Hybride",
   "project2_desc": "Recommande intelligemment des morceaux avec Word2Vec et embeddings NLP. Application locale interactive, filtres dynamiques, export de playlists.",
   "project2_more": "En savoir plus",
   "project2_desc_long": "Ce système de recommandation musicale hybride combine deux moteurs complémentaires : (1) un filtrage collaboratif basé sur Word2Vec (coécoute), et (2) une analyse sémantique via embeddings Sentence-BERT. L'application propose :\n\n<ul>\n<li>Un moteur double : similarité de coécoute (Word2Vec) + sémantique (Sentence-BERT)</li>\n<li>Filtres interactifs par genre, durée, humeur ou décennie</li>\n<li>Mode exploration avec métriques audio avancées (énergie, dansabilité, positivité)</li>\n<li>Indicateurs de performance : 94,2 % de précision, 85ms de latence, note utilisateur 4,6/5</li>\n<li>Dashboard avancé avec heatmaps, graphiques radar, comparaison avec Spotify</li>\n<li>Génération et export CSV de playlists personnalisées</li>\n<li>Déploiement 100 % local, sans cloud ni API externe</li>\n</ul>\n\nPensé pour la performance, l'interprétabilité et la personnalisation — une plateforme locale puissante pour expérimenter les systèmes de recommandation.",
-  
+  "project3_title": "Système de Recommandation d'Assurance (Zimnat)",
+  "project3_desc": "Approche hybride (Machine Learning + Règles Statistiques) optimisant le Cross-Sell. Application Streamlit avec tableaux de bord et simulation de marché.",
+  "project3_more": "En savoir plus",
+  "project3_desc_long": "Ce projet répond au challenge <strong>Zimnat Insurance Recommendation</strong> (Zindi) : prédire les produits manquants d'un client à partir d'une photo de son portefeuille actuel.\n\n<ul>\n<li><strong>Approche Hybride (Dual Engine)</strong> : Combinaison d'une <em>Baseline Statistique (Bayésienne)</em> pour la robustesse et d'un modèle <em>CatBoost</em> pour la personnalisation fine.</li>\n<li><strong>Filtre Anti-Cheat</strong> : Règles métier strictes garantissant qu'aucun produit déjà détenu n'est recommandé (zéro faux pas).</li>\n<li><strong>Application Streamlit Modulaire</strong> : 5 interfaces dédiées (Executive Dashboard, Business Insights, Client Inspector pour agents, Market Simulator).</li>\n<li><strong>Impact Business</strong> : Transition du Mass Marketing vers le <em>Precision Marketing</em> pour maximiser la LTV et réduire le churn.</li>\n</ul>\n\nPensé pour l'efficacité opérationnelle, ce système transforme une liste de produits en une stratégie client ciblée.",
   "project_learn_more": "En savoir plus",
   "skills_title": "Compétences",
   "skills_subtitle": "Forces clés en data, ML, NLP & ingénierie",
@@ -74,7 +76,6 @@
   "skills_adv_cloud_desc": "AWS, GCP : déploiement, stockage, orchestration de pipelines.",
   "skills_adv_viz_title": "Visualisation & Présentation",
   "skills_adv_viz_desc": "Matplotlib, Plotly, dashboards interactifs (Streamlit), documentation claire.",
-  
   "techskills_title": "Compétences Techniques",
   "techskills_subtitle": "Technologies, bibliothèques et outils principaux que j'utilise au quotidien",
   "techskills_langs": "Langages",
@@ -84,17 +85,22 @@
   "techskills_cloud": "Cloud & DevOps",
   "techskills_db": "Bases de données",
   "techskills_viz": "Visualisation",
-  
   "experience_title": "Expérience",
   "experience_subtitle": "Stages, projets & formation",
-  "exp1_title": "Square Management — Stage M2",
-  "exp1_date": "2025 • IA Générative, RAG, OCR & Document Intelligence",
-  "exp1_desc": "Conception d'un <strong>pipeline RAG modulaire et traçable</strong> pour documents métiers longs, avec une <strong>analyse systématique de l'impact de chaque choix technique</strong> (OCR, segmentation, embeddings, indexation) sur la qualité des réponses.",
-  "exp1_task1": "<strong>+180 configurations comparées</strong> afin de quantifier leur effet sur la fidélité, pertinence et traçabilité.",
-  "exp1_task2": "<strong>Évaluation scientifique</strong> combinant <span>RAGAS</span> et <span>LLM-as-a-Judge</span> pour mesurer la performance des réponses générées.",
-  "exp1_task3": "<strong>Structuration enrichie</strong> avec <span>Docling</span> pour intégrer hiérarchie, tableaux, images et métadonnées.",
-  "exp1_task4": "<strong>Cadre expérimental reproductible</strong> conçu pour être réutilisé dans d'autres projets RAG internes.",
-  
+  "exp1_title": "Square Management — Stage de Recherche Appliquée (IA & RAG)",
+  "exp1_date": "Mai 2025 – Aujourd'hui • Paris (Hybride)",
+  "exp1_desc": "J'ai rejoint le Lab R&D pour relever un défi majeur : **transformer des documents stratégiques inexploités (Finance, RSE) en leviers de décision**. Ces documents, souvent longs et complexes, étaient difficiles à interroger. Ma mission a été de construire un système **RAG (Retrieval-Augmented Generation)** capable non seulement de retrouver l'information, mais de garantir une **traçabilité totale** pour les consultants.",
+  "exp1_task1": "J'ai mené une <strong>étude comparative rigoureuse</strong> de toutes les briques techniques (de l'OCR au modèle de langage) pour isoler la combinaison parfaite selon le type de document.",
+  "exp1_task2": "J'ai conçu une <strong>architecture 'Document-Centric'</strong> qui respecte la structure native des rapports (sommaires, tableaux) pour ne perdre aucune nuance sémantique.",
+  "exp1_task3": "Enfin, j'ai livré un <strong>cadre expérimental reproductible</strong> avec plus de 150 configurations testées, permettant de mesurer scientifiquement l'impact de chaque choix sur la qualité des réponses.",
+  "exp1_task4": "<em>Stack : Python, LangChain, Hugging Face, FAISS, Azure OpenAI, Ragas.</em>",
+  "exp2_title": "Ville de Paris — Data Scientist (Mobilité & Environnement)",
+  "exp2_date": "Juin 2024 – Août 2024 • Paris",
+  "exp2_desc": "J'ai intégré la Direction de la Voirie pour une mission à fort impact public : **éclairer les décisions politiques de mobilité durable par la donnée**. L'objectif était d'identifier précisément quelles flottes d'entreprises contribuent le plus à la pollution urbaine pour mieux cibler les actions de la ville.",
+  "exp2_task1": "J'ai construit un <strong>pipeline de données massif</strong> croisant des sources éparses (immatriculations, référentiels publics, données de voirie) en assurant un nettoyage intensif pour fiabiliser le diagnostic.",
+  "exp2_task2": "J'ai développé un <strong>Score de Pollution Composite et explicable</strong>, prenant en compte chaque caractéristique technique (Crit’Air, motorisation, âge) pour segmenter les acteurs économiques.",
+  "exp2_task3": "Pour finir, j'ai transformé ces analyses en <strong>outils d'aide à la décision</strong> (dashboards, rapports) permettant aux décideurs de prioriser les leviers d'action les plus efficaces.",
+  "exp2_task4": "<em>Stack : Python, Pandas, Clustering, API REST, Data Visualization.</em>",
   "contact_title": "Contact",
   "contact_subtitle": "Restons en contact",
   "contact_text": "Je suis toujours ouvert aux nouvelles opportunités et collaborations. N'hésitez pas à me contacter !",
@@ -105,11 +111,9 @@
   "form_message": "Message",
   "form_submit": "Envoyer le message",
   "contact_success": "Message envoyé avec succès ! Je vous répondrai rapidement.",
-  
   "footer_rights": "Tous droits réservés.",
   "footer_linkedin": "LinkedIn",
   "footer_github": "GitHub",
   "footer_email": "Email",
-  
   "close": "Fermer"
 }
