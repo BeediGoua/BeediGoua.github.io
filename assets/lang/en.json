@@ -29,7 +29,7 @@
   "about_subtitle": "Versatile and Rigorous Data Scientist",
   "about_intro": "Final-year Data Science student at ENSAI, with a strong background in mathematics, statistics, and machine learning.",
   "about_text": "I'm a Data Scientist with experience in statistical modeling, supervised and unsupervised learning, deep learning, NLP, and Generative AI. My academic path shaped a rigorous and analytical mindset.",
-  "about_desc": "I design scalable, modular pipelines — from preprocessing to deployment — with a focus on robustness, automation, and interpretability.",
+  "about_desc": "I build scalable and modular pipelines, from preprocessing and vector indexing to LLM-powered generation, focusing on <strong>robustness</strong>, <strong>interpretability</strong>, and <strong>clean architecture</strong>.",
   "about_extra": "I enjoy solving end-to-end real-world problems, blending classic ML with modern tools like LLMs, embeddings, and vector databases, always aiming for clarity and clean, maintainable code.",
   "about_location": "Rennes, France",
   "education_title": "Education",

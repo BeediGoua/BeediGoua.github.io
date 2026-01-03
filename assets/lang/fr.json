@@ -29,7 +29,7 @@
   "about_subtitle": "Data Scientist polyvalent et rigoureux",
   "about_intro": "Étudiant en dernière année à l'ENSAI, avec une solide formation en mathématiques, statistiques et machine learning.",
   "about_text": "Je suis Data Scientist avec des compétences larges en modélisation statistique, apprentissage supervisé/non supervisé, deep learning, NLP et IA générative. Mon parcours académique m'a apporté rigueur et esprit analytique.",
-  "about_desc": "Je conçois des pipelines modulaires et scalables — du prétraitement des données au déploiement — avec un souci de robustesse, d'interprétabilité et d'automatisation.",
+  "about_desc": "Je construis des pipelines modulaires et scalables, du prétraitement à la génération par LLM, en mettant l'accent sur la <strong>robustesse</strong>, l'<strong>interprétabilité</strong> et le <strong>Clean Code</strong>.",
   "about_extra": "J'aime résoudre des problèmes concrets de bout en bout, en combinant ML classique et outils modernes comme les LLMs, embeddings et bases vectorielles. J'accorde aussi de l'importance au code propre et à la vulgarisation des modèles complexes.",
   "about_location": "Rennes, France",
   "education_title": "Formation",
