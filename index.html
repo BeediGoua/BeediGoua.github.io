@@ -10,13 +10,39 @@
   <title>Goua Beedi Henri | Data Scientist Portfolio</title>
 
   <!-- Favicon -->
-  <link rel="icon" href="assets/img/favicon.ico" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Goua Beedi Henri - Data Scientist Portfolio">
   <meta property="og:description" content="Découvrez mes projets IA, NLP et RAG.">
   <meta property="og:image" content="assets/img/hero-bg.jpg">
   <meta property="og:url" content="https://gouahenri.github.io/">
+
+  <!-- Canonical & Twitter meta -->
+  <link rel="canonical" href="https://gouahenri.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Goua Beedi Henri - Data Scientist Portfolio">
+  <meta name="twitter:description" content="Découvrez mes projets IA, NLP et RAG.">
+  <meta name="twitter:image" content="assets/img/hero-bg.jpg">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Goua Beedi Henri",
+    "url": "https://gouahenri.github.io/",
+    "jobTitle": "Data Scientist"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Goua Beedi Henri Portfolio",
+    "url": "https://gouahenri.github.io/"
+  }
+  </script>
 
   <!-- (Optionnel) Google Fonts — retire si tu restes en system-ui -->
   <!--
@@ -148,21 +174,20 @@
     <!-- Hero -->
     <section id="hero" class="section hero">
       <div class="hero-content reveal-up">
-        <img src="assets/img/goua.jpg" alt="Portrait Goua Beedi Henri" width="110" height="110" decoding="async"
-          fetchpriority="high"
-          style="border-radius:50%;box-shadow:0 2px 12px rgba(74,144,226,0.15);margin-bottom:1.2rem;object-fit:cover;">
-        <h1 style="text-align:center; line-height:1.3;">
-          <span class="hero-name" style="display:block; margin-bottom:.5rem;">
+        <img src="assets/img/goua.webp" alt="Portrait Goua Beedi Henri" width="110" height="110" decoding="async"
+          fetchpriority="high">
+        <h1>
+          <span class="hero-name">
             <span data-i18n="hero_greeting">Hi, I'm</span> Goua Beedi Henri
           </span>
           <span class="hero-title">
             <span class="typed-text"></span>
           </span>
         </h1>
-        <p data-i18n="hero_description" class="lead" style="text-align:center; margin:1.2rem auto;">
+        <p data-i18n="hero_description" class="lead">
           Data Scientist, exploring, building, and connecting ideas from data to cloud
         </p>
-        <a href="#projects" class="btn bounce" data-i18n="btn_projects" style="display:block; margin:0 auto;">
+        <a href="#projects" class="btn bounce" data-i18n="btn_projects">
           See My Projects
         </a>
       </div>
@@ -179,34 +204,37 @@
       <div class="about-wrapper reveal-up">
         <div class="about-content">
           <div class="about-text-block">
-            <p class="about-intro" data-i18n="about_intro">
-              Final-year Data Science student at <strong>ENSAI</strong> (Grande École in Statistics & AI), with a strong
-              foundation in <strong>applied mathematics</strong>, <strong>statistics</strong>, and <strong>machine
-                learning</strong>.
-            </p>
             <p class="about-text" data-i18n="about_text">
-              I specialize in <strong>supervised/unsupervised learning</strong>, <strong>deep learning</strong>
-              (PyTorch, TensorFlow), and <strong>Natural Language Processing</strong> (Transformers, RAG, LLMs), with a
-              rigorous and analytical mindset shaped by academic excellence.
-            </p>
-            <p class="about-desc" data-i18n-html="about_desc">
-              I build scalable and modular pipelines, from preprocessing and vector indexing to LLM-powered generation,
-              focusing on <strong>robustness</strong>, <strong>interpretability</strong>, and <strong>clean
-                architecture</strong>.
-            </p>
-            <p class="about-extra" data-i18n="about_extra">
-              Passionate about delivering real-world impact, I blend classic ML with modern tools like
-              <strong>embeddings</strong>, <strong>vector databases</strong>, and <strong>Generative AI</strong>, always
-              aiming for clarity, maintainability, and efficiency.
+              Diplômé en Data Science (ENSAI), j’ai acquis de bonnes compétences dans la conception de pipelines
+              Machine Learning et data de bout-en-bout sur le cloud, avec mise en production d’APIs ML en Python. Je
+              possède des connaissances en statistique, machine learning, deep learning, ainsi qu’en NLP, Computer
+              Vision et IA générative, avec un souci particulier pour l’évaluation de modèles et le post-processing.
+              Je recherche une opportunité de Data Scientist pour contribuer à des projets d’IA appliquée et
+              d’industrialisation, en alliant rigueur analytique et impact métier.
             </p>
           </div>
 
-          <!-- CV buttons -->
-          <div class="cv-buttons">
-            <a href="assets/CV_GouaHenri_FR.pdf" class="btn btn-primary" data-i18n="btn_cv_fr" download>Download CV
-              (FR)</a>
-            <a href="assets/CV_GouaHenri_EN.pdf" class="btn btn-primary" data-i18n="btn_cv_en" download>Download CV
-              (EN)</a>
+          <div class="cv-actions">
+            <a href="https://beedigoua.github.io/CV_GOUA/?lang=fr" target="_blank" rel="noopener noreferrer"
+              class="btn btn-primary">
+              <i data-feather="external-link"></i> <span data-i18n="btn_online_cv">Voir mon CV interactif</span>
+            </a>
+
+            <div class="cv-dropdown">
+              <button class="btn btn-primary dropdown-toggle" id="downloadBtn" aria-haspopup="true"
+                aria-expanded="false">
+                <i data-feather="download"></i> <span data-i18n="btn_download_pdf">Télécharger PDF</span>
+                <i data-feather="chevron-down" class="chevron-icon"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="downloadBtn">
+                <a href="assets/CV_GouaHenri_FR.pdf" download class="dropdown-item">
+                  <span data-i18n="cv_fr">Version Française</span>
+                </a>
+                <a href="assets/CV_GouaHenri_EN.pdf" download class="dropdown-item">
+                  <span data-i18n="cv_en">Version Anglaise</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -530,55 +558,56 @@
       <div class="skills-advanced reveal-up">
         <div class="skills-advanced-grid">
           <div class="skill-adv-item">
-            <div class="skill-adv-icon"><i data-feather="bar-chart-2"></i></div>
+            <div class="skill-adv-icon"><i data-feather="trending-up"></i></div>
             <div>
-              <h4 data-i18n="skills_adv_data_science_title">Data Science</h4>
-              <p data-i18n="skills_adv_data_science_desc">Python (pandas, numpy, polars), advanced SQL, statistical
-                modeling, automated EDA.</p>
+              <h4 data-i18n="skills_adv_data_science_title">Stats, Eco & Time Series</h4>
+              <p data-i18n="skills_adv_data_science_desc">Bayesian inference, econometrics, linear/GLM models,
+                ARIMA/SARIMA, VAR, ETS, convex optimization.</p>
             </div>
           </div>
 
           <div class="skill-adv-item">
-            <div class="skill-adv-icon"><i data-feather="sliders"></i></div>
+            <div class="skill-adv-icon"><i data-feather="cpu"></i></div>
             <div>
-              <h4 data-i18n="skills_adv_ml_title">Machine Learning</h4>
-              <p data-i18n="skills_adv_ml_desc">Supervised & unsupervised, time series, advanced feature engineering,
-                deep learning (RNN, LSTM), interpretability (SHAP, LIME).</p>
+              <h4 data-i18n="skills_adv_ml_title">Machine Learning & Evaluation</h4>
+              <p data-i18n="skills_adv_ml_desc">Supervised & unsupervised, XGBoost, Deep Learning (CNN, LSTM),
+                explainability (SHAP, LIME), recommender systems.</p>
             </div>
           </div>
 
           <div class="skill-adv-item">
-            <div class="skill-adv-icon"><i data-feather="edit-3"></i></div>
+            <div class="skill-adv-icon"><i data-feather="search"></i></div>
             <div>
-              <h4 data-i18n="skills_adv_nlp_title">NLP & Generative AI</h4>
-              <p data-i18n="skills_adv_nlp_desc">Hybrid RAG pipelines, LLMs (LangChain, Hugging Face), embeddings,
-                prompt engineering, fine-tuning, RAG evaluation.</p>
+              <h4 data-i18n="skills_adv_nlp_title">NLP & Hybrid Search (RAG)</h4>
+              <p data-i18n="skills_adv_nlp_desc">RAG pipelines (BM25 + reranking), LLMs (Hugging Face, LangChain),
+                embeddings, vector indices (FAISS, ChromaDB).</p>
             </div>
           </div>
 
           <div class="skill-adv-item">
-            <div class="skill-adv-icon"><i data-feather="tool"></i></div>
+            <div class="skill-adv-icon"><i data-feather="activity"></i></div>
             <div>
-              <h4 data-i18n="skills_adv_dataeng_title">Data Engineering & DataOps</h4>
-              <p data-i18n="skills_adv_dataeng_desc">Modular pipelines, ETL, CI/CD, orchestration, Git, Python APIs
-                (FastAPI, Streamlit).</p>
+              <h4 data-i18n="skills_adv_dataeng_title">MLOps & Industrialization</h4>
+              <p data-i18n="skills_adv_dataeng_desc">Docker, MLflow, FastAPI, Streamlit, CI/CD (GitHub Actions),
+                performance and p95 latency monitoring.</p>
             </div>
           </div>
 
           <div class="skill-adv-item">
-            <div class="skill-adv-icon"><i data-feather="cloud"></i></div>
+            <div class="skill-adv-icon"><i data-feather="database"></i></div>
             <div>
-              <h4 data-i18n="skills_adv_cloud_title">Cloud</h4>
-              <p data-i18n="skills_adv_cloud_desc">AWS, Azure, GCP: deployment, storage, pipeline orchestration.</p>
+              <h4 data-i18n="skills_adv_cloud_title">Big Data & Cloud</h4>
+              <p data-i18n="skills_adv_cloud_desc">Spark, Hadoop, AWS (EC2), GCP (Cloud Run), scalable pipeline
+                management and cloud architecture.</p>
             </div>
           </div>
 
           <div class="skill-adv-item">
             <div class="skill-adv-icon"><i data-feather="pie-chart"></i></div>
             <div>
-              <h4 data-i18n="skills_adv_viz_title">Visualization & Presentation</h4>
-              <p data-i18n="skills_adv_viz_desc">Matplotlib, Plotly, interactive dashboards (Streamlit, Panel), clear
-                documentation.</p>
+              <h4 data-i18n="skills_adv_viz_title">Visualization & Business Impact</h4>
+              <p data-i18n="skills_adv_viz_desc">Matplotlib, Seaborn, Plotly, interactive dashboards, distilling complex
+                models for decision-makers.</p>
             </div>
           </div>
 
@@ -603,6 +632,7 @@
             <div class="techskills-badges">
               <span class="badge badge-main">Python</span>
               <span class="badge badge-main">SQL</span>
+              <span class="badge badge-alt">R</span>
               <span class="badge badge-alt">Bash</span>
               <span class="badge badge-alt">Java</span>
             </div>
@@ -615,7 +645,6 @@
               <span class="badge badge-main">Pandas</span>
               <span class="badge badge-main">NumPy</span>
               <span class="badge badge-main">Scikit-learn</span>
-              <span class="badge badge-alt">Polars</span>
               <span class="badge badge-alt">XGBoost</span>
               <span class="badge badge-alt">LightGBM</span>
               <span class="badge badge-main">PyTorch</span>
@@ -628,12 +657,12 @@
             <h4 data-i18n="techskills_nlp">NLP & LLMs</h4>
             <div class="techskills-badges">
               <span class="badge badge-main">spaCy</span>
-              <span class="badge badge-main">NLTK</span>
               <span class="badge badge-main">Hugging Face</span>
               <span class="badge badge-alt">LangChain</span>
               <span class="badge badge-alt">SentenceTransformers</span>
-              <span class="badge badge-main">BERT</span>
-              <span class="badge badge-main">T5</span>
+              <span class="badge badge-main">FAISS</span>
+              <span class="badge badge-main">ChromaDB</span>
+              <span class="badge badge-alt">BM25</span>
             </div>
           </div>
 
@@ -654,10 +683,11 @@
             <div class="mini-card-icon"><i data-feather="cloud"></i></div>
             <h4 data-i18n="techskills_cloud">Cloud & DevOps</h4>
             <div class="techskills-badges">
-              <span class="badge badge-main">AWS</span>
-              <span class="badge badge-main">GCP</span>
-              <span class="badge badge-alt">Azure</span>
-              <span class="badge badge-alt">Terraform</span>
+              <span class="badge badge-main">AWS (EC2)</span>
+              <span class="badge badge-main">GCP (Cloud Run)</span>
+              <span class="badge badge-alt">Spark</span>
+              <span class="badge badge-alt">Hadoop</span>
+              <span class="badge badge-alt">Docker</span>
             </div>
           </div>
 
@@ -680,7 +710,7 @@
               <span class="badge badge-main">Seaborn</span>
               <span class="badge badge-main">Plotly</span>
               <span class="badge badge-alt">Dash</span>
-              <span class="badge badge-alt">Power BI</span>
+              <span class="badge badge-alt">DigDash</span>
             </div>
           </div>
         </div>

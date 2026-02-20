@@ -1,6 +1,6 @@
 # Portfolio Data Scientist - Goua Beedi Henri
 
-Portfolio personnel moderne et interactif d'un Data Scientist Junior spécialisé en NLP et IA Générative.
+Portfolio personnel moderne et interactif d'un Data Scientist Junior.
 
 **[Voir le portfolio en ligne](https://gouahenri.github.io/)**
 
@@ -9,7 +9,6 @@ Portfolio personnel moderne et interactif d'un Data Scientist Junior spécialis�
 - **Bilingue** : Français / Anglais avec changement dynamique
 - **Mode sombre/clair** : Interface adaptative avec animations fluides
 - **Responsive** : Optimisé pour mobile, tablette et desktop
-
 - **CV téléchargeables** : Versions française et anglaise
 - **Formulaire de contact** : Intégration FormSubmit
 
@@ -46,23 +45,24 @@ portfolio/
 ## Déploiement local
 
 1. **Cloner le repository**
+
    ```bash
    git clone https://github.com/BeediGoua/BeediGoua-portfolio.git
    cd BeediGoua-portfolio
    ```
-
 2. **Lancer un serveur local**
+
    ```bash
    # Avec Python
    python -m http.server 8000
-   
+
    # Avec Node.js
    npx serve .
-   
+
    # Ou simplement ouvrir index.html dans le navigateur
    ```
-
 3. **Accéder au portfolio**
+
    ```
    http://localhost:8000
    ```
@@ -80,9 +80,11 @@ portfolio/
 ## Projets mis en avant
 
 ### ReviewGuardian
+
 Pipeline de modération de commentaires avec IA locale, détection de toxicité et explications SHAP.
 
 ### Hybrid Music Recommender
+
 Système de recommandation musical combinant Word2Vec et embeddings sémantiques.
 
 ## Personnalisation
@@ -100,6 +102,5 @@ Pour adapter ce portfolio :
 - **LinkedIn** : [goua-beedi-henri](https://www.linkedin.com/in/goua-beedi-henri-a152bb1b2/)
 - **GitHub** : [BeediGoua](https://github.com/BeediGoua)
 - **Email** : gouabeedi@gmail.com
-
 
 ---

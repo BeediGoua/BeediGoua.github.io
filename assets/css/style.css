@@ -662,15 +662,14 @@ header {
   font-size: 1rem;
   padding: 0.3rem 0.7rem;
   border-radius: 5px;
-  border: none;
-  background: var(--card-bg);
+  border: 1px solid var(--border);
+  background-color: var(--secondary-color);
   color: var(--text-color);
   cursor: pointer;
 }
 
 #mainNav select option {
-  background: var(--card-bg);
-  /* Ou une couleur unie si le gradient passe mal */
+  background-color: var(--secondary-color);
   color: var(--text-color);
   padding: 0.3rem 0.7rem;
 }
@@ -786,6 +785,8 @@ header {
   color: #fff;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  text-align: center;
+  line-height: 1.3;
 }
 
 .hero-name {
@@ -793,6 +794,8 @@ header {
   color: #fff;
   white-space: normal;
   line-height: 1.2;
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
 .hero-title {
@@ -830,6 +833,21 @@ header {
 .hero p {
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   color: var(--text-secondary);
+  text-align: center;
+  margin: 1.2rem auto;
+}
+
+/* Custom hero element styles (moved from inline styles) */
+.hero img {
+  border-radius: 50%;
+  box-shadow: 0 2px 12px rgba(74, 144, 226, 0.15);
+  margin-bottom: 1.2rem;
+  object-fit: cover;
+}
+
+.hero a.btn {
+  display: block;
+  margin: 0 auto;
 }
 
 /* ===============================================
@@ -889,23 +907,100 @@ header {
   color: var(--text-improved);
 }
 
-/* CV buttons */
-.cv-buttons {
+/* CV Actions & Dropdown */
+.cv-actions {
   display: flex;
   justify-content: center;
-  gap: clamp(0.8rem, 2vw, 1.2rem);
+  gap: clamp(1rem, 3vw, 1.5rem);
   flex-wrap: wrap;
-  margin-top: 1.8rem;
+  margin-top: 2rem;
+  width: 100%;
 }
 
-.cv-buttons a {
-  flex: 1;
-  min-width: min(140px, 40vw);
-  text-align: center;
-  min-height: 48px;
+.cv-actions .btn {
+  min-width: 200px;
+  justify-content: center;
+}
+
+.cv-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 0.8rem;
+}
+
+.chevron-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.cv-dropdown:hover .chevron-icon {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--card-bg-premium);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-top: 0.5rem;
+  box-shadow: var(--shadow-strong);
+  z-index: 1000;
+  overflow: hidden;
+  animation: slideDown 0.3s ease-out;
+}
+
+.cv-dropdown:hover .dropdown-menu,
+.cv-dropdown.active .dropdown-menu {
+  display: block;
+}
+
+.cv-dropdown:hover .chevron-icon,
+.cv-dropdown.active .chevron-icon {
+  transform: rotate(180deg);
+}
+
+.dropdown-item {
+  display: block;
+  padding: 0.8rem 1.2rem;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background: var(--primary-color);
+  color: #fff;
+  text-decoration: none;
+  padding-left: 1.5rem;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fix for mobile menu button being hidden by backdrop filter on some devices */
+.mobile-menu-btn {
+  z-index: 10001 !important;
 }
 
 /* ===============================================
@@ -4610,12 +4705,17 @@ body.light-theme ::-webkit-scrollbar-thumb:hover {
 }
 
 .mobile-menu-control-item select {
-  background: var(--card-bg);
+  background-color: var(--secondary-color);
   color: var(--text-color);
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 0.4rem 0.8rem;
   cursor: pointer;
+}
+
+.mobile-menu-control-item select option {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
 }
 
 .mobile-menu-control-item .theme-toggle {
@@ -4670,7 +4770,7 @@ body.light-theme .mobile-menu-control-item {
 }
 
 body.light-theme .mobile-menu-control-item select {
-  background: white;
+  background-color: white;
 }
 
 body.light-theme .mobile-menu-control-item .theme-toggle {

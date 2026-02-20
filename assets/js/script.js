@@ -122,6 +122,9 @@
       const selectMobile = $('#langSwitcherMobile');
       if (select) select.value = lang;
       if (selectMobile) selectMobile.value = lang;
+      // Synchronize secondary mobile language selector (inside mobile menu)
+      const selectMobile2 = document.getElementById('langSwitcherMobile2');
+      if (selectMobile2) selectMobile2.value = lang;
 
     } catch (e) {
       console.warn('i18n load error', e);
@@ -265,7 +268,8 @@
         }
       }
     }, {
-      threshold: 0.5
+      // Baisse légèrement le seuil pour rendre la détection plus réactive
+      threshold: 0.3
     });
 
     sections.forEach(s => io.observe(s));
@@ -433,6 +437,34 @@
   }
 
   /* -----------------------
+     Interactivité du Dropdown CV (Mobile)
+  ----------------------- */
+  function initCvDropdown() {
+    const dropdown = $('.cv-dropdown');
+    const toggle = $('#downloadBtn');
+
+    if (!dropdown || !toggle) return;
+
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const isOpen = dropdown.classList.contains('active');
+
+      // Fermer tous les autres dropdowns si nécessaire
+      dropdown.classList.toggle('active', !isOpen);
+      toggle.setAttribute('aria-expanded', !isOpen);
+    });
+
+    // Fermer si on clique ailleurs
+    document.addEventListener('click', (e) => {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  /* -----------------------
      Effet Tilt 3D (Premium)
   ----------------------- */
   function initTiltEffect() {
@@ -496,6 +528,7 @@
     initContactForm();
     initAOS();
     initTiltEffect();
+    initCvDropdown();
   });
 
 })();
