@@ -245,6 +245,10 @@ body.light-theme {
     margin-bottom: 20px;
 }
 
+.project-icon-primary {
+    color: var(--primary-color);
+}
+
 .project-logo-sm {
     height: 14px;
 }
@@ -404,6 +408,12 @@ body.light-theme {
     margin-top: 40px;
     border-top: 1px solid var(--glass-border);
     color: var(--text-secondary);
+}
+
+body.project-detail-page.light-theme .project-page-footer {
+    background: var(--card-bg-alt);
+    color: var(--text-color);
+    border-top: 1px solid var(--divider);
 }
 
 /* ============ RESPONSIVE DESIGN ============ */
