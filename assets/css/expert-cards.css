@@ -1,0 +1,206 @@
+/* --- EXPERT PROJECT CARDS (High-Fidelity Mockup Match) --- */
+
+.project-card.expert-mode {
+    background: rgba(13, 17, 23, 0.7) !important;
+    backdrop-filter: blur(30px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding: clamp(20px, 5vw, 35px) !important;
+    border-radius: 32px !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    position: relative;
+    overflow: visible !important;
+}
+
+.project-card.expert-mode:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.project-title-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.project-card h3 {
+    font-size: clamp(1.3rem, 3.5vw, 1.8rem) !important;
+    margin: 0;
+    color: #fff !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.02em;
+}
+
+.project-desc {
+    font-size: clamp(0.9rem, 2vw, 1.05rem);
+    color: rgba(255, 255, 255, 0.65) !important;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.action-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.action-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), transparent);
+    margin: 25px 0;
+}
+
+/* Button & Badge Alignment (Row 1) */
+.project-techs-expert {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Specific Button Styles from Mockup */
+.btn-expert {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: clamp(10px, 2vw, 12px) clamp(16px, 4vw, 26px);
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1.5px solid transparent;
+}
+
+.btn-cyan-glow {
+    background: rgba(14, 165, 233, 0.1);
+    color: #38bdf8;
+    border-color: rgba(14, 165, 233, 0.4);
+}
+
+.btn-cyan-glow:hover {
+    background: rgba(14, 165, 233, 0.25);
+    box-shadow: 0 0 25px rgba(14, 165, 233, 0.6);
+    transform: scale(1.02);
+}
+
+.btn-green-glow {
+    background: rgba(34, 197, 94, 0.1);
+    color: #4ade80;
+    border-color: rgba(34, 197, 94, 0.4);
+}
+
+.btn-green-glow:hover {
+    background: rgba(34, 197, 94, 0.25);
+    box-shadow: 0 0 25px rgba(34, 197, 94, 0.6);
+    transform: scale(1.02);
+}
+
+.btn-purple-glow {
+    background: rgba(168, 85, 247, 0.1);
+    color: #c084fc;
+    border-color: rgba(168, 85, 247, 0.4);
+}
+
+.btn-purple-glow:hover {
+    background: rgba(168, 85, 247, 0.25);
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.6);
+    transform: scale(1.02);
+}
+
+/* Tech Badges (High-Fidelity) */
+.tech-badge-expert {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: clamp(5px, 1vw, 6px) clamp(10px, 2vw, 14px);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #f1f5f9;
+    font-size: clamp(0.75rem, 1.5vw, 0.85rem);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.tech-badge-expert:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.tech-badge-expert img {
+    width: clamp(12px, 2vw, 14px);
+    height: clamp(12px, 2vw, 14px);
+    object-fit: contain;
+}
+
+.tech-badge-expert i {
+    width: clamp(12px, 2vw, 14px);
+    height: clamp(12px, 2vw, 14px);
+}
+
+/* ============ RESPONSIVE DESIGN ============ */
+
+/* TABLET: 768px - 1024px */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .project-card.expert-mode {
+        padding: clamp(25px, 4vw, 30px) !important;
+    }
+
+    .action-row {
+        gap: clamp(10px, 2vw, 15px);
+    }
+}
+
+/* MOBILE: < 768px */
+@media (max-width: 768px) {
+    .project-card.expert-mode {
+        padding: clamp(15px, 4vw, 25px) !important;
+        border-radius: 24px !important;
+    }
+
+    .project-title-row {
+        gap: clamp(10px, 2vw, 15px);
+        margin-bottom: clamp(15px, 3vw, 25px);
+    }
+
+    .action-row {
+        gap: clamp(8px, 2vw, 15px);
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-expert {
+        width: 100%;
+    }
+
+    .action-divider {
+        margin: clamp(15px, 3vw, 25px) 0;
+    }
+
+    .project-techs-expert {
+        gap: clamp(6px, 1vw, 10px);
+        justify-content: center;
+    }
+}
+
+/* VERY SMALL MOBILE: < 480px */
+@media (max-width: 480px) {
+    .project-card.expert-mode {
+        padding: clamp(12px, 3vw, 20px) !important;
+        border-radius: 20px !important;
+    }
+
+    .project-card h3 {
+        font-size: clamp(1.1rem, 3vw, 1.5rem) !important;
+    }
+
+    .project-desc {
+        font-size: clamp(0.85rem, 2vw, 0.95rem);
+    }
+}

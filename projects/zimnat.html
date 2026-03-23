@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zimnat Insurance | Project Detail</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/animations.css" />
+    <link rel="stylesheet" href="../assets/css/project-detail.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Background Blobs -->
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <nav class="back-nav">
+        <a href="../index.html#projects" class="back-link">
+            <i data-feather="arrow-left" style="width: 18px; color: var(--primary-color);"></i> <span
+                data-i18n="btn_back_projects">Back to Projects</span>
+        </a>
+    </nav>
+
+    <section class="project-detail-hero">
+        <div class="project-header-container">
+            <h1 class="project-title-xl">Zimnat Insurance</h1>
+            <div class="project-hero-meta" style="margin-top: 30px;">
+                <div class="project-badges-top" style="margin-bottom: 25px;">
+                    <span class="tech-badge-expert">
+                        <i data-feather="cpu" style="width: 14px;"></i>
+                        Machine Learning
+                    </span>
+                    <span class="tech-badge-expert">
+                        <i data-feather="trending-up" style="width: 14px;"></i>
+                        FinTech
+                    </span>
+                    <span class="tech-badge-expert">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                            alt="Python" />
+                        Python
+                    </span>
+                    <span class="tech-badge-expert">
+                        <i data-feather="activity" style="width: 14px;"></i>
+                        CatBoost
+                    </span>
+                    <span class="tech-badge-expert">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"
+                            alt="Streamlit" />
+                        Streamlit
+                    </span>
+                </div>
+                <div class="project-action-bar" style="margin-bottom: 0;">
+                    <a href="#" target="_blank" class="btn-expert btn-cyan-glow">
+                        <span data-i18n="btn_live_demo">View Simulation</span> <i data-feather="play-circle"
+                            style="width: 18px;"></i>
+                    </a>
+                    <a href="https://github.com/BeediGoua" target="_blank" class="btn-expert btn-purple-glow">
+                        <span data-i18n="btn_github_repo">View on GitHub</span> <i data-feather="github"
+                            style="width: 18px;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="project-detail-container">
+        <div class="case-study-card reveal-up">
+            <h2>The Challenge</h2>
+            <p>
+                Insurance companies face a critical challenge in identifying which products are most relevant to their
+                existing clients. Mass marketing is often inefficient and intrusive. The goal was to build a
+                recommendation engine for Zimnat Insurance that accurately predicts a client's "missing pieces" to
+                optimize cross-selling based on their current portfolio and profile.
+            </p>
+        </div>
+
+        <div class="visual-placeholder-lg reveal-up">
+            <i data-feather="image" style="width: 64px; height: 64px; margin-bottom: 20px;"></i>
+            <p>(Place a screenshot of the Market Simulator or Client Inspector here)</p>
+            <small>Example: The agent-facing dashboard for personalized insurance advice</small>
+        </div>
+
+        <div class="case-study-card reveal-up">
+            <h2>The Technical Solution</h2>
+            <p>
+                The solution is a <strong>Hybrid Dual-Engine</strong> architecture designed for both robustness and high
+                personalization.
+            </p>
+            <div class="architecture-viz">
+                <div class="schema-placeholder">
+                    <div class="schema-node accent">Client Profile & History</div>
+                    <div class="schema-arrow">↓</div>
+                    <div class="schema-row">
+                        <div class="schema-node">Bayesian Statistical Engine</div>
+                        <div class="schema-node">CatBoost Personalizer</div>
+                    </div>
+                    <div class="schema-arrow">↓</div>
+                    <div class="schema-node accent">Weighted Consensus Layer</div>
+                    <div class="schema-arrow">↓</div>
+                    <div class="schema-node">Anti-Cheat Product Filter</div>
+                    <div class="schema-arrow">↓</div>
+                    <div class="schema-node accent">Final Recommendations (Top K)</div>
+                </div>
+            </div>
+            <p>
+                I chose <strong>CatBoost</strong> specifically to handle the high cardinality of categorical features
+                without the need for complex pre-processing. The <strong>Bayesian Engine</strong> acts as a
+                fallback/safety layer, ensuring that even for new clients with little history, the recommendations
+                remain statistically sound.
+            </p>
+        </div>
+
+        <div class="case-study-card reveal-up">
+            <h2>The Results & Impact</h2>
+            <ul>
+                <li><strong>Zero Commercial Error</strong>: The built-in anti-cheat system ensures 100% of
+                    recommendations are products not yet owned by the client.</li>
+                <li><strong>Market Simulation</strong>: Developed a Streamlit tool for managers to simulate "what-if"
+                    scenarios for new product launches.</li>
+                <li><strong>Precision Marketing</strong>: Enabled the transition from generic campaigns to
+                    hyper-personalized agent advice.</li>
+            </ul>
+        </div>
+
+        <div class="tech-stack-section reveal-up">
+            <h3 data-i18n="project_techs">Full Tech Stack</h3>
+            <div class="tech-stack-grid">
+                <span class="tech-badge-expert">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                        alt="Python" />
+                    Python
+                </span>
+                <span class="tech-badge-expert">
+                    <i data-feather="activity" style="width: 14px;"></i>
+                    CatBoost
+                </span>
+                <span class="tech-badge-expert">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"
+                        alt="Streamlit" />
+                    Streamlit
+                </span>
+                <span class="tech-badge-expert">
+                    <i data-feather="database" style="width: 14px;"></i>
+                    Pandas
+                </span>
+                <span class="tech-badge-expert">
+                    <i data-feather="layers" style="width: 14px;"></i>
+                    Scikit-learn
+                </span>
+                <span class="tech-badge-expert">
+                    <i data-feather="pie-chart" style="width: 14px;"></i>
+                    Plotly
+                </span>
+                <span class="tech-badge-expert">
+                    <i data-feather="zap" style="width: 14px;"></i>
+                    XGBoost
+                </span>
+            </div>
+        </div>
+
+
+    </div>
+
+    <footer style="text-align: center; padding: 40px; border-top: 1px solid var(--glass-border);">
+        <p>&copy; 2025 Goua Beedi Henri.</p>
+    </footer>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+<script src="../assets/js/project-script.js"></script>
+<script>
+    feather.replace();
+
+    // Simple Reveal Logic
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('is-visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal-up').forEach(el => io.observe(el));
+
+    // Sticky Header Logic
+    const hero = document.querySelector('.project-detail-hero');
+    const scrollThreshold = 100;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > scrollThreshold) {
+            hero.classList.add('is-sticky');
+        } else {
+            hero.classList.remove('is-sticky');
+        }
+    });
+</script>
+</body>
+</html>

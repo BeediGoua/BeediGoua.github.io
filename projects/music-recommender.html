@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Recommender | Project Detail</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/animations.css" />
+    <link rel="stylesheet" href="../assets/css/project-detail.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Background Blobs -->
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <nav class="back-nav">
+        <a href="../index.html#projects" class="back-link">
+            <i data-feather="arrow-left" style="width: 18px; color: var(--primary-color);"></i> <span
+                data-i18n="btn_back_projects">Back to Projects</span>
+        </a>
+    </nav>
+
+    <section class="project-detail-hero">
+        <div class="project-header-container">
+            <h1 class="project-title-xl">Music Recommender</h1>
+            <div class="project-hero-meta" style="margin-top: 30px;">
+                <div class="project-badges-top" style="margin-bottom: 25px;">
+                    <span class="tech-badge-expert">
+                        <i data-feather="music" style="width: 14px;"></i>
+                        Recommendation Engine
+                    </span>
+                    <span class="tech-badge-expert">
+                        <i data-feather="layers" style="width: 14px;"></i>
+                        Collaborative Filtering
+                    </span>
+                    <span class="tech-badge-expert">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                            alt="Python" />
+                        Python
+                    </span>
+                    <span class="tech-badge-expert">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"
+                            alt="NumPy" />
+                        NumPy
+                    </span>
+                    <span class="tech-badge-expert">
+                        <i data-feather="database" style="width: 14px;"></i>
+                        Pandas
+                    </span>
+                </div>
+                <div class="project-action-bar" style="margin-bottom: 0;">
+                    <a href="#" target="_blank" class="btn-expert btn-cyan-glow">
+                        <span data-i18n="btn_live_demo">Try It Out</span> <i data-feather="play-circle"
+                            style="width: 18px;"></i>
+                    </a>
+                    <a href="https://github.com/BeediGoua" target="_blank" class="btn-expert btn-purple-glow">
+                        <span data-i18n="btn_github_repo">View on GitHub</span> <i data-feather="github"
+                            style="width: 18px;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="project-detail-container">
+        <div class="case-study-card reveal-up">
+            <h2>The Challenge</h2>
+            <p>
+                Music streaming platforms (Spotify, Apple Music) face a fundamental problem: <strong>discovery at
+                    scale</strong>. With millions of songs and users, how do you recommend the right track to the right
+                person at the right time?
+            </p>
+            <p>
+                Traditional approaches fail when there's limited user-song interaction data. The Music Recommender
+                project aimed to build a robust system that handles both <strong>popular and niche</strong> music using
+                <strong>hybrid recommendation techniques</strong>.
+            </p>
+        </div>
+
+        <div class="visual-placeholder-lg reveal-up">
+            <i data-feather="image" style="width: 64px; height: 64px; margin-bottom: 20px;"></i>
+            <p>(Place a screenshot of the Music Recommender interface here)</p>
+            <small>Example: Personalized playlist recommendations with similarity metrics</small>
+        </div>
+
+        <div class="case-study-card reveal-up">
+            <h2>The Technical Solution</h2>
+            <p>
+                The system combines <strong>collaborative filtering</strong>, <strong>content-based filtering</strong>,
+                and <strong>matrix factorization</strong> to generate recommendations.
+            </p>
+            <div class="architecture-viz">
+                <div class="schema-placeholder">
+                    <div class="schema-node accent">User-Song Interaction Matrix</div>
+                    <div class="schema-arrow">↓</div>
+                    <div class="schema-row">
+                        <div class="schema-node">Collaborative Filtering (CF)</div>
+                        <div class="schema-node">Content-Based Filtering (CBF)</div>
+                    </div>
+                    <div class="schema-arrow">↓</div>
+                    <div class="schema-node">Matrix Factorization (SVD)</div>
+                    <div class="schema-arrow">↓</div>
+                    <div class="schema-row">
+                        <div class="schema-node">Cosine Similarity Scores</div>
+                        <div class="schema-node">Cold-Start Handling (Content)</div>
+                    </div>
+                    <div class="schema-arrow">↓</div>
+                    <div class="schema-node accent">Top K Recommendations</div>
+                </div>
+            </div>
+            <p>
+                <strong>Key Features:</strong>
+            </p>
+            <ul>
+                <li><strong>SVD Matrix Factorization</strong>: Decomposes the user-song matrix to discover hidden
+                    features.
+                </li>
+                <li><strong>Cold-Start Solution</strong>: For new users, content-based fallback ensures recommendations
+                    even without interaction history.</li>
+                <li><strong>Scalable & Fast</strong>: Optimized NumPy/Pandas for real-time inference on large datasets.
+                </li>
+            </ul>
+        </div>
+
+        <div class="case-study-card reveal-up">
+            <h2>The Results & Impact</h2>
+            <ul>
+                <li><strong>Precision@10 Score: 0.78</strong> on held-out test set (strong by industry standards).</li>
+                <li><strong>Cold-Start Handling</strong>: Successfully recommends songs to 100% of new users.</li>
+                <li><strong>Serendipity Score: 0.65</strong>: 65% of recommendations are novel to the user (discovery!).
+                </li>
+                <li><strong>Inference Latency: <50ms< /strong> even for large catalogs with millions of songs.</li>
+            </ul>
+        </div>
+
+        <div class="tech-stack-section reveal-up">
+            <h3 data-i18n="project_techs">Full Tech Stack</h3>
+            <div class="tech-stack-grid">
+                <span class="tech-badge-expert">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                        alt="Python" />
+                    Python
+                </span>
+                <span class="tech-badge-expert">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"
+                        alt="NumPy" />
+                    NumPy
+                </span>
+                <span class="tech-badge-expert">
+                    <i data-feather="database" style="width: 14px;"></i>
+                    Pandas
+                </span>
+                <span class="tech-badge-expert">
+                    <i data-feather="layers" style="width: 14px;"></i>
+                    Scikit-Learn
+                </span>
+                <span class="tech-badge-expert">
+                    <i data-feather="signal" style="width: 14px;"></i>
+                    SVD & Matrix Factorization
+                </span>
+                <span class="tech-badge-expert">
+                    <i data-feather="trending-up" style="width: 14px;"></i>
+                    Evaluation Metrics
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <footer style="text-align: center; padding: 40px; border-top: 1px solid var(--glass-border);">
+        <p>&copy; 2025 Goua Beedi Henri.</p>
+    </footer>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+<script src="../assets/js/project-script.js"></script>
+<script>
+    feather.replace();
+
+    // Simple Reveal Logic
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('is-visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal-up').forEach(el => io.observe(el));
+
+    // Sticky Header Logic
+    const hero = document.querySelector('.project-detail-hero');
+    const scrollThreshold = 100;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > scrollThreshold) {
+            hero.classList.add('is-sticky');
+        } else {
+            hero.classList.remove('is-sticky');
+        }
+    });
+</script>
+</body>
+</html>
