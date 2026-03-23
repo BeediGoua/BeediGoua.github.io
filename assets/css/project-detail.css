@@ -432,6 +432,25 @@ body.project-detail-page.light-theme::before {
     margin: 0;
 }
 
+.project-visual {
+    width: 100%;
+    margin: 40px 0;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    background: var(--card-bg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.project-screenshot {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: transparent;
+}
+
 .project-page-footer {
     text-align: center;
     padding: 40px 20px;
@@ -626,6 +645,10 @@ body.project-detail-page.light-theme .project-page-footer {
         height: 250px;
         margin: 25px 0;
         padding: 20px;
+    }
+
+    .project-visual {
+        margin: 25px 0;
     }
 
     .visual-placeholder-lg i {
