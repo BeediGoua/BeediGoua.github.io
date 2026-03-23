@@ -23,7 +23,25 @@
     --project-placeholder-bg: rgba(0, 0, 0, 0.4);
 }
 
-body.light-theme {
+body.project-detail-page {
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --glass-bg: rgba(15, 23, 42, 0.45);
+    --project-sticky-bg: rgba(11, 14, 20, 0.8);
+    --project-sticky-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    --project-title-start: #ffffff;
+    --project-badge-bg: rgba(255, 255, 255, 0.05);
+    --project-badge-border: rgba(255, 255, 255, 0.1);
+    --project-badge-text: #f1f5f9;
+    --project-back-text: #ffffff;
+    --project-back-hover-bg: rgba(59, 130, 246, 0.3);
+    --project-architecture-bg: rgba(0, 0, 0, 0.2);
+    --project-schema-bg: rgba(255, 255, 255, 0.05);
+    --project-schema-border: rgba(255, 255, 255, 0.12);
+    --project-schema-text: #f8fafc;
+    --project-placeholder-bg: rgba(0, 0, 0, 0.4);
+}
+
+body.project-detail-page.light-theme {
     --glass-border: rgba(15, 23, 42, 0.12);
     --glass-bg: rgba(255, 255, 255, 0.72);
     --project-sticky-bg: rgba(248, 250, 252, 0.88);
@@ -39,6 +57,18 @@ body.light-theme {
     --project-schema-border: rgba(148, 163, 184, 0.3);
     --project-schema-text: #0f172a;
     --project-placeholder-bg: rgba(255, 255, 255, 0.82);
+}
+
+body.project-detail-page,
+body.project-detail-page.light-theme {
+    background: var(--background-mesh), var(--background-gradient) !important;
+}
+
+body.project-detail-page::before,
+body.project-detail-page.light-theme::before {
+    background:
+        radial-gradient(circle at 25% 25%, rgba(91, 115, 245, 0.02) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.02) 0%, transparent 50%) !important;
 }
 
 .project-detail-hero {
@@ -414,6 +444,24 @@ body.project-detail-page.light-theme .project-page-footer {
     background: var(--card-bg-alt);
     color: var(--text-color);
     border-top: 1px solid var(--divider);
+}
+
+body.project-detail-page footer,
+body.project-detail-page .project-page-footer {
+    background: transparent !important;
+    color: var(--text-secondary) !important;
+    border-top: 1px solid var(--glass-border) !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+}
+
+body.project-detail-page.light-theme footer,
+body.project-detail-page.light-theme .project-page-footer {
+    background: var(--card-bg-alt) !important;
+    color: var(--text-color) !important;
+    border-top: 1px solid var(--divider) !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
 }
 
 /* ============ RESPONSIVE DESIGN ============ */
