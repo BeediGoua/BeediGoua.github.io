@@ -1,0 +1,4 @@
+html, body {
+  background: #f0f0f0; /* or whatever color is specified to fix white background */
+  min-height: 100vh; /* Ensures full viewport height */
+}
