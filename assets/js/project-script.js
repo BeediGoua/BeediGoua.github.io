@@ -13,6 +13,12 @@
     const $ = (s, r = document) => r.querySelector(s);
     const $$ = (s, r = document) => r.querySelectorAll(s);
 
+    function safeFeatherReplace() {
+        if (typeof feather !== 'undefined' && typeof feather.replace === 'function') {
+            feather.replace();
+        }
+    }
+
     /* -----------------------
        Système de Thème
     ----------------------- */
@@ -100,7 +106,7 @@
                 headerContainer.insertBefore(stickyBackButton, headerContainer.firstChild);
 
                 // Réappliquer feather icons et traductions
-                feather.replace();
+                safeFeatherReplace();
                 const span = stickyBackButton.querySelector('[data-i18n="btn_back_projects"]');
                 const savedLang = localStorage.getItem('lang') || 'en';
 
@@ -138,17 +144,16 @@
        Init
     ----------------------- */
     function init() {
-        feather.replace();
+        safeFeatherReplace();
         initTheme();
         initLanguage();
         initReveal();
         initStickyBackButton();
     }
 
-    // Attendre que feather icons soit chargé
-    if (typeof feather !== 'undefined') {
-        init();
+    if (document.readyState === 'loading') {
+        window.addEventListener('DOMContentLoaded', init);
     } else {
-        window.addEventListener('load', init);
+        init();
     }
 })();
