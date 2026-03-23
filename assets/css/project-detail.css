@@ -62,7 +62,7 @@ body.project-detail-page.light-theme {
 .project-detail-hero {
     padding: 100px 0 60px;
     text-align: center;
-    background: var(--background-gradient);
+    background: transparent;
     position: sticky;
     top: -1px;
     /* Slight offset to ensure trigger */
