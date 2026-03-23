@@ -39,7 +39,7 @@
     ----------------------- */
     async function changeLanguage(lang) {
         try {
-            const response = await fetch(`../assets/lang/${lang}.json`, { cache: 'no-store' });
+            const response = await fetch(`../lang/${lang}.json`, { cache: 'no-store' });
             const translations = await response.json();
 
             // Textes simples
@@ -69,11 +69,13 @@
        Sticky Back Button
     ----------------------- */
     function initStickyBackButton() {
+        if (window.matchMedia('(max-width: 768px)').matches) return;
+
         const hero = $('.project-detail-hero');
         const headerContainer = $('.project-header-container');
         const backNav = $('.back-nav');
 
-        if (!hero || !headerContainer || !backNav) return;
+        if (!hero || !headerContainer) return;
 
         // Créer une copie du back button pour le sticky header
         const backButton = $('.back-link');
@@ -102,17 +104,45 @@
                 const span = stickyBackButton.querySelector('[data-i18n="btn_back_projects"]');
                 const savedLang = localStorage.getItem('lang') || 'en';
 
-                fetch(`../assets/lang/${savedLang}.json`)
+                fetch(`../lang/${savedLang}.json`)
                     .then(r => r.json())
                     .then(t => {
                         if (t['btn_back_projects']) {
                             span.textContent = t['btn_back_projects'];
                         }
                     });
+
+                if (backNav) {
+                    backNav.classList.add('is-hidden');
+                }
             } else if (!isScrolled && stickyBackButton) {
                 // Retirer le bouton quand on remonte
                 stickyBackButton.remove();
                 stickyBackButton = null;
+
+                if (backNav) {
+                    backNav.classList.remove('is-hidden');
+                }
+            }
+        });
+    }
+
+    /* -----------------------
+       Sticky Hero Compact
+    ----------------------- */
+    function initStickyHero() {
+        if (window.matchMedia('(max-width: 768px)').matches) return;
+
+        const hero = $('.project-detail-hero');
+        if (!hero) return;
+
+        const scrollThreshold = 100;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > scrollThreshold) {
+                hero.classList.add('is-sticky');
+            } else {
+                hero.classList.remove('is-sticky');
             }
         });
     }
@@ -136,9 +166,11 @@
        Init
     ----------------------- */
     function init() {
+        feather.replace();
         initTheme();
         initLanguage();
         initReveal();
+        initStickyHero();
         initStickyBackButton();
     }
 

@@ -81,6 +81,8 @@
   --glow-warm: 0 0 25px rgba(255, 107, 53, 0.3);
   --inner-glow: inset 0 1px 2px rgba(248, 250, 252, 0.1);
   --glass-blur: blur(16px);
+  --glass-bg: rgba(17, 24, 39, 0.45);
+  --glass-border: rgba(148, 163, 184, 0.28);
 
   /* Hiérarchie couleurs projets/skills premium */
   --project-title-color: #5b73f5;
@@ -198,6 +200,8 @@ body.light-theme {
   --inner-glow: inset 0 1px 2px rgba(255, 255, 255, 0.8);
   --glass-effect: rgba(255, 255, 255, 0.85);
   --glass-blur: blur(20px);
+  --glass-bg: rgba(255, 255, 255, 0.68);
+  --glass-border: rgba(148, 163, 184, 0.45);
 
   /* Couleurs projets/skills premium mode jour */
   --project-title-color: #4f46e5;
