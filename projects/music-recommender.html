@@ -178,32 +178,6 @@
     </footer>
 
     <script src="https://unpkg.com/feather-icons"></script>
-<script src="../assets/js/project-script.js"></script>
-<script>
-    feather.replace();
-
-    // Simple Reveal Logic
-    const io = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-            if (e.isIntersecting) {
-                e.target.classList.add('is-visible');
-            }
-        });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.reveal-up').forEach(el => io.observe(el));
-
-    // Sticky Header Logic
-    const hero = document.querySelector('.project-detail-hero');
-    const scrollThreshold = 100;
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > scrollThreshold) {
-            hero.classList.add('is-sticky');
-        } else {
-            hero.classList.remove('is-sticky');
-        }
-    });
-</script>
+    <script src="../assets/js/project-script.js"></script>
 </body>
 </html>

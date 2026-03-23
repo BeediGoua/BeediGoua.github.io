@@ -85,6 +85,8 @@
         window.addEventListener('scroll', () => {
             const isScrolled = window.scrollY > scrollThreshold;
 
+            hero.classList.toggle('is-sticky', isScrolled);
+
             if (isScrolled && !stickyBackButton) {
                 // Créer et afficher le bouton dans le sticky header
                 stickyBackButton = document.createElement('div');
@@ -136,6 +138,7 @@
        Init
     ----------------------- */
     function init() {
+        feather.replace();
         initTheme();
         initLanguage();
         initReveal();
