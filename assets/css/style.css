@@ -346,13 +346,21 @@ body.light-theme footer {
 
 html {
   scroll-behavior: smooth;
+  /* Assure que la page couvre tout l’écran et masque le fond blanc du navigateur */
+  min-height: 100%;
+  background-color: #0f0f23;
 }
 
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background: var(--background-mesh), var(--background-gradient);
+  /* Le corps occupe toute la hauteur de la fenêtre et a un fond explicite */
+  min-height: 100vh;
+  background-color: #0f0f23;
+  background-image: var(--background-mesh), var(--background-gradient);
+  background-repeat: no-repeat;
+  background-size: cover;
   color: var(--text-color);
   font-family: var(--font-main);
   line-height: 1.6;

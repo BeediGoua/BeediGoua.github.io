@@ -39,6 +39,13 @@ body.project-detail-page {
     --project-schema-border: rgba(255, 255, 255, 0.12);
     --project-schema-text: #f8fafc;
     --project-placeholder-bg: rgba(0, 0, 0, 0.4);
+
+    /* Empêche les espaces vides de laisser apparaître le fond blanc */
+    min-height: 100vh;
+    background-color: #0f0f23;
+    background-image: var(--background-mesh), var(--background-gradient);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 body.project-detail-page.light-theme {
@@ -57,6 +64,13 @@ body.project-detail-page.light-theme {
     --project-schema-border: rgba(148, 163, 184, 0.3);
     --project-schema-text: #0f172a;
     --project-placeholder-bg: rgba(241, 245, 249, 0.9);
+
+    /* La version claire doit aussi forcer un fond couvrant toute la page */
+    min-height: 100vh;
+    background-color: var(--background-color);
+    background-image: var(--background-mesh), var(--background-gradient);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .project-detail-hero {
