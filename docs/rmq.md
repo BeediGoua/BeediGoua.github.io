@@ -20,13 +20,9 @@ Stabiliser l’affichage des pages secondaires (projets) et supprimer les zones 
 - Le script est maintenant robuste si Feather CDN échoue (appel protégé via `safeFeatherReplace`).
 
 ### Ce qui est maintenant corrigé
-- Les placeholders visuels ont été remplacés sur les 3 pages projet :
-   - `projects/zimnat.html`
-   - `projects/music-recommender.html`
-   - `projects/reviewguardian.html`
-- Un composant visuel final a été ajouté dans `assets/css/project-detail.css` :
-   - `.project-visual`
-   - `.project-screenshot`
+- Les zones visuelles intermédiaires ont été supprimées sur les 3 pages projet.
+- Le flux est simplifié : **The Challenge → The Technical Solution**.
+- Les anciens placeholders sont neutralisés côté CSS pour éviter un retour accidentel.
 
 ---
 
@@ -37,13 +33,10 @@ Le fond blanc visible peut venir de 3 sources différentes :
 1. **Le composant HTML/CSS placeholder**
    - Corrigeable côté code.
 
-2. **Le wrapper du visuel**
-   - Si une couleur fixe est utilisée (`#fff`), le mode sombre sera incohérent.
+2. **Les surfaces du schéma en thème clair**
+   - Certaines variables peuvent rendre des blocs trop lumineux en light mode.
 
-3. **Le screenshot lui-même**
-   - Si l’image exportée contient un fond blanc, ce blanc restera visible même avec un bon thème.
-
-Conclusion : il faut traiter à la fois le composant et le média.
+Conclusion : il faut traiter à la fois les blocs supprimés et les variables du schéma.
 
 ---
 
@@ -52,8 +45,8 @@ Conclusion : il faut traiter à la fois le composant et le média.
 Le projet utilise actuellement le modèle :
 - classe `body.light-theme` (et non `data-theme="dark"`).
 
-Donc pour les nouveaux composants visuels :
-- utiliser des variables existantes (`--card-bg`, `--glass-border`, `--text-color`, etc.),
+Donc pour les sections restantes (notamment le schéma) :
+- utiliser les variables existantes,
 - éviter toute couleur codée en dur pour le fond et le texte.
 
 À éviter :
@@ -66,13 +59,13 @@ Donc pour les nouveaux composants visuels :
 ## 4) Plan d’action recommandé
 
 ### Priorité haute
-1. Remplacer les images temporaires (`hero-bg.jpg`) par des captures réelles par projet.
-2. Vérifier la qualité des images (fond, lisibilité, ratio 16:9).
-3. Conserver le composant visuel final centralisé dans `assets/css/project-detail.css`.
+1. Conserver le flux sans image sur les pages projet.
+2. Vérifier que les blocs de schéma restent lisibles en thème clair et sombre.
+3. Ne pas réintroduire de placeholder visuel en production.
 
 ### Priorité moyenne
-4. Conserver `.visual-placeholder-lg` uniquement comme fallback interne, moins dominant visuellement.
-5. Ajouter une micro-zone de preuve (KPI) sous le visuel pour renforcer la crédibilité produit.
+4. Ajuster finement les variables light-theme si certaines surfaces paraissent encore trop blanches.
+5. Ajouter une micro-zone de preuve (KPI) sous le schéma pour renforcer la crédibilité produit.
 
 ---
 
@@ -89,5 +82,5 @@ Donc pour les nouveaux composants visuels :
 ## 6) Verdict
 
 - Le socle technique (script central + thème) est en place.
-- Le principal chantier restant est **UX/contenu visuel** (remplacer les images temporaires par des captures projet).
-- Le socle technique est prêt : thème, robustesse JS et composant visuel sont en place.
+- Le socle technique est prêt : thème, robustesse JS, et suppression des zones placeholder.
+- Le chantier restant est l’ajustement visuel fin du schéma en light theme.

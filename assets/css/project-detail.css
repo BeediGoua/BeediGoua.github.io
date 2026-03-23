@@ -52,11 +52,11 @@ body.project-detail-page.light-theme {
     --project-badge-text: #1e293b;
     --project-back-text: #0f172a;
     --project-back-hover-bg: rgba(79, 70, 229, 0.12);
-    --project-architecture-bg: rgba(79, 70, 229, 0.05);
-    --project-schema-bg: rgba(255, 255, 255, 0.72);
+    --project-architecture-bg: rgba(79, 70, 229, 0.04);
+    --project-schema-bg: rgba(248, 250, 252, 0.9);
     --project-schema-border: rgba(148, 163, 184, 0.3);
     --project-schema-text: #0f172a;
-    --project-placeholder-bg: rgba(255, 255, 255, 0.82);
+    --project-placeholder-bg: rgba(241, 245, 249, 0.9);
 }
 
 body.project-detail-page,
@@ -412,43 +412,7 @@ body.project-detail-page.light-theme::before {
 }
 
 .visual-placeholder-lg {
-    width: 100%;
-    height: 400px;
-    background: var(--project-placeholder-bg);
-    border-radius: 20px;
-    border: 1px dashed var(--glass-border);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-secondary);
-    margin: 40px 0;
-    padding: 24px;
-    text-align: center;
-}
-
-.visual-placeholder-lg p,
-.visual-placeholder-lg small {
-    margin: 0;
-}
-
-.project-visual {
-    width: 100%;
-    margin: 40px 0;
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid var(--glass-border);
-    background: var(--card-bg);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-}
-
-.project-screenshot {
-    display: block;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    background: transparent;
+    display: none;
 }
 
 .project-page-footer {
@@ -642,26 +606,7 @@ body.project-detail-page.light-theme .project-page-footer {
     }
 
     .visual-placeholder-lg {
-        height: 250px;
-        margin: 25px 0;
-        padding: 20px;
-    }
-
-    .project-visual {
-        margin: 25px 0;
-    }
-
-    .visual-placeholder-lg i {
-        width: 48px !important;
-        height: 48px !important;
-    }
-
-    .visual-placeholder-lg p {
-        font-size: 0.9rem;
-    }
-
-    .visual-placeholder-lg small {
-        font-size: 0.75rem;
+        display: none;
     }
 
     .tech-stack-section {
