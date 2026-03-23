@@ -8,6 +8,37 @@
 :root {
     --glass-border: rgba(255, 255, 255, 0.12);
     --glass-bg: rgba(15, 23, 42, 0.45);
+    --project-sticky-bg: rgba(11, 14, 20, 0.8);
+    --project-sticky-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    --project-title-start: #ffffff;
+    --project-badge-bg: rgba(255, 255, 255, 0.05);
+    --project-badge-border: rgba(255, 255, 255, 0.1);
+    --project-badge-text: #f1f5f9;
+    --project-back-text: #ffffff;
+    --project-back-hover-bg: rgba(59, 130, 246, 0.3);
+    --project-architecture-bg: rgba(0, 0, 0, 0.2);
+    --project-schema-bg: rgba(255, 255, 255, 0.05);
+    --project-schema-border: rgba(255, 255, 255, 0.12);
+    --project-schema-text: var(--text-color);
+    --project-placeholder-bg: rgba(0, 0, 0, 0.4);
+}
+
+body.light-theme {
+    --glass-border: rgba(15, 23, 42, 0.12);
+    --glass-bg: rgba(255, 255, 255, 0.72);
+    --project-sticky-bg: rgba(248, 250, 252, 0.88);
+    --project-sticky-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+    --project-title-start: #0f172a;
+    --project-badge-bg: rgba(79, 70, 229, 0.08);
+    --project-badge-border: rgba(79, 70, 229, 0.16);
+    --project-badge-text: #1e293b;
+    --project-back-text: #0f172a;
+    --project-back-hover-bg: rgba(79, 70, 229, 0.12);
+    --project-architecture-bg: rgba(79, 70, 229, 0.05);
+    --project-schema-bg: rgba(255, 255, 255, 0.72);
+    --project-schema-border: rgba(148, 163, 184, 0.3);
+    --project-schema-text: #0f172a;
+    --project-placeholder-bg: rgba(255, 255, 255, 0.82);
 }
 
 .project-detail-hero {
@@ -23,10 +54,10 @@
 
 .project-detail-hero.is-sticky {
     padding: 12px 0;
-    background: rgba(11, 14, 20, 0.8);
+    background: var(--project-sticky-bg);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--glass-border);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--project-sticky-shadow);
 }
 
 .project-header-container {
@@ -48,7 +79,7 @@
 .project-title-xl {
     font-size: clamp(2.5rem, 6vw, 4.5rem);
     margin-bottom: 20px;
-    background: linear-gradient(135deg, #fff 30%, var(--primary-color) 100%);
+    background: linear-gradient(135deg, var(--project-title-start) 30%, var(--primary-color) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -58,7 +89,7 @@
 .is-sticky .project-title-xl {
     font-size: 1.4rem;
     margin-bottom: 0;
-    background: linear-gradient(135deg, #fff 30%, var(--primary-color) 100%);
+    background: linear-gradient(135deg, var(--project-title-start) 30%, var(--primary-color) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -70,6 +101,10 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+}
+
+.project-hero-meta-spaced {
+    margin-top: 30px;
 }
 
 .is-sticky .project-hero-meta {
@@ -85,6 +120,10 @@
     flex-wrap: wrap;
     margin-bottom: 40px;
     transition: all 0.5s ease;
+}
+
+.project-badges-top-tight {
+    margin-bottom: 25px;
 }
 
 .is-sticky .project-badges-top {
@@ -174,10 +213,10 @@
     align-items: center;
     gap: 8px;
     padding: 6px 14px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--project-badge-bg);
+    border: 1px solid var(--project-badge-border);
     border-radius: 999px;
-    color: #f1f5f9;
+    color: var(--project-badge-text);
     font-size: 0.85rem;
     font-weight: 500;
     line-height: 1.2;
@@ -188,6 +227,26 @@
     width: 14px;
     height: 14px;
     flex-shrink: 0;
+}
+
+.project-icon-sm {
+    width: 14px !important;
+    height: 14px !important;
+}
+
+.project-icon-md {
+    width: 18px !important;
+    height: 18px !important;
+}
+
+.project-icon-lg {
+    width: 64px !important;
+    height: 64px !important;
+    margin-bottom: 20px;
+}
+
+.project-logo-sm {
+    height: 14px;
 }
 
 .case-study-card {
@@ -259,19 +318,19 @@
     padding: 10px 20px;
     border-radius: 50px;
     border: 1px solid var(--glass-border);
-    color: #fff;
+    color: var(--project-back-text);
     font-weight: 600;
     transition: var(--transition);
 }
 
 .back-link:hover {
     transform: translateX(-5px);
-    background: rgba(59, 130, 246, 0.3);
+    background: var(--project-back-hover-bg);
     border-color: var(--primary-color);
 }
 
 .architecture-viz {
-    background: rgba(0, 0, 0, 0.2);
+    background: var(--project-architecture-bg);
     border-radius: 16px;
     padding: 30px;
     margin: 30px 0;
@@ -298,9 +357,9 @@
     max-width: 100%;
     padding: 14px 18px;
     border-radius: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--text-color);
+    border: 1px solid var(--project-schema-border);
+    background: var(--project-schema-bg);
+    color: var(--project-schema-text);
     text-align: center;
     font-weight: 600;
     line-height: 1.5;
@@ -321,7 +380,7 @@
 .visual-placeholder-lg {
     width: 100%;
     height: 400px;
-    background: rgba(0, 0, 0, 0.4);
+    background: var(--project-placeholder-bg);
     border-radius: 20px;
     border: 1px dashed var(--glass-border);
     display: flex;
@@ -337,6 +396,14 @@
 .visual-placeholder-lg p,
 .visual-placeholder-lg small {
     margin: 0;
+}
+
+.project-page-footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 40px;
+    border-top: 1px solid var(--glass-border);
+    color: var(--text-secondary);
 }
 
 /* ============ RESPONSIVE DESIGN ============ */
