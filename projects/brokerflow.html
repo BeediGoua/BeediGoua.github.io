@@ -25,8 +25,8 @@
             <h1 class="project-title-xl">BrokerFlow AI</h1>
             <div class="project-hero-meta project-hero-meta-spaced">
                 <div class="project-badges-top project-badges-top-tight">
-                    <span class="tech-badge-expert"><i data-feather="cpu" class="project-icon-sm"></i> Machine Learning</span>
-                    <span class="tech-badge-expert"><i data-feather="shield" class="project-icon-sm"></i> Credit Risk</span>
+                    <span class="tech-badge-expert"><i data-feather="cpu" class="project-icon-sm"></i> <span data-i18n="bf_badge_ml">Machine Learning</span></span>
+                    <span class="tech-badge-expert"><i data-feather="shield" class="project-icon-sm"></i> <span data-i18n="bf_badge_credit">Credit Risk</span></span>
                     <span class="tech-badge-expert"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /> Python</span>
                     <span class="tech-badge-expert"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" /> FastAPI</span>
                     <span class="tech-badge-expert"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg" alt="Streamlit" /> Streamlit</span>
@@ -43,29 +43,29 @@
     </section>
     <div class="project-detail-container">
         <div class="case-study-card reveal-up">
-            <h2>Le problème</h2>
-            <p>Un broker reçoit des dizaines de dossiers de crédit par semaine. Chaque dossier contient des données structurées (revenus, dette, historique), une note libre rédigée à la main, et des documents parfois manquants ou contradictoires. Deux erreurs coûtent cher : accepter un dossier risqué ou refuser un bon client. Un score seul ne suffit pas : il faut une décision claire, justifiée et défendable.</p>
+            <h2 data-i18n="bf_section_challenge">Le problème</h2>
+            <p data-i18n="bf_section_challenge_text">Un broker reçoit des dizaines de dossiers de crédit par semaine. Chaque dossier contient des données structurées (revenus, dette, historique), une note libre rédigée à la main, et des documents parfois manquants ou contradictoires. Deux erreurs coûtent cher : accepter un dossier risqué ou refuser un bon client. Un score seul ne suffit pas : il faut une décision claire, justifiée et défendable.</p>
         </div>
         <div class="case-study-card reveal-up">
-            <h2>La solution technique</h2>
-            <p>BrokerFlow AI assemble trois couches complémentaires :</p>
+            <h2 data-i18n="bf_section_solution">La solution technique</h2>
+            <p data-i18n="bf_section_solution_intro">BrokerFlow AI assemble trois couches complémentaires :</p>
             <ul>
-                <li>Modèle ML calibré pour estimer la probabilité de défaut à partir des données structurées</li>
-                <li>Policy déterministe qui traduit ce score en décision métier, en tenant compte de la complétude du dossier et de la sévérité des alertes détectées</li>
-                <li>Agents légers qui lisent la note libre, vérifient la cohérence du dossier, et rédigent une explication lisible pour le broker</li>
+                <li data-i18n="bf_section_solution_list1">Modèle ML calibré pour estimer la probabilité de défaut à partir des données structurées</li>
+                <li data-i18n="bf_section_solution_list2">Policy déterministe qui traduit ce score en décision métier, en tenant compte de la complétude du dossier et de la sévérité des alertes détectées</li>
+                <li data-i18n="bf_section_solution_list3">Agents légers qui lisent la note libre, vérifient la cohérence du dossier, et rédigent une explication lisible pour le broker</li>
             </ul>
-            <p>Un dossier entre dans l'API. Il en ressort <strong>ACCEPTABLE</strong>, <strong>REVIEW</strong>, <strong>REQUEST_DOCUMENTS</strong> ou <strong>ESCALATE</strong> — avec les codes motifs et un résumé en langage naturel.</p>
+            <p data-i18n="bf_section_solution_outro">Un dossier entre dans l'API. Il en ressort <strong>ACCEPTABLE</strong>, <strong>REVIEW</strong>, <strong>REQUEST_DOCUMENTS</strong> ou <strong>ESCALATE</strong> — avec les codes motifs et un résumé en langage naturel.</p>
         </div>
         <div class="case-study-card reveal-up">
-            <h2>Résultats & Impact</h2>
+            <h2 data-i18n="bf_section_results">Résultats & Impact</h2>
             <ul>
-                <li>AUC modèle calibré : <strong>0.728</strong></li>
-                <li>Brier score : 0.150</li>
-                <li>Seuil opérationnel (F1 optimal) : <strong>0.231</strong></li>
-                <li>Précision alertes reviewer : <strong>1.00</strong></li>
-                <li>Rappel alertes reviewer : <strong>1.00</strong></li>
-                <li>F1 parser de notes : <strong>0.89</strong></li>
-                <li>Validité JSON sorties agents : <strong>100 %</strong></li>
+                <li data-i18n="bf_section_results_auc">AUC modèle calibré : <strong>0.728</strong></li>
+                <li data-i18n="bf_section_results_brier">Brier score : 0.150</li>
+                <li data-i18n="bf_section_results_f1">Seuil opérationnel (F1 optimal) : <strong>0.231</strong></li>
+                <li data-i18n="bf_section_results_precision">Précision alertes reviewer : <strong>1.00</strong></li>
+                <li data-i18n="bf_section_results_recall">Rappel alertes reviewer : <strong>1.00</strong></li>
+                <li data-i18n="bf_section_results_parser">F1 parser de notes : <strong>0.89</strong></li>
+                <li data-i18n="bf_section_results_json">Validité JSON sorties agents : <strong>100 %</strong></li>
             </ul>
         </div>
         <div class="case-study-card reveal-up">
