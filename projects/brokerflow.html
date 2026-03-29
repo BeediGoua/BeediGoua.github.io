@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body class="project-detail-page">
+    <!-- Background Blobs -->
     <div class="blob-container">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
@@ -30,7 +31,7 @@
                     <span class="tech-badge-expert"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" /> FastAPI</span>
                     <span class="tech-badge-expert"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg" alt="Streamlit" /> Streamlit</span>
                     <span class="tech-badge-expert"><i data-feather="layers" class="project-icon-sm"></i> scikit-learn</span>
-                    <span class="tech-badge-expert"><img src="https://avatars.githubusercontent.com/u/16880727?s=200&v=4" alt="Ollama" style="background:#fff;border-radius:50%;width:20px;height:20px;" /> Ollama</span>
+                    <span class="tech-badge-expert"><i data-feather="box" class="project-icon-sm"></i> Ollama</span>
                 </div>
                 <div class="project-action-bar">
                     <a href="https://github.com/BeediGoua/Brokerflow_ai" target="_blank" rel="noopener noreferrer" class="btn-expert btn-purple-glow">
@@ -43,33 +44,20 @@
     <div class="project-detail-container">
         <div class="case-study-card reveal-up">
             <h2>Le problème</h2>
-            <p>Un broker reçoit des dizaines de dossiers de crédit par semaine, souvent incomplets ou ambigus. Deux erreurs coûtent cher : accepter un dossier risqué ou refuser un bon client. Un score seul ne suffit pas : il faut une décision claire, justifiée et défendable.</p>
+            <p>Un broker reçoit des dizaines de dossiers de crédit par semaine. Chaque dossier contient des données structurées (revenus, dette, historique), une note libre rédigée à la main, et des documents parfois manquants ou contradictoires. Deux erreurs coûtent cher : accepter un dossier risqué ou refuser un bon client. Un score seul ne suffit pas : il faut une décision claire, justifiée et défendable.</p>
         </div>
         <div class="case-study-card reveal-up">
-            <h2>La solution</h2>
+            <h2>La solution technique</h2>
+            <p>BrokerFlow AI assemble trois couches complémentaires :</p>
             <ul>
-                <li>Modèle ML calibré pour estimer le risque de défaut</li>
-                <li>Policy déterministe pour transformer le score en décision métier</li>
-                <li>Agents LLM pour lire la note libre, vérifier la cohérence et générer une explication lisible</li>
+                <li>Modèle ML calibré pour estimer la probabilité de défaut à partir des données structurées</li>
+                <li>Policy déterministe qui traduit ce score en décision métier, en tenant compte de la complétude du dossier et de la sévérité des alertes détectées</li>
+                <li>Agents légers qui lisent la note libre, vérifient la cohérence du dossier, et rédigent une explication lisible pour le broker</li>
             </ul>
-            <p>Sortie : <strong>ACCEPTABLE</strong>, <strong>REVIEW</strong>, <strong>REQUEST_DOCUMENTS</strong> ou <strong>ESCALATE</strong> avec motifs et résumé naturel.</p>
+            <p>Un dossier entre dans l'API. Il en ressort <strong>ACCEPTABLE</strong>, <strong>REVIEW</strong>, <strong>REQUEST_DOCUMENTS</strong> ou <strong>ESCALATE</strong> — avec les codes motifs et un résumé en langage naturel.</p>
         </div>
         <div class="case-study-card reveal-up">
-            <h2>Pourquoi des agents ?</h2>
-            <p>Les agents LLM n'ont pas le pouvoir de décider : ils informent, extraient les signaux, vérifient la cohérence et rédigent des explications. Si un agent échoue ou si Ollama est indisponible, le système bascule automatiquement en mode déterministe.</p>
-            <table class="project-table-agents">
-                <thead>
-                    <tr><th>Agent</th><th>Ce qu'il fait</th><th>Ce qu'il ne fait pas</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>note_parser</td><td>Extrait les signaux de la note libre (retards, contradictions, ambiguïtés, négations)</td><td>Modifie le score</td></tr>
-                    <tr><td>reviewer</td><td>Vérifie la cohérence entre données, note et documents — produit des alertes typées</td><td>Prend une décision seul</td></tr>
-                    <tr><td>summary_writer</td><td>Reformule la décision finale en langage métier</td><td>A une autorité sur la recommandation</td></tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="case-study-card reveal-up">
-            <h2>Résultats mesurés</h2>
+            <h2>Résultats & Impact</h2>
             <ul>
                 <li>AUC modèle calibré : <strong>0.728</strong></li>
                 <li>Brier score : 0.150</li>
@@ -81,42 +69,41 @@
             </ul>
         </div>
         <div class="case-study-card reveal-up">
-            <h2>Parcours d'une décision</h2>
-            <img src="../assets/img/brokerflow_decision_flow.png" alt="Schéma parcours décision BrokerFlow" style="width:100%;max-width:600px;margin:20px auto;display:block;" />
+            <h2>Schéma de la prise de décision</h2>
+            <div class="architecture-viz">
+                <div class="schema-placeholder">
+                    <div class="schema-node accent">Dossier broker<br>données + note + documents</div>
+                    <div class="schema-arrow">↓</div>
+                    <div class="schema-row">
+                        <div class="schema-node">Modèle ML calibré</div>
+                        <div class="schema-node">Agents légers</div>
+                    </div>
+                    <div class="schema-arrow">↓</div>
+                    <div class="schema-row">
+                        <div class="schema-node">Score de risque 0–1</div>
+                        <div class="schema-node">Alertes structurées<br>Sévérité · Complétude</div>
+                    </div>
+                    <div class="schema-arrow">↓</div>
+                    <div class="schema-node accent">Policy déterministe</div>
+                    <div class="schema-arrow">↓</div>
+                    <div class="schema-row">
+                        <div class="schema-node">Décision + codes motifs</div>
+                        <div class="schema-node">Résumé broker</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="case-study-card reveal-up">
-            <h2>Structure du projet</h2>
-            <pre><code>src/
-  api/         → FastAPI — routes /v1/score, /v1/review, /v2/score
-  agents/      → note_parser, reviewer, summary_writer (LLM + fallback déterministe)
-  models/      → entraînement, évaluation, scoring runtime
-  rules/       → policy déterministe + vérifications de cohérence
-  features/    → feature engineering
-  eval/        → benchmark agents sur 50 cas annotés
-  ui/          → interface Streamlit broker
-notebooks/
-  03 → EDA risque crédit
-  04 → feature engineering
-  05 → modèles baseline
-  06 → calibration + explicabilité (SHAP)
-  07 → évaluation agents
-  09 → comparaison champion/challenger
-  10 → test live broker (notebook interactif)
-tests/         → 44 tests pytest
-data/
-  agent_eval_cases.json  → 50 cas annotés (standard / hard / adversarial)
-</code></pre>
-        </div>
-        <div class="case-study-card reveal-up">
-            <h2>Démarrage rapide</h2>
-            <ol>
-                <li>Installer les dépendances : <code>make setup</code></li>
-                <li>Télécharger le modèle LLM local : <code>ollama pull qwen2.5:3b-instruct</code></li>
-                <li>Générer les données, entraîner, lancer l'API : <code>python -m src.data.generate_synthetic_cases</code>, <code>make train</code>, <code>make run</code></li>
-                <li>Interface broker (optionnel) : <code>streamlit run src/ui/app.py</code></li>
-                <li>Interface Gradio (optionnel) : <code>make run-gradio</code></li>
-            </ol>
-            <p>API disponible sur <a href="http://localhost:8000" target="_blank">http://localhost:8000</a> · Documentation interactive : <a href="http://localhost:8000/docs" target="_blank">/docs</a></p>
+        <div class="tech-stack-section reveal-up">
+            <h3 data-i18n="project_techs">Stack technique</h3>
+            <div class="tech-stack-grid">
+                <span class="tech-badge-expert"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /> Python</span>
+                <span class="tech-badge-expert"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" /> FastAPI</span>
+                <span class="tech-badge-expert"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg" alt="Streamlit" /> Streamlit</span>
+                <span class="tech-badge-expert"><i data-feather="layers" class="project-icon-sm"></i> scikit-learn</span>
+                <span class="tech-badge-expert"><img src="https://avatars.githubusercontent.com/u/16880727?s=200&v=4" alt="Ollama" style="background:#fff;border-radius:50%;width:20px;height:20px;" /> Ollama</span>
+                <span class="tech-badge-expert"><i data-feather="bar-chart-2" class="project-icon-sm"></i> Pandas</span>
+                <span class="tech-badge-expert"><i data-feather="zap" class="project-icon-sm"></i> Pytest</span>
+            </div>
         </div>
     </div>
     <footer class="project-page-footer">
