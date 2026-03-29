@@ -136,5 +136,21 @@
   "bf_section_results_precision": "Reviewer alert precision: <strong>1.00</strong>",
   "bf_section_results_recall": "Reviewer alert recall: <strong>1.00</strong>",
   "bf_section_results_parser": "Note parser F1: <strong>0.89</strong>",
-  "bf_section_results_json": "Agent output JSON validity: <strong>100 %</strong>"
+  "bf_section_results_json": "Agent output JSON validity: <strong>100 %</strong>",
+  "bf_stack_python": "Python",
+  "bf_stack_fastapi": "FastAPI",
+  "bf_stack_streamlit": "Streamlit",
+  "bf_stack_sklearn": "scikit-learn",
+  "bf_stack_ollama": "Ollama",
+  "bf_stack_pandas": "Pandas",
+  "bf_stack_pytest": "Pytest",
+  "bf_schema_title": "Decision Flow Diagram",
+  "bf_schema_input": "Broker file<br>data + note + documents",
+  "bf_schema_ml": "Calibrated ML model",
+  "bf_schema_agents": "Lightweight agents",
+  "bf_schema_score": "Risk score 0–1",
+  "bf_schema_alerts": "Structured alerts<br>Severity · Completeness",
+  "bf_schema_policy": "Deterministic policy",
+  "bf_schema_decision": "Decision + reason codes",
+  "bf_schema_summary": "Broker summary"
 }
