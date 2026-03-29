@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BrokerFlow AI – Copilote analyse crédit</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/expert-cards.css" />
+</head>
+<body>
+  <main class="project-detail-container">
+    <h1 data-i18n="project_brokerflow_title">BrokerFlow AI</h1>
+    <p class="project-detail-lead" data-i18n="project_brokerflow_lead">
+      Copilote d'analyse de risque crédit&nbsp;: de la donnée brute à la décision explicable.<br>
+      <strong>Stack&nbsp;:</strong> Python · FastAPI · scikit-learn · Ollama · Streamlit
+    </p>
+    <section>
+      <h2 data-i18n="project_brokerflow_problem_title">Problème</h2>
+      <p data-i18n="project_brokerflow_problem">Un broker reçoit des dizaines de dossiers de crédit par semaine, souvent incomplets ou ambigus. Deux erreurs coûtent cher&nbsp;: accepter un dossier risqué ou refuser un bon client. Un score seul ne suffit pas&nbsp;: il faut une décision claire, justifiée et défendable.</p>
+    </section>
+    <section>
+      <h2 data-i18n="project_brokerflow_solution_title">Solution</h2>
+      <ul>
+        <li data-i18n="project_brokerflow_solution_list1">Modèle ML calibré pour estimer le risque de défaut</li>
+        <li data-i18n="project_brokerflow_solution_list2">Policy déterministe pour transformer le score en décision métier</li>
+        <li data-i18n="project_brokerflow_solution_list3">Agents LLM pour lire la note libre, vérifier la cohérence et générer une explication lisible</li>
+      </ul>
+      <p data-i18n="project_brokerflow_solution_out">Sortie&nbsp;: <strong>ACCEPTABLE</strong>, <strong>REVIEW</strong>, <strong>REQUEST_DOCUMENTS</strong> ou <strong>ESCALATE</strong> avec motifs et résumé naturel.</p>
+    </section>
+    <section>
+      <h2 data-i18n="project_brokerflow_strengths_title">Points forts</h2>
+      <ul>
+        <li data-i18n="project_brokerflow_strengths_list1">Explications générées automatiquement pour chaque décision</li>
+        <li data-i18n="project_brokerflow_strengths_list2">Fallback déterministe si les agents LLM échouent</li>
+        <li data-i18n="project_brokerflow_strengths_list3">Benchmarks sur 50 cas annotés&nbsp;: AUC 0.728, F1 parser 0.89, validité JSON 100%</li>
+      </ul>
+    </section>
+    <section>
+      <h2 data-i18n="project_brokerflow_code_title">Accès au code</h2>
+      <a href="https://github.com/BeediGoua/Brokerflow_ai" target="_blank" rel="noopener noreferrer" class="btn-expert btn-purple-glow" data-i18n="project_brokerflow_github">
+        Voir sur GitHub <i data-feather="github"></i>
+      </a>
+    </section>
+  </main>
+  <script src="../assets/js/script.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>feather.replace();</script>
+</body>
+</html>
