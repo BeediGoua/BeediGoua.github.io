@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retail Demand Forecasting & Inventory Optimization Assistant</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/project-detail.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/expert-cards.css">
+  <script src="../assets/js/project-script.js" defer></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+  <main class="container project-detail-container">
+    <section class="project-detail-header">
+      <div class="project-detail-title-row">
+        <i data-feather="shopping-cart" style="width: 40px; height: 40px;"></i>
+        <h1 data-i18n="retail_title">Retail Demand Forecasting & Inventory Optimization Assistant</h1>
+      </div>
+      <p class="project-detail-subtitle" data-i18n="retail_subtitle">Ne prédisez pas seulement les ventes. Optimisez les décisions.</p>
+      <div class="project-detail-actions">
+        <a href="https://github.com/BeediGoua/retail-demand-forecasting-assistant" target="_blank" rel="noopener noreferrer" class="btn-expert btn-purple-glow">
+          <span data-i18n="btn_github_repo">Voir sur GitHub</span> <i data-feather="github"></i>
+        </a>
+      </div>
+    </section>
+
+    <section class="project-detail-section">
+      <h2 data-i18n="retail_context_title">1. Contexte & Enjeux (Business Case)</h2>
+      <h3 data-i18n="retail_challenge_title">Le Défi : Le Dilemme du Stock</h3>
+      <p data-i18n="retail_challenge_desc">Dans la grande distribution, chaque responsable de magasin doit répondre chaque semaine à une question critique : "Combien dois-je commander ?" ...</p>
+      <ul>
+        <li data-i18n="retail_understock">La Rupture de Stock (Understock) : Ventes perdues, clients insatisfaits, image de marque dégradée.</li>
+        <li data-i18n="retail_overstock">Le Surstock (Overstock) : Trésorerie immobilisée, coûts de stockage, risques de perte (périssables) ou de démarque inconnue.</li>
+      </ul>
+      <h3 data-i18n="retail_env_title">L'Environnement : Corporación Favorita (Équateur)</h3>
+      <ul>
+        <li data-i18n="retail_env_promo">Volatilité promotionnelle : Les promotions massives créent des pics de demande soudains.</li>
+        <li data-i18n="retail_env_calendar">Calendrier complexe : Jours fériés locaux, régionaux et nationaux, souvent décalés.</li>
+        <li data-i18n="retail_env_macro">Facteurs macro-économiques : Sensibilité aux prix du pétrole.</li>
+        <li data-i18n="retail_env_diversity">Diversité des produits : Des milliers de références, des produits de base aux produits de niche.</li>
+      </ul>
+      <h3 data-i18n="retail_objective_title">L'Objectif</h3>
+      <ul>
+        <li data-i18n="retail_obj1">Prévoir la demande hebdomadaire sur un horizon de 8 semaines.</li>
+        <li data-i18n="retail_obj2">Quantifier l'incertitude de cette prévision.</li>
+        <li data-i18n="retail_obj3">Recommander une quantité de commande optimale basée sur les coûts économiques.</li>
+      </ul>
+    </section>
+
+    <section class="project-detail-section">
+      <h2 data-i18n="retail_etl_title">2. Architecture & Stratégie de Données (ETL)</h2>
+      <div class="project-detail-diagram">
+        <img src="../assets/img/retail-etl-diagram.png" alt="ETL Pipeline" style="max-width:100%;">
+      </div>
+      <h3 data-i18n="retail_etl_quality_title">Transformation & Qualité (Python)</h3>
+      <ul>
+        <li data-i18n="retail_etl_cartesian">Grille Cartésienne : Génération des lignes manquantes pour distinguer "Pas de vente" et "Pas de demande".</li>
+        <li data-i18n="retail_etl_iso">Agrégation Hebdomadaire ISO : Utilisation du standard ISO 8601.</li>
+        <li data-i18n="retail_etl_parquet">Sortie Parquet : Données nettoyées stockées dans data/processed/*.parquet.</li>
+      </ul>
+      <h3 data-i18n="retail_etl_tracking_title">Suivi des Expériences (Experiment Tracking)</h3>
+      <ul>
+        <li data-i18n="retail_etl_forecasts">forecasts.sqlite : Prévisions probabilistes et registre des runs.</li>
+        <li data-i18n="retail_etl_metrics">metrics.sqlite : Erreurs et monitoring de drift.</li>
+        <li data-i18n="retail_etl_decisions">decisions.sqlite : Recommandations de commandes optimisées.</li>
+      </ul>
+    </section>
+
+    <section class="project-detail-section">
+      <h2 data-i18n="retail_modeling_title">3. Stratégie de Modélisation (Intelligence Artificielle)</h2>
+      <h3 data-i18n="retail_baseline_title">Approche "Baseline Hybride" (Smart Routing)</h3>
+      <p data-i18n="retail_baseline_desc">La "Baseline" du projet n'est pas un modèle unique, c'est une Stratégie Hybride Intelligente (Smart Routing)...</p>
+      <ul>
+        <li data-i18n="retail_baseline_diag">Le Diagnostic (Analyse du Produit) : Calcul des indicateurs ADI et CV².</li>
+        <li data-i18n="retail_baseline_class">La Classification (Matrice Syntetos-Boylan) : Classement des produits selon ADI et CV².</li>
+        <li data-i18n="retail_baseline_routing">Le "Routing" (Le Choix du Modèle) : Application de la meilleure formule pour chaque profil.</li>
+      </ul>
+      <div class="project-detail-table">
+        <table>
+          <thead>
+            <tr>
+              <th data-i18n="retail_table_type">Type de Produit</th>
+              <th data-i18n="retail_table_recipe">La Recette Appliquée</th>
+              <th data-i18n="retail_table_why">Pourquoi ce choix ?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n="retail_table_smooth">Produits Stables (Smooth)</td>
+              <td data-i18n="retail_table_smooth_recipe">Mix (70% Moyenne + 30% Saisonnier)</td>
+              <td data-i18n="retail_table_smooth_why">On lisse le bruit tout en gardant une légère mémoire de la saisonnalité.</td>
+            </tr>
+            <tr>
+              <td data-i18n="retail_table_erratic">Produits Nerveux (Erratic)</td>
+              <td data-i18n="retail_table_erratic_recipe">Mix (50% Moyenne + 50% Saisonnier)</td>
+              <td data-i18n="retail_table_erratic_why">La volatilité est forte : on fait plus confiance à la saisonnalité.</td>
+            </tr>
+            <tr>
+              <td data-i18n="retail_table_rare">Produits Rares (Intermittent/Lumpy)</td>
+              <td data-i18n="retail_table_rare_recipe">Moyenne Mobile Robuste</td>
+              <td data-i18n="retail_table_rare_why">On assure le "minimum vital" pour éviter le surstockage.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p data-i18n="retail_baseline_summary">La baseline cherche à être statistiquement robuste, évitant les erreurs classiques de modélisation.</p>
+    </section>
+
+    <section class="project-detail-section">
+      <h2 data-i18n="retail_decision_title">4. Moteur de Décision (Inventory Optimization)</h2>
+      <h3 data-i18n="retail_decision_prob_title">Prévision Probabiliste</h3>
+      <ul>
+        <li data-i18n="retail_decision_p10">P10 (Scénario Bas) : On est sûr à 90% de vendre au moins ça.</li>
+        <li data-i18n="retail_decision_p50">P50 (Médiane) : Le scénario le plus probable.</li>
+        <li data-i18n="retail_decision_p90">P90 (Scénario Haut) : On a 10% de chance de vendre plus que ça.</li>
+      </ul>
+      <h3 data-i18n="retail_decision_newsvendor_title">Logique "Newsvendor" (Vendeur de Journaux)</h3>
+      <ul>
+        <li data-i18n="retail_decision_newsvendor1">Si le coût de la rupture est élevé, le système cible un quantile élevé (ex: P80).</li>
+        <li data-i18n="retail_decision_newsvendor2">Si le coût de surstock est élevé, le système cible un quantile bas (ex: P40).</li>
+      </ul>
+    </section>
+
+    <section class="project-detail-section">
+      <h2 data-i18n="retail_guide_title">5. Guide Technique</h2>
+      <h3 data-i18n="retail_prereq_title">Prérequis</h3>
+      <ul>
+        <li>Python 3.8+</li>
+        <li>Pip</li>
+      </ul>
+      <h3 data-i18n="retail_install_title">Installation</h3>
+      <pre><code>git clone https://github.com/BeediGoua/retail-demand-forecasting-assistant
+cd retail-demand-forecasting-assistant
+pip install -r requirements.txt</code></pre>
+      <h3 data-i18n="retail_data_title">Téléchargement des Données</h3>
+      <pre><code>pip install kaggle
+kaggle competitions download -c store-sales-time-series-forecasting
+unzip store-sales-time-series-forecasting.zip -d data/raw/</code></pre>
+      <h3 data-i18n="retail_pipeline_title">Construction des Données (Pipeline)</h3>
+      <pre><code># 1. Traitement et Nettoyage
+python scripts/preprocessing.py
+# 2. Construction de la Base SQL
+python scripts/build_warehouse.py
+# 3. Vérification de l'Intégrité
+audit python scripts/verify_warehouse_integrity.py</code></pre>
+      <h3 data-i18n="retail_app_title">Lancement de l'Application</h3>
+      <pre><code>streamlit run app/Home.py</code></pre>
+      <h3 data-i18n="retail_structure_title">Structure du Projet</h3>
+      <ul>
+        <li>data/ : Stockage des données</li>
+        <li>notes/ : Documentation détaillée</li>
+        <li>scripts/ : Scripts d'orchestration</li>
+        <li>sql/ : Modules SQL</li>
+        <li>src/ : Code source Python</li>
+      </ul>
+    </section>
+
+    <footer class="project-detail-footer">
+      <p data-i18n="retail_author">Auteur : Goua Beedi</p>
+      <p data-i18n="retail_project">Projet : Retail Demand Forecasting Assistant</p>
+    </footer>
+  </main>
+  <script>feather.replace()</script>
+</body>
+</html>
