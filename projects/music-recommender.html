@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+            <style>
+                body.project-detail-page { opacity: 0; transition: opacity 0.2s; }
+            </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Music Recommender | Project Detail</title>
@@ -14,6 +17,12 @@
 </head>
 
 <body class="project-detail-page">
+            <div style="position:fixed;top:1.2em;right:2em;z-index:1000;">
+                <select id="langSwitcherProject" aria-label="Language switcher">
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                </select>
+            </div>
     <!-- Background Blobs -->
     <div class="blob-container">
         <div class="blob blob-1"></div>
@@ -21,10 +30,9 @@
     </div>
 
     <nav class="back-nav">
-        <a href="../index.html#projects" class="back-link">
-            <i data-feather="arrow-left" class="project-icon-md project-icon-primary"></i> <span
-                data-i18n="btn_back_projects">Back to Projects</span>
-        </a>
+        <button class="back-link" id="backToProjectsBtn" type="button" style="background:none;border:none;display:flex;align-items:center;gap:0.5em;font-size:1rem;color:var(--primary-color);font-weight:600;cursor:pointer;">
+            <i data-feather="arrow-left" class="project-icon-md project-icon-primary"></i> <span data-i18n="btn_back_projects">Back to Projects</span>
+        </button>
     </nav>
 
     <section class="project-detail-hero">
@@ -156,5 +164,21 @@
 
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="../assets/js/project-script.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const select = document.getElementById('langSwitcherProject');
+                const html = document.documentElement;
+                const mainBody = document.body;
+                const lang = localStorage.getItem('lang') || 'fr';
+                select.value = lang;
+                html.lang = lang;
+                setTimeout(() => { mainBody.style.opacity = 1; }, 350);
+                select.addEventListener('change', (e) => {
+                    localStorage.setItem('lang', e.target.value);
+                    html.lang = e.target.value;
+                    window.location.reload();
+                });
+            });
+        </script>
 </body>
 </html>

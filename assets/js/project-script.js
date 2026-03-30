@@ -1,3 +1,12 @@
+    // Gestion du bouton retour aux projets multilingue et navigation
+    function initBackToProjectsBtn() {
+        const btn = document.getElementById('backToProjectsBtn');
+        if (btn) {
+            btn.addEventListener('click', () => {
+                window.location.href = '../index.html#projects';
+            });
+        }
+    }
 /* =========================================================
    PROJECT PAGES SCRIPT
    - Synchronisation de la langue & thème
@@ -149,6 +158,7 @@
         initLanguage();
         initReveal();
         initStickyBackButton();
+        initBackToProjectsBtn();
     }
 
     if (document.readyState === 'loading') {
