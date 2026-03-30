@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BrokerFlow AI | Project Detail</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/animations.css" />
+    <link rel="stylesheet" href="../assets/css/project-detail.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body class="project-detail-page">
+    <!-- Background Blobs -->
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+    <nav class="back-nav">
+        <a href="../index.html#projects" class="back-link">
+            <i data-feather="arrow-left" class="project-icon-md project-icon-primary"></i> <span data-i18n="btn_back_projects">Retour aux projets</span>
+        </a>
+    </nav>
+    <section class="project-detail-hero">
+        <div class="project-header-container">
+            <h1 class="project-title-xl">BrokerFlow AI</h1>
+            <div class="project-hero-meta project-hero-meta-spaced">
+                <div class="project-badges-top project-badges-top-tight">
+                    <span class="tech-badge-expert"><i data-feather="cpu" class="project-icon-sm"></i> <span data-i18n="bf_badge_ml">Machine Learning</span></span>
+                    <span class="tech-badge-expert"><i data-feather="shield" class="project-icon-sm"></i> <span data-i18n="bf_badge_credit">Credit Risk</span></span>
+                    <span class="tech-badge-expert"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /> Python</span>
+                    <span class="tech-badge-expert"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" /> FastAPI</span>
+                    <span class="tech-badge-expert"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg" alt="Streamlit" /> Streamlit</span>
+                    <span class="tech-badge-expert"><i data-feather="layers" class="project-icon-sm"></i> scikit-learn</span>
+                    <span class="tech-badge-expert"><i data-feather="box" class="project-icon-sm"></i> Ollama</span>
+                </div>
+                <div class="project-action-bar">
+                    <a href="https://github.com/BeediGoua/Brokerflow_ai" target="_blank" rel="noopener noreferrer" class="btn-expert btn-purple-glow">
+                        <span data-i18n="btn_github_repo">Voir sur GitHub</span> <i data-feather="github" class="project-icon-md"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="project-detail-container">
+        <div class="case-study-card reveal-up">
+            <h2 data-i18n="bf_section_challenge">Le problème</h2>
+            <p data-i18n="bf_section_challenge_text">Un broker reçoit des dizaines de dossiers de crédit par semaine. Chaque dossier contient des données structurées (revenus, dette, historique), une note libre rédigée à la main, et des documents parfois manquants ou contradictoires. Deux erreurs coûtent cher : accepter un dossier risqué ou refuser un bon client. Un score seul ne suffit pas : il faut une décision claire, justifiée et défendable.</p>
+        </div>
+        <div class="case-study-card reveal-up">
+            <h2 data-i18n="bf_section_solution">La solution technique</h2>
+            <p data-i18n="bf_section_solution_intro">BrokerFlow AI assemble trois couches complémentaires :</p>
+            <ul>
+                <li data-i18n="bf_section_solution_list1">Modèle ML calibré pour estimer la probabilité de défaut à partir des données structurées</li>
+                <li data-i18n="bf_section_solution_list2">Policy déterministe qui traduit ce score en décision métier, en tenant compte de la complétude du dossier et de la sévérité des alertes détectées</li>
+                <li data-i18n="bf_section_solution_list3">Agents légers qui lisent la note libre, vérifient la cohérence du dossier, et rédigent une explication lisible pour le broker</li>
+            </ul>
+            <p data-i18n="bf_section_solution_outro">Un dossier entre dans l'API. Il en ressort <strong>ACCEPTABLE</strong>, <strong>REVIEW</strong>, <strong>REQUEST_DOCUMENTS</strong> ou <strong>ESCALATE</strong> — avec les codes motifs et un résumé en langage naturel.</p>
+        </div>
+        <div class="case-study-card reveal-up">
+            <h2 data-i18n="bf_section_results">Résultats & Impact</h2>
+            <ul>
+                <li data-i18n="bf_section_results_auc">AUC modèle calibré : <strong>0.728</strong></li>
+                <li data-i18n="bf_section_results_brier">Brier score : 0.150</li>
+                <li data-i18n="bf_section_results_f1">Seuil opérationnel (F1 optimal) : <strong>0.231</strong></li>
+                <li data-i18n="bf_section_results_precision">Précision alertes reviewer : <strong>1.00</strong></li>
+                <li data-i18n="bf_section_results_recall">Rappel alertes reviewer : <strong>1.00</strong></li>
+                <li data-i18n="bf_section_results_parser">F1 parser de notes : <strong>0.89</strong></li>
+                <li data-i18n="bf_section_results_json">Validité JSON sorties agents : <strong>100 %</strong></li>
+            </ul>
+        </div>
+        <div class="case-study-card reveal-up">
+            <h2>Schéma de la prise de décision</h2>
+            <div class="architecture-viz">
+                <div class="schema-placeholder">
+                    <div class="schema-node accent">Dossier broker<br>données + note + documents</div>
+                    <div class="schema-arrow">↓</div>
+                    <div class="schema-row">
+                        <div class="schema-node">Modèle ML calibré</div>
+                        <div class="schema-node">Agents légers</div>
+                    </div>
+                    <div class="schema-arrow">↓</div>
+                    <div class="schema-row">
+                        <div class="schema-node">Score de risque 0–1</div>
+                        <div class="schema-node">Alertes structurées<br>Sévérité · Complétude</div>
+                    </div>
+                    <div class="schema-arrow">↓</div>
+                    <div class="schema-node accent">Policy déterministe</div>
+                    <div class="schema-arrow">↓</div>
+                    <div class="schema-row">
+                        <div class="schema-node">Décision + codes motifs</div>
+                        <div class="schema-node">Résumé broker</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tech-stack-section reveal-up">
+            <h3 data-i18n="project_techs">Stack technique</h3>
+            <div class="tech-stack-grid">
+                <span class="tech-badge-expert"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /> <span data-i18n="bf_stack_python">Python</span></span>
+                <span class="tech-badge-expert"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" /> <span data-i18n="bf_stack_fastapi">FastAPI</span></span>
+                <span class="tech-badge-expert"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg" alt="Streamlit" /> <span data-i18n="bf_stack_streamlit">Streamlit</span></span>
+                <span class="tech-badge-expert"><i data-feather="layers" class="project-icon-sm"></i> <span data-i18n="bf_stack_sklearn">scikit-learn</span></span>
+                <span class="tech-badge-expert"><i data-feather="box" class="project-icon-sm"></i> <span data-i18n="bf_stack_ollama">Ollama</span></span>
+                <span class="tech-badge-expert"><i data-feather="bar-chart-2" class="project-icon-sm"></i> <span data-i18n="bf_stack_pandas">Pandas</span></span>
+                <span class="tech-badge-expert"><i data-feather="zap" class="project-icon-sm"></i> <span data-i18n="bf_stack_pytest">Pytest</span></span>
+            </div>
+        </div>
+    </div>
+    <footer class="project-page-footer">
+        <p>&copy; 2025 Goua Beedi Henri.</p>
+    </footer>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="../assets/js/project-script.js"></script>
+</body>
+</html>

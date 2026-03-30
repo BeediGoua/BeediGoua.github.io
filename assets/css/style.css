@@ -346,13 +346,21 @@ body.light-theme footer {
 
 html {
   scroll-behavior: smooth;
+  /* Assure que la page couvre tout l’écran et masque le fond blanc du navigateur */
+  min-height: 100%;
+  background-color: #0f0f23;
 }
 
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background: var(--background-mesh), var(--background-gradient);
+  /* Le corps occupe toute la hauteur de la fenêtre et a un fond explicite */
+  min-height: 100vh;
+  background-color: #0f0f23;
+  background-image: var(--background-mesh), var(--background-gradient);
+  background-repeat: no-repeat;
+  background-size: cover;
   color: var(--text-color);
   font-family: var(--font-main);
   line-height: 1.6;
@@ -1134,7 +1142,10 @@ header {
 .project-card:hover {
   border-left: 4px solid var(--accent-pink);
   transform: translateY(-8px) scale(1.02);
-  box-shadow: var(--shadow-premium), var(--glow-accent);
+  box-shadow:
+    var(--shadow-premium),
+    0 0 0 1px rgba(74, 110, 226, 0.4),
+    0 6px 24px rgba(74, 144, 226, 0.17);
 }
 
 .project-card:hover::before {
@@ -1404,7 +1415,10 @@ header {
 
 .skill-adv-item:hover {
   transform: translateY(-4px) scale(1.03);
-  box-shadow: var(--shadow-premium);
+  box-shadow:
+    var(--shadow-premium),
+    0 0 0 1px rgba(74, 110, 226, 0.4),
+    0 6px 24px rgba(74, 144, 226, 0.17);
 }
 
 .skill-adv-item:hover::before {
@@ -3216,19 +3230,12 @@ body.light-theme .techskill-mini-card {
 
 /* Hover effects élégants */
 body.light-theme .skill-adv-item:hover,
-body.light-theme .techskill-mini-card:hover {
+body.light-theme .techskill-mini-card:hover,
+body.light-theme .project-card:hover {
   transform: translateY(-2px) scale(1.01) !important;
   box-shadow:
     var(--shadow-medium),
     inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
-}
-
-body.light-theme .project-card:hover {
-  transform: translateY(-4px) !important;
-  box-shadow:
-    var(--shadow-strong),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
-  border-color: rgba(79, 70, 229, 0.2) !important;
 }
 
 /* Détails projets avec glass effect */

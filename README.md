@@ -2,7 +2,7 @@
 
 Portfolio personnel moderne et interactif d'un Data Scientist Junior.
 
-**[Voir le portfolio en ligne](https://gouahenri.github.io/)**
+**[Voir le portfolio en ligne]([[https://beedigoua.github.io/index.html#])**
 
 ## Fonctionnalités
 

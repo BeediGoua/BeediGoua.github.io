@@ -16,10 +16,10 @@
   <meta property="og:title" content="Goua Beedi Henri - Data Scientist Portfolio">
   <meta property="og:description" content="Découvrez mes projets IA, NLP et RAG.">
   <meta property="og:image" content="assets/img/hero-bg.jpg">
-  <meta property="og:url" content="https://gouahenri.github.io/">
+  <meta property="og:url" content="https://beedigoua.github.io/">
 
   <!-- Canonical & Twitter meta -->
-  <link rel="canonical" href="https://gouahenri.github.io/">
+  <link rel="canonical" href="https://beedigoua.github.io/">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Goua Beedi Henri - Data Scientist Portfolio">
   <meta name="twitter:description" content="Découvrez mes projets IA, NLP et RAG.">
@@ -31,7 +31,7 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Goua Beedi Henri",
-    "url": "https://gouahenri.github.io/",
+    "url": "https://beedigoua.github.io/",
     "jobTitle": "Data Scientist"
   }
   </script>
@@ -40,19 +40,21 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Goua Beedi Henri Portfolio",
-    "url": "https://gouahenri.github.io/"
+    "url": "https://beedigoua.github.io/"
   }
   </script>
 
-  <!-- (Optionnel) Google Fonts — retire si tu restes en system-ui -->
-  <!--
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/expert-cards.css" />
   <style>
     /* Correction anti-scroll horizontal tablette/ordi */
     body.tablet-overflow-protection {
@@ -68,75 +70,26 @@
   </style>
 </head>
 
-<body>
-  <!-- Loader -->
-  <div id="loader" aria-label="Loading">
-    <div class="spinner-border" role="status" aria-hidden="true"></div>
-    <span class="visually-hidden">Loading...</span>
-  </div>
 
-  <!-- Header -->
-  <header>
-    <nav id="mainNav" class="reveal-up">
-      <div class="nav-links">
-        <a href="#hero" class="nav-link" data-i18n="nav_home">Home</a>
-        <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
-        <a href="#education" class="nav-link" data-i18n="nav_education">Education</a>
-        <a href="#timeline" class="nav-link" data-i18n="nav_experience">Expérience</a>
-        <a href="#projects" class="nav-link" data-i18n="nav_projects">Projects</a>
-        <a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a>
-        <a href="#technical-skills" class="nav-link" data-i18n="nav_techskills">Technical Skills</a>
-        <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
+<!-- Background Blobs -->
+<div class="blob-container">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
 
-        <!-- Séparateur -->
-        <hr class="nav-separator" aria-hidden="true">
+<!-- Scroll Progress Bar -->
+<div id="scrollProgress"></div>
+<!-- Loader -->
+<div id="loader" aria-label="Loading">
+  <div class="spinner-border" role="status" aria-hidden="true"></div>
+  <span class="visually-hidden">Loading...</span>
+</div>
 
-        <!-- Contrôles intégrés dans le menu mobile -->
-        <div class="nav-control-item">
-          <span class="control-label" data-i18n="nav_language">Langue</span>
-          <select id="langSwitcherMobile" aria-label="Language switcher mobile">
-            <option value="en">EN</option>
-            <option value="fr">FR</option>
-          </select>
-        </div>
-
-        <div class="nav-control-item">
-          <span class="control-label" data-i18n="nav_theme">Thème</span>
-          <button id="themeToggleMobile" class="theme-toggle" aria-label="Toggle theme mobile">
-            <div class="toggle-icon">
-              <i data-feather="moon" class="moon-icon"></i>
-              <i data-feather="sun" class="sun-icon"></i>
-            </div>
-          </button>
-        </div>
-      </div>
-
-      <div class="nav-controls">
-        <label for="langSwitcher" class="visually-hidden">Language</label>
-        <select id="langSwitcher" aria-label="Language switcher">
-          <option value="en">EN</option>
-          <option value="fr">FR</option>
-        </select>
-        <button id="themeToggle" class="theme-toggle" aria-label="Basculer entre mode jour et nuit">
-          <div class="toggle-icon">
-            <i data-feather="moon" class="moon-icon"></i>
-            <i data-feather="sun" class="sun-icon"></i>
-          </div>
-        </button>
-      </div>
-
-      <!-- Nouveau bouton hamburger -->
-      <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
-    </nav>
-  </header>
-
-  <!-- Menu Mobile Overlay -->
-  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-    <nav class="mobile-menu-nav">
+<!-- Header -->
+<header>
+  <nav id="mainNav" class="reveal-up">
+    <div class="nav-links">
       <a href="#hero" class="nav-link" data-i18n="nav_home">Home</a>
       <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
       <a href="#education" class="nav-link" data-i18n="nav_education">Education</a>
@@ -145,20 +98,22 @@
       <a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a>
       <a href="#technical-skills" class="nav-link" data-i18n="nav_techskills">Technical Skills</a>
       <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
-    </nav>
 
-    <div class="mobile-menu-controls">
-      <div class="mobile-menu-control-item">
-        <label data-i18n="nav_language">Langue</label>
-        <select id="langSwitcherMobile2" aria-label="Language switcher mobile">
+      <!-- Séparateur -->
+      <hr class="nav-separator" aria-hidden="true">
+
+      <!-- Contrôles intégrés dans le menu mobile -->
+      <div class="nav-control-item">
+        <span class="control-label" data-i18n="nav_language">Langue</span>
+        <select id="langSwitcherMobile" aria-label="Language switcher mobile">
           <option value="en">EN</option>
           <option value="fr">FR</option>
         </select>
       </div>
 
-      <div class="mobile-menu-control-item">
-        <label data-i18n="nav_theme">Thème</label>
-        <button id="themeToggleMobile2" class="theme-toggle" aria-label="Toggle theme mobile">
+      <div class="nav-control-item">
+        <span class="control-label" data-i18n="nav_theme">Thème</span>
+        <button id="themeToggleMobile" class="theme-toggle" aria-label="Toggle theme mobile">
           <div class="toggle-icon">
             <i data-feather="moon" class="moon-icon"></i>
             <i data-feather="sun" class="sun-icon"></i>
@@ -166,689 +121,966 @@
         </button>
       </div>
     </div>
+
+    <div class="nav-controls">
+      <select id="langSwitcher" aria-label="Language switcher">
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+      </select>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        <div class="toggle-icon">
+          <i data-feather="moon" class="moon-icon"></i>
+          <i data-feather="sun" class="sun-icon"></i>
+        </div>
+      </button>
+    </div>
+
+    <!-- Nouveau bouton hamburger -->
+    <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </nav>
+</header>
+
+<!-- Menu Mobile Overlay -->
+<div class="mobile-menu-overlay" id="mobileMenuOverlay">
+  <nav class="mobile-menu-nav">
+    <a href="#hero" class="nav-link" data-i18n="nav_home">Home</a>
+    <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
+    <a href="#education" class="nav-link" data-i18n="nav_education">Education</a>
+    <a href="#timeline" class="nav-link" data-i18n="nav_experience">Expérience</a>
+    <a href="#projects" class="nav-link" data-i18n="nav_projects">Projects</a>
+    <a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a>
+    <a href="#technical-skills" class="nav-link" data-i18n="nav_techskills">Technical Skills</a>
+    <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
+  </nav>
+
+  <div class="mobile-menu-controls">
+    <div class="mobile-menu-control-item">
+      <label data-i18n="nav_language">Langue</label>
+      <select id="langSwitcherMobile2" aria-label="Language switcher mobile">
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+      </select>
+    </div>
+
+    <div class="mobile-menu-control-item">
+      <label data-i18n="nav_theme">Thème</label>
+      <button id="themeToggleMobile2" class="theme-toggle" aria-label="Toggle theme mobile">
+        <div class="toggle-icon">
+          <i data-feather="moon" class="moon-icon"></i>
+          <i data-feather="sun" class="sun-icon"></i>
+        </div>
+      </button>
+    </div>
   </div>
+</div>
 
-  <!-- MAIN -->
-  <main class="container">
+<!-- MAIN -->
+<main class="container">
 
-    <!-- Hero -->
-    <section id="hero" class="section hero">
-      <div class="hero-content reveal-up">
-        <img src="assets/img/goua.webp" alt="Portrait Goua Beedi Henri" width="110" height="110" decoding="async"
-          fetchpriority="high">
-        <h1>
-          <span class="hero-name">
-            <span data-i18n="hero_greeting">Hi, I'm</span> Goua Beedi Henri
-          </span>
-          <span class="hero-title">
-            <span class="typed-text"></span>
-          </span>
-        </h1>
-        <p data-i18n="hero_description" class="lead">
-          Data Scientist, exploring, building, and connecting ideas from data to cloud
-        </p>
-        <a href="#projects" class="btn bounce" data-i18n="btn_projects">
-          See My Projects
-        </a>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="section">
-      <div class="section-header section-centered reveal-up">
-        <span class="section-mainicon"><i data-feather="user"></i></span>
-        <h2 data-i18n="about_title" class="section-title">About Me</h2>
-      </div>
-
-      <div class="about-wrapper reveal-up">
-        <div class="about-content">
-          <div class="about-text-block">
-            <p class="about-text" data-i18n="about_text">
-              Diplômé en Data Science (ENSAI), j’ai acquis de bonnes compétences dans la conception de pipelines
-              Machine Learning et data de bout-en-bout sur le cloud, avec mise en production d’APIs ML en Python. Je
-              possède des connaissances en statistique, machine learning, deep learning, ainsi qu’en NLP, Computer
-              Vision et IA générative, avec un souci particulier pour l’évaluation de modèles et le post-processing.
-              Je recherche une opportunité de Data Scientist pour contribuer à des projets d’IA appliquée et
-              d’industrialisation, en alliant rigueur analytique et impact métier.
-            </p>
-          </div>
-
-          <div class="cv-actions">
-            <a href="https://beedigoua.github.io/CV_GOUA/?lang=fr" target="_blank" rel="noopener noreferrer"
-              class="btn btn-primary">
-              <i data-feather="external-link"></i> <span data-i18n="btn_online_cv">Voir mon CV interactif</span>
-            </a>
-
-            <div class="cv-dropdown">
-              <button class="btn btn-primary dropdown-toggle" id="downloadBtn" aria-haspopup="true"
-                aria-expanded="false">
-                <i data-feather="download"></i> <span data-i18n="btn_download_pdf">Télécharger PDF</span>
-                <i data-feather="chevron-down" class="chevron-icon"></i>
-              </button>
-              <div class="dropdown-menu" aria-labelledby="downloadBtn">
-                <a href="assets/CV_GouaHenri_FR.pdf" download class="dropdown-item">
-                  <span data-i18n="cv_fr">Version Française</span>
-                </a>
-                <a href="assets/CV_GouaHenri_EN.pdf" download class="dropdown-item">
-                  <span data-i18n="cv_en">Version Anglaise</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section id="education" class="section">
-      <div class="section-header reveal-up">
-        <span class="section-mainicon"><i data-feather="book-open"></i></span>
-        <h2 class="section-title" data-i18n="education_title">Education</h2>
-        <p class="section-subtitle" data-i18n="education_subtitle">Academic background & key courses</p>
-      </div>
-
-      <div class="education-card reveal-up">
-        <h3 class="edu-title" data-i18n="edu1_title">Engineer's Degree – Data Science & AI</h3>
-        <p class="edu-years" data-i18n="edu1_date">2022 – 2025</p>
-        <p class="edu-school-badge" data-i18n="edu1_school">
-          ENSAI – École Nationale de la Statistique et de l'Analyse de l'Information (Ker Lann, Rennes)
-        </p>
-        <p class="edu-subtext" data-i18n="edu1_desc">
-          Grande École française rattachée à l'INSEE – Top-tier program in statistics & AI
-        </p>
-        <ul class="edu-courses">
-          <li><i data-feather="book-open" class="icon-bullet"></i> <span data-i18n="edu1_course1">Key courses:
-              Supervised & unsupervised learning, deep learning (PyTorch, TensorFlow), NLP with Transformers, generative
-              AI (LLMs, RAG), time series, Bayesian inference, stochastic calculus</span></li>
-          <li><i data-feather="settings" class="icon-bullet"></i> <span data-i18n="edu1_course2">Big Data & Engineering:
-              Spark, Hadoop, SQL, APIs, Docker, MLOps, cloud deployment</span></li>
-          <li><i data-feather="activity" class="icon-bullet"></i> <span data-i18n="edu1_course3">Applied work:
-              Real-world projects in fraud detection, recommendation systems, ML and NLP</span></li>
-          <li><i data-feather="globe" class="icon-bullet"></i> <span data-i18n="edu1_course4">Bilingual curriculum
-              (FR/EN) – International exposure (Erasmus+ eligible)</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Timeline (Parcours) -->
-    <section id="timeline" class="section">
-      <div class="section-header reveal-up">
-        <span class="section-mainicon"><i data-feather="map"></i></span>
-        <h2 class="section-title" data-i18n="experience_title">Expérience</h2>
-        <p class="section-subtitle" data-i18n="experience_subtitle">Stages, projets & formation</p>
-      </div>
-
-      <div class="container">
-        <ol class="timeline">
-
-          <!-- Square Management -->
-          <li class="timeline-item reveal-up">
-            <div class="dot"></div>
-            <div class="section-content">
-              <h3 data-i18n="exp1_title">Square Management - Stage M2</h3>
-              <p class="muted" data-i18n="exp1_date">2025 • IA Générative, RAG, OCR & Document Intelligence</p>
-              <p data-i18n-html="exp1_desc">
-                Conception d'un <strong>pipeline RAG modulaire et traçable</strong> pour documents métiers longs,
-                avec une <strong>analyse systématique de l'impact de chaque choix technique</strong>
-                (OCR, segmentation, embeddings, indexation) sur la qualité des réponses.
-              </p>
-              <ul>
-                <li data-i18n-html="exp1_task1"><strong>+180 configurations comparées</strong> afin de quantifier leur
-                  effet sur la fidélité, pertinence et traçabilité.</li>
-                <li data-i18n-html="exp1_task2"><strong>Évaluation scientifique</strong> combinant <span>RAGAS</span> et
-                  <span>LLM-as-a-Judge</span> pour mesurer la performance des réponses générées.
-                </li>
-                <li data-i18n-html="exp1_task3"><strong>Structuration enrichie</strong> avec <span>Docling</span> pour
-                  intégrer hiérarchie, tableaux, images et métadonnées.</li>
-                <li data-i18n-html="exp1_task4"><strong>Cadre expérimental reproductible</strong> conçu pour être
-                  réutilisé dans d'autres projets RAG internes.</li>
-              </ul>
-            </div>
-          </li>
-
-          <!-- Ville de Paris -->
-          <li class="timeline-item reveal-up">
-            <div class="dot"></div>
-            <div class="section-content">
-              <h3 data-i18n="exp2_title">Ville de Paris - Data Scientist</h3>
-              <p class="muted" data-i18n="exp2_date">2024</p>
-              <p data-i18n-html="exp2_desc">
-                Contribution à la politique de mobilité de la Ville de Paris par l'analyse des données de trafic et de
-                déplacements.
-              </p>
-              <ul>
-                <li data-i18n-html="exp2_task1"><strong>Pipeline multi-sources</strong> pour l'ingestion et le
-                  traitement de données hétérogènes (capteurs, GPS, réseaux sociaux).</li>
-                <li data-i18n-html="exp2_task2"><strong>Score composite</strong> d'impact des événements sur la
-                  fluidité du trafic, intégrant des modèles prédictifs.</li>
-                <li data-i18n-html="exp2_task3"><strong>Restitution décideurs</strong> via des tableaux de bord
-                  interactifs et des rapports synthétiques.</li>
-                <li data-i18n-html="exp2_task4"><strong>Stack</strong>: Python, Pandas, Scikit-learn, PostgreSQL,
-                  PowerBI.</li>
-              </ul>
-            </div>
-          </li>
-
-        </ol>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="section">
-      <div class="section-header reveal-up">
-        <span class="section-mainicon"><i data-feather="folder"></i></span>
-        <h2 data-i18n="projects_title" class="section-title">Projects</h2>
-        <p data-i18n="projects_subtitle" class="section-subtitle">A selection of my end-to-end data & AI projects</p>
-      </div>
-
-      <div class="project-filters reveal-up">
-        <button class="filter-btn active" data-filter="all">
-          <i data-feather="grid"></i> <span data-i18n="filter_all">All</span>
-        </button>
-        <button class="filter-btn" data-filter="nlp">
-          <i data-feather="type"></i> <span data-i18n="filter_nlp">NLP</span>
-        </button>
-        <button class="filter-btn" data-filter="ml">
-          <i data-feather="cpu"></i> <span data-i18n="filter_ml">ML</span>
-        </button>
-        <button class="filter-btn" data-filter="eda">
-          <i data-feather="bar-chart-2"></i> <span data-i18n="filter_data">EDA</span>
-        </button>
-      </div>
-
-      <div id="projects-grid">
-
-        <!-- Project 3 : Zimnat Insurance -->
-        <div class="project-item project-card reveal-up" data-category="ml eda">
-          <div>
-            <h3 style="display:flex;align-items:center;gap:.6em;">
-              <i data-feather="umbrella"></i>
-              <span data-i18n="project3_title">Système de Recommandation d'Assurance (Zimnat)</span>
-            </h3>
-
-            <p data-i18n="project3_desc">
-              Approche hybride (Machine Learning + Règles Statistiques) optimisant le Cross-Sell. Application Streamlit
-              avec tableaux de bord et simulation de marché.
-            </p>
-
-            <details class="project-details">
-              <summary class="project-summary" onclick="this.scrollIntoView({behavior:'smooth', block:'start'})"
-                data-i18n="project_learn_more">
-                En savoir plus
-              </summary>
-              <div class="project-details-content" data-i18n-html="project3_desc_long">
-                <p>This project addresses the <strong>Zimnat Insurance Recommendation</strong> challenge (Zindi):
-                  predicting a client's missing products using a snapshot of their current portfolio.</p>
-                <ul>
-                  <li><strong>Hybrid Approach (Dual Engine)</strong>: Combines a <em>Statistical Baseline
-                      (Bayesian)</em> for robustness with a <em>CatBoost</em> model for fine-grained personalization.
-                  </li>
-                  <li><strong>Anti-Cheat Filter</strong>: Strict business rules ensuring no already-owned products are
-                    recommended (zero commercial errors).</li>
-                  <li><strong>Modular Streamlit App</strong>: 5 dedicated interfaces (Executive Dashboard, Business
-                    Insights, Client Inspector for agents, Market Simulator).</li>
-                  <li><strong>Business Impact</strong>: Transition from Mass Marketing to <em>Precision Marketing</em>
-                    to maximize LTV and reduce churn.</li>
-                </ul>
-                <p>Designed for operational efficiency, this system transforms a product list into a targeted client
-                  strategy.</p>
-              </div>
-            </details>
-
-            <h4 class="project-techs-title" data-i18n="project_techs">Technologies used</h4>
-            <div class="project-techs">
-              <span class="tech-badge">Python</span>
-              <span class="tech-badge">CatBoost</span>
-              <span class="tech-badge">Streamlit</span>
-              <span class="tech-badge">Pandas</span>
-              <span class="tech-badge">Scikit-learn</span>
-              <span class="tech-badge">Plotly</span>
-            </div>
-          </div>
-
-          <div style="display:flex;gap:1em;flex-wrap:wrap;margin-top:1em;">
-            <a href="https://insurance-product-recommender.onrender.com/" target="_blank" rel="noopener noreferrer"
-              class="btn">
-              <i data-feather="play-circle"></i> <span data-i18n="btn_live_demo">Live Demo</span>
-            </a>
-            <a href="https://github.com/BeediGoua/Insurance_product_recommender" target="_blank"
-              rel="noopener noreferrer" class="btn">
-              <i data-feather="github"></i> <span data-i18n="btn_github_repo">View on GitHub (Repo)</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 1 : ReviewGuardian -->
-        <div class="project-item project-card reveal-up" data-category="nlp">
-          <div>
-            <h3 style="display:flex;align-items:center;gap:.6em;">
-              <i data-feather="shield"></i>
-              <span data-i18n="project1_title">ReviewGuardian – Safe Review Pipeline</span>
-            </h3>
-
-            <p data-i18n="project1_desc">
-              A fully local AI system to moderate user reviews in real-time. It detects toxic content, explains
-              decisions, and rewrites harmful text, all while preserving user privacy.
-            </p>
-
-            <details class="project-details">
-              <summary class="project-summary" onclick="this.scrollIntoView({behavior:'smooth', block:'start'})"
-                data-i18n="project_learn_more">
-                Learn more
-              </summary>
-              <div class="project-details-content" data-i18n-html="project1_desc_long">
-                <p>ReviewGuardian is a privacy-focused NLP system for identifying and managing toxic content in user
-                  reviews. It includes:</p>
-                <ul>
-                  <li><strong>End-to-end review pipeline</strong>: scraping, preprocessing, and custom text cleaning
-                  </li>
-                  <li><strong>Multi-model toxicity detection</strong> using <em>Naive Bayes</em>, <em>Logistic
-                      Regression</em>, and <em>Random Forest</em> with TF-IDF</li>
-                  <li><strong>Explainability layer</strong> powered by <em>SHAP</em> for local interpretation of
-                    predictions</li>
-                  <li><strong>Model versioning and evaluation</strong> with built-in A/B testing and performance
-                    tracking</li>
-                  <li><strong>Fully local deployment</strong>: Streamlit front-end and FastAPI backend, no cloud, full
-                    control</li>
-                </ul>
-                <p>All inference runs locally to guarantee complete data privacy and maximum transparency.</p>
-              </div>
-            </details>
-
-            <h4 class="project-techs-title" data-i18n="project_techs">Technologies used</h4>
-            <div class="project-techs">
-              <span class="tech-badge">Python</span>
-              <span class="tech-badge">TF-IDF</span>
-              <span class="tech-badge">Naive Bayes</span>
-              <span class="tech-badge">Logistic Regression</span>
-              <span class="tech-badge">Random Forest</span>
-              <span class="tech-badge">SHAP</span>
-              <span class="tech-badge">FastAPI</span>
-              <span class="tech-badge">Streamlit</span>
-              <span class="tech-badge">scikit-learn</span>
-            </div>
-          </div>
-
-          <div style="display:flex;gap:1em;flex-wrap:wrap;margin-top:1em;">
-            <a href="https://reviewguardian.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn">
-              <i data-feather="play-circle"></i> <span data-i18n="btn_live_demo">Live Demo</span>
-            </a>
-            <a href="https://github.com/BeediGoua/ReviewGuardian" target="_blank" rel="noopener noreferrer" class="btn">
-              <i data-feather="github"></i> <span data-i18n="btn_github_repo">View on GitHub</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 2 : Hybrid Music Recommender -->
-        <div class="project-item project-card reveal-up" data-category="ml nlp">
-          <div>
-            <h3 style="display:flex;align-items:center;gap:.6em;">
-              <i data-feather="headphones"></i>
-              <span data-i18n="project2_title">Hybrid Music Recommender</span>
-            </h3>
-
-            <p data-i18n="project2_desc">
-              Intelligent playlist recommender combining Word2Vec and content-based NLP embeddings. Fully local,
-              interactive and privacy-focused: explore music by mood, genre, era and more.
-            </p>
-
-            <details class="project-details">
-              <summary class="project-summary" onclick="this.scrollIntoView({behavior:'smooth', block:'start'})"
-                data-i18n="project_learn_more">
-                Learn more
-              </summary>
-              <div class="project-details-content" data-i18n-html="project2_desc_long">
-                <p>This premium music recommender system blends collaborative filtering and semantic content analysis:
-                </p>
-                <ul>
-                  <li><strong>Dual similarity engine</strong> combining <em>Word2Vec (co-occurrence)</em> and
-                    <em>Sentence-BERT (semantic)</em> embeddings
-                  </li>
-                  <li><strong>Interactive Streamlit interface</strong> with real-time filters: genre, duration, decade,
-                    mood</li>
-                  <li><strong>Audio-based exploration mode</strong> using features like energy, danceability, and
-                    valence</li>
-                  <li><strong>Visual dashboard</strong> with interpretability tools: heatmaps, radar charts, and
-                    performance benchmarking</li>
-                  <li><strong>Custom playlist generation</strong> with CSV export and adaptive user preferences</li>
-                  <li><strong>100% offline system</strong>: no cloud, no API, full data privacy</li>
-                </ul>
-                <p>Built with performance, explainability, and personalization in mind, a powerful sandbox for
-                  recommender systems.</p>
-              </div>
-            </details>
-
-            <h4 class="project-techs-title" data-i18n="project_techs">Technologies used</h4>
-            <div class="project-techs">
-              <span class="tech-badge">Python</span>
-              <span class="tech-badge">Word2Vec</span>
-              <span class="tech-badge">SentenceTransformers</span>
-              <span class="tech-badge">pandas</span>
-              <span class="tech-badge">scikit-learn</span>
-              <span class="tech-badge">Streamlit</span>
-              <span class="tech-badge">Plotly</span>
-              <span class="tech-badge">Gensim</span>
-            </div>
-          </div>
-
-          <div style="display:flex;gap:1em;flex-wrap:wrap;margin-top:1em;">
-            <a href="https://music-recommender-hybrid.onrender.com" target="_blank" rel="noopener noreferrer"
-              class="btn">
-              <i data-feather="play-circle"></i> <span data-i18n="btn_live_demo">Live Demo</span>
-            </a>
-            <a href="https://github.com/BeediGoua/music-recommender-hybrid" target="_blank" rel="noopener noreferrer"
-              class="btn">
-              <i data-feather="github"></i> <span data-i18n="btn_github_repo">View on GitHub</span>
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="section">
-      <div class="section-header reveal-up">
-        <span class="section-mainicon"><i data-feather="award"></i></span>
-        <h2 data-i18n="skills_title" class="section-title">My Skills</h2>
-        <p data-i18n="skills_subtitle" class="section-subtitle">Core strengths in data, ML, NLP & engineering</p>
-      </div>
-
-      <div class="skills-advanced reveal-up">
-        <div class="skills-advanced-grid">
-          <div class="skill-adv-item">
-            <div class="skill-adv-icon"><i data-feather="trending-up"></i></div>
-            <div>
-              <h4 data-i18n="skills_adv_data_science_title">Stats, Eco & Time Series</h4>
-              <p data-i18n="skills_adv_data_science_desc">Bayesian inference, econometrics, linear/GLM models,
-                ARIMA/SARIMA, VAR, ETS, convex optimization.</p>
-            </div>
-          </div>
-
-          <div class="skill-adv-item">
-            <div class="skill-adv-icon"><i data-feather="cpu"></i></div>
-            <div>
-              <h4 data-i18n="skills_adv_ml_title">Machine Learning & Evaluation</h4>
-              <p data-i18n="skills_adv_ml_desc">Supervised & unsupervised, XGBoost, Deep Learning (CNN, LSTM),
-                explainability (SHAP, LIME), recommender systems.</p>
-            </div>
-          </div>
-
-          <div class="skill-adv-item">
-            <div class="skill-adv-icon"><i data-feather="search"></i></div>
-            <div>
-              <h4 data-i18n="skills_adv_nlp_title">NLP & Hybrid Search (RAG)</h4>
-              <p data-i18n="skills_adv_nlp_desc">RAG pipelines (BM25 + reranking), LLMs (Hugging Face, LangChain),
-                embeddings, vector indices (FAISS, ChromaDB).</p>
-            </div>
-          </div>
-
-          <div class="skill-adv-item">
-            <div class="skill-adv-icon"><i data-feather="activity"></i></div>
-            <div>
-              <h4 data-i18n="skills_adv_dataeng_title">MLOps & Industrialization</h4>
-              <p data-i18n="skills_adv_dataeng_desc">Docker, MLflow, FastAPI, Streamlit, CI/CD (GitHub Actions),
-                performance and p95 latency monitoring.</p>
-            </div>
-          </div>
-
-          <div class="skill-adv-item">
-            <div class="skill-adv-icon"><i data-feather="database"></i></div>
-            <div>
-              <h4 data-i18n="skills_adv_cloud_title">Big Data & Cloud</h4>
-              <p data-i18n="skills_adv_cloud_desc">Spark, Hadoop, AWS (EC2), GCP (Cloud Run), scalable pipeline
-                management and cloud architecture.</p>
-            </div>
-          </div>
-
-          <div class="skill-adv-item">
-            <div class="skill-adv-icon"><i data-feather="pie-chart"></i></div>
-            <div>
-              <h4 data-i18n="skills_adv_viz_title">Visualization & Business Impact</h4>
-              <p data-i18n="skills_adv_viz_desc">Matplotlib, Seaborn, Plotly, interactive dashboards, distilling complex
-                models for decision-makers.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Technical Skills -->
-    <section id="technical-skills" class="section">
-      <div class="techskills-card enhanced-techskills-card reveal-up">
-        <div class="techskills-header">
-          <span class="techskills-mainicon"><i data-feather="zap"></i></span>
-          <h2 data-i18n="techskills_title" class="techskills-title">Technical Skills</h2>
-          <p data-i18n="techskills_subtitle" class="techskills-subtitle">Main technologies, libraries & tools I use
-            daily</p>
-        </div>
-
-        <div class="techskills-enhanced-grid">
-          <div class="techskill-mini-card reveal-up">
-            <div class="mini-card-icon"><i data-feather="code"></i></div>
-            <h4 data-i18n="techskills_langs">Languages</h4>
-            <div class="techskills-badges">
-              <span class="badge badge-main">Python</span>
-              <span class="badge badge-main">SQL</span>
-              <span class="badge badge-alt">R</span>
-              <span class="badge badge-alt">Bash</span>
-              <span class="badge badge-alt">Java</span>
-            </div>
-          </div>
-
-          <div class="techskill-mini-card reveal-up">
-            <div class="mini-card-icon"><i data-feather="bar-chart"></i></div>
-            <h4 data-i18n="techskills_libs">Data & ML Libraries</h4>
-            <div class="techskills-badges">
-              <span class="badge badge-main">Pandas</span>
-              <span class="badge badge-main">NumPy</span>
-              <span class="badge badge-main">Scikit-learn</span>
-              <span class="badge badge-alt">XGBoost</span>
-              <span class="badge badge-alt">LightGBM</span>
-              <span class="badge badge-main">PyTorch</span>
-              <span class="badge badge-main">TensorFlow</span>
-            </div>
-          </div>
-
-          <div class="techskill-mini-card reveal-up">
-            <div class="mini-card-icon"><i data-feather="message-square"></i></div>
-            <h4 data-i18n="techskills_nlp">NLP & LLMs</h4>
-            <div class="techskills-badges">
-              <span class="badge badge-main">spaCy</span>
-              <span class="badge badge-main">Hugging Face</span>
-              <span class="badge badge-alt">LangChain</span>
-              <span class="badge badge-alt">SentenceTransformers</span>
-              <span class="badge badge-main">FAISS</span>
-              <span class="badge badge-main">ChromaDB</span>
-              <span class="badge badge-alt">BM25</span>
-            </div>
-          </div>
-
-          <div class="techskill-mini-card reveal-up">
-            <div class="mini-card-icon"><i data-feather="settings"></i></div>
-            <h4 data-i18n="techskills_mlops">MLOps & API</h4>
-            <div class="techskills-badges">
-              <span class="badge badge-main">FastAPI</span>
-              <span class="badge badge-main">Streamlit</span>
-              <span class="badge badge-alt">MLflow</span>
-              <span class="badge badge-alt">Docker</span>
-              <span class="badge badge-main">Git</span>
-              <span class="badge badge-alt">CI/CD</span>
-            </div>
-          </div>
-
-          <div class="techskill-mini-card reveal-up">
-            <div class="mini-card-icon"><i data-feather="cloud"></i></div>
-            <h4 data-i18n="techskills_cloud">Cloud & DevOps</h4>
-            <div class="techskills-badges">
-              <span class="badge badge-main">AWS (EC2)</span>
-              <span class="badge badge-main">GCP (Cloud Run)</span>
-              <span class="badge badge-alt">Spark</span>
-              <span class="badge badge-alt">Hadoop</span>
-              <span class="badge badge-alt">Docker</span>
-            </div>
-          </div>
-
-          <div class="techskill-mini-card reveal-up">
-            <div class="mini-card-icon"><i data-feather="database"></i></div>
-            <h4 data-i18n="techskills_db">Databases</h4>
-            <div class="techskills-badges">
-              <span class="badge badge-main">PostgreSQL</span>
-              <span class="badge badge-main">SQLite</span>
-              <span class="badge badge-alt">Firebase</span>
-            </div>
-          </div>
-
-          <div class="techskill-mini-card reveal-up">
-            <div class="mini-card-icon"><i data-feather="eye"></i></div>
-            <h4 data-i18n="techskills_viz">Visualization</h4>
-            <div class="techskills-badges">
-              <span class="badge badge-main">Matplotlib</span>
-              <span class="badge badge-main">Seaborn</span>
-              <span class="badge badge-main">Plotly</span>
-              <span class="badge badge-alt">Dash</span>
-              <span class="badge badge-alt">DigDash</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section"
-      style="display:flex; flex-direction:column; align-items:center; justify-content:center;">
-      <div class="section-header reveal-up">
-        <span class="section-mainicon"><i data-feather="mail"></i></span>
-        <h2 data-i18n="contact_title" class="section-title">Contact</h2>
-        <p data-i18n="contact_subtitle" class="section-subtitle">Let's connect</p>
-      </div>
-
-      <p data-i18n="contact_text" class="lead" style="text-align:center; max-width:500px;">
-        Want to discuss an idea? Let's connect.
+  <!-- Hero -->
+  <section id="hero" class="section hero">
+    <div class="hero-content reveal-up">
+      <img src="assets/img/goua.webp" alt="Portrait Goua Beedi Henri" width="110" height="110" decoding="async"
+        fetchpriority="high">
+      <h1>
+        <span class="hero-name">
+          <span data-i18n="hero_greeting">Hi, I'm</span> Goua Beedi Henri
+        </span>
+        <span class="hero-title">
+          <span class="typed-text"></span>
+        </span>
+      </h1>
+      <p data-i18n="hero_description" class="lead">
+        Data Scientist, exploring, building, and connecting ideas from data to cloud
       </p>
-
-      <!-- Message de confirmation -->
-      <div id="contactMessage" class="contact-message" style="display:none;">
-        <p data-i18n="contact_success">✅ Message envoyé avec succès ! Je vous répondrai rapidement.</p>
-      </div>
-
-      <!-- FormSubmit -->
-      <form action="https://formsubmit.co/gouabeedi@gmail.com" method="POST" id="contactForm" data-contact>
-        <!-- Hidden config -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="Nouveau message depuis ton portfolio Data Science">
-
-        <!-- Fields -->
-        <input type="text" name="name" data-i18n-placeholder="form_name" placeholder="Your Name" autocomplete="name"
-          required>
-        <input type="email" name="email" data-i18n-placeholder="form_email" placeholder="Your Email"
-          autocomplete="email" required>
-        <textarea name="message" data-i18n-placeholder="form_message" placeholder="Your Message" required></textarea>
-
-        <button type="submit" class="btn" data-i18n="form_submit" style="align-self:center; max-width:200px;">
-          Send Message
-        </button>
-      </form>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="socials">
-      <a href="https://www.linkedin.com/in/goua-beedi-henri-a152bb1b2/" target="_blank" rel="noopener noreferrer"
-        title="LinkedIn" data-i18n="footer_linkedin">
-        <i data-feather="linkedin"></i>
-      </a>
-      <a href="https://github.com/BeediGoua" target="_blank" rel="noopener noreferrer" title="GitHub"
-        data-i18n="footer_github">
-        <i data-feather="github"></i>
-      </a>
-      <a href="mailto:gouabeedi@gmail.com" title="Email" data-i18n="footer_email">
-        <i data-feather="mail"></i>
+      <a href="#projects" class="btn btn-primary bounce" data-i18n="btn_projects">
+        See My Projects
       </a>
     </div>
-    <p>© 2024 Goua Beedi Henri | <span data-i18n="footer_rights">All rights reserved.</span></p>
-    <a href="#hero" id="backToTop" data-i18n="btn_scrolltop" style="cursor:pointer;">
-      <i data-feather="arrow-up"></i> Back to Top
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="section-header section-centered reveal-up">
+      <span class="section-mainicon"><i data-feather="user"></i></span>
+      <h2 data-i18n="about_title" class="section-title">About Me</h2>
+    </div>
+
+    <div class="about-wrapper reveal-up">
+      <div class="about-content">
+        <div class="about-text-block">
+          <p class="about-text" data-i18n="about_text">
+            Diplômé en Data Science (ENSAI), j’ai acquis de bonnes compétences dans la conception de pipelines
+            Machine Learning et data de bout-en-bout sur le cloud, avec mise en production d’APIs ML en Python. Je
+            possède des connaissances en statistique, machine learning, deep learning, ainsi qu’en NLP, Computer
+            Vision et IA générative, avec un souci particulier pour l’évaluation de modèles et le post-processing.
+            Je recherche une opportunité de Data Scientist pour contribuer à des projets d’IA appliquée et
+            d’industrialisation, en alliant rigueur analytique et impact métier.
+          </p>
+        </div>
+
+        <div class="cv-actions">
+          <a href="https://beedigoua.github.io/CV_GOUA/?lang=fr" target="_blank" rel="noopener noreferrer"
+            class="btn btn-primary">
+            <i data-feather="external-link"></i> <span data-i18n="btn_online_cv">Voir mon CV interactif</span>
+          </a>
+
+          <div class="cv-dropdown">
+            <button class="btn btn-primary dropdown-toggle" id="downloadBtn" aria-haspopup="true" aria-expanded="false">
+              <i data-feather="download"></i> <span data-i18n="btn_download_pdf">Télécharger PDF</span>
+              <i data-feather="chevron-down" class="chevron-icon"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="downloadBtn">
+              <a href="assets/CV_GouaHenri_FR.pdf" download class="dropdown-item">
+                <span data-i18n="cv_fr">Version Française</span>
+              </a>
+              <a href="assets/CV_GouaHenri_EN.pdf" download class="dropdown-item">
+                <span data-i18n="cv_en">Version Anglaise</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="section">
+    <div class="section-header reveal-up">
+      <span class="section-mainicon"><i data-feather="book-open"></i></span>
+      <h2 class="section-title" data-i18n="education_title">Education</h2>
+      <p class="section-subtitle" data-i18n="education_subtitle">Academic background & key courses</p>
+    </div>
+
+    <div class="education-card reveal-up">
+      <h3 class="edu-title" data-i18n="edu1_title">Engineer's Degree – Data Science & AI</h3>
+      <p class="edu-years" data-i18n="edu1_date">2022 – 2025</p>
+      <p class="edu-school-badge" data-i18n="edu1_school">
+        ENSAI – École Nationale de la Statistique et de l'Analyse de l'Information (Ker Lann, Rennes)
+      </p>
+      <p class="edu-subtext" data-i18n="edu1_desc">
+        Grande École française rattachée à l'INSEE – Top-tier program in statistics & AI
+      </p>
+      <ul class="edu-courses">
+        <li><i data-feather="book-open" class="icon-bullet"></i> <span data-i18n="edu1_course1">Key courses:
+            Supervised & unsupervised learning, deep learning (PyTorch, TensorFlow), NLP with Transformers, generative
+            AI (LLMs, RAG), time series, Bayesian inference, stochastic calculus</span></li>
+        <li><i data-feather="settings" class="icon-bullet"></i> <span data-i18n="edu1_course2">Big Data & Engineering:
+            Spark, Hadoop, SQL, APIs, Docker, MLOps, cloud deployment</span></li>
+        <li><i data-feather="activity" class="icon-bullet"></i> <span data-i18n="edu1_course3">Applied work:
+            Real-world projects in fraud detection, recommendation systems, ML and NLP</span></li>
+        <li><i data-feather="globe" class="icon-bullet"></i> <span data-i18n="edu1_course4">Bilingual curriculum
+            (FR/EN) – International exposure (Erasmus+ eligible)</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Timeline (Parcours) -->
+  <section id="timeline" class="section">
+    <div class="section-header reveal-up">
+      <span class="section-mainicon"><i data-feather="map"></i></span>
+      <h2 class="section-title" data-i18n="experience_title">Expérience</h2>
+      <p class="section-subtitle" data-i18n="experience_subtitle">Stages, projets & formation</p>
+    </div>
+
+    <div class="container">
+      <ol class="timeline">
+
+        <!-- Square Management -->
+        <li class="timeline-item reveal-up">
+          <div class="dot"></div>
+          <div class="section-content">
+            <h3 data-i18n="exp1_title"><i data-feather="cpu" class="icon-bullet"></i> Square Management - Stage M2</h3>
+            <p class="muted" data-i18n="exp1_date">2025 • IA Générative, RAG, OCR & Document Intelligence</p>
+            <p data-i18n-html="exp1_desc">
+              Conception d'un <strong>pipeline RAG modulaire</strong> pour documents métiers longs, s'appuyant sur des
+              technologies de pointe comme <strong>Docling</strong> pour la structuration et <strong>RAGAS</strong> pour
+              l'évaluation.
+            </p>
+            <ul>
+              <li data-i18n-html="exp1_task1"><strong>+180 configurations comparées</strong> (embeddings, segmentation,
+                indexation) pour optimiser la pertinence et la traçabilité.</li>
+              <li data-i18n-html="exp1_task2">Mise en place d'une <strong>évaluation scientifique</strong> par
+                <strong>LLM-as-a-Judge</strong> pour valider la fidélité des réponses.
+              </li>
+              <li data-i18n-html="exp1_task4">Architecturé pour une <strong>reproductibilité maximale</strong> au sein
+                des futurs projets RAG de l'entreprise.</li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- Ville de Paris -->
+        <li class="timeline-item reveal-up">
+          <div class="dot"></div>
+          <div class="section-content">
+            <h3 data-i18n="exp2_title"><i data-feather="map-pin" class="icon-bullet"></i> Ville de Paris - Data
+              Scientist</h3>
+            <p class="muted" data-i18n="exp2_date">2024</p>
+            <p data-i18n-html="exp2_desc">
+              Analyse d'impact sur la mobilité urbaine via des flux de données hétérogènes traités en
+              <strong>Python</strong> et <strong>SQL</strong>.
+            </p>
+            <ul>
+              <li data-i18n-html="exp2_task1">Développement d'un <strong>pipeline multi-sources</strong> pour
+                l'ingestion de données capteurs et GPS en temps réel.</li>
+              <li data-i18n-html="exp2_task2">Création d'un <strong>score composite de fluidité</strong> pour aide à la
+                décision lors d'événements majeurs.</li>
+              <li data-i18n-html="exp2_task3">Visualisation stratégique via <strong>PowerBI</strong> et rapports
+                techniques pour les décideurs publics.</li>
+            </ul>
+          </div>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="section-header reveal-up">
+      <span class="section-mainicon"><i data-feather="folder"></i></span>
+      <h2 data-i18n="projects_title" class="section-title">Projects</h2>
+      <p data-i18n="projects_subtitle" class="section-subtitle">A selection of my end-to-end data & AI projects</p>
+    </div>
+
+    <div class="project-filters reveal-up">
+      <button class="filter-btn active" data-filter="all">
+        <i data-feather="grid"></i> <span data-i18n="filter_all">All</span>
+      </button>
+      <button class="filter-btn" data-filter="nlp">
+        <i data-feather="type"></i> <span data-i18n="filter_nlp">NLP</span>
+      </button>
+      <button class="filter-btn" data-filter="ml">
+        <i data-feather="cpu"></i> <span data-i18n="filter_ml">ML</span>
+      </button>
+      <button class="filter-btn" data-filter="eda">
+        <i data-feather="bar-chart-2"></i> <span data-i18n="filter_data">EDA</span>
+      </button>
+    </div>
+
+    <div id="projects-grid">
+
+      <!-- Project 4 : BrokerFlow AI -->
+      <div class="project-item project-card expert-mode reveal-up" data-category="ml nlp">
+        <div class="browser-header">
+          <span class="browser-dot dot-red"></span>
+          <span class="browser-dot dot-yellow"></span>
+          <span class="browser-dot dot-green"></span>
+        </div>
+
+        <div class="project-title-row">
+          <i data-feather="activity" style="width: 32px; height: 32px;"></i>
+          <h3 data-i18n="project4_title">BrokerFlow AI – Copilote analyse crédit</h3>
+        </div>
+
+        <p class="project-desc" data-i18n="project4_desc">
+          Copilote IA pour l'analyse de risque crédit : combine ML calibré, policy métier et agents LLM pour transformer des dossiers ambigus en décisions claires, justifiées et explicables, même avec des données incomplètes.
+        </p>
+
+
+        <div class="action-row">
+          <a href="projects/brokerflow.html" class="btn-expert btn-cyan-glow">
+            <span data-i18n="project_learn_more">En savoir plus</span> <i data-feather="external-link" style="width: 18px;"></i>
+          </a>
+          <div class="project-techs-expert">
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+              Python
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" />
+              FastAPI
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg" alt="Streamlit" />
+              Streamlit
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikit-learn/scikit-learn-original.svg" alt="scikit-learn" />
+              scikit-learn
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://avatars.githubusercontent.com/u/16880727?s=200&v=4" alt="Ollama" style="background:#fff;border-radius:50%;width:20px;height:20px;" />
+              Ollama
+            </span>
+              <span class="tech-badge-expert">
+                <i data-feather="box" class="project-icon-sm"></i>
+                Ollama
+              </span>
+          </div>
+        </div>
+
+        <div class="action-divider"></div>
+
+        <div class="action-row">
+          <a href="https://github.com/BeediGoua/Brokerflow_ai" target="_blank" rel="noopener noreferrer"
+            class="btn-expert btn-purple-glow">
+            <span data-i18n="btn_github_repo">View on GitHub</span> <i data-feather="github" style="width: 18px;"></i>
+          </a>
+        </div>
+      </div>
+
+        <!-- Project 5 : Retail Demand Forecasting & Inventory Optimization Assistant -->
+        <div class="project-item project-card expert-mode reveal-up" data-category="ml eda">
+          <div class="browser-header">
+            <span class="browser-dot dot-red"></span>
+            <span class="browser-dot dot-yellow"></span>
+            <span class="browser-dot dot-green"></span>
+          </div>
+
+          <div class="project-title-row">
+            <i data-feather="shopping-cart" style="width: 32px; height: 32px;"></i>
+            <h3 data-i18n="project5_title">Retail Demand Forecasting & Inventory Optimization Assistant</h3>
+          </div>
+
+          <p class="project-desc" data-i18n="project5_desc">
+            Solution IA complète pour la grande distribution : prévision de la demande, quantification de l’incertitude et optimisation des stocks, basée sur des données réelles et une stratégie hybride robuste.
+          </p>
+
+          <div class="action-row">
+            <a href="projects/retail-demand-forecasting.html" class="btn-expert btn-cyan-glow">
+              <span data-i18n="project_learn_more">En savoir plus</span> <i data-feather="external-link" style="width: 18px;"></i>
+            </a>
+            <div class="project-techs-expert">
+              <span class="tech-badge-expert">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+                Python
+              </span>
+              <span class="tech-badge-expert">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg" alt="Streamlit" />
+                Streamlit
+              </span>
+              <span class="tech-badge-expert">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite" />
+                SQLite
+              </span>
+              <span class="tech-badge-expert">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" />
+                Pandas
+              </span>
+              <span class="tech-badge-expert">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" />
+                NumPy
+              </span>
+            </div>
+          </div>
+
+          <div class="action-divider"></div>
+
+          <div class="action-row">
+            <a href="https://github.com/BeediGoua/retail-demand-forecasting-assistant" target="_blank" rel="noopener noreferrer"
+              class="btn-expert btn-purple-glow">
+              <span data-i18n="btn_github_repo">View on GitHub</span> <i data-feather="github" style="width: 18px;"></i>
+            </a>
+          </div>
+        </div>
+
+      <!-- Project 3 : Zimnat Insurance -->
+      <div class="project-item project-card expert-mode reveal-up" data-category="ml eda">
+        <div class="browser-header">
+          <span class="browser-dot dot-red"></span>
+          <span class="browser-dot dot-yellow"></span>
+          <span class="browser-dot dot-green"></span>
+        </div>
+
+        <div class="project-title-row">
+          <i data-feather="umbrella" style="width: 32px; height: 32px;"></i>
+          <h3 data-i18n="project3_title">Système de Recommandation d'Assurance (Zimnat)</h3>
+        </div>
+
+        <p class="project-desc" data-i18n="project3_desc">
+          Approche ML hybride utilisant le filtrage collaboratif et basé sur le contenu pour des recommandations
+          d'assurance personnalisées et précises chez Zimnat.
+        </p>
+
+        <div class="action-row">
+          <a href="projects/zimnat.html" class="btn-expert btn-cyan-glow">
+            <span data-i18n="project_learn_more">En savoir plus</span> <i data-feather="external-link"
+              style="width: 18px;"></i>
+          </a>
+
+          <div class="project-techs-expert">
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+              Python
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://raw.githubusercontent.com/catboost/catboost/master/logo/catboost_logo.svg"
+                alt="CatBoost" style="filter: brightness(0) invert(1);" />
+              CatBoost
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"
+                alt="Streamlit" />
+              Streamlit
+            </span>
+          </div>
+        </div>
+
+        <div class="action-divider"></div>
+
+        <div class="action-row">
+          <a href="https://insurance-product-recommender.onrender.com/" target="_blank" rel="noopener noreferrer"
+            class="btn-expert btn-green-glow">
+            <span data-i18n="btn_live_demo">Live Demo</span> <i data-feather="play" style="width: 18px;"></i>
+          </a>
+          <a href="https://github.com/BeediGoua/Insurance_product_recommender" target="_blank" rel="noopener noreferrer"
+            class="btn-expert btn-purple-glow">
+            <span data-i18n="btn_github_repo">View on GitHub</span> <i data-feather="github" style="width: 18px;"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 1 : ReviewGuardian -->
+      <div class="project-item project-card expert-mode reveal-up" data-category="nlp">
+        <div class="browser-header">
+          <span class="browser-dot dot-red"></span>
+          <span class="browser-dot dot-yellow"></span>
+          <span class="browser-dot dot-green"></span>
+        </div>
+
+        <div class="project-title-row">
+          <i data-feather="shield" style="width: 32px; height: 32px;"></i>
+          <h3 data-i18n="project1_title">ReviewGuardian – Safe Review Pipeline</h3>
+        </div>
+
+        <p class="project-desc" data-i18n="project1_desc">
+          Système de modération IA local pour détecter la toxicité et expliquer les décisions en temps réel,
+          garantissant une confidentialité totale des données.
+        </p>
+
+        <div class="action-row">
+          <a href="projects/reviewguardian.html" class="btn-expert btn-cyan-glow">
+            <span data-i18n="project_learn_more">En savoir plus</span> <i data-feather="external-link"
+              style="width: 18px;"></i>
+          </a>
+
+          <div class="project-techs-expert">
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+              Python
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg"
+                alt="scikit-learn" />
+              scikit-learn
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
+                alt="FastAPI" />
+              FastAPI
+            </span>
+          </div>
+        </div>
+
+        <div class="action-divider"></div>
+
+        <div class="action-row">
+          <a href="https://reviewguardian.onrender.com/" target="_blank" rel="noopener noreferrer"
+            class="btn-expert btn-green-glow">
+            <span data-i18n="btn_live_demo">Live Demo</span> <i data-feather="play" style="width: 18px;"></i>
+          </a>
+          <a href="https://github.com/BeediGoua/ReviewGuardian" target="_blank" rel="noopener noreferrer"
+            class="btn-expert btn-purple-glow">
+            <span data-i18n="btn_github_repo">View on GitHub</span> <i data-feather="github" style="width: 18px;"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 2 : Hybrid Music Recommender -->
+      <div class="project-item project-card expert-mode reveal-up" data-category="ml nlp">
+        <div class="browser-header">
+          <span class="browser-dot dot-red"></span>
+          <span class="browser-dot dot-yellow"></span>
+          <span class="browser-dot dot-green"></span>
+        </div>
+
+        <div class="project-title-row">
+          <i data-feather="headphones" style="width: 32px; height: 32px;"></i>
+          <h3 data-i18n="project2_title">Hybrid Music Recommender</h3>
+        </div>
+
+        <p class="project-desc" data-i18n="project2_desc">
+          Système de recommandation intelligent alliant Word2Vec et embeddings NLP pour une exploration musicale basée
+          sur l'humeur, le genre et l'époque.
+        </p>
+
+        <div class="action-row">
+          <a href="projects/music-recommender.html" class="btn-expert btn-cyan-glow">
+            <span data-i18n="project_learn_more">En savoir plus</span> <i data-feather="external-link"
+              style="width: 18px;"></i>
+          </a>
+
+          <div class="project-techs-expert">
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+              Python
+            </span>
+            <span class="tech-badge-expert">
+              <i data-feather="activity" style="width: 14px;"></i>
+              Word2Vec
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"
+                alt="Streamlit" />
+              Streamlit
+            </span>
+          </div>
+        </div>
+
+        <div class="action-divider"></div>
+
+        <div class="action-row">
+          <a href="https://music-recommender-hybrid.onrender.com" target="_blank" rel="noopener noreferrer"
+            class="btn-expert btn-green-glow">
+            <span data-i18n="btn_live_demo">Live Demo</span> <i data-feather="play" style="width: 18px;"></i>
+          </a>
+          <a href="https://github.com/BeediGoua/music-recommender-hybrid" target="_blank" rel="noopener noreferrer"
+            class="btn-expert btn-purple-glow">
+            <span data-i18n="btn_github_repo">View on GitHub</span> <i data-feather="github" style="width: 18px;"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <div class="section-header reveal-up">
+      <span class="section-mainicon"><i data-feather="award"></i></span>
+      <h2 data-i18n="skills_title" class="section-title">My Skills</h2>
+      <p data-i18n="skills_subtitle" class="section-subtitle">Core strengths in data, ML, NLP & engineering</p>
+    </div>
+
+    <div class="skills-advanced reveal-up">
+      <div class="skills-advanced-grid">
+        <div class="skill-adv-item">
+          <div class="skill-adv-icon"><i data-feather="trending-up"></i></div>
+          <div>
+            <h4 data-i18n="skills_adv_data_science_title">Stats, Eco & Time Series</h4>
+            <p data-i18n="skills_adv_data_science_desc">Bayesian inference, econometrics, linear/GLM models,
+              ARIMA/SARIMA, VAR, ETS, convex optimization.</p>
+          </div>
+        </div>
+
+        <div class="skill-adv-item">
+          <div class="skill-adv-icon"><i data-feather="cpu"></i></div>
+          <div>
+            <h4 data-i18n="skills_adv_ml_title">Machine Learning & Evaluation</h4>
+            <p data-i18n="skills_adv_ml_desc">Supervised & unsupervised, XGBoost, Deep Learning (CNN, LSTM),
+              explainability (SHAP, LIME), recommender systems.</p>
+          </div>
+        </div>
+
+        <div class="skill-adv-item">
+          <div class="skill-adv-icon"><i data-feather="search"></i></div>
+          <div>
+            <h4 data-i18n="skills_adv_nlp_title">NLP & Hybrid Search (RAG)</h4>
+            <p data-i18n="skills_adv_nlp_desc">RAG pipelines (BM25 + reranking), LLMs (Hugging Face, LangChain),
+              embeddings, vector indices (FAISS, ChromaDB).</p>
+          </div>
+        </div>
+
+        <div class="skill-adv-item">
+          <div class="skill-adv-icon"><i data-feather="activity"></i></div>
+          <div>
+            <h4 data-i18n="skills_adv_dataeng_title">MLOps & Industrialization</h4>
+            <p data-i18n="skills_adv_dataeng_desc">Docker, MLflow, FastAPI, Streamlit, CI/CD (GitHub Actions),
+              performance and p95 latency monitoring.</p>
+          </div>
+        </div>
+
+        <div class="skill-adv-item">
+          <div class="skill-adv-icon"><i data-feather="database"></i></div>
+          <div>
+            <h4 data-i18n="skills_adv_cloud_title">Big Data & Cloud</h4>
+            <p data-i18n="skills_adv_cloud_desc">Spark, Hadoop, AWS (EC2), GCP (Cloud Run), scalable pipeline
+              management and cloud architecture.</p>
+          </div>
+        </div>
+
+        <div class="skill-adv-item">
+          <div class="skill-adv-icon"><i data-feather="pie-chart"></i></div>
+          <div>
+            <h4 data-i18n="skills_adv_viz_title">Visualization & Business Impact</h4>
+            <p data-i18n="skills_adv_viz_desc">Matplotlib, Seaborn, Plotly, interactive dashboards, distilling complex
+              models for decision-makers.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Skills -->
+  <section id="technical-skills" class="section">
+    <div class="techskills-card enhanced-techskills-card reveal-up">
+      <div class="techskills-header">
+        <span class="techskills-mainicon"><i data-feather="zap"></i></span>
+        <h2 data-i18n="techskills_title" class="techskills-title">Technical Skills</h2>
+        <p data-i18n="techskills_subtitle" class="techskills-subtitle">Main technologies, libraries & tools I use
+          daily</p>
+      </div>
+
+      <div class="techskills-enhanced-grid">
+
+        <div class="techskill-mini-card reveal-up">
+          <div class="mini-card-icon"><i data-feather="code"></i></div>
+          <h4 data-i18n="techskills_langs">Languages</h4>
+          <div class="techskills-badges">
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+              Python
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQL" />
+              SQL
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R" />
+              R
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" />
+              Bash
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
+              Java
+            </span>
+          </div>
+        </div>
+
+        <div class="techskill-mini-card reveal-up">
+          <div class="mini-card-icon"><i data-feather="bar-chart"></i></div>
+          <h4 data-i18n="techskills_libs">Data & ML Libraries</h4>
+          <div class="techskills-badges">
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" />
+              Pandas
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" />
+              NumPy
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg"
+                alt="Scikit-learn" />
+              Scikit-learn
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://raw.githubusercontent.com/catboost/catboost/master/logo/catboost_logo.svg" alt="XGBoost"
+                style="filter: brightness(0) invert(1);" />
+              XGBoost
+            </span>
+            <span class="tech-badge-expert">
+              <i data-feather="layers" style="width: 14px;"></i>
+              LightGBM
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"
+                alt="PyTorch" />
+              PyTorch
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+                alt="TensorFlow" />
+              TensorFlow
+            </span>
+          </div>
+        </div>
+
+        <div class="techskill-mini-card reveal-up">
+          <div class="mini-card-icon"><i data-feather="message-square"></i></div>
+          <h4 data-i18n="techskills_nlp">NLP & LLMs</h4>
+          <div class="techskills-badges">
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spacy/spacy-original.svg" alt="spaCy"
+                style="filter: brightness(0) invert(1);" />
+              spaCy
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" />
+              Hugging Face
+            </span>
+            <span class="tech-badge-expert">
+              <i data-feather="link" style="width: 14px;"></i>
+              LangChain
+            </span>
+            <span class="tech-badge-expert">
+              <i data-feather="activity" style="width: 14px;"></i>
+              SentenceTransformers
+            </span>
+            <span class="tech-badge-expert">
+              <i data-feather="database" style="width: 14px;"></i>
+              FAISS
+            </span>
+            <span class="tech-badge-expert">
+              <i data-feather="box" style="width: 14px;"></i>
+              ChromaDB
+            </span>
+            <span class="tech-badge-expert">
+              <i data-feather="search" style="width: 14px;"></i>
+              BM25
+            </span>
+          </div>
+        </div>
+
+        <div class="techskill-mini-card reveal-up">
+          <div class="mini-card-icon"><i data-feather="settings"></i></div>
+          <h4 data-i18n="techskills_mlops">MLOps & API</h4>
+          <div class="techskills-badges">
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
+                alt="FastAPI" />
+              FastAPI
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"
+                alt="Streamlit" />
+              Streamlit
+            </span>
+            <span class="tech-badge-expert">
+              <i data-feather="terminal" style="width: 14px;"></i>
+              MLflow
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" />
+              Docker
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+              Git
+            </span>
+            <span class="tech-badge-expert">
+              <i data-feather="refresh-cw" style="width: 14px;"></i>
+              CI/CD
+            </span>
+          </div>
+        </div>
+
+        <div class="techskill-mini-card reveal-up">
+          <div class="mini-card-icon"><i data-feather="cloud"></i></div>
+          <h4 data-i18n="techskills_cloud">Cloud & DevOps</h4>
+          <div class="techskills-badges">
+            <span class="tech-badge-expert">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                alt="AWS" style="filter: brightness(0) invert(1);" />
+              AWS (EC2)
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+                alt="GCP" />
+              GCP (Cloud Run)
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg"
+                alt="Spark" />
+              Spark
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hadoop/hadoop-original.svg" alt="Hadoop" />
+              Hadoop
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" />
+              Docker
+            </span>
+          </div>
+        </div>
+
+        <div class="techskill-mini-card reveal-up">
+          <div class="mini-card-icon"><i data-feather="database"></i></div>
+          <h4 data-i18n="techskills_db">Databases</h4>
+          <div class="techskills-badges">
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                alt="PostgreSQL" />
+              PostgreSQL
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite" />
+              SQLite
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+                alt="Firebase" />
+              Firebase
+            </span>
+          </div>
+        </div>
+
+        <div class="techskill-mini-card reveal-up">
+          <div class="mini-card-icon"><i data-feather="eye"></i></div>
+          <h4 data-i18n="techskills_viz">Visualization</h4>
+          <div class="techskills-badges">
+            <span class="tech-badge-expert">
+              <i data-feather="pie-chart" style="width: 14px;"></i>
+              Matplotlib
+            </span>
+            <span class="tech-badge-expert">
+              <i data-feather="bar-chart-2" style="width: 14px;"></i>
+              Seaborn
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/plotly/plotly-original.svg" alt="Plotly" />
+              Plotly
+            </span>
+            <span class="tech-badge-expert">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/plotly/plotly-original.svg" alt="Dash" />
+              Dash
+            </span>
+            <span class="tech-badge-expert">
+              <i data-feather="eye" style="width: 14px;"></i>
+              DigDash
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section"
+    style="display:flex; flex-direction:column; align-items:center; justify-content:center;">
+    <div class="section-header reveal-up">
+      <span class="section-mainicon"><i data-feather="mail"></i></span>
+      <h2 data-i18n="contact_title" class="section-title">Contact</h2>
+      <p data-i18n="contact_subtitle" class="section-subtitle">Let's connect</p>
+    </div>
+
+    <p data-i18n="contact_text" class="lead" style="text-align:center; max-width:500px;">
+      Want to discuss an idea? Let's connect.
+    </p>
+
+    <!-- Message de confirmation -->
+    <div id="contactMessage" class="contact-message" style="display:none;">
+      <p data-i18n="contact_success"> Message envoyé avec succès ! Je vous répondrai rapidement.</p>
+    </div>
+
+    <!-- FormSubmit -->
+    <form action="https://formsubmit.co/gouabeedi@gmail.com" method="POST" id="contactForm" data-contact>
+      <!-- Hidden config -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="Nouveau message depuis ton portfolio Data Science">
+
+      <!-- Fields -->
+      <input type="text" name="name" data-i18n-placeholder="form_name" placeholder="Your Name" autocomplete="name"
+        required>
+      <input type="email" name="email" data-i18n-placeholder="form_email" placeholder="Your Email" autocomplete="email"
+        required>
+      <textarea name="message" data-i18n-placeholder="form_message" placeholder="Your Message" required></textarea>
+
+      <button type="submit" class="btn" data-i18n="form_submit" style="align-self:center; max-width:200px;">
+        Send Message
+      </button>
+    </form>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="socials">
+    <a href="https://www.linkedin.com/in/goua-beedi-henri-a152bb1b2/" target="_blank" rel="noopener noreferrer"
+      title="LinkedIn" data-i18n="footer_linkedin">
+      <i data-feather="linkedin"></i>
     </a>
-  </footer>
+    <a href="https://github.com/BeediGoua" target="_blank" rel="noopener noreferrer" title="GitHub"
+      data-i18n="footer_github">
+      <i data-feather="github"></i>
+    </a>
+    <a href="mailto:gouabeedi@gmail.com" title="Email" data-i18n="footer_email">
+      <i data-feather="mail"></i>
+    </a>
+  </div>
+  <p>© 2024 Goua Beedi Henri | <span data-i18n="footer_rights">All rights reserved.</span></p>
+  <a href="#hero" id="backToTop" data-i18n="btn_scrolltop" style="cursor:pointer;">
+    <i data-feather="arrow-up"></i> Back to Top
+  </a>
+</footer>
 
-  <!-- JS (fin de body = pas besoin de defer) -->
-  <script src="assets/js/script.js"></script>
-  <script src="assets/js/animations.js"></script>
-  <script src="https://unpkg.com/feather-icons"></script>
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      if (window.feather) { feather.replace(); }
-      setTimeout(() => { if (window.feather) feather.replace(); }, 100);
+<!-- JS (fin de body = pas besoin de defer) -->
+<script src="assets/js/script.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    if (window.feather) { feather.replace(); }
+    setTimeout(() => { if (window.feather) feather.replace(); }, 100);
 
-      const backToTop = document.getElementById('backToTop');
-      if (backToTop) {
-        backToTop.addEventListener('click', (e) => {
-          e.preventDefault();
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-      }
-
-      // Détection et protection tablettes exotiques
-      function checkTabletNavOverflow() {
-        const nav = document.getElementById('mainNav');
-        const navLinks = document.querySelector('.nav-links');
-        const navControls = document.querySelector('.nav-controls');
-
-        if (!nav || !navLinks || !navControls) return;
-
-        // Toujours retirer les classes avant de tester (évite répétition)
-        document.body.classList.remove('tablet-overflow-protection');
-        document.body.classList.remove('emergency-vertical');
-
-        // Vérifier si on est sur une tablette (largeur entre 600px et 1400px, tactile)
-        const isTablet = window.innerWidth >= 600 && window.innerWidth <= 1400 &&
-          ('ontouchstart' in window || navigator.maxTouchPoints > 0);
-
-        if (isTablet) {
-          setTimeout(() => {
-            // Vérifier si la navigation déborde
-            const navRect = nav.getBoundingClientRect();
-            const linksRect = navLinks.getBoundingClientRect();
-            const controlsRect = navControls.getBoundingClientRect();
-
-            // Si les éléments débordent
-            if (linksRect.right + controlsRect.width > navRect.right - 10) {
-              document.body.classList.add('tablet-overflow-protection');
-            }
-
-            // Protection d'urgence pour écrans très courts
-            if (window.innerHeight < 500 && window.innerWidth > window.innerHeight) {
-              document.body.classList.add('emergency-vertical');
-            }
-          }, 100);
-        }
-      }
-
-      // Vérifier au chargement et au redimensionnement
-      checkTabletNavOverflow();
-      window.addEventListener('resize', debounce(checkTabletNavOverflow, 250));
-      window.addEventListener('orientationchange', () => {
-        setTimeout(checkTabletNavOverflow, 300);
+    const backToTop = document.getElementById('backToTop');
+    if (backToTop) {
+      backToTop.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       });
-    });
-
-    // Fonction debounce pour optimiser les performances 
-    function debounce(func, wait) {
-      let timeout;
-      return function executedFunction(...args) {
-        const later = () => {
-          clearTimeout(timeout);
-          func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-      };
     }
-  </script>
+
+    // Détection et protection tablettes exotiques
+    function checkTabletNavOverflow() {
+      const nav = document.getElementById('mainNav');
+      const navLinks = document.querySelector('.nav-links');
+      const navControls = document.querySelector('.nav-controls');
+
+      if (!nav || !navLinks || !navControls) return;
+
+      // Toujours retirer les classes avant de tester (évite répétition)
+      document.body.classList.remove('tablet-overflow-protection');
+      document.body.classList.remove('emergency-vertical');
+
+      // Vérifier si on est sur une tablette (largeur entre 600px et 1400px, tactile)
+      const isTablet = window.innerWidth >= 600 && window.innerWidth <= 1400 &&
+        ('ontouchstart' in window || navigator.maxTouchPoints > 0);
+
+      if (isTablet) {
+        setTimeout(() => {
+          // Vérifier si la navigation déborde
+          const navRect = nav.getBoundingClientRect();
+          const linksRect = navLinks.getBoundingClientRect();
+          const controlsRect = navControls.getBoundingClientRect();
+
+          // Si les éléments débordent
+          if (linksRect.right + controlsRect.width > navRect.right - 10) {
+            document.body.classList.add('tablet-overflow-protection');
+          }
+
+          // Protection d'urgence pour écrans très courts
+          if (window.innerHeight < 500 && window.innerWidth > window.innerHeight) {
+            document.body.classList.add('emergency-vertical');
+          }
+        }, 100);
+      }
+    }
+
+    // Vérifier au chargement et au redimensionnement
+    checkTabletNavOverflow();
+    window.addEventListener('resize', debounce(checkTabletNavOverflow, 250));
+    window.addEventListener('orientationchange', () => {
+      setTimeout(checkTabletNavOverflow, 300);
+    });
+  });
+
+  // Fonction debounce pour optimiser les performances 
+  function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  }
+</script>
 </body>
 
 </html>

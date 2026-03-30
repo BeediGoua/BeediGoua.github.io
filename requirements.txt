@@ -1,0 +1,3 @@
+## No Python dependencies are required for this static portfolio.
+## Optional local preview:
+## python -m http.server 8000

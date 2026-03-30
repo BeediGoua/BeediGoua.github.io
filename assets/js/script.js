@@ -245,6 +245,21 @@
   }
 
   /* -----------------------
+     Scroll Progress Bar
+  ----------------------- */
+  function initScrollProgress() {
+    const bar = document.getElementById('scrollProgress');
+    if (!bar) return;
+
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      bar.style.width = scrolled + "%";
+    }, { passive: true });
+  }
+
+  /* -----------------------
      Scroll spy (IntersectionObserver)
   ----------------------- */
   function initScrollSpy() {
@@ -437,6 +452,59 @@
   }
 
   /* -----------------------
+     Project Drawer Logic
+  ----------------------- */
+  function initProjectDrawer() {
+    const drawer = document.getElementById('projectDrawer');
+    const drawerBody = document.getElementById('drawerBody');
+    const closeBtn = document.querySelector('.drawer-close');
+    const overlay = document.querySelector('.drawer-overlay');
+
+    if (!drawer || !drawerBody) return;
+
+    // Open drawer on "Learn More" click
+    document.querySelectorAll('.project-summary').forEach(summary => {
+      summary.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const card = summary.closest('.project-card');
+        const detailsContent = card.querySelector('.project-details-content');
+        const title = card.querySelector('h3').innerText;
+
+        // Populate drawer
+        drawerBody.innerHTML = `
+          <h2>${title}</h2>
+          <div class="drawer-case-study">
+            ${detailsContent.innerHTML}
+          </div>
+        `;
+
+        // Refeather icons if any were injected
+        if (typeof feather !== 'undefined') {
+          feather.replace();
+        }
+
+        drawer.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    const closeDrawer = () => {
+      drawer.classList.remove('active');
+      document.body.style.overflow = '';
+    };
+
+    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+    if (overlay) overlay.addEventListener('click', closeDrawer);
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && drawer.classList.contains('active')) {
+        closeDrawer();
+      }
+    });
+  }
+
+  /* -----------------------
      Interactivité du Dropdown CV (Mobile)
   ----------------------- */
   function initCvDropdown() {
@@ -520,8 +588,10 @@
 
     initI18n();
     initNewMobileMenu();
+    initScrollProgress();
     initScrollSpy();
     initSmoothScroll();
+    initProjectDrawer();
     initReveal();
     initProjectFilters();
     initContactValidation();
