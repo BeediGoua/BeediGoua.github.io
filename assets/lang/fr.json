@@ -1,3 +1,4 @@
+  "project4_details": "<summary>Voir le détail du projet</summary><div class='project-details'><h4 data-i18n='bf_section_challenge'>Le problème</h4><p data-i18n='bf_section_challenge_text'></p><h4 data-i18n='bf_section_solution'>La solution technique</h4><p data-i18n='bf_section_solution_intro'></p><ul><li data-i18n='bf_section_solution_list1'></li><li data-i18n='bf_section_solution_list2'></li><li data-i18n='bf_section_solution_list3'></li></ul><p data-i18n='bf_section_solution_outro'></p><h4 data-i18n='bf_section_results'>Résultats & Impact</h4><ul><li data-i18n='bf_section_results_auc'></li><li data-i18n='bf_section_results_brier'></li><li data-i18n='bf_section_results_f1'></li><li data-i18n='bf_section_results_precision'></li><li data-i18n='bf_section_results_recall'></li><li data-i18n='bf_section_results_parser'></li><li data-i18n='bf_section_results_json'></li></ul></div>",
 {
   "nav_home": "Accueil",
   "nav_about": "À propos",

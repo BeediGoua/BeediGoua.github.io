@@ -157,6 +157,24 @@
       });
     }
     changeLanguage(defaultLang);
+
+    // Ajout : injection dynamique du détail projet BrokerFlow (drawer)
+    setTimeout(() => {
+      const details = document.querySelector('.project-details-content[data-i18n-html="project4_details"]');
+      if (details && typeof window.portfolioAnimations?.initTypingEffect !== 'undefined') {
+        // Réapplique la traduction sur les sous-éléments
+        $$('[data-i18n], [data-i18n-html]', details).forEach(el => {
+          const key = el.getAttribute('data-i18n') || el.getAttribute('data-i18n-html');
+          if (translations[key]) {
+            if (el.hasAttribute('data-i18n-html')) {
+              el.innerHTML = translations[key];
+            } else {
+              el.textContent = translations[key];
+            }
+          }
+        });
+      }
+    }, 500);
   }
 
   /* -----------------------
