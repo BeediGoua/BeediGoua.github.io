@@ -1,3 +1,17 @@
+.drawer-back-btn {
+  font-size: 1rem;
+  padding: 0.5em 0.8em 0.5em 0;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.drawer-back-btn:hover {
+  color: var(--secondary-color, #5b73f5);
+  text-decoration: underline;
+}
 /* =========================================================
    PORTFOLIO — STYLE GLOBAL (version unifiée & optimisée)
    - ADN minimaliste, sobre et pro

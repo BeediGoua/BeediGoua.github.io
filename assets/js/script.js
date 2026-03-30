@@ -489,13 +489,27 @@
         const detailsContent = card.querySelector('.project-details-content');
         const title = card.querySelector('h3').innerText;
 
-        // Populate drawer
+
+        // Ajout du bouton Retour aux projets (drawer)
         drawerBody.innerHTML = `
+          <button class="drawer-back-btn" type="button" style="display:flex;align-items:center;gap:0.5em;margin-bottom:1em;background:none;border:none;color:var(--primary-color);font-weight:600;cursor:pointer;">
+            <i data-feather="arrow-left"></i>
+            <span data-i18n="btn_back_projects">Back to Projects</span>
+          </button>
           <h2>${title}</h2>
           <div class="drawer-case-study">
             ${detailsContent.innerHTML}
           </div>
         `;
+
+        // Ajout du handler pour fermer le drawer
+        const backBtn = drawerBody.querySelector('.drawer-back-btn');
+        if (backBtn) {
+          backBtn.addEventListener('click', () => {
+            drawer.classList.remove('active');
+            document.body.style.overflow = '';
+          });
+        }
 
         // Refeather icons if any were injected
         if (typeof feather !== 'undefined') {
