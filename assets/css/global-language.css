@@ -1,0 +1,42 @@
+
+/* Global language state shared by every page */
+html[data-site-lang="fr"] [data-lang="en"],
+html[data-site-lang="en"] [data-lang="fr"] { display: none !important; }
+
+.global-lang-switch {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2200;
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+  padding: .28rem;
+  border: 1px solid var(--border, rgba(255,255,255,.14));
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--card-bg, #151a30) 88%, transparent);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.22);
+}
+.global-lang-switch button {
+  border: 0;
+  border-radius: 999px;
+  padding: .45rem .7rem;
+  background: transparent;
+  color: var(--text-secondary, #aab2ca);
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+}
+.global-lang-switch button[aria-pressed="true"] {
+  background: linear-gradient(135deg, #18d1b0, #6675ff 72%, #9b5cff);
+  color: #fff;
+}
+[data-set-lang][aria-pressed="true"], .lang-chip[aria-current="true"] {
+  border-color: #19d1b0 !important;
+  color: #20d6b4 !important;
+}
+@media (max-width: 720px) {
+  .global-lang-switch { top: .65rem; right: .65rem; }
+  .global-lang-switch button { padding: .38rem .58rem; font-size: .82rem; }
+}

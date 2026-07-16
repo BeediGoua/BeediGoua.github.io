@@ -1,5 +1,5 @@
 /* =========================================================
-   PORTFOLIO — ANIMATIONS (Hero & UI light)
+   PORTFOLIO - ANIMATIONS (Hero & UI light)
    - Typing effect (multilingue, piloté par i18n)
    - Particules flottantes (légères, respect reduced-motion)
    - Parallax discret du Hero (désactivé mobile/reduced-motion)
@@ -63,7 +63,7 @@
 
   /* =======================================================
      2) PARTICULES FLOTTANTES (héros)
-     - très légères : ~16–40 particules selon viewport
+     - très légères : ~16-40 particules selon viewport
      - rAF unique + deltaTime
      - clean-up complet via stopParticles()
   ======================================================= */

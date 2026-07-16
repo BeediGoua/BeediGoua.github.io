@@ -1,0 +1,34 @@
+{
+  "credit_scoring": {
+    "id": "credit-scoring",
+    "title": "Credit Scoring - Modélisation du risque de défaut",
+    "subtitle": "Étude académique de scoring crédit menée dans le cadre du cursus ENSAI",
+    "badges": "<span class=\"tech-badge-expert\">Régression logistique</span><span class=\"tech-badge-expert\">Random Forest</span><span class=\"tech-badge-expert\">XGBoost</span>",
+    "content": [
+      {
+        "title": "1. Vue d'ensemble",
+        "body": "<p><strong>Problème</strong><br>Le système existant reposait principalement sur l’expertise métier et ne fournissait pas de mesure quantitative homogène du risque associé aux comptes professionnels.</p><p><strong>Approche</strong><br>Développer un modèle interprétable du défaut à douze mois, puis convertir ses coefficients en une grille de score comprise entre 0 et 1 000 et en sept classes homogènes de risque.</p><p><strong>Résultat principal</strong><br>La régression logistique atteint une AUC de 0,784 sur le jeu de test. Les modèles Random Forest et XGBoost améliorent légèrement la discrimination, avec des AUC respectives de 0,800 et 0,798, mais sans gain suffisant pour compenser la perte d’interprétabilité.</p>"
+      },
+      {
+        "title": "2. Données",
+        "body": "<ul><li>532 567 comptes professionnels</li><li>143 variables initiales</li><li>cible : défaut dans les douze mois</li><li>taux de défaut : 12,76 %</li><li>informations clients, transactions et santé financière</li><li>70 % train / 30 % test stratifié</li><li>372 381 observations train et 159 845 test après traitement</li></ul><p><em>Note : La définition du défaut retenue repose notamment sur un franchissement prolongé d’un seuil d’arriérés.</em></p>"
+      },
+      {
+        "title": "3. Préparation des données",
+        "body": "<p><strong>Chaîne de traitement :</strong><br>Base initiale → retrait des variables (95% NA ou constantes) → split stratifié 70/30 → sélection statistique → traitement des valeurs manquantes → discrétisation → vérification de la stabilité → modélisation.</p><p><strong>Méthodes :</strong> V de Cramer, Kruskal-Wallis, corrélations de Pearson/Spearman, imputation KNN (k=10).</p>"
+      },
+      {
+        "title": "4. Modélisation",
+        "body": "<p><strong>Modèle principal :</strong> Une régression logistique a été retenue comme modèle principal afin de combiner discrimination, parcimonie et interprétabilité (9 variables dans le modèle final).</p><p><strong>Challengers :</strong> Random Forest, XGBoost.</p><table style=\"width:100%; border-collapse: collapse; margin-top: 1rem;\"><tr style=\"border-bottom: 1px solid var(--border);\"><th>Modèle</th><th>AUC test</th><th>Gini</th></tr><tr><td>Régression logistique</td><td>0,784</td><td>0,57</td></tr><tr><td>Random Forest</td><td>0,800</td><td>0,60</td></tr><tr style=\"border-bottom: 1px solid var(--border);\"><td>XGBoost</td><td>0,798</td><td>0,59</td></tr></table><p style=\"margin-top: 1rem;\">Les modèles d’ensemble obtiennent un gain limité. La régression logistique reste particulièrement adaptée à la construction d’une grille de score interprétable.</p>"
+      },
+      {
+        "title": "5. Grille de score",
+        "body": "<ul><li>Échelle de 0 à 1 000 (score élevé = risque estimé plus faible)</li><li>Conversion des coefficients logistiques en pondérations</li><li>Sept classes de risque (CHR1 à CHR7)</li></ul><table style=\"width:100%; border-collapse: collapse; margin-top: 1rem;\"><tr style=\"border-bottom: 1px solid var(--border);\"><th>Classe</th><th>Intervalle</th><th>Taux de défaut</th></tr><tr><td>CHR1</td><td>]743 ; 1000]</td><td>2,50 %</td></tr><tr><td>CHR2</td><td>]647 ; 743]</td><td>6,46 %</td></tr><tr><td>CHR3</td><td>]580 ; 647]</td><td>9,16 %</td></tr><tr><td>CHR4</td><td>]511 ; 580]</td><td>13,85 %</td></tr><tr><td>CHR5</td><td>]409 ; 511]</td><td>20,52 %</td></tr><tr><td>CHR6</td><td>]320 ; 409]</td><td>32,75 %</td></tr><tr style=\"border-bottom: 1px solid var(--border);\"><td>CHR7</td><td>[0 ; 320]</td><td>58,39 %</td></tr></table>"
+      },
+      {
+        "title": "6. Limites",
+        "body": "<ul><li>Seuils de discrétisation perfectibles</li><li>Meilleure classification des non-défauts que des défauts</li><li>Faible amélioration des modèles complexes</li><li>Absence de validation en production</li><li>Risque d’évolution temporelle des modalités</li><li>Données confidentielles non publiables</li></ul>"
+      }
+    ]
+  }
+}

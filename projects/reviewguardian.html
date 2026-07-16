@@ -1,182 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<head>
-            <style>
-                body.project-detail-page { opacity: 0; transition: opacity 0.2s; }
-            </style>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ReviewGuardian | Project Detail</title>
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="stylesheet" href="../assets/css/animations.css" />
-    <link rel="stylesheet" href="../assets/css/project-detail.css" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-</head>
-
-<body class="project-detail-page">
-            <div style="position:fixed;top:1.2em;right:2em;z-index:1000;">
-                <select id="langSwitcherProject" aria-label="Language switcher">
-                    <option value="en">EN</option>
-                    <option value="fr">FR</option>
-                </select>
-            </div>
-    <!-- Background Blobs -->
-    <div class="blob-container">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-    </div>
-
-    <nav class="back-nav">
-        <button class="back-link" id="backToProjectsBtn" type="button" style="background:none;border:none;display:flex;align-items:center;gap:0.5em;font-size:1rem;color:var(--primary-color);font-weight:600;cursor:pointer;">
-            <i data-feather="arrow-left" class="project-icon-md project-icon-primary"></i> <span data-i18n="btn_back_projects">Back to Projects</span>
-        </button>
-    </nav>
-
-    <section class="project-detail-hero">
-        <div class="project-header-container">
-            <h1 class="project-title-xl" data-i18n="project1_title">ReviewGuardian</h1>
-            <div class="project-hero-meta project-hero-meta-spaced">
-                <div class="project-badges-top project-badges-top-tight">
-                    <span class="tech-badge-expert"><i data-feather="shield-alert" class="project-icon-sm"></i> <span data-i18n="review_badge_security">Security</span></span>
-                    <span class="tech-badge-expert"><i data-feather="layers" class="project-icon-sm"></i> <span data-i18n="review_badge_scraping">Web Scraping</span></span>
-                    <span class="tech-badge-expert"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /> <span data-i18n="bf_stack_python">Python</span></span>
-                    <span class="tech-badge-expert"><i data-feather="database" class="project-icon-sm"></i> <span data-i18n="review_badge_mongodb">MongoDB</span></span>
-                    <span class="tech-badge-expert"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" class="project-logo-sm" /> <span data-i18n="review_badge_nodejs">Node.js</span></span>
-                </div>
-                <div class="project-action-bar">
-                    <a href="https://reviewguardian.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn-expert btn-cyan-glow">
-                        <span data-i18n="btn_live_demo">View Live</span> <i data-feather="play-circle"
-                            class="project-icon-md"></i>
-                    </a>
-                    <a href="https://github.com/BeediGoua/ReviewGuardian" target="_blank" rel="noopener noreferrer" class="btn-expert btn-purple-glow">
-                        <span data-i18n="btn_github_repo">View on GitHub</span> <i data-feather="github"
-                            class="project-icon-md"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="project-detail-container">
-        <div class="case-study-card reveal-up">
-            <h2>The Challenge</h2>
-            <p>
+<html lang="fr">
+<head><script>(function(){try{var u=new URL(location.href),q=u.searchParams.get('lang'),s=localStorage.getItem('portfolioLanguage')||localStorage.getItem('lang'),f=(location.pathname.split('/').pop()||'').toLowerCase(),i=f==='index-en.html'?'en':'fr',l=(q==='en'||q==='fr')?q:((s==='en'||s==='fr')?s:i);document.documentElement.lang=l;document.documentElement.dataset.siteLang=l;document.documentElement.dataset.expLang=l;document.documentElement.dataset.projLang=l;localStorage.setItem('portfolioLanguage',l);localStorage.setItem('lang',l);}catch(e){}})();</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-page-title-en="ReviewGuardian - Overview | Goua Beedi" data-page-title-fr="ReviewGuardian - Présentation | Goua Beedi">ReviewGuardian | Project Detail</title>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<link href="../assets/css/animations.css" rel="stylesheet"/>
+<link href="../assets/css/expert-cards.css" rel="stylesheet"/>
+<style>
+        .project-detail-hero { padding: 6rem 1rem 3rem; background: var(--card-bg-hero); border-bottom: 1px solid var(--border); text-align: center; }
+        .project-title-xl { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--text-color); margin-bottom: 1rem; }
+        .project-detail-container { max-width: 900px; margin: 0 auto; padding: 2rem 1rem; }
+        .case-study-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; margin-bottom: 2rem; }
+        .case-study-card h2 { font-size: 1.5rem; color: var(--accent-color); margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+        .case-study-card h3 { font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--text-color); }
+        .case-study-card p, .case-study-card ul { margin-bottom: 1rem; color: var(--text-secondary); }
+        .case-study-card ul { list-style-type: disc; padding-left: 1.5rem; }
+        .tech-badges-top { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-bottom: 2rem; }
+        .back-nav { position: fixed; top: 1rem; left: 1rem; z-index: 1000; }
+        .btn-expert { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; color: var(--text-color); font-weight: 600; cursor: pointer; text-decoration: none; }
+        .btn-expert:hover { border-color: var(--primary-color); }
+    </style>
+<link href="../assets/css/detail-polish.css" rel="stylesheet"/>
+<link href="../assets/css/unified-icons-metrics.css" rel="stylesheet"/><link href="../assets/css/global-language.css" rel="stylesheet"/><link href="../assets/css/visual-system-v3.css" rel="stylesheet"/></head>
+<body class="project-detail-page detail-page">
+<div class="blob-container">
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+</div><nav aria-hidden="true" class="legacy-sticky-titlebar"><a class="nav-brand" href="../index.html#hero"><span class="brand-monogram">GB</span><span>GOUA BEEDI</span></a>
+<a class="legacy-sticky-back" data-smart-back="true" href="autres-projets.html"><span data-lang="fr">Retour aux autres projets</span><span data-lang="en">Back to other projects</span></a>
+<div class="legacy-sticky-center"><div class="legacy-sticky-heading">ReviewGuardian</div><div class="legacy-sticky-techs tech-logo-row"><span class="compact-tech-badge" data-tech="Python" title="Python"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/><span>Python</span></span><span class="compact-tech-badge" data-tech="FastAPI" title="FastAPI"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"/><span>FastAPI</span></span><span class="compact-tech-badge" data-tech="Docker" title="Docker"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"/><span>Docker</span></span><span class="compact-tech-badge" data-tech="Streamlit" title="Streamlit"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"/><span>Streamlit</span></span></div></div>
+</nav>
+<nav class="back-nav">
+<a class="btn-expert" data-smart-back="true" href="autres-projets.html"><i data-feather="arrow-left" style="width: 18px;"></i><span data-lang="fr">Retour aux autres projets</span><span data-lang="en">Back to other projects</span></a>
+</nav><div aria-label="Language switcher" class="global-lang-switch"><button data-set-lang="fr" type="button">FR</button><button data-set-lang="en" type="button">EN</button></div>
+<section class="project-detail-hero">
+<div class="project-header-container">
+<h1 class="project-title-xl">ReviewGuardian</h1>
+<p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem;"><span data-lang="fr">Modération locale et explicable des avis clients</span><span data-lang="en">Local and explainable customer-review moderation</span></p>
+<div class="tech-badges-top">
+<span class="tech-badge-expert" data-tech="NLP"><i aria-hidden="true" class="tech-concept-icon" data-feather="message-square"></i>NLP</span><span class="tech-badge-expert" data-tech="Classification"><i aria-hidden="true" class="tech-concept-icon" data-feather="layers"></i>Classification</span>
+</div>
+</div>
+</section>
+<div class="project-detail-container"><div data-lang="fr">
+<div class="case-study-card reveal-up"><h2>Le défi</h2><p>Les plateformes doivent modérer de grands volumes d’avis tout en protégeant les données utilisateurs. L’objectif était de détecter les contenus toxiques localement, avec des prédictions compréhensibles et une intégration simple.</p></div>
+<div class="case-study-card reveal-up"><h2>La solution technique</h2><p>ReviewGuardian combine des représentations TF-IDF, des variables structurées et plusieurs modèles de classification. LIME et SHAP fournissent des explications locales et globales, tandis que FastAPI, Streamlit et Docker rendent le système testable et déployable.</p><ul><li>Pipeline de préparation et d’entraînement.</li><li>Prédiction unitaire et traitement par lot.</li><li>Explicabilité locale avec LIME et SHAP.</li><li>API, interface de démonstration et monitoring.</li></ul></div>
+<div class="case-study-card reveal-up"><h2>Résultats et limites</h2><ul><li>Corpus équilibré de 7 296 avis documenté dans le dépôt.</li><li>Interface de modération et visualisation des explications.</li><li>Architecture locale limitant l’exposition des données.</li><li>Les performances doivent être interprétées dans le contexte du corpus utilisé.</li></ul></div>
+</div><div data-lang="en">
+<div class="case-study-card reveal-up">
+<h2>The Challenge</h2>
+<p>
                 E-commerce sellers and marketplace operators face a critical threat: <strong>malicious reviews</strong>.
                 Competitors, coordinated actors, and bots post fake 1-star or 5-star reviews to manipulate product
                 rankings or damage reputations. Traditional review moderation is manual, slow, and prone to errors.
             </p>
-            <p>
-                The goal was to create an intelligent system that detects suspicious review patterns—bots,
-                coordinated attacks, and fake accounts—without requiring extensive labeled training data.
+<p>
+                The goal was to create an intelligent system that detects suspicious review patterns-bots,
+                coordinated attacks, and fake accounts-without requiring extensive labeled training data.
             </p>
-        </div>
-
-        <div class="case-study-card reveal-up">
-            <h2>The Technical Solution</h2>
-            <p>
+</div>
+<div class="case-study-card reveal-up">
+<h2>The Technical Solution</h2>
+<p>
                 ReviewGuardian combines <strong>behavioral analysis</strong>, <strong>NLP anomaly detection</strong>,
                 and <strong>graph-based clustering</strong> to identify suspicious review patterns without heavy
                 supervision.
             </p>
-            <div class="architecture-viz">
-                <div class="schema-placeholder">
-                    <div class="schema-node accent">Review Stream (Scraped + Real-Time)</div>
-                    <div class="schema-arrow">↓</div>
-                    <div class="schema-row">
-                        <div class="schema-node">Behavioral Profiling</div>
-                        <div class="schema-node">NLP Embeddings (Outlier Detection)</div>
-                    </div>
-                    <div class="schema-arrow">↓</div>
-                    <div class="schema-row">
-                        <div class="schema-node">Account Clustering (Graph-Based)</div>
-                        <div class="schema-node">Temporal Pattern Analysis</div>
-                    </div>
-                    <div class="schema-arrow">↓</div>
-                    <div class="schema-node accent">Suspicion Score & Alerts</div>
-                    <div class="schema-arrow">↓</div>
-                    <div class="schema-node">MongoDB Storage + Dashboard</div>
-                </div>
-            </div>
-            <p>
+<div class="architecture-viz">
+<div class="schema-placeholder">
+<div class="schema-node accent">Review Stream (Scraped + Real-Time)</div>
+<div class="schema-arrow">↓</div>
+<div class="schema-row">
+<div class="schema-node">Behavioral Profiling</div>
+<div class="schema-node">NLP Embeddings (Outlier Detection)</div>
+</div>
+<div class="schema-arrow">↓</div>
+<div class="schema-row">
+<div class="schema-node">Account Clustering (Graph-Based)</div>
+<div class="schema-node">Temporal Pattern Analysis</div>
+</div>
+<div class="schema-arrow">↓</div>
+<div class="schema-node accent">Suspicion Score &amp; Alerts</div>
+<div class="schema-arrow">↓</div>
+<div class="schema-node">MongoDB Storage + Dashboard</div>
+</div>
+</div>
+<p>
                 Key innovations:
             </p>
-            <ul>
-                <li><strong>Zero-Labeled Learning</strong>: Uses isolation forests and density estimation instead of
+<ul>
+<li><strong>Zero-Labeled Learning</strong>: Uses isolation forests and density estimation instead of
                     supervised classification.</li>
-                <li><strong>Cross-Platform Detection</strong>: Identifies coordinated campaigns across multiple
+<li><strong>Cross-Platform Detection</strong>: Identifies coordinated campaigns across multiple
                     accounts/platforms.</li>
-                <li><strong>Temporal Awareness</strong>: Flags synchronized review posting (bot behavior).</li>
-            </ul>
-        </div>
+<li><strong>Temporal Awareness</strong>: Flags synchronized review posting (bot behavior).</li>
+</ul>
+</div>
+<div class="case-study-card reveal-up">
+<h2>The Results &amp; Impact</h2>
+<ul>
+<li><strong>70%+ Detection Rate</strong> on synthetic bot campaigns, minimal false positives.</li>
+<li><strong>Real-Time Alerting</strong>: Suspicious reviews flagged within minutes of posting.</li>
+<li><strong>Marketplace Trust</strong>: Businesses can now focus on genuine customer feedback.</li>
+<li><strong>Scalable &amp; Adaptable</strong>: Easily extended to new platforms and review types.</li>
+</ul>
+</div>
+<div class="tech-stack-section reveal-up">
+<h3 data-i18n="project_techs">Full Tech Stack</h3>
+<div class="tech-stack-grid">
+<span class="tech-badge-expert" data-tech="Python" title="Python"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/>
 
-        <div class="case-study-card reveal-up">
-            <h2>The Results & Impact</h2>
-            <ul>
-                <li><strong>70%+ Detection Rate</strong> on synthetic bot campaigns, minimal false positives.</li>
-                <li><strong>Real-Time Alerting</strong>: Suspicious reviews flagged within minutes of posting.</li>
-                <li><strong>Marketplace Trust</strong>: Businesses can now focus on genuine customer feedback.</li>
-                <li><strong>Scalable & Adaptable</strong>: Easily extended to new platforms and review types.</li>
-            </ul>
-        </div>
-
-        <div class="tech-stack-section reveal-up">
-            <h3 data-i18n="project_techs">Full Tech Stack</h3>
-            <div class="tech-stack-grid">
-                <span class="tech-badge-expert">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                        alt="Python" />
                     Python
                 </span>
-                <span class="tech-badge-expert">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg"
-                        alt="Node.js" class="project-logo-sm" />
+<span class="tech-badge-expert" data-tech="Node.js" title="Node.js"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"/>
+<img alt="Node.js" class="project-logo-sm" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg"/>
                     Node.js
                 </span>
-                <span class="tech-badge-expert">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-                        alt="MongoDB" />
+<span class="tech-badge-expert" data-tech="MongoDB" title="MongoDB"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"/>
+
                     MongoDB
                 </span>
-                <span class="tech-badge-expert">
-                    <i data-feather="layers" class="project-icon-sm"></i>
+<span class="tech-badge-expert" data-tech="Selenium" title="Selenium"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg"/>
+
                     Selenium
                 </span>
-                <span class="tech-badge-expert">
-                    <i data-feather="brain" class="project-icon-sm"></i>
+<span class="tech-badge-expert" data-tech="Scikit-Learn" title="Scikit-Learn"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg"/>
+
                     Scikit-Learn
                 </span>
-                <span class="tech-badge-expert">
-                    <i data-feather="zap" class="project-icon-sm"></i>
+<span class="tech-badge-expert" data-tech="Isolation Forest"><i aria-hidden="true" class="tech-concept-icon" data-feather="git-branch"></i>
+
                     Isolation Forest
                 </span>
-            </div>
-        </div>
-    </div>
-
-    <footer class="project-page-footer">
-        <p>&copy; 2025 Goua Beedi Henri.</p>
-    </footer>
-
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script src="../assets/js/project-script.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const select = document.getElementById('langSwitcherProject');
-                const html = document.documentElement;
-                const mainBody = document.body;
-                const lang = localStorage.getItem('lang') || 'fr';
-                select.value = lang;
-                html.lang = lang;
-                setTimeout(() => { mainBody.style.opacity = 1; }, 350);
-                select.addEventListener('change', (e) => {
-                    localStorage.setItem('lang', e.target.value);
-                    html.lang = e.target.value;
-                    window.location.reload();
-                });
-            });
-        </script>
-</body>
+</div>
+</div>
+</div></div>
+<footer style="text-align: center; padding: 2rem; border-top: 1px solid var(--border); margin-top: 3rem;">
+<p style="color: var(--text-secondary);">© 2026 Goua Beedi. Portfolio structuré.</p>
+</footer>
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.feather) { feather.replace(); }
+        });
+    </script>
+<script src="../assets/js/legacy-project-detail.js"></script><script src="../assets/js/i18n-dictionaries.js"></script><script src="../assets/js/global-language.js"></script></body>
 </html>
