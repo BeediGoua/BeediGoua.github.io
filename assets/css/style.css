@@ -13,7 +13,7 @@
   text-decoration: underline;
 }
 /* =========================================================
-   PORTFOLIO — STYLE GLOBAL (version unifiée & optimisée)
+   PORTFOLIO - STYLE GLOBAL (version unifiée & optimisée)
    - ADN minimaliste, sobre et pro
    - Animations discrètes
    - Responsive mobile/tablette/desktop
@@ -860,9 +860,7 @@ header {
 }
 
 /* Custom hero element styles (moved from inline styles) */
-.hero img {
-  border-radius: 50%;
-  box-shadow: 0 2px 12px rgba(74, 144, 226, 0.15);
+.hero-portrait {
   margin-bottom: 1.2rem;
   object-fit: cover;
 }
@@ -4797,4 +4795,85 @@ body.light-theme .mobile-menu-control-item select {
 body.light-theme .mobile-menu-control-item .theme-toggle {
   background: white;
   border-color: rgba(203, 213, 225, 0.4);
+}
+
+/* REAL TECHNOLOGY LOGOS - GLOBAL */
+.tech-logo {
+  width: 1.18rem;
+  height: 1.18rem;
+  object-fit: contain;
+  flex: 0 0 auto;
+  display: inline-block;
+  vertical-align: middle;
+  filter: none;
+}
+.compact-tech-badge .tech-logo,
+.tech-pill .tech-logo,
+.tech-badge-expert .tech-logo,
+.tech-stack-chip .tech-logo,
+.logo-chip-row span .tech-logo,
+.other-project-tags span .tech-logo {
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-right: .42rem;
+}
+.compact-tech-badge,
+.tech-pill,
+.tech-badge-expert,
+.tech-stack-chip,
+.logo-chip-row > span,
+.other-project-tags > span {
+  display: inline-flex;
+  align-items: center;
+  gap: .15rem;
+}
+.tech-concept-icon {
+  width: 1.08rem;
+  height: 1.08rem;
+  margin-right: .4rem;
+  color: var(--accent-mint, #20d6b5);
+  flex: 0 0 auto;
+}
+.tech-stack-row {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: .55rem;
+  margin-top: .9rem;
+}
+.tech-stack-chip {
+  border: 1px solid rgba(120,136,255,.28);
+  background: rgba(255,255,255,.045);
+  border-radius: 999px;
+  padding: .48rem .72rem;
+  color: var(--text-color, #f5f7ff);
+  font-weight: 650;
+  font-size: .86rem;
+  line-height: 1;
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+.tech-stack-chip:hover,
+.logo-chip-row > span:hover,
+.compact-tech-badge:hover {
+  transform: translateY(-2px);
+  border-color: rgba(32,214,181,.52);
+  background: rgba(32,214,181,.08);
+}
+.skill-category-logo {
+  width: 2.15rem;
+  height: 2.15rem;
+  object-fit: contain;
+  display: block;
+}
+/* Keep monochrome logos readable in dark mode. */
+html:not([data-theme="light"]) img[src*="github-original"],
+html:not([data-theme="light"]) img[src*="ollama"],
+html:not([data-theme="light"]) img[src*="latex-original"] {
+  background: rgba(255,255,255,.9);
+  border-radius: 5px;
+  padding: 2px;
+}
+@media (max-width: 720px) {
+  .tech-logo { width: 1rem; height: 1rem; }
+  .tech-stack-chip { font-size: .78rem; padding: .42rem .62rem; }
+  .skill-category-logo { width: 1.8rem; height: 1.8rem; }
 }

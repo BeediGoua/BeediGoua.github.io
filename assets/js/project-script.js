@@ -69,14 +69,14 @@
                 if (translations[key]) el.innerHTML = translations[key];
             });
 
-            localStorage.setItem('lang', lang);
+            localStorage.setItem('portfolioLanguage', lang); localStorage.setItem('lang', lang);
         } catch (err) {
             console.error('Erreur chargement langue:', err);
         }
     }
 
     function initLanguage() {
-        const defaultLang = localStorage.getItem('lang') || 'en';
+        const defaultLang = localStorage.getItem('portfolioLanguage') || localStorage.getItem('portfolioLanguage') || localStorage.getItem('lang') || 'fr';
         changeLanguage(defaultLang);
     }
 
@@ -117,7 +117,7 @@
                 // Réappliquer feather icons et traductions
                 safeFeatherReplace();
                 const span = stickyBackButton.querySelector('[data-i18n="btn_back_projects"]');
-                const savedLang = localStorage.getItem('lang') || 'en';
+                const savedLang = localStorage.getItem('portfolioLanguage') || localStorage.getItem('portfolioLanguage') || localStorage.getItem('lang') || 'fr';
 
                 fetch(`../assets/lang/${savedLang}.json`)
                     .then(r => r.json())

@@ -1,5 +1,5 @@
 /* =========================================================
-   PORTFOLIO — SCRIPT PRINCIPAL (propre & minimal)
+   PORTFOLIO - SCRIPT PRINCIPAL (propre & minimal)
    - Filtres projets
    - Reveal au scroll (IO)
    - i18n (texte + HTML)
@@ -114,7 +114,7 @@
       }
 
       // Persistance & <html lang="..">
-      localStorage.setItem('lang', lang);
+      localStorage.setItem('portfolioLanguage', lang); localStorage.setItem('lang', lang);
       document.documentElement.lang = lang;
 
       // Sync sélecteurs si dispo (desktop et mobile)
@@ -256,7 +256,7 @@
     }
 
     // Synchroniser les valeurs initiales
-    const currentLang = localStorage.getItem('lang') || 'fr';
+    const currentLang = localStorage.getItem('portfolioLanguage') || localStorage.getItem('lang') || 'fr';
     if (langSwitcherMobile2) {
       langSwitcherMobile2.value = currentLang;
     }

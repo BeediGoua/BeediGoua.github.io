@@ -1,0 +1,59 @@
+
+/* Unified visual language for professional experiences and selected projects */
+:root{--detail-mint:#19d3ae;--detail-mint-soft:rgba(25,211,174,.09);--detail-mint-border:rgba(25,211,174,.25)}
+.proj-section,.exp-section,.project-detail-section,.case-study-card{position:relative;overflow:hidden;border:1px solid var(--border);border-radius:22px;background:linear-gradient(145deg,rgba(255,255,255,.032),rgba(25,211,174,.022));box-shadow:0 14px 34px rgba(0,0,0,.12)}
+.proj-section:before,.exp-section:before,.project-detail-section:before,.case-study-card:before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,var(--detail-mint),var(--primary-color),var(--accent-purple));opacity:.92}
+.proj-section>h2,.exp-section h2,.project-detail-section>h2,.case-study-card>h2{display:flex;align-items:center;gap:12px}
+.proj-section>h2:before,.exp-section h2:before,.project-detail-section>h2:before,.case-study-card>h2:before{content:"✦";display:grid;place-items:center;width:38px;height:38px;flex:0 0 38px;border-radius:12px;background:linear-gradient(135deg,var(--detail-mint-soft),rgba(91,115,245,.15));border:1px solid var(--detail-mint-border);color:var(--detail-mint);font-size:1rem;box-shadow:0 8px 20px rgba(25,211,174,.08)}
+.proj-overview-card,.challenge-card,.metric-card,.proj-meta-card,.exp-meta-card{transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.proj-overview-card:hover,.challenge-card:hover,.metric-card:hover,.proj-meta-card:hover,.exp-meta-card:hover{transform:translateY(-3px);border-color:var(--detail-mint-border);box-shadow:0 14px 28px rgba(0,0,0,.12)}
+.workflow-step,.tech-pill{border-color:var(--detail-mint-border)!important}.workflow-step{background:linear-gradient(145deg,rgba(25,211,174,.075),rgba(91,115,245,.06))!important}.workflow-arrow{color:var(--detail-mint)!important}
+.notice-box,.notice{border-left-color:var(--detail-mint)!important;background:linear-gradient(90deg,rgba(25,211,174,.09),rgba(91,115,245,.04))!important}
+.lesson{border-left:3px solid var(--detail-mint);padding:1rem 1.2rem;border-radius:0 14px 14px 0;background:var(--detail-mint-soft)}
+body.light-theme .proj-section,body.light-theme .exp-section,body.light-theme .project-detail-section,body.light-theme .case-study-card{background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(25,211,174,.035))}
+@media(max-width:640px){.proj-section>h2:before,.exp-section h2:before,.project-detail-section>h2:before,.case-study-card>h2:before{width:32px;height:32px;flex-basis:32px;border-radius:10px}}
+
+
+/* ===== Compact technology rows with recognizable logos ===== */
+.tech-logo-row{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.compact-tech-badge{display:inline-flex;align-items:center;gap:7px;min-height:34px;padding:7px 11px;border-radius:999px;border:1px solid var(--project-badge-border);background:var(--project-badge-bg);color:var(--project-badge-text);font-weight:750;font-size:.82rem;line-height:1;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+.compact-tech-badge img,.compact-tech-badge svg,.compact-tech-badge i{width:17px;height:17px;flex:0 0 17px;object-fit:contain}
+.exp-hero-techs,.proj-hero-techs{margin-top:20px;justify-content:flex-start}
+.proj-hero-techs{justify-content:center}
+.exp-sticky-center,.proj-sticky-center{min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.exp-sticky-techs,.proj-sticky-techs{justify-content:center;flex-wrap:nowrap;min-width:0;overflow:hidden}
+.exp-sticky-techs .compact-tech-badge,.proj-sticky-techs .compact-tech-badge{min-height:27px;padding:5px 8px;font-size:.7rem}
+.exp-sticky-techs .compact-tech-badge img,.exp-sticky-techs .compact-tech-badge svg,.proj-sticky-techs .compact-tech-badge img,.proj-sticky-techs .compact-tech-badge svg{width:13px;height:13px;flex-basis:13px}
+
+/* ===== Legacy other-project pages: hero scrolls, only compact bar stays fixed ===== */
+body.project-detail-page .project-detail-hero{position:relative!important;top:auto!important;z-index:2!important;padding:80px 0 30px!important;background:transparent!important;box-shadow:none!important;border-bottom:0!important;backdrop-filter:none!important}
+body.project-detail-page .project-detail-hero.is-sticky{padding:80px 0 30px!important;background:transparent!important;box-shadow:none!important;border-bottom:0!important;backdrop-filter:none!important}
+body.project-detail-page .project-detail-hero.is-sticky .project-header-container{flex-direction:column!important;justify-content:center!important;max-width:1000px!important}
+body.project-detail-page .project-detail-hero.is-sticky .project-title-xl{font-size:clamp(2.5rem,6vw,4.5rem)!important;margin-bottom:20px!important}
+body.project-detail-page .project-detail-hero.is-sticky .project-hero-meta{flex-direction:column!important;gap:0!important;margin-top:20px!important}
+body.project-detail-page .project-detail-hero.is-sticky .project-badges-top{margin-bottom:15px!important;gap:10px!important}
+body.project-detail-page .project-detail-hero.is-sticky .project-action-bar{margin-bottom:20px!important;gap:20px!important}
+body.project-detail-page .project-detail-hero.is-sticky .tech-badge-expert{padding:6px 14px!important;font-size:.85rem!important}
+body.project-detail-page .project-detail-hero.is-sticky .btn-expert{padding:10px 20px!important;font-size:.95rem!important}
+.legacy-sticky-titlebar{position:fixed;top:0;left:0;right:0;z-index:1500;min-height:70px;display:grid;grid-template-columns:minmax(150px,1fr) minmax(0,4fr) minmax(150px,1fr);align-items:center;gap:16px;padding:8px clamp(16px,3vw,40px);background:rgba(15,15,35,.95);border-bottom:1px solid var(--glass-border);box-shadow:0 12px 34px rgba(3,7,18,.26);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);opacity:0;transform:translateY(-100%);pointer-events:none;transition:opacity .22s ease,transform .22s ease}
+.light-theme .legacy-sticky-titlebar{background:rgba(248,250,252,.96)}
+.legacy-sticky-titlebar.is-visible{opacity:1;transform:translateY(0);pointer-events:auto}
+.legacy-sticky-back{justify-self:start;display:inline-flex;align-items:center;gap:7px;min-height:40px;padding:8px 13px;border:1px solid var(--project-badge-border);border-radius:999px;background:var(--project-badge-bg);color:var(--project-badge-text);font-weight:800;text-decoration:none}
+.legacy-sticky-center{grid-column:2;min-width:0;display:flex;flex-direction:column;align-items:center;gap:5px}
+.legacy-sticky-heading{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:"Bricolage Grotesque",var(--font-main);font-size:clamp(1.05rem,2vw,1.35rem);font-weight:850;background:linear-gradient(135deg,var(--text-color) 10%,var(--primary-color) 72%,var(--accent-purple));-webkit-background-clip:text;background-clip:text;color:transparent}
+.legacy-sticky-techs{justify-content:center;flex-wrap:nowrap;max-width:100%;overflow:hidden}
+.legacy-sticky-techs .compact-tech-badge{min-height:27px;padding:5px 8px;font-size:.7rem}
+.legacy-sticky-techs .compact-tech-badge img,.legacy-sticky-techs .compact-tech-badge svg{width:13px;height:13px;flex-basis:13px}
+
+@media(max-width:760px){
+ .compact-tech-badge{font-size:.76rem;padding:6px 9px}
+ .exp-sticky-techs .compact-tech-badge:nth-child(n+3),.proj-sticky-techs .compact-tech-badge:nth-child(n+3),.legacy-sticky-techs .compact-tech-badge:nth-child(n+3){display:none}
+ .legacy-sticky-titlebar{grid-template-columns:auto minmax(0,1fr);min-height:62px;padding:8px 10px}
+ .legacy-sticky-center{grid-column:2}.legacy-sticky-back span{display:none}
+}
+@media(max-width:500px){
+ .exp-sticky-techs .compact-tech-badge:nth-child(n+2),.proj-sticky-techs .compact-tech-badge:nth-child(n+2),.legacy-sticky-techs .compact-tech-badge:nth-child(n+2){display:none}
+ .exp-hero-techs,.proj-hero-techs{gap:7px}
+}
+.compact-tech-badge .tech-symbol{width:17px;height:17px;display:inline-grid;place-items:center;flex:0 0 17px;color:var(--detail-mint);font-size:.92rem;font-weight:900;line-height:1}
+.exp-sticky-techs .tech-symbol,.proj-sticky-techs .tech-symbol,.legacy-sticky-techs .tech-symbol{width:13px;height:13px;flex-basis:13px;font-size:.72rem}
