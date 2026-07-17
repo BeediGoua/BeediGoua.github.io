@@ -1,185 +1,675 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head><script>(function(){try{var u=new URL(location.href),q=u.searchParams.get('lang'),s=localStorage.getItem('portfolioLanguage')||localStorage.getItem('lang'),f=(location.pathname.split('/').pop()||'').toLowerCase(),i=f==='index-en.html'?'en':'fr',l=(q==='en'||q==='fr')?q:((s==='en'||s==='fr')?s:i);document.documentElement.lang=l;document.documentElement.dataset.siteLang=l;document.documentElement.dataset.expLang=l;document.documentElement.dataset.projLang=l;localStorage.setItem('portfolioLanguage',l);localStorage.setItem('lang',l);}catch(e){}})();</script>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport"/>
-<meta content="Goua Beedi’s Data Science portfolio: credit scoring, RAG evaluation, multi-source data and applied statistics." name="description"/>
-<meta content="Goua Beedi" name="author"/>
-<meta content="#23243a" name="theme-color"/>
-<title data-page-title-en="Goua Beedi | Data Scientist" data-page-title-fr="Goua Beedi | Data Scientist">Goua Beedi | Data Scientist</title>
-<link href="assets/img/favicon.png" rel="icon" type="image/png"/>
-<link href="https://beedigoua.github.io/" rel="canonical"/>
-<meta content="Goua Beedi - Data Scientist" property="og:title"/>
-<meta content="Machine learning appliqué, statistiques, scoring et évaluation de systèmes d'IA." property="og:description"/>
-<meta content="assets/img/hero-bg.jpg" property="og:image"/>
-<meta content="https://beedigoua.github.io/" property="og:url"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Goua Beedi","url":"https://beedigoua.github.io/","jobTitle":"Data Scientist","alumniOf":[{"@type":"CollegeOrUniversity","name":"ENSAI"},{"@type":"CollegeOrUniversity","name":"Sorbonne Université"}]}</script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet"/>
-<link href="assets/css/style.css" rel="stylesheet"/>
-<link href="assets/css/animations.css" rel="stylesheet"/>
-<link href="assets/css/expert-cards.css" rel="stylesheet"/>
-<link href="assets/css/content-refinement.css" rel="stylesheet"/>
-<link href="assets/css/homepage-polish.css" rel="stylesheet"/><link href="assets/css/global-language.css" rel="stylesheet"/><link href="assets/css/visual-system-v3.css" rel="stylesheet"/></head>
+
+<head>
+  <script>(function () { try { var u = new URL(location.href), q = u.searchParams.get('lang'), s = localStorage.getItem('portfolioLanguage') || localStorage.getItem('lang'), f = (location.pathname.split('/').pop() || '').toLowerCase(), i = f === 'index-en.html' ? 'en' : 'fr', l = (q === 'en' || q === 'fr') ? q : ((s === 'en' || s === 'fr') ? s : i); document.documentElement.lang = l; document.documentElement.dataset.siteLang = l; document.documentElement.dataset.expLang = l; document.documentElement.dataset.projLang = l; localStorage.setItem('portfolioLanguage', l); localStorage.setItem('lang', l); } catch (e) { } })();</script>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport" />
+  <meta
+    content="Goua Beedi’s Data Science portfolio: credit scoring, RAG evaluation, multi-source data and applied statistics."
+    name="description" />
+  <meta content="Goua Beedi" name="author" />
+  <meta content="#23243a" name="theme-color" />
+  <title data-page-title-en="Goua Beedi | Data Scientist" data-page-title-fr="Goua Beedi | Data Scientist">Goua Beedi |
+    Data Scientist</title>
+  <link href="assets/img/favicon.png" rel="icon" type="image/png" />
+  <link href="https://beedigoua.github.io/" rel="canonical" />
+  <meta content="Goua Beedi - Data Scientist" property="og:title" />
+  <meta content="Machine learning appliqué, statistiques, scoring et évaluation de systèmes d'IA."
+    property="og:description" />
+  <meta content="assets/img/hero-bg.jpg" property="og:image" />
+  <meta content="https://beedigoua.github.io/" property="og:url" />
+  <meta content="summary_large_image" name="twitter:card" />
+  <script
+    type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Goua Beedi","url":"https://beedigoua.github.io/","jobTitle":"Data Scientist","alumniOf":[{"@type":"CollegeOrUniversity","name":"ENSAI"},{"@type":"CollegeOrUniversity","name":"Sorbonne Université"}]}</script>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap"
+    rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="assets/css/animations.css" rel="stylesheet" />
+  <link href="assets/css/expert-cards.css" rel="stylesheet" />
+  <link href="assets/css/content-refinement.css" rel="stylesheet" />
+  <link href="assets/css/homepage-polish.css" rel="stylesheet" />
+  <link href="assets/css/global-language.css" rel="stylesheet" />
+  <link href="assets/css/visual-system-v3.css" rel="stylesheet" />
+</head>
+
 <body>
-<div class="blob-container"><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div></div>
-<div id="scrollProgress"></div>
-<header>
-<nav class="reveal-up" id="mainNav"><a class="nav-brand" href="#hero"><span class="brand-monogram">GB</span><span>GOUA BEEDI</span></a>
-<div aria-label="Language switcher" class="nav-language-switch"><a class="lang-chip" data-set-lang="fr" href="index.html">FR</a><a class="lang-chip active" data-set-lang="en" href="index-en.html">EN</a></div><div class="nav-links"><a class="nav-link" href="#hero">Home</a>
-<a class="nav-link" href="#education">Education</a><a class="nav-link" href="#experience">Experience</a><a class="nav-link" href="#projects">Projects</a><a class="nav-link" href="#skills">Skills</a><a class="nav-link" href="#contact">Contact</a><a class="nav-link" href="assets/CV_GouaHenri_EN.pdf" style="font-weight:700" target="_blank">Download CV</a></div>
-<button aria-expanded="false" aria-label="Ouvrir le menu" class="mobile-menu-btn"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button>
-</nav>
-</header>
-<div class="mobile-menu-overlay" id="mobileMenuOverlay"><nav class="mobile-menu-nav"><a class="nav-link" href="#hero">Home</a><a class="nav-link" href="#education">Education</a><a class="nav-link" href="#experience">Experience</a><a class="nav-link" href="#projects">Projects</a><a class="nav-link" href="#skills">Skills</a><a class="nav-link" href="#contact">Contact</a><a class="nav-link" href="assets/CV_GouaHenri_EN.pdf" target="_blank">Download CV</a><div class="mobile-language-switch"><a class="lang-chip" data-set-lang="fr" href="index.html">FR</a><a class="lang-chip active" data-set-lang="en" href="index-en.html">EN</a></div></nav></div>
-<main class="container">
-<section class="section hero" id="hero"><div class="hero-content hero-copy reveal-up">
-<span class="hero-kicker">Statistics · Machine Learning · Decision Support</span>
-<h1><span class="hero-name">GOUA <span class="hero-title" style="color:var(--accent-color)">BEEDI</span></span></h1>
-<h2 class="hero-subtitle">Data Scientist</h2>
-<p class="lead" style="margin-top:1.5rem;text-align:left">MSc student in Statistics, Learning and Algorithms at Sorbonne University, after an Engineering Degree in Statistics and Data Science from ENSAI. My experience spans applied machine learning, credit scoring, document retrieval and multi-source data analysis.</p>
-<p class="lead" style="margin-top:1rem;font-weight:650;text-align:left">Seeking a final-year Data Science / Machine Learning internship starting in April 2027.</p>
-<div class="hero-affiliations">
-  <img src="assets/img/brands/sorbonne.png" alt="Sorbonne Université" style="height:75px; object-fit:contain;">
-  <img src="assets/img/brands/ensai.png" alt="ENSAI" style="height:70px; object-fit:contain;">
-  <img src="assets/img/brands/MS2A.png" alt="MS2A" style="height:75px; object-fit:contain;">
-</div>
-<div class="hero-actions"><a class="btn btn-primary hero-main-cta" href="assets/CV_GouaHenri_EN.pdf" rel="noopener" target="_blank"><i data-feather="download"></i> Download my CV</a><a class="btn btn-secondary hero-social-btn" href="https://www.linkedin.com/in/gouabeedi/" target="_blank" rel="noopener"><i data-feather="linkedin"></i> LinkedIn</a><a class="btn btn-secondary hero-social-btn" href="https://github.com/BeediGoua" target="_blank" rel="noopener"><i data-feather="github"></i> GitHub</a></div>
-</div><div class="hero-visual reveal-up"><div class="hero-portrait-wrap"><img alt="Portrait of Goua Beedi" class="hero-portrait" loading="eager" src="assets/img/goua.png"/></div></div>
-</section>
-<section class="section accent-section" id="approach"><div class="section-header reveal-up"><span class="section-mainicon"><i data-feather="compass"></i></span><h2 class="section-title">My approach</h2><p class="section-subtitle">My experiences and projects have progressively taught me to value understanding the need, data quality, and evaluation as much as the choice of the model itself. This is the way of working I aim to deepen today.</p></div>
-<div class="principles-grid reveal-up"><article class="principle-card"><h3>1. Understanding the problem</h3><p>Before modeling, I try to understand the context, the constraints, and how the results will actually be used.</p></article><article class="principle-card"><h3>2. Caring for the data</h3><p>I pay close attention to their origin, consistency, and quality, because a large part of an analysis's reliability is decided at this stage.</p></article><article class="principle-card"><h3>3. Evaluating with perspective</h3><p>I don't just look for a good metric. I also try to analyze the model's stability, its errors, and the trade-offs between performance and interpretability.</p></article><article class="principle-card"><h3>4. Moving towards something usable</h3><p>Whenever possible, I try to extend the analysis into a tangible tool: an API, a dashboard, a scoring engine, or an evaluation protocol.</p></article></div>
-<div class="hero-stats-bar reveal-up" style="margin-bottom: 4rem; margin-top: -1rem;">
-  
-  <!-- Block 1: Ce que je construis (Bento 1 col) -->
-  <div class="hero-stat-item">
-    <div class="hero-stat-icon"><i data-feather="tool"></i></div>
-    <div class="hero-stat-content">
-      <span class="stat-title">What I build</span>
-      <div class="stat-pipeline stat-pipeline-vertical">
-        <div class="pipeline-node"><i data-feather="server"></i> Data APIs</div>
-        <i data-feather="arrow-down" class="pipeline-arrow"></i>
-        <div class="pipeline-node"><i data-feather="layout"></i> Dashboards</div>
-        <i data-feather="arrow-down" class="pipeline-arrow"></i>
-        <div class="pipeline-node"><i data-feather="check-circle"></i> Decision</div>
-      </div>
-    </div>
+  <div class="blob-container">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
   </div>
-
-  <!-- Block 2: Ce qui m'intéresse (Bento 1 col) -->
-  <div class="hero-stat-item">
-    <div class="hero-stat-icon"><i data-feather="target"></i></div>
-    <div class="hero-stat-content">
-      <span class="stat-title">What I care about</span>
-      <div class="stat-cloud">
-        <span class="stat-cloud-tag purple">Reliable AI</span>
-        <span class="stat-cloud-tag">Data-driven</span>
-        <span class="stat-cloud-tag">Model Eval</span>
-        <span class="stat-cloud-tag purple">Applied Stats</span>
+  <div id="scrollProgress"></div>
+  <header>
+    <nav class="reveal-up" id="mainNav"><a class="nav-brand" href="#hero"><span
+          class="brand-monogram">GB</span><span>GOUA BEEDI</span></a>
+      <div aria-label="Language switcher" class="nav-language-switch"><a class="lang-chip" data-set-lang="fr"
+          href="index.html">FR</a><a class="lang-chip active" data-set-lang="en" href="index-en.html">EN</a></div>
+      <div class="nav-links"><a class="nav-link" href="#hero">Home</a>
+        <a class="nav-link" href="#education">Education</a><a class="nav-link" href="#experience">Experience</a><a
+          class="nav-link" href="#projects">Projects</a><a class="nav-link" href="#skills">Skills</a><a class="nav-link"
+          href="#contact">Contact</a><a class="nav-link" href="assets/CV_GouaHenri_EN.pdf" style="font-weight:700"
+          target="_blank">Download CV</a>
       </div>
-    </div>
+      <button aria-expanded="false" aria-label="Ouvrir le menu" class="mobile-menu-btn"><span
+          class="hamburger-line"></span><span class="hamburger-line"></span><span
+          class="hamburger-line"></span></button>
+    </nav>
+  </header>
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+    <nav class="mobile-menu-nav"><a class="nav-link" href="#hero">Home</a><a class="nav-link"
+        href="#education">Education</a><a class="nav-link" href="#experience">Experience</a><a class="nav-link"
+        href="#projects">Projects</a><a class="nav-link" href="#skills">Skills</a><a class="nav-link"
+        href="#contact">Contact</a><a class="nav-link" href="assets/CV_GouaHenri_EN.pdf" target="_blank">Download CV</a>
+      <div class="mobile-language-switch"><a class="lang-chip" data-set-lang="fr" href="index.html">FR</a><a
+          class="lang-chip active" data-set-lang="en" href="index-en.html">EN</a></div>
+    </nav>
   </div>
-
-  <!-- Block 3: Expériences (Bento 1 col) -->
-  <div class="hero-stat-item">
-    <div class="hero-stat-icon"><i data-feather="briefcase"></i></div>
-    <div class="hero-stat-content">
-      <span class="stat-title">Experience</span>
-      <div class="stat-logos">
-        <div class="stat-logo-item">
-          <div class="stat-logo-icon"><img src="assets/img/brands/ville_paris.png" alt="City of Paris" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px;"></div>
-          <div class="stat-logo-text">
-            <span class="stat-logo-name">City of Paris</span>
-            <span class="stat-logo-role">Public Sector</span>
-          </div>
+  <main class="container">
+    <section class="section hero" id="hero">
+      <div class="hero-content hero-copy reveal-up">
+        <span class="hero-kicker">Statistics · Machine Learning · Decision Support</span>
+        <h1><span class="hero-name">GOUA <span class="hero-title" style="color:var(--accent-color)">BEEDI</span></span>
+        </h1>
+        <h2 class="hero-subtitle">Data Scientist</h2>
+        <p class="lead" style="margin-top:1.5rem;text-align:left">MSc student in Statistics, Learning and Algorithms at
+          Sorbonne University, after an Engineering Degree in Statistics and Data Science from ENSAI. My experience
+          spans applied machine learning, credit scoring, document retrieval and multi-source data analysis.</p>
+        <div class="hero-affiliations">
+          <img src="assets/img/brands/sorbonne.png" alt="Sorbonne Université" style="height:75px; object-fit:contain;">
+          <img src="assets/img/brands/ensai.png" alt="ENSAI" style="height:70px; object-fit:contain;">
+          <img src="assets/img/brands/MS2A.png" alt="MS2A" style="height:75px; object-fit:contain;">
         </div>
-        <div class="stat-logo-item">
-          <div class="stat-logo-icon"><img src="assets/img/brands/square.png" alt="Square Management" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px;"></div>
-          <div class="stat-logo-text">
-            <span class="stat-logo-name">Square Management</span>
-            <span class="stat-logo-role">Data Consulting</span>
-          </div>
-        </div>
-        <div class="stat-logo-item">
-          <div class="stat-logo-icon"><img src="assets/img/brands/FINZUU.png" alt="FINZUU" style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px;"></div>
-          <div class="stat-logo-text">
-            <span class="stat-logo-name">FINZUU</span>
-            <span class="stat-logo-role">FinTech Startup</span>
-          </div>
+        <div class="hero-actions"><a class="btn btn-primary hero-main-cta" href="assets/CV_GouaHenri_EN.pdf"
+            rel="noopener" target="_blank"><i data-feather="download"></i> Download my CV</a><a
+            class="btn btn-secondary hero-social-btn" href="https://www.linkedin.com/in/gouabeedi/" target="_blank"
+            rel="noopener"><i data-feather="linkedin"></i> LinkedIn</a><a class="btn btn-secondary hero-social-btn"
+            href="https://github.com/BeediGoua" target="_blank" rel="noopener"><i data-feather="github"></i> GitHub</a>
         </div>
       </div>
-    </div>
-  </div>
-
-  <!-- Block 4: Disponible (Bento pleine largeur) -->
-  <div class="hero-stat-item bento-col-3" style="background: rgba(16, 185, 129, 0.03); border-color: rgba(16, 185, 129, 0.1); justify-content: center;">
-    <div class="stat-avail-horizontal">
-      <div class="avail-title"><div class="avail-dot"></div> Open to work</div>
-      <div class="avail-date">April 2027</div>
-      <div class="avail-desc-group">
-        <div class="avail-desc"><i data-feather="briefcase" style="width: 16px; height: 16px;"></i> M2 Internship (6 mos)</div>
-        <div class="avail-desc"><i data-feather="map-pin" style="width: 16px; height: 16px;"></i> Paris • France</div>
+      <div class="hero-visual reveal-up">
+        <div class="hero-portrait-wrap"><img alt="Portrait of Goua Beedi" class="hero-portrait" loading="eager"
+            src="assets/img/goua.png" /></div>
       </div>
-    </div>
-  </div>
+    </section>
+    <section class="section accent-section" id="approach">
+      <div class="section-header reveal-up"><span class="section-mainicon"><i data-feather="compass"></i></span>
+        <h2 class="section-title">My approach</h2>
+        <p class="section-subtitle">My experiences and projects have progressively taught me to value understanding the
+          need, data quality, and evaluation as much as the choice of the model itself. This is the way of working I aim
+          to deepen today.</p>
+      </div>
+      <div class="principles-grid reveal-up">
+        <article class="principle-card">
+          <h3>1. Understanding the problem</h3>
+          <p>Before modeling, I try to understand the context, the constraints, and how the results will actually be
+            used.</p>
+        </article>
+        <article class="principle-card">
+          <h3>2. Caring for the data</h3>
+          <p>I pay close attention to their origin, consistency, and quality, because a large part of an analysis's
+            reliability is decided at this stage.</p>
+        </article>
+        <article class="principle-card">
+          <h3>3. Evaluating with perspective</h3>
+          <p>I don't just look for a good metric. I also try to analyze the model's stability, its errors, and the
+            trade-offs between performance and interpretability.</p>
+        </article>
+        <article class="principle-card">
+          <h3>4. Moving towards something usable</h3>
+          <p>Whenever possible, I try to extend the analysis into a tangible tool: an API, a dashboard, a scoring
+            engine, or an evaluation protocol.</p>
+        </article>
+      </div>
+      <div class="hero-stats-bar reveal-up" style="margin-bottom: 4rem; margin-top: -1rem;">
 
-</div></section>
-<section class="section education-showcase education-accordion" id="education">
-<div class="section-header reveal-up"><span class="section-mainicon"><i data-feather="book-open"></i></span><h2 class="section-title">Education</h2><p class="section-subtitle">A path in mathematics, statistics and data science, from preparatory classes to the MS2A master’s degree.</p></div>
-<div class="education-timeline reveal-up" data-education-accordion="">
-<div aria-hidden="true" class="education-axis"></div>
-<article class="education-node education-left" data-edu-card="su"><span class="education-dot">01</span><button aria-controls="edu-su-details" aria-expanded="false" class="education-summary" type="button"><span class="education-school-mark"><img alt="Sorbonne" src="assets/img/brands/sorbonne.png"/></span><span class="education-summary-copy"><strong>Sorbonne Université</strong><span>Master's in Mathematics: Statistics, Learning and Algorithms (MS2A)</span><small>Paris, France · 2026-2027</small></span><span class="education-toggle-label">Details</span></button><div class="education-details" hidden="" id="edu-su-details"><div class="education-detail-grid"><div><h4>Core Subjects</h4><ul><li>Statistical learning</li><li>Stochastic optimization</li><li>High-dimensional statistics</li><li>Simulation methods</li></ul></div><div><h4>Objective</h4><p>Deepen the mathematical foundations of machine learning and prepare for roles in Data Science / Applied ML.</p></div></div><a class="education-link" href="https://sciences.sorbonne-universite.fr/" rel="noopener" target="_blank">Official website ↗</a></div></article>
-<article class="education-node education-right" data-edu-card="ensai"><span class="education-dot">02</span><button aria-controls="edu-ensai-details" aria-expanded="false" class="education-summary" type="button"><span class="education-school-mark"><img alt="ENSAI" src="assets/img/brands/ensai.png"/></span><span class="education-summary-copy"><strong>ENSAI</strong><span>Engineering Degree in Statistics and Data Science</span><small>Rennes, France · 2022-2025</small></span><span class="education-toggle-label">Details</span></button><div class="education-details" hidden="" id="edu-ensai-details"><div class="education-detail-grid"><div><h4>Core Subjects</h4><ul><li>Probability &amp; Inference</li><li>Econometrics</li><li>Machine Learning</li><li>Optimization</li><li>Survival Analysis</li></ul></div><div><h4>Key Projects</h4><ul><li>Credit Scoring</li><li>Post-Covid Survival Analysis</li><li>Retail Demand Forecasting</li></ul></div></div><a class="education-link" href="https://ensai.fr/" rel="noopener" target="_blank">Official website ↗</a></div></article>
-<article class="education-node education-left" data-edu-card="prepa"><span class="education-dot">03</span><button aria-controls="edu-prepa-details" aria-expanded="false" class="education-summary" type="button"><span class="education-school-mark"><i data-feather="activity" style="width: 32px; height: 32px; color: #fff;"></i></span><span class="education-summary-copy"><strong>Preparatory Classes MPSI/MP</strong><span>Mathematics, physics and engineering sciences</span><small>France · 2020-2022</small></span><span class="education-toggle-label">Details</span></button><div class="education-details" hidden="" id="edu-prepa-details"><div class="education-detail-grid"><div><h4>Core subjects</h4><ul><li>Advanced mathematics</li><li>Physics</li><li>Computer science</li><li>Engineering sciences</li></ul></div><div><h4>Objective</h4><p>Develop strong scientific rigor and complex problem-solving skills.</p></div></div></div></article>
-</div></section><section class="section accent-section" id="experience"><div class="section-header reveal-up"><span class="section-mainicon"><i data-feather="briefcase"></i></span><h2 class="section-title">Experience</h2><p class="section-subtitle">Applied research, public-sector data science and scoring for a fintech startup.</p></div><div class="container"><ol class="timeline">
-<li class="timeline-item reveal-up"><div class="dot"></div><div class="section-content"><div class="experience-header-wrap"><span class="experience-brand"><img alt="FINZUU" src="assets/img/brands/FINZUU.png"/></span><div class="location-line"><h3>FINZUU - Fintech Startup</h3><span class="muted">2026</span></div></div><p class="experience-role">Data Scientist - Agricultural credit risk scoring</p><p class="experience-summary">Design of a scoring engine combining field data, agricultural reference frameworks, prudent assumptions and explainable indicators to estimate agricultural risk and repayment capacity.</p><ul class="clean-list"><li>Estimation of yields, prices, production, income, margin and repayment capacity.</li><li>Consistency checks, alerts, confidence levels and reason codes.</li><li>Integration into a FastAPI, a PostgreSQL/PostGIS database and a monitoring dashboard.</li></ul><div class="notice" style="margin-top:0.5rem">System currently under development and business validation; it supports a human review and should not be presented as an automated decision validated in production.</div><div class="experience-tech-row tech-logo-row"><span class="compact-tech-badge" data-tech="Python" title="Python"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/> Python</span><span class="compact-tech-badge" data-tech="FastAPI" title="FastAPI"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"/> FastAPI</span><span class="compact-tech-badge" data-tech="PostgreSQL" title="PostgreSQL"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"/> PostgreSQL</span><span class="compact-tech-badge" data-tech="Docker" title="Docker"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"/> Docker</span></div><a class="btn btn-primary experience-detail-btn" href="projects/finzuu.html" style="margin-top:0.5rem; align-self: flex-start;">View details</a></div></li><li class="timeline-item reveal-up"><div class="dot"></div><div class="section-content"><div class="experience-header-wrap"><span class="experience-brand"><img alt="Square Management" src="assets/img/brands/square.png"/></span><div class="location-line"><h3>Square Management - Square Research Center</h3><span class="muted">Paris, France · 2025</span></div></div><p class="experience-role">AI &amp; Data Science Internship - Evaluation of document retrieval systems</p><p class="experience-summary">Design of an experimental protocol comparing 189 RAG configurations on long documents, to study the effect of chunking, retrieval, indexing and ranking on answer quality.</p><ul class="clean-list"><li>Definition of relevance indicators, faithfulness to sources and failure mode analysis.</li><li>Study of trade-offs between context coverage, document noise and answer quality.</li><li>Implementation of a vector search module with ChromaDB, RAGAS, FastAPI and Docker.</li></ul><div class="experience-tech-row tech-logo-row"><span class="compact-tech-badge" data-tech="Python" title="Python"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/> Python</span><span class="compact-tech-badge" data-tech="ChromaDB" title="ChromaDB"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://www.trychroma.com/_next/static/media/chroma-logo.9f57e2f0.svg"/> ChromaDB</span><span class="compact-tech-badge" data-tech="RAGAS" title="RAGAS"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://raw.githubusercontent.com/explodinggradients/ragas/main/docs/_static/img/logo.png"/> RAGAS</span><span class="compact-tech-badge" data-tech="FastAPI" title="FastAPI"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"/> FastAPI</span><span class="compact-tech-badge" data-tech="Docker" title="Docker"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"/> Docker</span></div><a class="btn btn-primary experience-detail-btn" href="projects/square-management.html" style="margin-top:0.5rem; align-self: flex-start;">View details</a></div></li><li class="timeline-item reveal-up"><div class="dot"></div><div class="section-content"><div class="experience-header-wrap"><span class="experience-brand"><img alt="Ville de Paris" src="assets/img/brands/ville_paris.png"/></span><div class="location-line"><h3>Ville de Paris - Mobility Agency</h3><span class="muted">Paris, France · 2024</span></div></div><p class="experience-role">Data Science Internship - Mobility data analysis</p><p class="experience-summary">Construction of a pipeline cross-referencing LAPI, SIV, SIREN data and external sources to build a coherent analytical base and produce useful indicators for business teams.</p><ul class="clean-list"><li>Cleaning, quality control and entity matching between heterogeneous sources.</li><li>Creation of indicators, profile segmentation and statistical analysis.</li><li>Reporting of results in Digdash dashboards.</li></ul><div class="experience-tech-row tech-logo-row"><span class="compact-tech-badge" data-tech="Python" title="Python"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/> Python</span><span class="compact-tech-badge" data-tech="pandas" title="pandas"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"/> pandas</span><span class="compact-tech-badge" data-tech="scikit-learn" title="scikit-learn"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg"/> scikit-learn</span><span class="compact-tech-badge" data-tech="statsmodels" title="statsmodels"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.simpleicons.org/python"/> statsmodels</span><span class="compact-tech-badge" data-tech="Digdash" title="Digdash"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://www.digdash.com/wp-content/uploads/2022/04/favicon-192x192.png"/> Digdash</span></div><a class="btn btn-primary experience-detail-btn" href="projects/ville-de-paris.html" style="margin-top:0.5rem; align-self: flex-start;">View details</a></div></li></ol></div></section>
-<section class="section projects-showcase accent-section" id="projects"><div class="section-header reveal-up"><span class="section-mainicon"><i data-feather="folder"></i></span><h2 class="section-title">Selected projects</h2><p class="section-subtitle">Systems built, evaluated and documented through data, methods, results, errors, limitations and reproducibility.</p></div>
-<div class="selected-projects-grid">
-<article class="selected-project-card reveal-up"><div class="project-card-index">01</div><div class="project-type">Academic project · Credit risk</div><h3>Credit Scoring - Professional risk scorecard</h3><p>Built an interpretable score from 532,567 business accounts, from data preparation to seven homogeneous risk classes.</p><div class="project-proof-row"><span>532k accounts</span><span>143 variables</span><span>AUC 0.784</span></div><div class="project-stack tech-stack-row"><span class="tech-stack-chip" data-tech="Régression logistique"><i aria-hidden="true" class="tech-concept-icon" data-feather="activity"></i>Logistic Regression</span><span class="tech-stack-chip" data-tech="Random Forest" title="Random Forest"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.simpleicons.org/scikitlearn"/>Random Forest</span><span class="tech-stack-chip" data-tech="XGBoost" title="XGBoost"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://raw.githubusercontent.com/dmlc/web-data/master/xgboost/logo/xgboost-logo.svg"/>XGBoost</span></div><div class="project-links"><a class="btn btn-primary" href="projects/credit-scoring.html">View details</a></div></article>
-<article class="selected-project-card reveal-up"><div class="project-card-index">02</div><div class="project-type">Personal project · Decision system</div><h3>BrokerFlow AI - Explainable credit decision support</h3><p>A copilot combining a calibrated model, deterministic rules and constrained agents to produce recommendations, alerts and reason codes.</p><div class="project-proof-row"><span>50 annotated cases</span><span>44 tests</span><span>Fallback</span></div><div class="project-stack tech-stack-row"><span class="tech-stack-chip" data-tech="FastAPI" title="FastAPI"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"/>FastAPI</span><span class="tech-stack-chip" data-tech="scikit-learn" title="scikit-learn"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg"/>scikit-learn</span><span class="tech-stack-chip" data-tech="Ollama" title="Ollama"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.simpleicons.org/ollama"/>Ollama</span><span class="tech-stack-chip" data-tech="Streamlit" title="Streamlit"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"/>Streamlit</span></div><div class="project-links"><a class="btn btn-primary" href="projects/brokerflow.html">View details</a><a class="btn btn-secondary" href="https://github.com/BeediGoua/Brokerflow_ai" target="_blank">GitHub</a></div></article>
-<article class="selected-project-card reveal-up"><div class="project-card-index">03</div><div class="project-type">Personal project · Forecasting</div><h3>Retail Demand Forecasting - Forecasting &amp; inventory</h3><p>A weekly pipeline combining ADI/CV² demand segmentation, probabilistic forecasts and Newsvendor logic to turn uncertainty into inventory decisions.</p><div class="project-proof-row"><span>8 weeks</span><span>P10/P50/P90</span><span>ADI/CV²</span></div><div class="project-stack tech-stack-row"><span class="tech-stack-chip" data-tech="Python" title="Python"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/>Python</span><span class="tech-stack-chip" data-tech="SQL" title="SQL"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.simpleicons.org/mysql"/>SQL</span><span class="tech-stack-chip" data-tech="Time Series"><i aria-hidden="true" class="tech-concept-icon" data-feather="trending-up"></i>Time Series</span><span class="tech-stack-chip" data-tech="Streamlit" title="Streamlit"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"/>Streamlit</span></div><div class="project-links"><a class="btn btn-primary" href="projects/retail-demand-forecasting.html">View details</a><a class="btn btn-secondary" href="https://github.com/BeediGoua/retail-demand-forecasting-assistant" target="_blank">GitHub</a></div></article>
-<article class="selected-project-card reveal-up"><div class="project-card-index">04</div><div class="project-type">Academic project · Healthcare statistics</div><h3>Post-Covid survival analysis - HEGP</h3><p>Analyzed longitudinal hospital data and applied a Cox model to study time to rehospitalization while accounting for censoring.</p><div class="project-proof-row"><span>Cox model</span><span>Censoring</span><span>Longitudinal data</span></div><div class="project-stack tech-stack-row"><span class="tech-stack-chip" data-tech="Survival Analysis"><i aria-hidden="true" class="tech-concept-icon" data-feather="activity"></i>Survival Analysis</span><span class="tech-stack-chip" data-tech="Cox PH"><i aria-hidden="true" class="tech-concept-icon" data-feather="activity"></i>Cox PH</span><span class="tech-stack-chip" data-tech="Statistical Inference"><i aria-hidden="true" class="tech-concept-icon" data-feather="bar-chart-2"></i>Statistical Inference</span></div><div class="project-links"><a class="btn btn-primary" href="projects/analyse-survie.html">View details</a></div></article>
-</div><div class="other-projects-cta reveal-up">
-<div class="other-projects-copy">
-<span class="other-projects-eyebrow">Explore more</span>
-<h3>Other projects</h3>
-<p>Discover three complementary projects covering recommendation, content moderation, and hybrid systems.</p>
-</div>
-<a class="btn btn-secondary other-projects-button" href="projects/autres-projets.html">View other projects</a>
-</div></section>
-<section class="section accent-section skills-redesign skills-premium" id="skills">
-<div class="section-header reveal-up"><span class="section-mainicon"><i data-feather="cpu"></i></span><h2 class="section-title">Skills</h2><p class="section-subtitle">Two distinct levels: methodological expertise and the technical stack used across my experience and projects.</p></div>
-<div class="skills-theory-grid reveal-up">
-<article class="skill-domain-card"><div class="skill-domain-icon"><i data-feather="bar-chart-2"></i></div><h3>Statistics &amp; modeling</h3><ul class="skill-key-list"><li>Inference &amp; estimation</li><li>Linear models / GLMs</li><li>Time series</li><li>Survival analysis</li></ul><p class="skill-value">Model, quantify uncertainty and interpret results.</p></article>
-<article class="skill-domain-card"><div class="skill-domain-icon"><i data-feather="target"></i></div><h3>Machine Learning &amp; decision</h3><ul class="skill-key-list"><li>Classification &amp; scoring</li><li>Clustering &amp; ensembles</li><li>Gradient boosting</li><li>Validation &amp; calibration</li></ul><p class="skill-value">Compare models and connect their outputs to a decision.</p></article>
-<article class="skill-domain-card"><div class="skill-domain-icon"><i data-feather="search"></i></div><h3>Document retrieval &amp; LLM evaluation</h3><ul class="skill-key-list"><li>Chunking &amp; retrieval</li><li>Indexation &amp; ranking</li><li>RAG / LLM evaluation</li><li>Error analysis</li></ul><p class="skill-value">Evaluate source faithfulness and failure modes.</p></article>
-<article class="skill-domain-card"><div class="skill-domain-icon"><i data-feather="shield"></i></div><h3>Reliable &amp; explainable data systems</h3><ul class="skill-key-list"><li>Quality &amp; traceability</li><li>Leakage prevention</li><li>APIs &amp; automation</li><li>Dashboards &amp; monitoring</li></ul><p class="skill-value">Turn a model into an actionable decision tool.</p></article>
-</div>
-<div class="technical-skills-block reveal-up">
-<div class="technical-skills-heading"><span class="section-mainicon small"><i data-feather="tool"></i></span><div><h3>Technical skills</h3><p>Languages, libraries, data, APIs and development tools.</p></div></div>
-<div class="technical-skills-grid">
-<article class="technical-skill-card"><div class="brand-icon category-icon"><i data-feather="code"></i></div><h4>Programming</h4><div class="logo-chip-row"><span><img alt="Python" class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/>Python</span><span><img alt="R" class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg"/>R</span><span><img alt="Scala" class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scala/scala-original.svg"/>Scala</span></div></article>
-<article class="technical-skill-card"><div class="brand-icon category-icon"><i data-feather="database"></i></div><h4>Data &amp; calcul</h4><div class="logo-chip-row"><span><img alt="pandas" class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"/>pandas</span><span><img alt="NumPy" class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"/>NumPy</span><span><img alt="statsmodels" class="tech-logo" src="https://cdn.simpleicons.org/python"/>statsmodels</span></div></article>
-<article class="technical-skill-card"><div class="brand-icon category-icon"><i data-feather="cpu"></i></div><h4>Machine Learning</h4><div class="logo-chip-row"><span><img alt="scikit-learn" class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg"/>scikit-learn</span><span><img alt="XGBoost" class="tech-logo" src="https://raw.githubusercontent.com/dmlc/web-data/master/xgboost/logo/xgboost-logo.svg"/>XGBoost</span><span><img alt="CatBoost" class="tech-logo" src="https://avatars.githubusercontent.com/u/31257634?s=200&amp;v=4"/>CatBoost</span></div></article>
-<article class="technical-skill-card"><div class="brand-icon category-icon"><i data-feather="server"></i></div><h4>API &amp; applications</h4><div class="logo-chip-row"><span><img alt="FastAPI" class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"/>FastAPI</span><span><img alt="Streamlit" class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"/>Streamlit</span><span><img alt="Node.js" class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"/>Node.js</span></div></article>
-<article class="technical-skill-card"><div class="brand-icon category-icon"><i data-feather="layers"></i></div><h4>Data &amp; infrastructure</h4><div class="logo-chip-row"><span><img alt="PostgreSQL" class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"/>PostgreSQL</span><span><img alt="Docker" class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"/>Docker</span><span><img alt="Git" class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"/>Git</span></div></article>
-</div></div></section>
-<section class="section accent-section contact-polished" id="contact">
-<div class="section-header reveal-up" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 16px; margin-bottom: 24px;">
-<span class="section-mainicon" style="margin: 0;"><i data-feather="mail"></i></span>
-<h2 class="section-title" style="margin: 0;">Contact</h2>
-</div>
-<div class="reveal-up" style="text-align:center;max-width:720px;margin:0 auto; display: flex; flex-direction: column; align-items: center; gap: 24px;">
-<p class="lead" style="font-size:1.1rem; margin: 0;">Feel free to reach out to discuss an opportunity, an idea, or a project.</p>
-<div class="hero-actions" style="justify-content: center; margin: 0;">
-<a class="btn btn-primary" href="mailto:gouabeedi@gmail.com"><i data-feather="send"></i> Email me</a>
-</div>
-</div>
-</section>
-</main>
-<footer><div class="socials"><a href="https://www.linkedin.com/in/gouabeedi/" target="_blank" title="LinkedIn"><i data-feather="linkedin"></i></a><a href="https://github.com/BeediGoua" target="_blank" title="GitHub"><i data-feather="github"></i></a><a href="mailto:gouabeedi@gmail.com" title="Email"><i data-feather="mail"></i></a></div><p>© 2025 Goua Beedi</p><a href="#hero" id="backToTop"><i data-feather="arrow-up"></i> Back to top</a></footer>
-<script src="assets/js/script.js"></script><script src="assets/js/education-accordion.js"></script><script src="assets/js/animations.js"></script><script src="https://unpkg.com/feather-icons"></script><script>document.addEventListener('DOMContentLoaded',()=>{if(window.feather)feather.replace();const b=document.getElementById('backToTop');if(b)b.addEventListener('click',e=>{e.preventDefault();window.scrollTo({top:0,behavior:'smooth'})})});</script>
-<script src="assets/js/i18n-dictionaries.js"></script><script src="assets/js/global-language.js"></script></body></html>
+        <!-- Block 1: Ce que je construis (Bento 1 col) -->
+        <div class="hero-stat-item">
+          <div class="hero-stat-icon"><i data-feather="tool"></i></div>
+          <div class="hero-stat-content">
+            <span class="stat-title">What I build</span>
+            <div class="stat-pipeline stat-pipeline-vertical">
+              <div class="pipeline-node"><i data-feather="server"></i> Data APIs</div>
+              <i data-feather="arrow-down" class="pipeline-arrow"></i>
+              <div class="pipeline-node"><i data-feather="layout"></i> Dashboards</div>
+              <i data-feather="arrow-down" class="pipeline-arrow"></i>
+              <div class="pipeline-node"><i data-feather="check-circle"></i> Decision</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 2: Ce qui m'intéresse (Bento 1 col) -->
+        <div class="hero-stat-item">
+          <div class="hero-stat-icon"><i data-feather="target"></i></div>
+          <div class="hero-stat-content">
+            <span class="stat-title">What I care about</span>
+            <div class="stat-cloud">
+              <span class="stat-cloud-tag purple">Reliable AI</span>
+              <span class="stat-cloud-tag">Data-driven</span>
+              <span class="stat-cloud-tag">Model Eval</span>
+              <span class="stat-cloud-tag purple">Applied Stats</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 3: Expériences (Bento 1 col) -->
+        <div class="hero-stat-item">
+          <div class="hero-stat-icon"><i data-feather="briefcase"></i></div>
+          <div class="hero-stat-content">
+            <span class="stat-title">Experience</span>
+            <div class="stat-logos">
+              <div class="stat-logo-item">
+                <div class="stat-logo-icon"><img src="assets/img/brands/ville_paris.png" alt="City of Paris"
+                    style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px;"></div>
+                <div class="stat-logo-text">
+                  <span class="stat-logo-name">City of Paris</span>
+                  <span class="stat-logo-role">Public Sector</span>
+                </div>
+              </div>
+              <div class="stat-logo-item">
+                <div class="stat-logo-icon"><img src="assets/img/brands/square.png" alt="Square Management"
+                    style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px;"></div>
+                <div class="stat-logo-text">
+                  <span class="stat-logo-name">Square Management</span>
+                  <span class="stat-logo-role">Data Consulting</span>
+                </div>
+              </div>
+              <div class="stat-logo-item">
+                <div class="stat-logo-icon"><img src="assets/img/brands/FINZUU.png" alt="FINZUU"
+                    style="width: 100%; height: 100%; object-fit: contain; border-radius: 4px;"></div>
+                <div class="stat-logo-text">
+                  <span class="stat-logo-name">FINZUU</span>
+                  <span class="stat-logo-role">FinTech Startup</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 4: Disponible (Bento pleine largeur) -->
+        <div class="hero-stat-item bento-col-3"
+          style="background: rgba(16, 185, 129, 0.03); border-color: rgba(16, 185, 129, 0.1); justify-content: center;">
+          <div class="stat-avail-horizontal">
+            <div class="avail-title">
+              <div class="avail-dot"></div> Open to work
+            </div>
+            <div class="avail-date">April 2027</div>
+            <div class="avail-desc-group">
+              <div class="avail-desc"><i data-feather="briefcase" style="width: 16px; height: 16px;"></i> M2 Internship
+                (6 mos)</div>
+              <div class="avail-desc"><i data-feather="map-pin" style="width: 16px; height: 16px;"></i> Paris • France
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="section education-showcase education-accordion" id="education">
+      <div class="section-header reveal-up"><span class="section-mainicon"><i data-feather="book-open"></i></span>
+        <h2 class="section-title">Education</h2>
+        <p class="section-subtitle">A path in mathematics, statistics and data science, from preparatory classes to the
+          MS2A master’s degree.</p>
+      </div>
+      <div class="education-timeline reveal-up" data-education-accordion="">
+        <div aria-hidden="true" class="education-axis"></div>
+        <article class="education-node education-left" data-edu-card="su"><span class="education-dot">01</span><button
+            aria-controls="edu-su-details" aria-expanded="false" class="education-summary" type="button"><span
+              class="education-school-mark"><img alt="Sorbonne" src="assets/img/brands/sorbonne.png" /></span><span
+              class="education-summary-copy"><strong>Sorbonne Université</strong><span>Master's in Mathematics:
+                Statistics, Learning and Algorithms (MS2A)</span><small>Paris, France</small></span><span
+              class="education-toggle-label">Details</span></button>
+          <div class="education-details" hidden="" id="edu-su-details">
+            <div class="education-detail-grid">
+              <div>
+                <h4>Core Subjects</h4>
+                <ul>
+                  <li>Statistical learning</li>
+                  <li>Stochastic optimization</li>
+                  <li>High-dimensional statistics</li>
+                  <li>Simulation methods</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Objective</h4>
+                <p>Deepen the mathematical foundations of machine learning and prepare for roles in Data Science /
+                  Applied ML.</p>
+              </div>
+            </div><a class="education-link" href="https://sciences.sorbonne-universite.fr/" rel="noopener"
+              target="_blank">Official website ↗</a>
+          </div>
+        </article>
+        <article class="education-node education-right" data-edu-card="ensai"><span
+            class="education-dot">02</span><button aria-controls="edu-ensai-details" aria-expanded="false"
+            class="education-summary" type="button"><span class="education-school-mark"><img alt="ENSAI"
+                src="assets/img/brands/ensai.png" /></span><span
+              class="education-summary-copy"><strong>ENSAI</strong><span>Engineering Degree in Statistics and Data
+                Science</span><small>Rennes, France</small></span><span
+              class="education-toggle-label">Details</span></button>
+          <div class="education-details" hidden="" id="edu-ensai-details">
+            <div class="education-detail-grid">
+              <div>
+                <h4>Core Subjects</h4>
+                <ul>
+                  <li>Probability &amp; Inference</li>
+                  <li>Econometrics</li>
+                  <li>Machine Learning</li>
+                  <li>Optimization</li>
+                  <li>Survival Analysis</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Key Projects</h4>
+                <ul>
+                  <li>Credit Scoring</li>
+                  <li>Post-Covid Survival Analysis</li>
+                  <li>Retail Demand Forecasting</li>
+                </ul>
+              </div>
+            </div><a class="education-link" href="https://ensai.fr/" rel="noopener" target="_blank">Official website
+              ↗</a>
+          </div>
+        </article>
+        <article class="education-node education-left" data-edu-card="prepa"><span
+            class="education-dot">03</span><button aria-controls="edu-prepa-details" aria-expanded="false"
+            class="education-summary" type="button"><span class="education-school-mark"><i data-feather="activity"
+                style="width: 32px; height: 32px; color: #fff;"></i></span><span
+              class="education-summary-copy"><strong>Preparatory Classes MPSI/MP</strong><span>Mathematics, physics and
+                engineering sciences</span><small>France</small></span><span
+              class="education-toggle-label">Details</span></button>
+          <div class="education-details" hidden="" id="edu-prepa-details">
+            <div class="education-detail-grid">
+              <div>
+                <h4>Core subjects</h4>
+                <ul>
+                  <li>Advanced mathematics</li>
+                  <li>Physics</li>
+                  <li>Computer science</li>
+                  <li>Engineering sciences</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Objective</h4>
+                <p>Develop strong scientific rigor and complex problem-solving skills.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="section accent-section" id="experience">
+      <div class="section-header reveal-up"><span class="section-mainicon"><i data-feather="briefcase"></i></span>
+        <h2 class="section-title">Experience</h2>
+        <p class="section-subtitle">Applied research, public-sector data science and scoring for a fintech startup.</p>
+      </div>
+      <div class="container">
+        <ol class="timeline">
+          <li class="timeline-item reveal-up">
+            <div class="dot"></div>
+            <div class="section-content">
+              <div class="experience-header-wrap"><span class="experience-brand"><img alt="FINZUU"
+                    src="assets/img/brands/FINZUU.png" /></span>
+                <div class="location-line">
+                  <h3>FINZUU - Fintech Startup</h3><span class="muted">2026</span>
+                </div>
+              </div>
+              <p class="experience-role">Data Scientist - Agricultural credit risk scoring</p>
+              <p class="experience-summary">Design of a scoring engine combining field data, agricultural reference
+                frameworks, prudent assumptions and explainable indicators to estimate agricultural risk and repayment
+                capacity.</p>
+              <ul class="clean-list">
+                <li>Estimation of yields, prices, production, income, margin and repayment capacity.</li>
+                <li>Consistency checks, alerts, confidence levels and reason codes.</li>
+                <li>Integration into a FastAPI, a PostgreSQL/PostGIS database and a monitoring dashboard.</li>
+              </ul>
+              <div class="notice" style="margin-top:0.5rem">System currently under development and business validation;
+                it supports a human review and should not be presented as an automated decision validated in production.
+              </div>
+              <div class="experience-tech-row tech-logo-row"><span class="compact-tech-badge" data-tech="Python"
+                  title="Python"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy"
+                    onerror="this.style.display='none'"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
+                  Python</span><span class="compact-tech-badge" data-tech="FastAPI" title="FastAPI"><img alt=""
+                    aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" />
+                  FastAPI</span><span class="compact-tech-badge" data-tech="PostgreSQL" title="PostgreSQL"><img alt=""
+                    aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" />
+                  PostgreSQL</span><span class="compact-tech-badge" data-tech="Docker" title="Docker"><img alt=""
+                    aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" /> Docker</span>
+              </div><a class="btn btn-primary experience-detail-btn" href="projects/finzuu.html"
+                style="margin-top:0.5rem; align-self: flex-start;">View details</a>
+            </div>
+          </li>
+          <li class="timeline-item reveal-up">
+            <div class="dot"></div>
+            <div class="section-content">
+              <div class="experience-header-wrap"><span class="experience-brand"><img alt="Square Management"
+                    src="assets/img/brands/square.png" /></span>
+                <div class="location-line">
+                  <h3>Square Management - Square Research Center</h3><span class="muted">Paris, France · 2025</span>
+                </div>
+              </div>
+              <p class="experience-role">AI &amp; Data Science Internship - Evaluation of document retrieval systems</p>
+              <p class="experience-summary">Design of an experimental protocol comparing 189 RAG configurations on long
+                documents, to study the effect of chunking, retrieval, indexing and ranking on answer quality.</p>
+              <ul class="clean-list">
+                <li>Definition of relevance indicators, faithfulness to sources and failure mode analysis.</li>
+                <li>Study of trade-offs between context coverage, document noise and answer quality.</li>
+                <li>Implementation of a vector search module with ChromaDB, RAGAS, FastAPI and Docker.</li>
+              </ul>
+              <div class="experience-tech-row tech-logo-row"><span class="compact-tech-badge" data-tech="Python"
+                  title="Python"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy"
+                    onerror="this.style.display='none'"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
+                  Python</span><span class="compact-tech-badge" data-tech="ChromaDB" title="ChromaDB"><img alt=""
+                    aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'"
+                    src="https://www.trychroma.com/_next/static/media/chroma-logo.9f57e2f0.svg" /> ChromaDB</span><span
+                  class="compact-tech-badge" data-tech="RAGAS" title="RAGAS"><img alt="" aria-hidden="true"
+                    class="tech-logo" loading="lazy" onerror="this.style.display='none'"
+                    src="https://raw.githubusercontent.com/explodinggradients/ragas/main/docs/_static/img/logo.png" />
+                  RAGAS</span><span class="compact-tech-badge" data-tech="FastAPI" title="FastAPI"><img alt=""
+                    aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" />
+                  FastAPI</span><span class="compact-tech-badge" data-tech="Docker" title="Docker"><img alt=""
+                    aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" /> Docker</span>
+              </div><a class="btn btn-primary experience-detail-btn" href="projects/square-management.html"
+                style="margin-top:0.5rem; align-self: flex-start;">View details</a>
+            </div>
+          </li>
+          <li class="timeline-item reveal-up">
+            <div class="dot"></div>
+            <div class="section-content">
+              <div class="experience-header-wrap"><span class="experience-brand"><img alt="Ville de Paris"
+                    src="assets/img/brands/ville_paris.png" /></span>
+                <div class="location-line">
+                  <h3>Ville de Paris - Mobility Agency</h3><span class="muted">Paris, France · 2024</span>
+                </div>
+              </div>
+              <p class="experience-role">Data Science Internship - Mobility data analysis</p>
+              <p class="experience-summary">Construction of a pipeline cross-referencing LAPI, SIV, SIREN data and
+                external sources to build a coherent analytical base and produce useful indicators for business teams.
+              </p>
+              <ul class="clean-list">
+                <li>Cleaning, quality control and entity matching between heterogeneous sources.</li>
+                <li>Creation of indicators, profile segmentation and statistical analysis.</li>
+                <li>Reporting of results in Digdash dashboards.</li>
+              </ul>
+              <div class="experience-tech-row tech-logo-row"><span class="compact-tech-badge" data-tech="Python"
+                  title="Python"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy"
+                    onerror="this.style.display='none'"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
+                  Python</span><span class="compact-tech-badge" data-tech="pandas" title="pandas"><img alt=""
+                    aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" />
+                  pandas</span><span class="compact-tech-badge" data-tech="scikit-learn" title="scikit-learn"><img
+                    alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" />
+                  scikit-learn</span><span class="compact-tech-badge" data-tech="statsmodels" title="statsmodels"><img
+                    alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'"
+                    src="https://cdn.simpleicons.org/python" /> statsmodels</span><span class="compact-tech-badge"
+                  data-tech="Digdash" title="Digdash"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy"
+                    onerror="this.style.display='none'"
+                    src="https://www.digdash.com/wp-content/uploads/2022/04/favicon-192x192.png" /> Digdash</span></div>
+              <a class="btn btn-primary experience-detail-btn" href="projects/ville-de-paris.html"
+                style="margin-top:0.5rem; align-self: flex-start;">View details</a>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="section projects-showcase accent-section" id="projects">
+      <div class="section-header reveal-up"><span class="section-mainicon"><i data-feather="folder"></i></span>
+        <h2 class="section-title">Selected projects</h2>
+        <p class="section-subtitle">Systems built, evaluated and documented through data, methods, results, errors,
+          limitations and reproducibility.</p>
+      </div>
+      <div class="selected-projects-grid">
+        <article class="selected-project-card reveal-up">
+          <div class="project-card-index">01</div>
+          <div class="project-type">Academic project · Credit risk</div>
+          <h3>Credit Scoring - Professional risk scorecard</h3>
+          <p>Built an interpretable score from 532,567 business accounts, from data preparation to seven homogeneous
+            risk classes.</p>
+          <div class="project-proof-row"><span>532k accounts</span><span>143 variables</span><span>AUC 0.784</span>
+          </div>
+          <div class="project-stack tech-stack-row"><span class="tech-stack-chip" data-tech="Régression logistique"><i
+                aria-hidden="true" class="tech-concept-icon" data-feather="activity"></i>Logistic Regression</span><span
+              class="tech-stack-chip" data-tech="Random Forest" title="Random Forest"><img alt="" aria-hidden="true"
+                class="tech-logo" loading="lazy" onerror="this.style.display='none'"
+                src="https://cdn.simpleicons.org/scikitlearn" />Random Forest</span><span class="tech-stack-chip"
+              data-tech="XGBoost" title="XGBoost"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy"
+                onerror="this.style.display='none'"
+                src="https://raw.githubusercontent.com/dmlc/web-data/master/xgboost/logo/xgboost-logo.svg" />XGBoost</span>
+          </div>
+          <div class="project-links"><a class="btn btn-primary" href="projects/credit-scoring.html">View details</a>
+          </div>
+        </article>
+        <article class="selected-project-card reveal-up">
+          <div class="project-card-index">02</div>
+          <div class="project-type">Personal project · Decision system</div>
+          <h3>BrokerFlow AI - Explainable credit decision support</h3>
+          <p>A copilot combining a calibrated model, deterministic rules and constrained agents to produce
+            recommendations, alerts and reason codes.</p>
+          <div class="project-proof-row"><span>50 annotated cases</span><span>44 tests</span><span>Fallback</span></div>
+          <div class="project-stack tech-stack-row"><span class="tech-stack-chip" data-tech="FastAPI"
+              title="FastAPI"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy"
+                onerror="this.style.display='none'"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" />FastAPI</span><span
+              class="tech-stack-chip" data-tech="scikit-learn" title="scikit-learn"><img alt="" aria-hidden="true"
+                class="tech-logo" loading="lazy" onerror="this.style.display='none'"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" />scikit-learn</span><span
+              class="tech-stack-chip" data-tech="Ollama" title="Ollama"><img alt="" aria-hidden="true" class="tech-logo"
+                loading="lazy" onerror="this.style.display='none'"
+                src="https://cdn.simpleicons.org/ollama" />Ollama</span><span class="tech-stack-chip"
+              data-tech="Streamlit" title="Streamlit"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy"
+                onerror="this.style.display='none'"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg" />Streamlit</span>
+          </div>
+          <div class="project-links"><a class="btn btn-primary" href="projects/brokerflow.html">View details</a><a
+              class="btn btn-secondary" href="https://github.com/BeediGoua/Brokerflow_ai" target="_blank">GitHub</a>
+          </div>
+        </article>
+        <article class="selected-project-card reveal-up">
+          <div class="project-card-index">03</div>
+          <div class="project-type">Personal project · Forecasting</div>
+          <h3>Retail Demand Forecasting - Forecasting &amp; inventory</h3>
+          <p>A weekly pipeline combining ADI/CV² demand segmentation, probabilistic forecasts and Newsvendor logic to
+            turn uncertainty into inventory decisions.</p>
+          <div class="project-proof-row"><span>8 weeks</span><span>P10/P50/P90</span><span>ADI/CV²</span></div>
+          <div class="project-stack tech-stack-row"><span class="tech-stack-chip" data-tech="Python" title="Python"><img
+                alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />Python</span><span
+              class="tech-stack-chip" data-tech="SQL" title="SQL"><img alt="" aria-hidden="true" class="tech-logo"
+                loading="lazy" onerror="this.style.display='none'"
+                src="https://cdn.simpleicons.org/mysql" />SQL</span><span class="tech-stack-chip"
+              data-tech="Time Series"><i aria-hidden="true" class="tech-concept-icon"
+                data-feather="trending-up"></i>Time Series</span><span class="tech-stack-chip" data-tech="Streamlit"
+              title="Streamlit"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy"
+                onerror="this.style.display='none'"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg" />Streamlit</span>
+          </div>
+          <div class="project-links"><a class="btn btn-primary" href="projects/retail-demand-forecasting.html">View
+              details</a><a class="btn btn-secondary"
+              href="https://github.com/BeediGoua/retail-demand-forecasting-assistant" target="_blank">GitHub</a></div>
+        </article>
+        <article class="selected-project-card reveal-up">
+          <div class="project-card-index">04</div>
+          <div class="project-type">Academic project · Healthcare statistics</div>
+          <h3>Post-Covid survival analysis - HEGP</h3>
+          <p>Analyzed longitudinal hospital data and applied a Cox model to study time to rehospitalization while
+            accounting for censoring.</p>
+          <div class="project-proof-row"><span>Cox model</span><span>Censoring</span><span>Longitudinal data</span>
+          </div>
+          <div class="project-stack tech-stack-row"><span class="tech-stack-chip" data-tech="Survival Analysis"><i
+                aria-hidden="true" class="tech-concept-icon" data-feather="activity"></i>Survival Analysis</span><span
+              class="tech-stack-chip" data-tech="Cox PH"><i aria-hidden="true" class="tech-concept-icon"
+                data-feather="activity"></i>Cox PH</span><span class="tech-stack-chip"
+              data-tech="Statistical Inference"><i aria-hidden="true" class="tech-concept-icon"
+                data-feather="bar-chart-2"></i>Statistical Inference</span></div>
+          <div class="project-links"><a class="btn btn-primary" href="projects/analyse-survie.html">View details</a>
+          </div>
+        </article>
+      </div>
+      <div class="other-projects-cta reveal-up">
+        <div class="other-projects-copy">
+          <span class="other-projects-eyebrow">Explore more</span>
+          <h3>Other projects</h3>
+          <p>Discover three complementary projects covering recommendation, content moderation, and hybrid systems.</p>
+        </div>
+        <a class="btn btn-secondary other-projects-button" href="projects/autres-projets.html">View other projects</a>
+      </div>
+    </section>
+    <section class="section accent-section skills-redesign skills-premium" id="skills">
+      <div class="section-header reveal-up"><span class="section-mainicon"><i data-feather="cpu"></i></span>
+        <h2 class="section-title">Skills</h2>
+        <p class="section-subtitle">Two distinct levels: methodological expertise and the technical stack used across my
+          experience and projects.</p>
+      </div>
+      <div class="skills-theory-grid reveal-up">
+        <article class="skill-domain-card">
+          <div class="skill-domain-icon"><i data-feather="bar-chart-2"></i></div>
+          <h3>Statistics &amp; modeling</h3>
+          <ul class="skill-key-list">
+            <li>Inference &amp; estimation</li>
+            <li>Linear models / GLMs</li>
+            <li>Time series</li>
+            <li>Survival analysis</li>
+          </ul>
+          <p class="skill-value">Model, quantify uncertainty and interpret results.</p>
+        </article>
+        <article class="skill-domain-card">
+          <div class="skill-domain-icon"><i data-feather="target"></i></div>
+          <h3>Machine Learning &amp; decision</h3>
+          <ul class="skill-key-list">
+            <li>Classification &amp; scoring</li>
+            <li>Clustering &amp; ensembles</li>
+            <li>Gradient boosting</li>
+            <li>Validation &amp; calibration</li>
+          </ul>
+          <p class="skill-value">Compare models and connect their outputs to a decision.</p>
+        </article>
+        <article class="skill-domain-card">
+          <div class="skill-domain-icon"><i data-feather="search"></i></div>
+          <h3>Document retrieval &amp; LLM evaluation</h3>
+          <ul class="skill-key-list">
+            <li>Chunking &amp; retrieval</li>
+            <li>Indexation &amp; ranking</li>
+            <li>RAG / LLM evaluation</li>
+            <li>Error analysis</li>
+          </ul>
+          <p class="skill-value">Evaluate source faithfulness and failure modes.</p>
+        </article>
+        <article class="skill-domain-card">
+          <div class="skill-domain-icon"><i data-feather="shield"></i></div>
+          <h3>Reliable &amp; explainable data systems</h3>
+          <ul class="skill-key-list">
+            <li>Quality &amp; traceability</li>
+            <li>Leakage prevention</li>
+            <li>APIs &amp; automation</li>
+            <li>Dashboards &amp; monitoring</li>
+          </ul>
+          <p class="skill-value">Turn a model into an actionable decision tool.</p>
+        </article>
+      </div>
+      <div class="technical-skills-block reveal-up">
+        <div class="technical-skills-heading"><span class="section-mainicon small"><i data-feather="tool"></i></span>
+          <div>
+            <h3>Technical skills</h3>
+            <p>Languages, libraries, data, APIs and development tools.</p>
+          </div>
+        </div>
+        <div class="technical-skills-grid">
+          <article class="technical-skill-card">
+            <div class="brand-icon category-icon"><i data-feather="code"></i></div>
+            <h4>Programming</h4>
+            <div class="logo-chip-row"><span><img alt="Python" class="tech-logo"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />Python</span><span><img
+                  alt="R" class="tech-logo"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" />R</span><span><img
+                  alt="Scala" class="tech-logo"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scala/scala-original.svg" />Scala</span></div>
+          </article>
+          <article class="technical-skill-card">
+            <div class="brand-icon category-icon"><i data-feather="database"></i></div>
+            <h4>Data &amp; calcul</h4>
+            <div class="logo-chip-row"><span><img alt="pandas" class="tech-logo"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" />pandas</span><span><img
+                  alt="NumPy" class="tech-logo"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" />NumPy</span><span><img
+                  alt="statsmodels" class="tech-logo" src="https://cdn.simpleicons.org/python" />statsmodels</span>
+            </div>
+          </article>
+          <article class="technical-skill-card">
+            <div class="brand-icon category-icon"><i data-feather="cpu"></i></div>
+            <h4>Machine Learning</h4>
+            <div class="logo-chip-row"><span><img alt="scikit-learn" class="tech-logo"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" />scikit-learn</span><span><img
+                  alt="XGBoost" class="tech-logo"
+                  src="https://raw.githubusercontent.com/dmlc/web-data/master/xgboost/logo/xgboost-logo.svg" />XGBoost</span><span><img
+                  alt="CatBoost" class="tech-logo"
+                  src="https://avatars.githubusercontent.com/u/31257634?s=200&amp;v=4" />CatBoost</span></div>
+          </article>
+          <article class="technical-skill-card">
+            <div class="brand-icon category-icon"><i data-feather="server"></i></div>
+            <h4>API &amp; applications</h4>
+            <div class="logo-chip-row"><span><img alt="FastAPI" class="tech-logo"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" />FastAPI</span><span><img
+                  alt="Streamlit" class="tech-logo"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg" />Streamlit</span><span><img
+                  alt="Node.js" class="tech-logo"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />Node.js</span>
+            </div>
+          </article>
+          <article class="technical-skill-card">
+            <div class="brand-icon category-icon"><i data-feather="layers"></i></div>
+            <h4>Data &amp; infrastructure</h4>
+            <div class="logo-chip-row"><span><img alt="PostgreSQL" class="tech-logo"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" />PostgreSQL</span><span><img
+                  alt="Docker" class="tech-logo"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" />Docker</span><span><img
+                  alt="Git" class="tech-logo"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />Git</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section accent-section contact-polished" id="contact">
+      <div class="section-header reveal-up"
+        style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 16px; margin-bottom: 24px;">
+        <span class="section-mainicon" style="margin: 0;"><i data-feather="mail"></i></span>
+        <h2 class="section-title" style="margin: 0;">Contact</h2>
+      </div>
+      <div class="reveal-up"
+        style="text-align:center;max-width:720px;margin:0 auto; display: flex; flex-direction: column; align-items: center; gap: 24px;">
+        <p class="lead" style="font-size:1.1rem; margin: 0;">Feel free to reach out to discuss an opportunity, an idea,
+          or a project.</p>
+        <div class="hero-actions" style="justify-content: center; margin: 0;">
+          <a class="btn btn-primary" href="mailto:gouabeedi@gmail.com"><i data-feather="send"></i> Email me</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="socials"><a href="https://www.linkedin.com/in/gouabeedi/" target="_blank" title="LinkedIn"><i
+          data-feather="linkedin"></i></a><a href="https://github.com/BeediGoua" target="_blank" title="GitHub"><i
+          data-feather="github"></i></a><a href="mailto:gouabeedi@gmail.com" title="Email"><i
+          data-feather="mail"></i></a></div>
+    <p>© 2025 Goua Beedi</p><a href="#hero" id="backToTop"><i data-feather="arrow-up"></i> Back to top</a>
+  </footer>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/education-accordion.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>document.addEventListener('DOMContentLoaded', () => { if (window.feather) feather.replace(); const b = document.getElementById('backToTop'); if (b) b.addEventListener('click', e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }) });</script>
+  <script src="assets/js/i18n-dictionaries.js"></script>
+  <script src="assets/js/global-language.js"></script>
+</body>
+
+</html>
