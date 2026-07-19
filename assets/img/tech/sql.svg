@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">SQL</title><desc id="desc">Icône de base de données SQL</desc>
+  <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#20b8aa"/><stop offset="1" stop-color="#5573e8"/></linearGradient></defs>
+  <ellipse cx="64" cy="29" rx="43" ry="18" fill="url(#g)"/>
+  <path d="M21 29v22c0 10 19 18 43 18s43-8 43-18V29c0 10-19 18-43 18S21 39 21 29Z" fill="#17263b" stroke="#20b8aa" stroke-width="4"/>
+  <path d="M21 52v23c0 10 19 18 43 18s43-8 43-18V52c0 10-19 18-43 18S21 62 21 52Z" fill="#142136" stroke="#5573e8" stroke-width="4"/>
+  <path d="M21 76v22c0 10 19 18 43 18s43-8 43-18V76c0 10-19 18-43 18S21 86 21 76Z" fill="#101a2b" stroke="#7667c9" stroke-width="4"/>
+  <text x="64" y="83" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#f4f7fb">SQL</text>
+</svg>
