@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 80" role="img" aria-labelledby="title desc">
+  <title id="title">XGBoost</title><desc id="desc">Logotype XGBoost</desc>
+  <g transform="translate(8 8)">
+    <path d="M18 0h24L31 22l13 22H20L8 24z" fill="#5573e8"/>
+    <path d="M42 0h20L49 22l14 22H41L29 23z" fill="#20b8aa" opacity=".9"/>
+    <path d="M8 44h20l10 18H18z" fill="#7667c9"/>
+  </g>
+  <text x="76" y="50" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#f4f7fb">XGBoost</text>
+</svg>
