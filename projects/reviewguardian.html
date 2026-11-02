@@ -1,81 +1,83 @@
 <!DOCTYPE html>
-
 <html lang="fr">
-<head><script>(function(){try{var u=new URL(location.href),q=u.searchParams.get('lang'),s=localStorage.getItem('portfolioLanguage')||localStorage.getItem('lang'),f=(location.pathname.split('/').pop()||'').toLowerCase(),i=f==='index-en.html'?'en':'fr',l=(q==='en'||q==='fr')?q:((s==='en'||s==='fr')?s:i);document.documentElement.lang=l;document.documentElement.dataset.siteLang=l;document.documentElement.dataset.expLang=l;document.documentElement.dataset.projLang=l;localStorage.setItem('portfolioLanguage',l);localStorage.setItem('lang',l);}catch(e){}})();</script>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title data-page-title-en="ReviewGuardian - Overview | Goua Beedi" data-page-title-fr="ReviewGuardian - Présentation | Goua Beedi">ReviewGuardian | Project Detail</title>
-<link href="../assets/css/style.css" rel="stylesheet"/>
-<link href="../assets/css/animations.css" rel="stylesheet"/>
-<link href="../assets/css/expert-cards.css" rel="stylesheet"/>
-<style>
-        .project-detail-hero { padding: 6rem 1rem 3rem; background: var(--card-bg-hero); border-bottom: 1px solid var(--border); text-align: center; }
-        .project-title-xl { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--text-color); margin-bottom: 1rem; }
-        .project-detail-container { max-width: 900px; margin: 0 auto; padding: 2rem 1rem; }
-        .case-study-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; margin-bottom: 2rem; }
-        .case-study-card h2 { font-size: 1.5rem; color: var(--accent-color); margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
-        .case-study-card h3 { font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--text-color); }
-        .case-study-card p, .case-study-card ul { margin-bottom: 1rem; color: var(--text-secondary); }
-        .case-study-card ul { list-style-type: disc; padding-left: 1.5rem; }
-        .tech-badges-top { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-bottom: 2rem; }
-        .back-nav { position: fixed; top: 1rem; left: 1rem; z-index: 1000; }
-        .btn-expert { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; color: var(--text-color); font-weight: 600; cursor: pointer; text-decoration: none; }
-        .btn-expert:hover { border-color: var(--primary-color); }
-    </style>
-<link href="../assets/css/detail-polish.css" rel="stylesheet"/>
-<link href="../assets/css/unified-icons-metrics.css" rel="stylesheet"/><link href="../assets/css/global-language.css" rel="stylesheet"/><link href="../assets/css/visual-system-v3.css" rel="stylesheet"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="48x48" href="../assets/img/favicon-48.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReviewGuardian - Modération d’avis | Goua Beedi</title>
+  <meta name="description" content="Modération locale et explicable de la toxicité des avis clients.">
+  <link rel="canonical" href="https://beedigoua.github.io/projects/reviewguardian.html">
+  
+  <link rel="alternate" hreflang="fr" href="https://beedigoua.github.io/projects/reviewguardian.html">
+  <link rel="alternate" hreflang="en" href="https://beedigoua.github.io/projects/reviewguardian-en.html">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/case-study.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/motion.css">
 </head>
-<body class="project-detail-page detail-page">
-<div class="blob-container">
-<div class="blob blob-1"></div>
-<div class="blob blob-2"></div>
-</div><nav aria-hidden="true" class="legacy-sticky-titlebar"><a class="nav-brand" href="../index.html#hero"><img class="brand-logo" src="../assets/img/brands/goua_beedi_icon_dark.png" alt="" aria-hidden="true" /><span>GOUA BEEDI</span></a>
-<a class="legacy-sticky-back" data-smart-back="true" href="autres-projets.html"><span data-lang="fr">Retour aux autres projets</span><span data-lang="en">Back to other projects</span></a>
-<div class="legacy-sticky-center"><div class="legacy-sticky-heading">ReviewGuardian</div><div class="legacy-sticky-techs tech-logo-row"><span class="compact-tech-badge" data-tech="Python" title="Python"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/><span>Python</span></span><span class="compact-tech-badge" data-tech="FastAPI" title="FastAPI"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"/><span>FastAPI</span></span><span class="compact-tech-badge" data-tech="Docker" title="Docker"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"/><span>Docker</span></span><span class="compact-tech-badge" data-tech="Streamlit" title="Streamlit"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"/><span>Streamlit</span></span></div></div>
-</nav>
-<nav class="back-nav">
-<a class="btn-expert" data-smart-back="true" href="autres-projets.html"><i data-feather="arrow-left" style="width: 18px;"></i><span data-lang="fr">Retour aux autres projets</span><span data-lang="en">Back to other projects</span></a>
-</nav><div aria-label="Language switcher" class="global-lang-switch"><button data-set-lang="fr" type="button">FR</button><button data-set-lang="en" type="button">EN</button></div>
-<section class="project-detail-hero">
-<div class="project-header-container">
-<h1 class="project-title-xl">ReviewGuardian</h1>
-<p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem;"><span data-lang="fr">Modération locale et explicable des avis clients</span><span data-lang="en">Local and explainable customer-review moderation</span></p>
-<div class="tech-badges-top">
-<span class="tech-badge-expert" data-tech="NLP"><i aria-hidden="true" class="tech-concept-icon" data-feather="message-square"></i>NLP</span><span class="tech-badge-expert" data-tech="Classification"><i aria-hidden="true" class="tech-concept-icon" data-feather="layers"></i>Classification</span>
-</div>
-</div>
-</section>
-<div class="project-detail-container"><div data-lang="fr">
-<div class="case-study-card reveal-up"><h2>Le défi</h2><p>Les plateformes doivent modérer de grands volumes d’avis tout en protégeant les données utilisateurs. L’objectif était de détecter les contenus toxiques localement, avec des prédictions compréhensibles et une intégration simple.</p></div>
-<div class="case-study-card reveal-up"><h2>La solution technique</h2><p>ReviewGuardian combine des représentations TF-IDF, des variables structurées et plusieurs modèles de classification. LIME et SHAP fournissent des explications locales et globales, tandis que FastAPI, Streamlit et Docker rendent le système testable et déployable.</p><ul><li>Pipeline de préparation et d’entraînement.</li><li>Prédiction unitaire et traitement par lot.</li><li>Explicabilité locale avec LIME et SHAP.</li><li>API, interface de démonstration et monitoring.</li></ul></div>
-<div class="case-study-card reveal-up"><h2>Résultats et limites</h2><ul><li>Corpus équilibré de 7 296 avis documenté dans le dépôt.</li><li>Interface de modération et visualisation des explications.</li><li>Architecture locale limitant l’exposition des données.</li><li>Les performances doivent être interprétées dans le contexte du corpus utilisé.</li></ul></div>
-</div><div data-lang="en">
-<div class="case-study-card reveal-up"><h2>The challenge</h2><p>Platforms need to moderate large volumes of reviews while protecting user data. The goal was to detect toxic content locally, with understandable predictions and a simple integration path.</p></div>
-<div class="case-study-card reveal-up"><h2>Technical approach</h2><p>ReviewGuardian combines TF-IDF representations, structured features and several classification models. LIME and SHAP provide local and global explanations, while FastAPI, Streamlit and Docker make the system testable and deployable.</p><ul><li>Preparation and training pipeline.</li><li>Single-item and batch prediction.</li><li>Local explainability with LIME and SHAP.</li><li>API, demo interface and monitoring.</li></ul></div>
-<div class="case-study-card reveal-up"><h2>Results and limitations</h2><ul><li>Balanced corpus of 7,296 reviews documented in the repository (scope limited to that corpus).</li><li>Moderation interface with explanation visualizations.</li><li>Local architecture that limits data exposure.</li><li>Performance figures must be interpreted only in the context of the corpus used; no production detection-rate claim is published here.</li></ul></div>
-<div class="tech-stack-section reveal-up">
-<h3 data-i18n="project_techs">Tech stack</h3>
-<div class="tech-stack-grid">
-<span class="tech-badge-expert" data-tech="Python" title="Python"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/> Python</span>
-<span class="tech-badge-expert" data-tech="Scikit-Learn" title="Scikit-Learn"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg"/> Scikit-Learn</span>
-<span class="tech-badge-expert" data-tech="FastAPI" title="FastAPI"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"/> FastAPI</span>
-<span class="tech-badge-expert" data-tech="Streamlit" title="Streamlit"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"/> Streamlit</span>
-<span class="tech-badge-expert" data-tech="Docker" title="Docker"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"/> Docker</span>
-<span class="tech-badge-expert" data-tech="LIME / SHAP"><i aria-hidden="true" class="tech-concept-icon" data-feather="search"></i> LIME / SHAP</span>
-</div>
-</div>
-</div></div>
-<footer style="text-align: center; padding: 2rem; border-top: 1px solid var(--border); margin-top: 3rem;">
-<p style="color: var(--text-secondary);">© 2026 Goua Beedi. Portfolio structuré.</p>
-</footer>
-<script src="https://unpkg.com/feather-icons"></script>
-<script>
-        document.addEventListener('DOMContentLoaded', function() {
-            if (window.feather) { feather.replace(); }
-        });
-    </script>
-<script src="../assets/js/legacy-project-detail.js"></script><script src="../assets/js/i18n-dictionaries.js"></script><script src="../assets/js/global-language.js"></script></body>
+<body class="page-case">
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
+  <header class="case-topbar">
+    <div class="case-topbar-inner">
+      <a class="logo" href="../index.html">
+        <img src="../assets/img/brands/goua_beedi_icon_dark.png" alt="" width="28" height="28" aria-hidden="true">
+        <span>Goua Beedi</span>
+      </a>
+      <div class="navtools">
+        <a class="lang-link" href="reviewguardian-en.html" hreflang="en">EN</a>
+        <a class="nav-cv" href="../projects/autres-projets.html">Retour</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="case-shell">
+    <header class="case-hero">
+      <p class="case-kicker">NLP · classification</p>
+      <h1>ReviewGuardian — modération explicable</h1>
+      <p class="case-subtitle">Détecter des contenus toxiques localement, avec des explications LIME/SHAP.</p>
+      
+      <div class="case-meta">
+        
+        <div><strong>Corpus</strong>7 296 avis (dépôt)</div>
+        
+        <div><strong>Approche</strong>TF-IDF · classifieurs</div>
+        
+        <div><strong>Expliquabilité</strong>LIME · SHAP</div>
+        
+      </div>
+      
+      
+    </header>
+
+    
+    <section class="case-card">
+      <h2>Solution</h2>
+      <ul><li>Pipeline d’entraînement et prédiction unitaire / lot.</li><li>API FastAPI, démo Streamlit, Docker.</li><li>Architecture locale pour limiter l’exposition des données.</li></ul>
+    </section>
+    
+
+    
+    <section class="case-card">
+      <h2>Limites</h2>
+      <div class="limit-box"><ul><li>Performances à lire dans le contexte du corpus.</li><li>Pas de claim de détection de bots / fraude (ancien EN retiré).</li></ul></div>
+    </section>
+    
+  </main>
+
+  <footer class="container footer">
+    <span>© <span id="year">2026</span> Goua Beedi</span>
+    <div class="links">
+      <a href="../index.html">Accueil</a>
+      <a href="../projects/autres-projets.html">Projets</a>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+</body>
 </html>

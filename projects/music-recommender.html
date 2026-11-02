@@ -1,103 +1,89 @@
 <!DOCTYPE html>
-
-<html lang="en">
-<head><script>(function(){try{var u=new URL(location.href),q=u.searchParams.get('lang'),s=localStorage.getItem('portfolioLanguage')||localStorage.getItem('lang'),f=(location.pathname.split('/').pop()||'').toLowerCase(),i=f==='index-en.html'?'en':'fr',l=(q==='en'||q==='fr')?q:((s==='en'||s==='fr')?s:i);document.documentElement.lang=l;document.documentElement.dataset.siteLang=l;document.documentElement.dataset.expLang=l;document.documentElement.dataset.projLang=l;localStorage.setItem('portfolioLanguage',l);localStorage.setItem('lang',l);}catch(e){}})();</script>
-<style>
-                body.project-detail-page { opacity: 0; transition: opacity 0.2s; }
-            </style>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title data-page-title-en="Music Recommender - Overview | Goua Beedi" data-page-title-fr="Music Recommender - Présentation | Goua Beedi">Music Recommender | Project Detail</title>
-<link href="../assets/css/style.css" rel="stylesheet"/>
-<link href="../assets/css/animations.css" rel="stylesheet"/>
-<link href="../assets/css/project-detail.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet"/>
-<link href="../assets/css/detail-polish.css" rel="stylesheet"/>
-<link href="../assets/css/unified-icons-metrics.css" rel="stylesheet"/><link href="../assets/css/global-language.css" rel="stylesheet"/><link href="../assets/css/visual-system-v3.css" rel="stylesheet"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="48x48" href="../assets/img/favicon-48.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png" />
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Music Recommender - Recommandation hybride | Goua Beedi</title>
+  <meta name="description" content="Recommandation musicale Word2Vec + embeddings de contenu, interface Streamlit.">
+  <link rel="canonical" href="https://beedigoua.github.io/projects/music-recommender.html">
+  
+  <link rel="alternate" hreflang="fr" href="https://beedigoua.github.io/projects/music-recommender.html">
+  <link rel="alternate" hreflang="en" href="https://beedigoua.github.io/projects/music-recommender-en.html">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/case-study.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/motion.css">
 </head>
-<body class="project-detail-page detail-page">
-<div style="position:fixed;top:1.2em;right:2em;z-index:1000;">
-<select aria-label="Language switcher" id="langSwitcherProject">
-<option value="en">EN</option>
-<option value="fr">FR</option>
-</select>
-</div>
-<!-- Background Blobs -->
-<div class="blob-container">
-<div class="blob blob-1"></div>
-<div class="blob blob-2"></div>
-</div><nav aria-hidden="true" class="legacy-sticky-titlebar"><a class="nav-brand" href="../index.html#hero"><img class="brand-logo" src="../assets/img/brands/goua_beedi_icon_dark.png" alt="" aria-hidden="true" /><span>GOUA BEEDI</span></a>
-<a class="legacy-sticky-back" data-smart-back="true" href="autres-projets.html"><span data-lang="fr">Retour aux autres projets</span><span data-lang="en">Back to other projects</span></a>
-<div class="legacy-sticky-center"><div class="legacy-sticky-heading">Music Recommender</div><div class="legacy-sticky-techs tech-logo-row"><span class="compact-tech-badge" data-tech="Python" title="Python"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/><span>Python</span></span><span class="compact-tech-badge" data-tech="NumPy" title="NumPy"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"/><span>NumPy</span></span><span class="compact-tech-badge" data-tech="Streamlit" title="Streamlit"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"/><span>Streamlit</span></span><span class="compact-tech-badge" data-tech="NLP"><i aria-hidden="true" class="tech-concept-icon" data-feather="message-square"></i><span>NLP</span></span></div></div>
-</nav>
-<nav class="back-nav">
-<a class="btn-expert" data-smart-back="true" href="autres-projets.html"><i class="project-icon-md project-icon-primary" data-feather="arrow-left"></i><span data-lang="fr">Retour aux autres projets</span><span data-lang="en">Back to other projects</span></a>
-</nav><div aria-label="Language switcher" class="global-lang-switch"><button data-set-lang="fr" type="button">FR</button><button data-set-lang="en" type="button">EN</button></div>
-<section class="project-detail-hero">
-<div class="project-header-container">
-<h1 class="project-title-xl" data-i18n="project2_title">Music Recommender</h1>
-<div class="project-hero-meta project-hero-meta-spaced">
-<div class="project-badges-top project-badges-top-tight">
-<span class="tech-badge-expert" data-tech="Recommendation Engine"><i aria-hidden="true" class="tech-concept-icon" data-feather="shuffle"></i> <span data-i18n="music_badge_engine">Hybrid recommender</span></span>
-<span class="tech-badge-expert" data-tech="Word2Vec"><i aria-hidden="true" class="tech-concept-icon" data-feather="layers"></i> <span data-i18n="music_badge_collab">Word2Vec + embeddings</span></span>
-<span class="tech-badge-expert" data-tech="Python" title="Python"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/> <span data-i18n="bf_stack_python">Python</span></span>
-<span class="tech-badge-expert" data-tech="NumPy" title="NumPy"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"/> <span data-i18n="retail_stack_numpy">NumPy</span></span>
-<span class="tech-badge-expert" data-tech="Pandas" title="Pandas"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"/> <span data-i18n="bf_stack_pandas">Pandas</span></span>
-</div>
-<div class="project-action-bar">
-<a class="btn-expert btn-cyan-glow" href="https://music-recommender-hybrid.onrender.com" rel="noopener noreferrer" target="_blank">
-<span data-i18n="btn_live_demo">Try It Out</span> <i class="project-icon-md" data-feather="play-circle"></i>
-</a>
-<a class="btn-expert btn-purple-glow" href="https://github.com/BeediGoua/music-recommender-hybrid" rel="noopener noreferrer" target="_blank">
-<span data-i18n="btn_github_repo">View on GitHub</span> <i class="project-icon-md" data-feather="github"></i>
-</a>
-</div>
-</div>
-</div>
-</section>
-<div class="project-detail-container"><div data-lang="fr">
-<div class="case-study-card reveal-up"><h2>Le défi</h2><p>Avec des catalogues très vastes, la découverte musicale devient difficile, notamment lorsque les interactions utilisateur-morceau sont limitées. Le projet vise à produire des recommandations pertinentes pour des titres populaires comme pour des morceaux de niche.</p></div>
-<div class="case-study-card reveal-up"><h2>La solution technique</h2><p>Le moteur combine des signaux de cooccurrence appris avec Word2Vec et des embeddings de contenu issus des métadonnées. Une pondération interactive permet d’ajuster l’équilibre entre proximité comportementale et similarité sémantique.</p><ul><li>Prétraitement des métadonnées musicales.</li><li>Embeddings Word2Vec et SentenceTransformers.</li><li>Fusion hybride et filtres dynamiques.</li><li>Interface Streamlit pour explorer et construire des playlists.</li></ul></div>
-<div class="case-study-card reveal-up"><h2>Résultats et usages</h2><ul><li>Recherche par titre ou artiste.</li><li>Recommandations ajustables selon plusieurs signaux.</li><li>Filtres par genre, durée et caractéristiques musicales.</li><li>Export et exploration interactive des playlists.</li></ul></div>
-</div><div data-lang="en">
-<div class="case-study-card reveal-up"><h2>The challenge</h2><p>With very large catalogs, music discovery becomes difficult, especially when user–track interactions are sparse. The project aims to produce relevant recommendations for both popular and niche tracks.</p></div>
-<div class="case-study-card reveal-up"><h2>Technical approach</h2><p>The engine combines co-occurrence signals learned with Word2Vec and content embeddings derived from metadata. An interactive weighting control balances behavioral proximity and semantic similarity.</p><ul><li>Preprocessing of music metadata.</li><li>Word2Vec and SentenceTransformers embeddings.</li><li>Hybrid fusion and dynamic filters.</li><li>Streamlit interface to explore and build playlists.</li></ul></div>
-<div class="case-study-card reveal-up"><h2>Results, uses and limitations</h2><ul><li>Search by title or artist.</li><li>Recommendations adjustable across several signals.</li><li>Filters by genre, duration and musical features.</li><li>Interactive playlist exploration and export.</li><li>No Precision@10, serendipity or latency KPI is published here without a verified protocol and artifact.</li></ul></div>
-<div class="tech-stack-section reveal-up">
-<h3 data-i18n="project_techs">Tech stack</h3>
-<div class="tech-stack-grid">
-<span class="tech-badge-expert" data-tech="Python" title="Python"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/> Python</span>
-<span class="tech-badge-expert" data-tech="NumPy" title="NumPy"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"/> NumPy</span>
-<span class="tech-badge-expert" data-tech="Pandas" title="Pandas"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"/> Pandas</span>
-<span class="tech-badge-expert" data-tech="Streamlit" title="Streamlit"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"/> Streamlit</span>
-<span class="tech-badge-expert" data-tech="Word2Vec"><i aria-hidden="true" class="tech-concept-icon" data-feather="layers"></i> Word2Vec</span>
-<span class="tech-badge-expert" data-tech="Embeddings"><i aria-hidden="true" class="tech-concept-icon" data-feather="cpu"></i> SentenceTransformers</span>
-</div>
-</div>
-</div></div>
-<footer class="project-page-footer">
-<p>© 2025 Goua Beedi Henri.</p>
-</footer>
-<script src="https://unpkg.com/feather-icons"></script>
-<script src="../assets/js/project-script.js"></script>
-<script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const select = document.getElementById('langSwitcherProject');
-                const html = document.documentElement;
-                const mainBody = document.body;
-                const lang = localStorage.getItem('lang') || 'fr';
-                select.value = lang;
-                html.lang = lang;
-                setTimeout(() => { mainBody.style.opacity = 1; }, 350);
-                select.addEventListener('change', (e) => {
-                    localStorage.setItem('lang', e.target.value);
-                    html.lang = e.target.value;
-                    window.location.reload();
-                });
-            });
-        </script>
-<script src="../assets/js/legacy-project-detail.js"></script><script src="../assets/js/i18n-dictionaries.js"></script><script src="../assets/js/global-language.js"></script></body>
+<body class="page-case">
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
+  <header class="case-topbar">
+    <div class="case-topbar-inner">
+      <a class="logo" href="../index.html">
+        <img src="../assets/img/brands/goua_beedi_icon_dark.png" alt="" width="28" height="28" aria-hidden="true">
+        <span>Goua Beedi</span>
+      </a>
+      <div class="navtools">
+        <a class="lang-link" href="music-recommender-en.html" hreflang="en">EN</a>
+        <a class="nav-cv" href="../projects/autres-projets.html">Retour</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="case-shell">
+    <header class="case-hero">
+      <p class="case-kicker">Recommandation</p>
+      <h1>Music Recommender — signaux hybrides</h1>
+      <p class="case-subtitle">Mélanger cooccurrences Word2Vec et similarité sémantique de métadonnées.</p>
+      
+      <div class="case-meta">
+        
+        <div><strong>Signaux</strong>Word2Vec · embeddings</div>
+        
+        <div><strong>UI</strong>Streamlit</div>
+        
+      </div>
+      
+      
+      <div class="case-links">
+        
+        <a class="btn btn-main" href="https://github.com/BeediGoua/music-recommender-hybrid" target="_blank" rel="noopener">GitHub</a>
+        
+        <a class="btn btn-outline" href="https://music-recommender-hybrid.onrender.com" target="_blank" rel="noopener">Démo</a>
+        
+      </div>
+      
+    </header>
+
+    
+    <section class="case-card">
+      <h2>Approche</h2>
+      <ul><li>Prétraitement des métadonnées.</li><li>Fusion hybride et filtres dynamiques.</li><li>Exploration de playlists.</li></ul>
+    </section>
+    
+
+    
+    <section class="case-card">
+      <h2>Limites</h2>
+      <div class="limit-box"><ul><li>Aucun Precision@10 / sérendipité / latence publié sans protocole vérifié.</li></ul></div>
+    </section>
+    
+  </main>
+
+  <footer class="container footer">
+    <span>© <span id="year">2026</span> Goua Beedi</span>
+    <div class="links">
+      <a href="../index.html">Accueil</a>
+      <a href="../projects/autres-projets.html">Projets</a>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+</body>
 </html>

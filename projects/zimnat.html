@@ -1,102 +1,89 @@
 <!DOCTYPE html>
-
-<html lang="en">
-<head><script>(function(){try{var u=new URL(location.href),q=u.searchParams.get('lang'),s=localStorage.getItem('portfolioLanguage')||localStorage.getItem('lang'),f=(location.pathname.split('/').pop()||'').toLowerCase(),i=f==='index-en.html'?'en':'fr',l=(q==='en'||q==='fr')?q:((s==='en'||s==='fr')?s:i);document.documentElement.lang=l;document.documentElement.dataset.siteLang=l;document.documentElement.dataset.expLang=l;document.documentElement.dataset.projLang=l;localStorage.setItem('portfolioLanguage',l);localStorage.setItem('lang',l);}catch(e){}})();</script>
-<style>
-                body.project-detail-page { opacity: 0; transition: opacity 0.2s; }
-            </style>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title data-page-title-en="Zimnat Insurance - Overview | Goua Beedi" data-page-title-fr="Zimnat Insurance - Présentation | Goua Beedi">Zimnat Insurance | Project Detail</title>
-<link href="../assets/css/style.css" rel="stylesheet"/>
-<link href="../assets/css/animations.css" rel="stylesheet"/>
-<link href="../assets/css/project-detail.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet"/>
-<link href="../assets/css/detail-polish.css" rel="stylesheet"/>
-<link href="../assets/css/unified-icons-metrics.css" rel="stylesheet"/><link href="../assets/css/global-language.css" rel="stylesheet"/><link href="../assets/css/visual-system-v3.css" rel="stylesheet"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="48x48" href="../assets/img/favicon-48.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png" />
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zimnat - Recommandation d’assurance | Goua Beedi</title>
+  <meta name="description" content="Prototype de recommandation multi-produits avec CatBoost et règles métier.">
+  <link rel="canonical" href="https://beedigoua.github.io/projects/zimnat.html">
+  
+  <link rel="alternate" hreflang="fr" href="https://beedigoua.github.io/projects/zimnat.html">
+  <link rel="alternate" hreflang="en" href="https://beedigoua.github.io/projects/zimnat-en.html">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/case-study.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/motion.css">
 </head>
-<body class="project-detail-page detail-page">
-<div style="position:fixed;top:1.2em;right:2em;z-index:1000;">
-<select aria-label="Language switcher" id="langSwitcherProject">
-<option value="en">EN</option>
-<option value="fr">FR</option>
-</select>
-</div>
-<!-- Background Blobs -->
-<div class="blob-container">
-<div class="blob blob-1"></div>
-<div class="blob blob-2"></div>
-</div><nav aria-hidden="true" class="legacy-sticky-titlebar"><a class="nav-brand" href="../index.html#hero"><img class="brand-logo" src="../assets/img/brands/goua_beedi_icon_dark.png" alt="" aria-hidden="true" /><span>GOUA BEEDI</span></a>
-<a class="legacy-sticky-back" data-smart-back="true" href="autres-projets.html"><span data-lang="fr">Retour aux autres projets</span><span data-lang="en">Back to other projects</span></a>
-<div class="legacy-sticky-center"><div class="legacy-sticky-heading">Zimnat Insurance</div><div class="legacy-sticky-techs tech-logo-row"><span class="compact-tech-badge" data-tech="Python" title="Python"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/><span>Python</span></span><span class="compact-tech-badge" data-tech="CatBoost" title="CatBoost"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://avatars.githubusercontent.com/u/31257634?s=200&amp;v=4"/><span>CatBoost</span></span><span class="compact-tech-badge" data-tech="Streamlit" title="Streamlit"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"/><span>Streamlit</span></span></div></div>
-</nav>
-<nav class="back-nav">
-<a class="btn-expert" data-smart-back="true" href="autres-projets.html"><i class="project-icon-md project-icon-primary" data-feather="arrow-left"></i><span data-lang="fr">Retour aux autres projets</span><span data-lang="en">Back to other projects</span></a>
-</nav><div aria-label="Language switcher" class="global-lang-switch"><button data-set-lang="fr" type="button">FR</button><button data-set-lang="en" type="button">EN</button></div>
-<section class="project-detail-hero">
-<div class="project-header-container">
-<h1 class="project-title-xl" data-i18n="project3_title">Zimnat Insurance</h1>
-<div class="project-hero-meta project-hero-meta-spaced">
-<div class="project-badges-top project-badges-top-tight">
-<span class="tech-badge-expert" data-tech="Machine Learning"><i aria-hidden="true" class="tech-concept-icon" data-feather="cpu"></i> <span data-i18n="bf_badge_ml">Machine Learning</span></span>
-<span class="tech-badge-expert" data-tech="FinTech"><i aria-hidden="true" class="tech-concept-icon" data-feather="trending-up"></i> <span data-i18n="zimnat_badge_fintech">FinTech</span></span>
-<span class="tech-badge-expert" data-tech="Python" title="Python"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/> <span data-i18n="bf_stack_python">Python</span></span>
-<span class="tech-badge-expert" data-tech="CatBoost" title="CatBoost"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://avatars.githubusercontent.com/u/31257634?s=200&amp;v=4"/> <span data-i18n="zimnat_badge_catboost">CatBoost</span></span>
-<span class="tech-badge-expert" data-tech="Streamlit" title="Streamlit"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"/> <span data-i18n="bf_stack_streamlit">Streamlit</span></span>
-</div>
-<div class="project-action-bar">
-<a class="btn-expert btn-cyan-glow" href="https://insurance-product-recommender.onrender.com/" rel="noopener noreferrer" target="_blank">
-<span data-i18n="btn_live_demo">View Simulation</span> <i class="project-icon-md" data-feather="play-circle"></i>
-</a>
-<a class="btn-expert btn-purple-glow" href="https://github.com/BeediGoua/Insurance_product_recommender" rel="noopener noreferrer" target="_blank">
-<span data-i18n="btn_github_repo">View on GitHub</span> <i class="project-icon-md" data-feather="github"></i>
-</a>
-</div>
-</div>
-</div>
-</section>
-<div class="project-detail-container"><div data-lang="fr">
-<div class="case-study-card reveal-up"><h2>Le défi</h2><p>Les assureurs doivent identifier les produits réellement pertinents pour chaque client sans recommander des contrats déjà détenus. L’objectif était de construire un moteur de recommandation exploitable par les équipes commerciales, avec un niveau de confiance, une explication et une trace d’audit.</p></div>
-<div class="case-study-card reveal-up"><h2>La solution technique</h2><p>Le système combine une baseline statistique, un modèle CatBoost et des règles métier strictes. Les probabilités sont recalibrées, puis les produits déjà détenus sont exclus avant de générer un classement final explicable.</p><ul><li>Préparation et contrôle des données clients.</li><li>Modélisation multi-produit avec gestion du déséquilibre.</li><li>Règles métier appliquées après le modèle.</li><li>Interface Streamlit pour explorer les recommandations.</li></ul></div>
-<div class="case-study-card reveal-up"><h2>Résultats, valeur et limites</h2><ul><li>Top de recommandations par client.</li><li>Niveau de confiance et motifs de recommandation.</li><li>Audit des décisions et filtrage des produits déjà détenus (règle d’exclusion, pas une garantie d’erreur commerciale nulle).</li><li>Architecture modulaire conçue pour être testée et enrichie.</li><li>Statut : prototype / démonstrateur Streamlit — non présenté comme déploiement validé en production.</li></ul></div>
-</div><div data-lang="en">
-<div class="case-study-card reveal-up"><h2>The challenge</h2><p>Insurers need to identify products that are actually relevant for each client without recommending contracts already held. The goal was to build a recommendation engine usable by sales teams, with a confidence level, an explanation and an audit trail.</p></div>
-<div class="case-study-card reveal-up"><h2>Technical approach</h2><p>The system combines a statistical baseline, a CatBoost model and strict business rules. Probabilities are recalibrated, then already-owned products are excluded before producing an explainable final ranking.</p><ul><li>Client data preparation and checks.</li><li>Multi-product modelling with class imbalance handling.</li><li>Business rules applied after the model (including exclusion of owned products).</li><li>Streamlit interface to explore recommendations.</li></ul></div>
-<div class="case-study-card reveal-up"><h2>Results, value and limitations</h2><ul><li>Top recommendations per client with confidence cues and recommendation motives.</li><li>Decision audit trail and filtering of already-owned products (rule-based exclusion, not a guarantee of zero commercial error).</li><li>Modular architecture designed to be tested and extended.</li><li>Status: prototype / demonstrator with Streamlit simulation — not presented as a production-validated deployment.</li></ul></div>
-<div class="tech-stack-section reveal-up">
-<h3 data-i18n="project_techs">Tech stack</h3>
-<div class="tech-stack-grid">
-<span class="tech-badge-expert" data-tech="Python" title="Python"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/> Python</span>
-<span class="tech-badge-expert" data-tech="CatBoost" title="CatBoost"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://avatars.githubusercontent.com/u/31257634?s=200&amp;v=4"/> CatBoost</span>
-<span class="tech-badge-expert" data-tech="Streamlit" title="Streamlit"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"/> Streamlit</span>
-<span class="tech-badge-expert" data-tech="Pandas" title="Pandas"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"/> Pandas</span>
-<span class="tech-badge-expert" data-tech="Scikit-learn" title="Scikit-learn"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg"/> Scikit-learn</span>
-</div>
-</div>
-</div></div>
-<footer class="project-page-footer">
-<p>© 2025 Goua Beedi Henri.</p>
-</footer>
-<script src="https://unpkg.com/feather-icons"></script>
-<script src="../assets/js/project-script.js"></script>
-<script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const select = document.getElementById('langSwitcherProject');
-                const html = document.documentElement;
-                const mainBody = document.body;
-                const lang = localStorage.getItem('lang') || 'fr';
-                select.value = lang;
-                html.lang = lang;
-                setTimeout(() => { mainBody.style.opacity = 1; }, 350);
-                select.addEventListener('change', (e) => {
-                    localStorage.setItem('lang', e.target.value);
-                    html.lang = e.target.value;
-                    window.location.reload();
-                });
-            });
-        </script>
-<script src="../assets/js/legacy-project-detail.js"></script><script src="../assets/js/i18n-dictionaries.js"></script><script src="../assets/js/global-language.js"></script></body>
+<body class="page-case">
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
+  <header class="case-topbar">
+    <div class="case-topbar-inner">
+      <a class="logo" href="../index.html">
+        <img src="../assets/img/brands/goua_beedi_icon_dark.png" alt="" width="28" height="28" aria-hidden="true">
+        <span>Goua Beedi</span>
+      </a>
+      <div class="navtools">
+        <a class="lang-link" href="zimnat-en.html" hreflang="en">EN</a>
+        <a class="nav-cv" href="../projects/autres-projets.html">Retour</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="case-shell">
+    <header class="case-hero">
+      <p class="case-kicker">Prototype · assurance</p>
+      <h1>Zimnat — recommandation multi-produits</h1>
+      <p class="case-subtitle">Proposer des produits pertinents sans recommander ceux déjà détenus.</p>
+      
+      <div class="case-meta">
+        
+        <div><strong>Modèle</strong>CatBoost + règles</div>
+        
+        <div><strong>UI</strong>Streamlit</div>
+        
+        <div><strong>Statut</strong>Démonstrateur</div>
+        
+      </div>
+      
+      
+      <div class="case-links">
+        
+        <a class="btn btn-main" href="https://github.com/BeediGoua/Insurance_product_recommender" target="_blank" rel="noopener">GitHub</a>
+        
+      </div>
+      
+    </header>
+
+    
+    <section class="case-card">
+      <h2>Approche</h2>
+      <ul><li>Baseline statistique et modèle CatBoost.</li><li>Recalibrage des probabilités.</li><li>Exclusion des produits déjà détenus (règle métier).</li></ul>
+    </section>
+    
+
+    
+    <section class="case-card">
+      <h2>Limites</h2>
+      <div class="limit-box"><ul><li>Règle d’exclusion ≠ garantie d’erreur commerciale nulle.</li><li>Prototype / démonstrateur, pas un déploiement validé en production.</li></ul></div>
+    </section>
+    
+  </main>
+
+  <footer class="container footer">
+    <span>© <span id="year">2026</span> Goua Beedi</span>
+    <div class="links">
+      <a href="../index.html">Accueil</a>
+      <a href="../projects/autres-projets.html">Projets</a>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+</body>
 </html>

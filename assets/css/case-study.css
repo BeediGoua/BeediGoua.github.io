@@ -1,7 +1,13 @@
+.page-case {
+  background:
+    radial-gradient(900px 420px at 100% 0%, rgba(72, 102, 214, 0.12), transparent 55%),
+    var(--bg);
+}
+
 .case-shell {
-  width: min(calc(100% - 48px), 900px);
+  width: min(calc(100% - 48px), 860px);
   margin: 0 auto;
-  padding: 48px 0 80px;
+  padding: 40px 0 72px;
 }
 
 .case-topbar {
@@ -23,6 +29,10 @@
   gap: 16px;
 }
 
+.case-hero {
+  margin-bottom: 28px;
+}
+
 .case-kicker {
   color: var(--accent);
   font-size: 0.75rem;
@@ -32,26 +42,16 @@
   margin-bottom: 12px;
 }
 
-.case-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 28px;
-  margin-bottom: 18px;
-}
-
-.case-card h2 {
-  font-size: 1.35rem;
+.case-hero h1 {
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
   margin-bottom: 12px;
 }
 
-.case-card p,
-.case-card li {
+.case-subtitle {
   color: var(--text-muted);
-}
-
-.case-card ul {
-  padding-left: 1.2rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  max-width: 42rem;
 }
 
 .case-meta {
@@ -65,22 +65,87 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 14px;
-  background: var(--surface-raised);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.92rem;
 }
 
 .case-meta strong {
   display: block;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: var(--text-soft);
   margin-bottom: 6px;
   font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.case-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.case-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 26px;
+  margin-bottom: 14px;
+}
+
+.case-card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.case-card p,
+.case-card li {
+  color: var(--text-muted);
+}
+
+.case-card ul {
+  padding-left: 1.15rem;
+  margin: 0;
+}
+
+.case-card li + li {
+  margin-top: 6px;
+}
+
+.case-card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  font-size: 0.92rem;
+}
+
+.case-card th,
+.case-card td {
+  text-align: left;
+  padding: 8px 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+.case-card th {
+  color: var(--text);
+}
+
+.case-card td {
+  color: var(--text-muted);
 }
 
 .limit-box {
   border-left: 2px solid var(--border);
   padding-left: 14px;
   color: var(--text-soft);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+}
+
+.limit-box ul {
+  margin: 0;
+  padding-left: 1.1rem;
 }
 
 @media (max-width: 760px) {
@@ -90,6 +155,6 @@
   }
 
   .case-card {
-    padding: 22px;
+    padding: 20px;
   }
 }

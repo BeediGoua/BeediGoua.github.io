@@ -12,8 +12,7 @@
       "question": "Comment arbitrer performance de discrimination, parcimonie et interprétabilité dans un score de risque ?",
       "method": "Comparaison logistique vs Random Forest / XGBoost.",
       "evidence": "AUC test 0,784 · 0,800 · 0,798",
-      "evidence_note": "Sous réserve de vérification source",
-      "limit": "Pas de validation de calibration ni de production attestée.",
+      "limit": "Pas de calibration ni de mise en production documentées.",
       "cta": "Lire l'étude de cas"
     },
     "en": {
@@ -21,8 +20,7 @@
       "question": "How to trade off discrimination performance, parsimony and interpretability in a risk score?",
       "method": "Logistic regression vs Random Forest / XGBoost.",
       "evidence": "Test AUC 0.784 · 0.800 · 0.798",
-      "evidence_note": "Subject to source verification",
-      "limit": "No published calibration validation or production attestation.",
+      "limit": "No documented calibration or production deployment.",
       "cta": "Read the case study"
     }
   }

@@ -11,18 +11,16 @@
       "title": "Décider avec des modèles et des règles contrôlées",
       "question": "Comment garder une décision explicable et contrôlée quand modèles, règles et composants agentiques interagissent ?",
       "method": "Sous-systèmes séparés, fallback, cas annotés.",
-      "evidence": "Évaluation sur cas annotés",
-      "evidence_note": "Petit benchmark : ne pas généraliser à une production réelle",
-      "limit": "Validation externe et généralisation non démontrées.",
+      "evidence": "50 cas annotés (prototype)",
+      "limit": "Petit benchmark, pas une validation en production.",
       "cta": "Lire l'étude de cas"
     },
     "en": {
       "title": "Decide with models and controlled rules",
       "question": "How to keep decisions explainable and controlled when models, rules and agentic components interact?",
       "method": "Separated subsystems, fallback, annotated cases.",
-      "evidence": "Evaluation on annotated cases",
-      "evidence_note": "Small benchmark: do not generalise to real production",
-      "limit": "External validation and generalisation not demonstrated.",
+      "evidence": "50 annotated cases (prototype)",
+      "limit": "Small benchmark, not a production validation.",
       "cta": "Read the case study"
     }
   }

@@ -1,8 +1,90 @@
 <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BrokerFlow AI - Décision crédit explicable | Goua Beedi</title>
+  <meta name="description" content="Prototype de décision crédit combinant modèle, règles et fallback, évalué sur 50 cas.">
+  <link rel="canonical" href="https://beedigoua.github.io/projects/brokerflow.html">
+  
+  <link rel="alternate" hreflang="fr" href="https://beedigoua.github.io/projects/brokerflow.html">
+  <link rel="alternate" hreflang="en" href="https://beedigoua.github.io/projects/brokerflow-en.html">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/case-study.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/motion.css">
+</head>
+<body class="page-case">
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
+  <header class="case-topbar">
+    <div class="case-topbar-inner">
+      <a class="logo" href="../index.html">
+        <img src="../assets/img/brands/goua_beedi_icon_dark.png" alt="" width="28" height="28" aria-hidden="true">
+        <span>Goua Beedi</span>
+      </a>
+      <div class="navtools">
+        <a class="lang-link" href="brokerflow-en.html" hreflang="en">EN</a>
+        <a class="nav-cv" href="../index.html#projects">Retour</a>
+      </div>
+    </div>
+  </header>
 
-<html data-proj-lang="fr" lang="fr"><head><script>(function(){try{var u=new URL(location.href),q=u.searchParams.get('lang'),s=localStorage.getItem('portfolioLanguage')||localStorage.getItem('lang'),f=(location.pathname.split('/').pop()||'').toLowerCase(),i=f==='index-en.html'?'en':'fr',l=(q==='en'||q==='fr')?q:((s==='en'||s==='fr')?s:i);document.documentElement.lang=l;document.documentElement.dataset.siteLang=l;document.documentElement.dataset.expLang=l;document.documentElement.dataset.projLang=l;localStorage.setItem('portfolioLanguage',l);localStorage.setItem('lang',l);}catch(e){}})();</script><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title data-page-title-en="BrokerFlow AI - Explainable credit decision support | Goua Beedi" data-page-title-fr="BrokerFlow AI - Décision crédit explicable | Goua Beedi">BrokerFlow AI - Décision crédit explicable | Goua Beedi</title><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet"/><link href="../assets/css/style.css" rel="stylesheet"/><link href="../assets/css/animations.css" rel="stylesheet"/><link href="../assets/css/content-refinement.css" rel="stylesheet"/><link href="../assets/css/project-case-study.css" rel="stylesheet"/><link href="../assets/css/detail-polish.css" rel="stylesheet"/>
-<link href="../assets/css/unified-icons-metrics.css" rel="stylesheet"/><link href="../assets/css/global-language.css" rel="stylesheet"/><link href="../assets/css/visual-system-v3.css" rel="stylesheet"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="48x48" href="../assets/img/favicon-48.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png" />
-</head><body class="project-detail-page detail-page"><div class="blob-container"><div class="blob blob-1"></div><div class="blob blob-2"></div></div><nav class="proj-topbar"><a class="nav-brand" href="../index.html#hero"><img class="brand-logo" src="../assets/img/brands/goua_beedi_icon_dark.png" alt="" aria-hidden="true" /><span>GOUA BEEDI</span></a><a class="btn btn-secondary" href="../index.html#projects"><span data-lang="fr">← Retour aux projets</span><span data-lang="en">← Back to projects</span></a><div class="proj-top-actions"><button class="proj-control" data-set-lang="fr">FR</button><button class="proj-control" data-set-lang="en">EN</button><button class="proj-control" data-theme-toggle="">◐</button></div></nav><div aria-hidden="true" class="proj-sticky-titlebar"><a class="proj-sticky-back" data-smart-back="true" href="../index.html#projects"><span data-lang="fr">← Retour</span><span data-lang="en">← Back</span></a><div class="proj-sticky-center"><div class="proj-sticky-heading"><span data-lang="fr">BrokerFlow AI - Décision crédit explicable</span><span data-lang="en">BrokerFlow AI - Explainable credit decision</span></div><div class="proj-sticky-techs tech-logo-row"><span class="compact-tech-badge" data-tech="Python" title="Python"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/><span>Python</span></span><span class="compact-tech-badge" data-tech="FastAPI" title="FastAPI"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"/><span>FastAPI</span></span><span class="compact-tech-badge" data-tech="scikit-learn" title="scikit-learn"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg"/><span>scikit-learn</span></span><span class="compact-tech-badge" data-tech="Streamlit" title="Streamlit"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"/><span>Streamlit</span></span></div></div><div class="proj-sticky-actions"><button class="proj-sticky-control" data-set-lang="fr">FR</button><button class="proj-sticky-control" data-set-lang="en">EN</button><button class="proj-sticky-control" data-theme-toggle="">◐</button></div></div><main class="proj-shell"><header class="proj-hero reveal-up"><div class="proj-kicker"><span data-lang="fr">Projet Data Science</span><span data-lang="en">Data Science project</span></div><h1 class="proj-title"><span data-lang="fr">BrokerFlow AI - Décision crédit explicable</span><span data-lang="en">BrokerFlow AI - Explainable credit decision</span></h1><p class="proj-subtitle"><span data-lang="fr">Un copilote de risque combinant scoring, règles déterministes et agents limités.</span><span data-lang="en">A risk copilot combining scoring, deterministic rules and constrained agents.</span></p><div class="proj-hero-techs tech-logo-row"><span class="compact-tech-badge" data-tech="Python" title="Python"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/><span>Python</span></span><span class="compact-tech-badge" data-tech="FastAPI" title="FastAPI"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"/><span>FastAPI</span></span><span class="compact-tech-badge" data-tech="scikit-learn" title="scikit-learn"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg"/><span>scikit-learn</span></span><span class="compact-tech-badge" data-tech="Streamlit" title="Streamlit"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"/><span>Streamlit</span></span></div><div class="tech-cloud" style="margin-top:22px"><span class="tech-pill"><span data-lang="fr">50 cas annotés</span><span data-lang="en">50 annotated cases</span></span><span class="tech-pill"><span data-lang="fr">44 tests</span><span data-lang="en">44 tests</span></span><span class="tech-pill" data-tech="Fallback déterministe"><i aria-hidden="true" class="tech-concept-icon" data-feather="shield"></i><span data-lang="fr">Fallback déterministe</span><span data-lang="en">Deterministic fallback</span></span></div><div class="proj-repo-actions"><a class="btn btn-secondary" href="https://github.com/BeediGoua/Brokerflow_ai" rel="noopener" target="_blank"><span data-lang="fr">GitHub</span><span data-lang="en">GitHub</span></a></div><div class="proj-meta-grid"><div class="proj-meta-card"><span class="proj-meta-label"><span data-lang="fr">Type</span><span data-lang="en">Type</span></span><div class="proj-meta-value"><span data-lang="fr">Projet personnel</span><span data-lang="en">Personal project</span></div></div><div class="proj-meta-card"><span class="proj-meta-label"><span data-lang="fr">Objectif</span><span data-lang="en">Objective</span></span><div class="proj-meta-value"><span data-lang="fr">Aide à la décision crédit</span><span data-lang="en">Credit decision support</span></div></div><div class="proj-meta-card"><span class="proj-meta-label"><span data-lang="fr">Statut</span><span data-lang="en">Status</span></span><div class="proj-meta-value"><span data-lang="fr">Prototype fonctionnel</span><span data-lang="en">Working prototype</span></div></div><div class="proj-meta-card"><span class="proj-meta-label"><span data-lang="fr">Code</span><span data-lang="en">Code</span></span><div class="proj-meta-value"><span data-lang="fr">Public</span><span data-lang="en">Public</span></div></div></div></header><section class="proj-section reveal-up"><h2 data-lang="fr">Vue d’ensemble</h2><h2 data-lang="en">Overview</h2><div data-lang="fr"><div class="proj-overview"><div class="proj-overview-card"><strong>Problème</strong><p>Un score seul ne suffit pas lorsqu’un dossier contient données structurées, notes libres et documents manquants.</p></div><div class="proj-overview-card"><strong>Approche</strong><p>Combiner modèle calibré, policy déterministe et agents limités.</p></div><div class="proj-overview-card"><strong>Résultat</strong><p>Une recommandation, des alertes, reason codes et une synthèse, avec fallback.</p></div></div></div><div data-lang="en"><div class="proj-overview"><div class="proj-overview-card"><strong>Problem</strong><p>A score alone is insufficient when a file includes structured data, free-text notes and missing documents.</p></div><div class="proj-overview-card"><strong>Approach</strong><p>Combine a calibrated model, deterministic policy and constrained agents.</p></div><div class="proj-overview-card"><strong>Outcome</strong><p>A recommendation, alerts, reason codes and summary, with fallback.</p></div></div></div></section><section class="proj-section reveal-up"><h2 data-lang="fr">Architecture</h2><h2 data-lang="en">Architecture</h2><div data-lang="fr"><div class="workflow"><div class="workflow-step">Données structurées<small>score ML</small></div><div class="workflow-arrow">+</div><div class="workflow-step">Note &amp; documents<small>agents</small></div><div class="workflow-arrow">→</div><div class="workflow-step">Policy déterministe</div><div class="workflow-arrow">→</div><div class="workflow-step">Décision + motifs</div></div><p>Les agents informent la décision, mais ne la prennent jamais seuls.</p></div><div data-lang="en"><div class="workflow"><div class="workflow-step">Structured data<small>ML score</small></div><div class="workflow-arrow">+</div><div class="workflow-step">Note &amp; documents<small>agents</small></div><div class="workflow-arrow">→</div><div class="workflow-step">Deterministic policy</div><div class="workflow-arrow">→</div><div class="workflow-step">Decision + reasons</div></div><p>Agents inform the decision but never make it alone.</p></div></section><section class="proj-section reveal-up"><h2 data-lang="fr">Évaluation</h2><h2 data-lang="en">Evaluation</h2><div data-lang="fr"><div class="metric-grid"><div class="metric-card"><span class="number">0,728</span><span class="label">AUC</span></div><div class="metric-card"><span class="number">0,150</span><span class="label">Brier</span></div><div class="metric-card"><span class="number">0,89</span><span class="label">F1 parser</span></div><div class="metric-card"><span class="number">44</span><span class="label">tests</span></div></div><p>Benchmark de 50 cas annotés, incluant cas standards, difficiles et adversariaux.</p></div><div data-lang="en"><div class="metric-grid"><div class="metric-card"><span class="number">0.728</span><span class="label">AUC</span></div><div class="metric-card"><span class="number">0.150</span><span class="label">Brier</span></div><div class="metric-card"><span class="number">0.89</span><span class="label">parser F1</span></div><div class="metric-card"><span class="number">44</span><span class="label">tests</span></div></div><p>Benchmark on 50 annotated standard, hard and adversarial cases.</p></div></section><section class="proj-section reveal-up"><h2 data-lang="fr">Analyse des erreurs</h2><h2 data-lang="en">Error analysis</h2><div data-lang="fr"><ul><li>Négations et contradictions implicites.</li><li>Documents manquants ou notes trop courtes.</li><li>Risque d’alertes excessives.</li><li>Limites d’un benchmark synthétique de petite taille.</li></ul></div><div data-lang="en"><ul><li>Negations and implicit contradictions.</li><li>Missing documents or very short notes.</li><li>Risk of excessive alerts.</li><li>Limits of a small synthetic benchmark.</li></ul></div></section><section class="proj-section reveal-up"><h2 data-lang="fr">Reproductibilité</h2><h2 data-lang="en">Reproducibility</h2><div data-lang="fr"><p>API FastAPI, interface Streamlit/Gradio, Ollama local, 44 tests pytest et commandes documentées. Le fallback déterministe maintient le service lorsque le LLM est indisponible.</p></div><div data-lang="en"><p>FastAPI API, Streamlit/Gradio interface, local Ollama, 44 pytest tests and documented commands. The deterministic fallback keeps the service running when the LLM is unavailable.</p></div></section><section class="proj-section reveal-up"><h2 data-lang="fr">Ce que j’améliorerais aujourd’hui</h2><h2 data-lang="en">What I would improve today</h2><div data-lang="fr"><p class="lesson">J’élargirais le benchmark, ajouterais des tests de robustesse par sous-groupes et mesurerais séparément la qualité du score, des alertes et de la décision finale.</p></div><div data-lang="en"><p class="lesson">I would expand the benchmark, add subgroup robustness tests and separately measure score, alert and final-decision quality.</p></div></section></main><footer style="text-align:center;padding:2rem;border-top:1px solid var(--border)"><p>© 2026 Goua Beedi</p></footer><script src="../assets/js/project-case-study.js"></script><script src="../assets/js/i18n-dictionaries.js"></script><script src="../assets/js/global-language.js"></script></body></html>
+  <main id="main-content" class="case-shell">
+    <header class="case-hero">
+      <p class="case-kicker">Prototype · ML systems</p>
+      <h1>BrokerFlow AI — décision contrôlée</h1>
+      <p class="case-subtitle">Garder une décision explicable quand un modèle, des règles et des composants agentiques cohabitent.</p>
+      
+      <div class="case-meta">
+        
+        <div><strong>Type</strong>Prototype</div>
+        
+        <div><strong>Benchmark</strong>50 cas annotés</div>
+        
+        <div><strong>AUC</strong>0,728</div>
+        
+        <div><strong>Tests</strong>44</div>
+        
+      </div>
+      
+      
+    </header>
+
+    
+    <section class="case-card">
+      <h2>Architecture</h2>
+      <ul><li>Modèle de scoring et règles déterministes séparés.</li><li>Fallback et reason codes.</li><li>Agents limités, pas un système autonome non contrôlé.</li></ul>
+    </section>
+    
+    <section class="case-card">
+      <h2>Évaluation</h2>
+      <p>Sur 50 cas annotés : AUC 0,728, Brier 0,150, seuil 0,231 (valeurs déclarées dans la source de vérité portfolio). Petit échantillon : utile pour le prototype, pas pour généraliser.</p>
+    </section>
+    
+
+    
+    <section class="case-card">
+      <h2>Limites</h2>
+      <div class="limit-box"><ul><li>Benchmark réduit.</li><li>Pas de validation externe de production.</li><li>Distinguer perf du modèle et comportement du système complet.</li></ul></div>
+    </section>
+    
+  </main>
+
+  <footer class="container footer">
+    <span>© <span id="year">2026</span> Goua Beedi</span>
+    <div class="links">
+      <a href="../index.html">Accueil</a>
+      <a href="../index.html#projects">Projets</a>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Credit Scoring - Default risk modelling | Goua Beedi</title>
+  <meta name="description" content="Academic credit scoring case: logistic vs RF/XGBoost, risk grid, limitations.">
+  <link rel="canonical" href="https://beedigoua.github.io/projects/credit-scoring-en.html">
+  
+  <link rel="alternate" hreflang="fr" href="https://beedigoua.github.io/projects/credit-scoring.html">
+  <link rel="alternate" hreflang="en" href="https://beedigoua.github.io/projects/credit-scoring-en.html">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/case-study.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/motion.css">
+</head>
+<body class="page-case">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="case-topbar">
+    <div class="case-topbar-inner">
+      <a class="logo" href="../index-en.html">
+        <img src="../assets/img/brands/goua_beedi_icon_dark.png" alt="" width="28" height="28" aria-hidden="true">
+        <span>Goua Beedi</span>
+      </a>
+      <div class="navtools">
+        <a class="lang-link" href="credit-scoring.html" hreflang="fr">FR</a>
+        <a class="nav-cv" href="../index-en.html#projects">Back</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="case-shell">
+    <header class="case-hero">
+      <p class="case-kicker">Academic project · ENSAI</p>
+      <h1>Credit scoring — performance and interpretability</h1>
+      <p class="case-subtitle">Build a readable 12-month default score, then compare it with more complex models.</p>
+      
+      <div class="case-meta">
+        
+        <div><strong>Type</strong>Academic case</div>
+        
+        <div><strong>Data</strong>532,567 accounts (initial)</div>
+        
+        <div><strong>Target</strong>12-month default</div>
+        
+        <div><strong>Split</strong>70/30 stratified</div>
+        
+      </div>
+      
+      
+    </header>
+
+    
+    <section class="case-card">
+      <h2>Data</h2>
+      <ul><li>532,567 professional accounts declared initially.</li><li>143 initial variables, 12.76% default rate.</li><li>After processing: 372,381 train + 159,845 test = 532,226.</li><li>Gap of 341 observations unexplained here (source report required).</li></ul>
+    </section>
+    
+    <section class="case-card">
+      <h2>Modelling</h2>
+      <p>Logistic regression retained (9 variables). Challengers: Random Forest and XGBoost.</p><table><tr><th>Model</th><th>Test AUC</th><th>Gini</th></tr><tr><td>Logistic</td><td>0.784</td><td>0.57</td></tr><tr><td>Random Forest</td><td>0.800</td><td>0.60</td></tr><tr><td>XGBoost</td><td>0.798</td><td>0.59</td></tr></table><p>Ensemble gains remain limited versus interpretability loss.</p>
+    </section>
+    
+    <section class="case-card">
+      <h2>Score grid</h2>
+      <p>0–1000 score and seven risk classes (CHR1–CHR7) for business reading.</p>
+    </section>
+    
+
+    
+    <section class="case-card">
+      <h2>Limitations</h2>
+      <div class="limit-box"><ul><li>No documented calibration curve or Brier score — calibration is not claimed.</li><li>No production validation.</li><li>Confidential data not publishable.</li></ul></div>
+    </section>
+    
+  </main>
+
+  <footer class="container footer">
+    <span>© <span id="year">2026</span> Goua Beedi</span>
+    <div class="links">
+      <a href="../index-en.html">Home</a>
+      <a href="../index-en.html#projects">Projects</a>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

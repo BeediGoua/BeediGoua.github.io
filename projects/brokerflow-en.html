@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BrokerFlow AI - Explainable credit decisions | Goua Beedi</title>
+  <meta name="description" content="Credit-decision prototype combining model, rules and fallback, evaluated on 50 cases.">
+  <link rel="canonical" href="https://beedigoua.github.io/projects/brokerflow-en.html">
+  
+  <link rel="alternate" hreflang="fr" href="https://beedigoua.github.io/projects/brokerflow.html">
+  <link rel="alternate" hreflang="en" href="https://beedigoua.github.io/projects/brokerflow-en.html">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/case-study.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/motion.css">
+</head>
+<body class="page-case">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="case-topbar">
+    <div class="case-topbar-inner">
+      <a class="logo" href="../index-en.html">
+        <img src="../assets/img/brands/goua_beedi_icon_dark.png" alt="" width="28" height="28" aria-hidden="true">
+        <span>Goua Beedi</span>
+      </a>
+      <div class="navtools">
+        <a class="lang-link" href="brokerflow.html" hreflang="fr">FR</a>
+        <a class="nav-cv" href="../index-en.html#projects">Back</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="case-shell">
+    <header class="case-hero">
+      <p class="case-kicker">Prototype · ML systems</p>
+      <h1>BrokerFlow AI — controlled decisions</h1>
+      <p class="case-subtitle">Keep decisions explainable when a model, rules and limited agentic parts coexist.</p>
+      
+      <div class="case-meta">
+        
+        <div><strong>Type</strong>Prototype</div>
+        
+        <div><strong>Benchmark</strong>50 annotated cases</div>
+        
+        <div><strong>AUC</strong>0.728</div>
+        
+        <div><strong>Tests</strong>44</div>
+        
+      </div>
+      
+      
+    </header>
+
+    
+    <section class="case-card">
+      <h2>Architecture</h2>
+      <ul><li>Scoring model and deterministic rules kept separate.</li><li>Fallback and reason codes.</li><li>Constrained agents, not an uncontrolled autonomous system.</li></ul>
+    </section>
+    
+    <section class="case-card">
+      <h2>Evaluation</h2>
+      <p>On 50 annotated cases: AUC 0.728, Brier 0.150, threshold 0.231 (values declared in the portfolio source of truth). Small sample: useful for a prototype, not for generalisation.</p>
+    </section>
+    
+
+    
+    <section class="case-card">
+      <h2>Limitations</h2>
+      <div class="limit-box"><ul><li>Small benchmark.</li><li>No external production validation.</li><li>Separate model score from full-system behaviour.</li></ul></div>
+    </section>
+    
+  </main>
+
+  <footer class="container footer">
+    <span>© <span id="year">2026</span> Goua Beedi</span>
+    <div class="links">
+      <a href="../index-en.html">Home</a>
+      <a href="../index-en.html#projects">Projects</a>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

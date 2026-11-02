@@ -11,8 +11,8 @@
       "url_fr": "projects/finzuu.html",
       "body_fr": "Développement d'un cadre explicable d'analyse des risques agricoles et de la capacité de remboursement, avec contraintes métier et vérifications humaines.",
       "body_en": "Development of an explainable framework for agricultural risk and repayment capacity analysis, with business constraints and human checks.",
-      "limit_fr": "Prototype / validation métier : ne pas présenter comme modèle de défaut certifié en production.",
-      "limit_en": "Prototype / business validation: not presented as a production-certified default model."
+      "limit_fr": "Prototype / validation métier.",
+      "limit_en": "Prototype / business validation."
     },
     {
       "id": "square",

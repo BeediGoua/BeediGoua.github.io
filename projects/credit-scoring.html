@@ -1,72 +1,95 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Credit Scoring - Modélisation du risque de défaut | Project Detail</title>
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="stylesheet" href="../assets/css/animations.css" />
-    <link rel="stylesheet" href="../assets/css/expert-cards.css" />
-    <style>
-        .project-detail-hero { padding: 6rem 1rem 3rem; background: var(--card-bg-hero); border-bottom: 1px solid var(--border); text-align: center; }
-        .project-title-xl { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--text-color); margin-bottom: 1rem; }
-        .project-detail-container { max-width: 900px; margin: 0 auto; padding: 2rem 1rem; }
-        .case-study-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; margin-bottom: 2rem; }
-        .case-study-card h2 { font-size: 1.5rem; color: var(--accent-color); margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
-        .case-study-card h3 { font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--text-color); }
-        .case-study-card p, .case-study-card ul { margin-bottom: 1rem; color: var(--text-secondary); }
-        .case-study-card ul { list-style-type: disc; padding-left: 1.5rem; }
-        .tech-badges-top { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-bottom: 2rem; }
-        .back-nav { position: fixed; top: 1rem; left: 1rem; z-index: 1000; }
-        .btn-expert { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; color: var(--text-color); font-weight: 600; cursor: pointer; text-decoration: none; }
-        .btn-expert:hover { border-color: var(--primary-color); }
-        th, td { padding: 8px; text-align: left; }
-        th { color: var(--text-color); }
-        td { color: var(--text-secondary); }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Credit Scoring - Modélisation du risque de défaut | Goua Beedi</title>
+  <meta name="description" content="Cas académique de scoring crédit : logistique vs RF/XGBoost, grille de risque, limites.">
+  <link rel="canonical" href="https://beedigoua.github.io/projects/credit-scoring.html">
+  
+  <link rel="alternate" hreflang="fr" href="https://beedigoua.github.io/projects/credit-scoring.html">
+  <link rel="alternate" hreflang="en" href="https://beedigoua.github.io/projects/credit-scoring-en.html">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/case-study.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/motion.css">
 </head>
-<body class="project-detail-page">
-    <div class="blob-container">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
+<body class="page-case">
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
+  <header class="case-topbar">
+    <div class="case-topbar-inner">
+      <a class="logo" href="../index.html">
+        <img src="../assets/img/brands/goua_beedi_icon_dark.png" alt="" width="28" height="28" aria-hidden="true">
+        <span>Goua Beedi</span>
+      </a>
+      <div class="navtools">
+        <a class="lang-link" href="credit-scoring-en.html" hreflang="en">EN</a>
+        <a class="nav-cv" href="../index.html#projects">Retour</a>
+      </div>
     </div>
-    <nav class="back-nav">
-        <a href="../index.html" class="btn-expert">← Retour au portfolio</a>
-    </nav>
-    <section class="project-detail-hero">
-        <div class="project-header-container">
-            <h1 class="project-title-xl">Credit Scoring - Modélisation du risque de défaut</h1>
-            <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem;">Étude académique de scoring crédit menée dans le cadre du cursus ENSAI</p>
-            <div class="tech-badges-top"><span class="tech-badge-expert">Régression logistique</span><span class="tech-badge-expert">Random Forest</span><span class="tech-badge-expert">XGBoost</span></div>
-        </div>
+  </header>
+
+  <main id="main-content" class="case-shell">
+    <header class="case-hero">
+      <p class="case-kicker">Projet académique · ENSAI</p>
+      <h1>Credit scoring — performance et interprétabilité</h1>
+      <p class="case-subtitle">Construire un score de défaut à 12 mois lisible, puis le comparer à des modèles plus complexes.</p>
+      
+      <div class="case-meta">
+        
+        <div><strong>Type</strong>Cas académique</div>
+        
+        <div><strong>Données</strong>532 567 comptes (initial)</div>
+        
+        <div><strong>Cible</strong>Défaut 12 mois</div>
+        
+        <div><strong>Split</strong>70/30 stratifié</div>
+        
+      </div>
+      
+      
+    </header>
+
+    
+    <section class="case-card">
+      <h2>Données</h2>
+      <ul><li>532 567 comptes professionnels déclarés en entrée.</li><li>143 variables initiales, taux de défaut 12,76&nbsp;%.</li><li>Après traitement : 372 381 train + 159 845 test = 532 226.</li><li>Écart de 341 observations non expliqué ici (rapport source requis).</li></ul>
     </section>
-    <div class="project-detail-container">
-        <div class="case-study-card reveal-up">
-            <h2>1. Vue d'ensemble</h2>
-            <p><strong>Problème</strong><br>Le système existant reposait principalement sur l’expertise métier et ne fournissait pas de mesure quantitative homogène du risque associé aux comptes professionnels.</p><p><strong>Approche</strong><br>Développer un modèle interprétable du défaut à douze mois, puis convertir ses coefficients en une grille de score comprise entre 0 et 1 000 et en sept classes homogènes de risque.</p><p><strong>Résultat principal</strong><br>La régression logistique atteint une AUC de 0,784 sur le jeu de test. Les modèles Random Forest et XGBoost améliorent légèrement la discrimination, avec des AUC respectives de 0,800 et 0,798, mais sans gain suffisant pour compenser la perte d’interprétabilité.</p>
-        </div>
-        <div class="case-study-card reveal-up">
-            <h2>2. Données</h2>
-            <ul><li>532 567 comptes professionnels (effectif initial déclaré)</li><li>143 variables initiales</li><li>cible : défaut dans les douze mois</li><li>taux de défaut : 12,76 %</li><li>informations clients, transactions et santé financière</li><li>70 % train / 30 % test stratifié</li><li>372 381 observations train et 159 845 test après traitement (somme = 532 226)</li></ul><p><em>Note : La définition du défaut retenue repose notamment sur un franchissement prolongé d’un seuil d’arriérés. L’écart de 341 observations entre l’effectif initial (532 567) et la somme train+test (532 226) reste à expliquer à partir du rapport source ; aucune cause n’est inventée ici.</em></p>
-        </div>
-        <div class="case-study-card reveal-up">
-            <h2>3. Préparation des données</h2>
-            <p><strong>Chaîne de traitement :</strong><br>Base initiale → retrait des variables (95% NA ou constantes) → split stratifié 70/30 → sélection statistique → traitement des valeurs manquantes → discrétisation → vérification de la stabilité → modélisation.</p><p><strong>Méthodes :</strong> V de Cramer, Kruskal-Wallis, corrélations de Pearson/Spearman, imputation KNN (k=10).</p>
-        </div>
-        <div class="case-study-card reveal-up">
-            <h2>4. Modélisation</h2>
-            <p><strong>Modèle principal :</strong> Une régression logistique a été retenue comme modèle principal afin de combiner discrimination, parcimonie et interprétabilité (9 variables dans le modèle final).</p><p><strong>Challengers :</strong> Random Forest, XGBoost.</p><table style="width:100%; border-collapse: collapse; margin-top: 1rem;"><tr style="border-bottom: 1px solid var(--border);"><th>Modèle</th><th>AUC test</th><th>Gini</th></tr><tr><td>Régression logistique</td><td>0,784</td><td>0,57</td></tr><tr><td>Random Forest</td><td>0,800</td><td>0,60</td></tr><tr style="border-bottom: 1px solid var(--border);"><td>XGBoost</td><td>0,798</td><td>0,59</td></tr></table><p style="margin-top: 1rem;">Les modèles d’ensemble obtiennent un gain limité. La régression logistique reste particulièrement adaptée à la construction d’une grille de score interprétable.</p>
-        </div>
-        <div class="case-study-card reveal-up">
-            <h2>5. Grille de score</h2>
-            <ul><li>Échelle de 0 à 1 000 (score élevé = risque estimé plus faible)</li><li>Conversion des coefficients logistiques en pondérations</li><li>Sept classes de risque (CHR1 à CHR7)</li></ul><table style="width:100%; border-collapse: collapse; margin-top: 1rem;"><tr style="border-bottom: 1px solid var(--border);"><th>Classe</th><th>Intervalle</th><th>Taux de défaut</th></tr><tr><td>CHR1</td><td>]743 ; 1000]</td><td>2,50 %</td></tr><tr><td>CHR2</td><td>]647 ; 743]</td><td>6,46 %</td></tr><tr><td>CHR3</td><td>]580 ; 647]</td><td>9,16 %</td></tr><tr><td>CHR4</td><td>]511 ; 580]</td><td>13,85 %</td></tr><tr><td>CHR5</td><td>]409 ; 511]</td><td>20,52 %</td></tr><tr><td>CHR6</td><td>]320 ; 409]</td><td>32,75 %</td></tr><tr style="border-bottom: 1px solid var(--border);"><td>CHR7</td><td>[0 ; 320]</td><td>58,39 %</td></tr></table>
-        </div>
-        <div class="case-study-card reveal-up">
-            <h2>6. Limites</h2>
-            <ul><li>Seuils de discrétisation perfectibles</li><li>Meilleure classification des non-défauts que des défauts</li><li>Faible amélioration des modèles complexes</li><li>Absence de validation en production</li><li>Pas de courbe de calibration ni de Brier score documentés dans le rapport source — la calibration n’est pas affirmée</li><li>Risque d’évolution temporelle des modalités</li><li>Données confidentielles non publiables</li></ul>
-        </div></div>
-    <footer style="text-align: center; padding: 2rem; border-top: 1px solid var(--border); margin-top: 3rem;">
-        <p style="color: var(--text-secondary);">&copy; 2026 Goua Beedi. Portfolio structuré.</p>
-    </footer>
+    
+    <section class="case-card">
+      <h2>Modélisation</h2>
+      <p>Régression logistique retenue (9 variables). Challengers : Random Forest et XGBoost.</p><table><tr><th>Modèle</th><th>AUC test</th><th>Gini</th></tr><tr><td>Logistique</td><td>0,784</td><td>0,57</td></tr><tr><td>Random Forest</td><td>0,800</td><td>0,60</td></tr><tr><td>XGBoost</td><td>0,798</td><td>0,59</td></tr></table><p>Le gain des ensembles reste limité face à la perte d’interprétabilité.</p>
+    </section>
+    
+    <section class="case-card">
+      <h2>Grille de score</h2>
+      <p>Score 0–1000 et sept classes de risque (CHR1–CHR7) pour une lecture métier.</p>
+    </section>
+    
+
+    
+    <section class="case-card">
+      <h2>Limites</h2>
+      <div class="limit-box"><ul><li>Pas de courbe de calibration ni Brier documentés — la calibration n’est pas affirmée.</li><li>Pas de validation en production.</li><li>Données confidentielles non publiables.</li></ul></div>
+    </section>
+    
+  </main>
+
+  <footer class="container footer">
+    <span>© <span id="year">2026</span> Goua Beedi</span>
+    <div class="links">
+      <a href="../index.html">Accueil</a>
+      <a href="../index.html#projects">Projets</a>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
 </body>
 </html>

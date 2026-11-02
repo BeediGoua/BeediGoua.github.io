@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Goua Beedi | Machine Learning &amp; AI Evaluation</title>
-<meta name="description" content="Research Editorial portfolio by Goua Beedi — statistical ML, AI evaluation and sourced case studies.">
+<title>Goua Beedi | Data Scientist</title>
+<meta name="description" content="Portfolio of Goua Beedi, Data Scientist: credit scoring, RAG system evaluation, multi-source data and applied statistics.">
 <link rel="canonical" href="https://beedigoua.github.io/index-en.html">
 <link rel="alternate" hreflang="fr" href="https://beedigoua.github.io/">
 <link rel="alternate" hreflang="en" href="https://beedigoua.github.io/index-en.html">
-<meta property="og:title" content="Goua Beedi | Machine Learning &amp; AI Evaluation">
-<meta property="og:description" content="Research Editorial portfolio by Goua Beedi — statistical ML, AI evaluation and sourced case studies.">
+<meta property="og:title" content="Goua Beedi | Data Scientist">
+<meta property="og:description" content="Portfolio of Goua Beedi, Data Scientist: credit scoring, RAG system evaluation, multi-source data and applied statistics.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://beedigoua.github.io/index-en.html">
 <meta property="og:image" content="https://beedigoua.github.io/assets/img/goua.png">
@@ -27,11 +27,14 @@
 <link rel="stylesheet" href="assets/css/responsive.css">
 <link rel="stylesheet" href="assets/css/motion.css">
 </head>
-<body>
+<body class="page-home">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-nav">
     <div class="container nav-inner">
-      <a class="logo" href="#top">GB<span>.</span></a>
+      <a class="logo" href="#top">
+        <img src="assets/img/brands/goua_beedi_icon_dark.png" alt="" width="28" height="28" aria-hidden="true">
+        <span>Goua Beedi</span>
+      </a>
       <details class="mobile-menu">
         <summary>Menu</summary>
         <nav class="mobile-dropdown" aria-label="Mobile navigation">
@@ -61,78 +64,66 @@
 
   <main id="main-content">
     <div id="top"></div>
-    <section class="hero container" id="hero">
-      <div class="hero-grid">
-        <div>
-          <div class="eyebrow">STATISTICS · MACHINE LEARNING · AI EVALUATION</div>
-          <h1>Goua Beedi<span class="dot">.</span></h1>
-          <div class="headline">Machine Learning &amp; AI Evaluation</div>
-          <p class="intro lead">I build and evaluate machine learning models, focusing on data quality, robustness, and understanding where systems fail.</p>
-          <p class="intro proof">Currently pursuing the MS2A master&#39;s programme at Sorbonne University after engineering studies at ENSAI. At Square Management, I investigated 189 RAG configurations for long-document processing.</p>
-          <p class="meta">Seeking an ML / Applied Research internship starting around April 2027.</p>
+    <section class="hero" id="hero">
+      <div class="hero-atmosphere" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Statistics · Machine Learning · Decision Support</p>
+          <h1>Goua Beedi</h1>
+          <p class="headline">Data Scientist</p>
+          <p class="intro lead">MSc student in Statistics, Learning and Algorithms at Sorbonne University, after an engineering degree in Statistics and Data Science from ENSAI. My experience spans applied machine learning, credit scoring, RAG system evaluation and multi-source data analysis.</p>
+          <p class="meta">Looking for a Data Science / Machine Learning internship starting around April 2027.</p>
+          <div class="hero-affiliations" aria-label="Affiliations">
+            <img src="assets/img/brands/sorbonne.png" alt="Sorbonne Université" height="52">
+            <img src="assets/img/brands/ensai.png" alt="ENSAI" height="48">
+            <img src="assets/img/brands/MS2A.png" alt="MS2A" height="52">
+          </div>
           <div class="hero-actions">
             <a class="btn btn-main" href="#projects">Explore selected work</a>
             <a class="btn btn-outline" href="assets/CV_GouaHenri_EN.pdf">Download CV</a>
-          </div>
-          <div class="hero-tags">
-            <a href="https://github.com/BeediGoua">GitHub</a>
-            <a href="https://www.linkedin.com/in/goua-beedi-henri-a152bb1b2/">LinkedIn</a>
-            <span>Sorbonne Université · ENSAI</span>
+            <a class="text-link" href="https://github.com/BeediGoua">GitHub</a>
+            <a class="text-link" href="https://www.linkedin.com/in/goua-beedi-henri-a152bb1b2/">LinkedIn</a>
           </div>
         </div>
-        <figure class="photo-frame">
-          <div class="photo">
-            <img src="assets/img/goua.png" alt="Portrait of Goua Beedi" width="420" height="375" fetchpriority="high">
-            <figcaption>
-              <strong>Statistics &amp; Machine Learning</strong>
-              <span>Applied research · Paris</span>
-            </figcaption>
-          </div>
+        <figure class="hero-portrait">
+          <img src="assets/img/goua.png" alt="Portrait of Goua Beedi" width="480" height="560" fetchpriority="high">
         </figure>
-      </div>
-      <div class="stats-rail">
-        <div><b>Statistical ML</b>Modelling &amp; inference</div>
-        <div><b>Evaluation</b>Protocols &amp; diagnostics</div>
-        <div><b>Engineering</b>Pipelines &amp; reproducibility</div>
       </div>
     </section>
 
-    <div class="divider"></div>
-
     <section class="section container" id="projects">
       <div class="section-head">
-        <span class="section-index">01 / WORK</span>
         <div>
           <h2>Selected work</h2>
-          <p>Selected work where the challenge is not just training a model, but designing a credible evaluation and understanding its limits.</p>
+          <p>A few projects where evaluation mattered as much as the model itself.</p>
         </div>
       </div>
 
       
       <article class="flagship">
         <div>
-          <div class="project-meta">RAG / Retrieval / Evaluation · Square Management</div>
+          <p class="project-meta">Square Management · RAG / Retrieval / Evaluation</p>
           <h3>Evaluating RAG systems on long documents</h3>
           <p>How do OCR, chunking and retrieval choices affect system quality on long documents?</p>
           <p>Compare configurations under a documented protocol.</p>
-          <div class="limit"><strong>189 configurations studied</strong><br>Internal data and deliverables are not public.</div>
-          <a class="feature-link" href="projects/square-management.html">Read the case study ↗</a>
+          <p class="evidence-inline"><strong>189 configurations studied</strong> — Internal data and deliverables are not public.</p>
+          <a class="feature-link" href="projects/square-management.html">Read the case study</a>
         </div>
-        <div class="system-diagram" aria-label="Conceptual diagram of a RAG evaluation pipeline">
-          <div class="diagram-stage">Documents &amp; structure</div>
-          <div class="diagram-arrow">↓</div>
+        <div class="system-diagram" aria-label="Conceptual RAG pipeline diagram">
+          <div class="diagram-stage">Long documents</div>
+          <div class="diagram-arrow" aria-hidden="true">↓</div>
           <div class="diagram-row">
-            <div class="diagram-stage">OCR &amp; extraction</div>
+            <div class="diagram-stage">OCR</div>
             <div class="diagram-stage">Chunking</div>
           </div>
-          <div class="diagram-arrow">↓</div>
+          <div class="diagram-arrow" aria-hidden="true">↓</div>
           <div class="diagram-row">
-            <div class="diagram-stage">Embeddings</div>
-            <div class="diagram-stage">Retrieval &amp; ranking</div>
+            <div class="diagram-stage">Retrieval</div>
+            <div class="diagram-stage">Ranking</div>
           </div>
-          <div class="diagram-arrow">↓</div>
-          <div class="diagram-stage highlight">Comparative evaluation &amp; error analysis</div>
-          <div class="diagram-caption">Conceptual diagram, not a quantitative result</div>
+          <div class="diagram-arrow" aria-hidden="true">↓</div>
+          <div class="diagram-stage highlight">Evaluation &amp; errors</div>
+          <p class="diagram-caption">Conceptual diagram</p>
         </div>
       </article>
 
@@ -141,175 +132,153 @@
         
         
         <article class="project-card">
-          <div class="project-meta">Statistical ML · Credit Scoring</div>
+          <p class="project-meta">Statistical ML · Credit Scoring</p>
           <h3>Balancing performance and interpretability</h3>
           <p>How to trade off discrimination performance, parsimony and interpretability in a risk score?</p>
-          <p class="evidence">Test AUC 0.784 · 0.800 · 0.798<small>Subject to source verification</small></p>
-          <p class="limit">No published calibration validation or production attestation.</p>
-          <a class="feature-link" href="projects/credit-scoring.html">Read the case study ↗</a>
+          <p class="evidence">Test AUC 0.784 · 0.800 · 0.798</p>
+          <p class="limit">No documented calibration or production deployment.</p>
+          <a class="feature-link" href="projects/credit-scoring.html">Read the case study</a>
         </article>
         
         
         
         <article class="project-card">
-          <div class="project-meta">ML Systems · BrokerFlow AI</div>
+          <p class="project-meta">ML Systems · BrokerFlow AI</p>
           <h3>Decide with models and controlled rules</h3>
           <p>How to keep decisions explainable and controlled when models, rules and agentic components interact?</p>
-          <p class="evidence">Evaluation on annotated cases<small>Small benchmark: do not generalise to real production</small></p>
-          <p class="limit">External validation and generalisation not demonstrated.</p>
-          <a class="feature-link" href="projects/brokerflow.html">Read the case study ↗</a>
+          <p class="evidence">50 annotated cases (prototype)</p>
+          <p class="limit">Small benchmark, not a production validation.</p>
+          <a class="feature-link" href="projects/brokerflow.html">Read the case study</a>
         </article>
         
       </div>
-      <a class="more-link" href="projects/autres-projets.html">Other work, including demand forecasting and survival analysis ↗</a>
+      <a class="more-link" href="projects/autres-projets.html">See all projects</a>
     </section>
-
-    <div class="divider"></div>
 
     <section class="section container" id="experience">
       <div class="section-head">
-        <span class="section-index">02 / EXPERIENCE</span>
         <div>
           <h2>Experience</h2>
-          <p>Concrete situations with their constraints: real data, modelling decisions and limits on what can be published.</p>
+          <p>Internships and roles, limited to what can be shared publicly.</p>
         </div>
       </div>
       <div class="experience-list">
         
         <article class="experience-entry">
-          <div class="date">2026 · Fintech</div>
+          <div class="date">2026</div>
           <div>
             <h3>FINZUU</h3>
-            <p class="role">Data Scientist</p>
+            <p class="role">Data Scientist · Fintech</p>
             <p>Development of an explainable framework for agricultural risk and repayment capacity analysis, with business constraints and human checks.</p>
-            <p class="tiny muted">Prototype / business validation: not presented as a production-certified default model.</p>
-            <a class="feature-link" href="projects/finzuu.html">View details ↗</a>
+            <a class="feature-link" href="projects/finzuu.html">Details</a>
           </div>
         </article>
         
         <article class="experience-entry">
-          <div class="date">2025 · Consulting</div>
+          <div class="date">2025</div>
           <div>
             <h3>Square Management · Research Center</h3>
-            <p class="role">AI &amp; Data Science Intern</p>
+            <p class="role">AI &amp; Data Science Intern · Consulting</p>
             <p>Comparative evaluation of RAG systems on long documents. Analysis of 189 configurations and their trade-offs.</p>
-            <p class="tiny muted">Internal data and deliverables are not public.</p>
-            <a class="feature-link" href="projects/square-management.html">View details ↗</a>
+            <a class="feature-link" href="projects/square-management.html">Details</a>
           </div>
         </article>
         
         <article class="experience-entry">
-          <div class="date">2024 · Public sector</div>
+          <div class="date">2024</div>
           <div>
             <h3>Ville de Paris · Mobilité</h3>
-            <p class="role">Data Science Intern</p>
+            <p class="role">Data Science Intern · Public sector</p>
             <p>Work on heterogeneous data sources, entity reconciliation and statistical indicators useful for decision-making.</p>
-            <p class="tiny muted">No confidential personal or operational data published.</p>
-            <a class="feature-link" href="projects/ville-de-paris.html">View details ↗</a>
+            <a class="feature-link" href="projects/ville-de-paris.html">Details</a>
           </div>
         </article>
         
       </div>
     </section>
-
-    <div class="divider"></div>
 
     <section class="section container" id="method">
       <div id="approach" aria-hidden="true"></div>
       <div class="section-head">
-        <span class="section-index">03 / APPROACH</span>
         <div>
-          <h2>How I evaluate models</h2>
-          <p>Methodological choices matter more than collecting frameworks. Each principle maps back to real work.</p>
+          <h2>How I work</h2>
+          <p>Three habits I carry from one project to the next.</p>
         </div>
       </div>
       <div class="method-grid">
         <article class="method-item">
-          <div class="number">01 — PROTOCOL</div>
-          <h3>Compare fairly</h3>
-          <p>Define the test set, baselines and metrics before claiming that one approach is superior.</p>
-          <a href="projects/square-management.html" class="foot">Example: RAG evaluation ↗</a>
+          <h3>Compare before concluding</h3>
+          <p>Baselines, splits and metrics first — as in the RAG evaluation at Square.</p>
+          <a href="projects/square-management.html" class="foot">Square</a>
         </article>
         <article class="method-item">
-          <div class="number">02 — TRADE-OFFS</div>
-          <h3>Justify a simple model</h3>
-          <p>A better AUC does not always offset complexity, opacity or maintenance cost.</p>
-          <a href="projects/credit-scoring.html" class="foot">Example: credit scoring ↗</a>
+          <h3>Accept a simpler model</h3>
+          <p>A better AUC does not always justify complexity, as in credit scoring.</p>
+          <a href="projects/credit-scoring.html" class="foot">Credit scoring</a>
         </article>
         <article class="method-item">
-          <div class="number">03 — FAILURE MODES</div>
-          <h3>Study failure modes</h3>
-          <p>Do not confuse local model performance with full-system reliability in decision settings.</p>
-          <a href="projects/brokerflow.html" class="foot">Example: BrokerFlow AI ↗</a>
+          <h3>Look at where it fails</h3>
+          <p>Model score is not enough: system behaviour under decisions matters.</p>
+          <a href="projects/brokerflow.html" class="foot">BrokerFlow</a>
         </article>
       </div>
-      <p class="muted reading" style="margin-top:28px">I favor results that can be explained and reproduced over numbers that merely look impressive.</p>
     </section>
-
-    <div class="divider"></div>
 
     <section class="section container" id="education">
       <div class="section-head">
-        <span class="section-index">04 / EDUCATION</span>
         <div>
           <h2>Education</h2>
-          <p>A solid base in mathematical statistics, then modelling and AI system analysis.</p>
+          <p>Mathematical statistics, then modelling and AI systems.</p>
         </div>
       </div>
       <div class="education-grid">
         
         <div class="edu-item">
-          <div class="overline">MASTER · IN PROGRESS</div>
+          <p class="overline">MASTER · IN PROGRESS</p>
           <h3>Sorbonne University — MS2A</h3>
           <p>Statistical learning, stochastic optimization, high-dimensional statistics and simulation methods.</p>
-          <p class="tiny">Courses and academic status to confirm at publication time.</p>
         </div>
         
         <div class="edu-item">
-          <div class="overline">ENGINEERING DEGREE</div>
+          <p class="overline">ENGINEERING DEGREE</p>
           <h3>ENSAI — Statistics &amp; Data Science</h3>
           <p>Statistical inference, modelling, machine learning, evaluation and applied data analysis.</p>
-          <p class="tiny">Degree status to verify before using the word &#34;graduate&#34;.</p>
         </div>
         
       </div>
     </section>
 
-    <div class="divider"></div>
-
     <section class="section container" id="skills">
       <div class="section-head">
-        <span class="section-index">05 / EXPERTISE</span>
         <div>
-          <h2>Useful expertise</h2>
-          <p>Techniques I can explain and implement, rather than an exhaustive logo collection.</p>
+          <h2>Skills</h2>
+          <p>What I actually use in my projects.</p>
         </div>
       </div>
       <div class="skills-grid">
         <div class="skill">
-          <h3>Statistical Learning</h3>
-          <p>Inference · Regression · Validation · Python / R</p>
+          <h3>Statistics</h3>
+          <p>Inférence · Régression · Validation · Python / R</p>
         </div>
         <div class="skill">
-          <h3>Machine Learning &amp; Evaluation</h3>
-          <p>Classification · Ensembles · Calibration when studied · Scikit-learn / XGBoost</p>
+          <h3>Machine learning</h3>
+          <p>Classification · Ensembles · Scikit-learn · XGBoost</p>
         </div>
         <div class="skill">
-          <h3>LLM &amp; Retrieval</h3>
-          <p>RAG · Embeddings · Hybrid search · Answer evaluation</p>
+          <h3>LLM &amp; retrieval</h3>
+          <p>RAG · Embeddings · Évaluation des réponses</p>
         </div>
         <div class="skill">
-          <h3>ML Engineering</h3>
-          <p>FastAPI · Docker · Tests · Reproducible pipelines</p>
+          <h3>Ingénierie</h3>
+          <p>FastAPI · Docker · Tests · Pipelines</p>
         </div>
       </div>
     </section>
 
     <section class="contact" id="contact">
       <div class="container">
-        <div class="eyebrow">LET'S TALK</div>
-        <h2>An applied research project or an ML internship?</h2>
-        <p>I am interested in problems where evaluation quality matters as much as advertised performance.</p>
+        <h2>An internship or a data / ML project?</h2>
+        <p>Feel free to write — happy to reply.</p>
         <a class="btn btn-main" href="mailto:gouabeedi@gmail.com">Contact me by email</a>
       </div>
     </section>

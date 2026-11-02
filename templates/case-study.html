@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} | Goua Beedi</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="canonical" href="{{ canonical }}">
+  {% if alternate_fr and alternate_en %}
+  <link rel="alternate" hreflang="fr" href="{{ alternate_fr }}">
+  <link rel="alternate" hreflang="en" href="{{ alternate_en }}">
+  {% endif %}
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/case-study.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/motion.css">
+</head>
+<body class="page-case">
+  <a class="skip-link" href="#main-content">{{ 'Aller au contenu' if lang == 'fr' else 'Skip to content' }}</a>
+  <header class="case-topbar">
+    <div class="case-topbar-inner">
+      <a class="logo" href="{{ home_url }}">
+        <img src="../assets/img/brands/goua_beedi_icon_dark.png" alt="" width="28" height="28" aria-hidden="true">
+        <span>Goua Beedi</span>
+      </a>
+      <div class="navtools">
+        <a class="lang-link" href="{{ lang_switch_href }}" hreflang="{{ 'en' if lang == 'fr' else 'fr' }}">{{ 'EN' if lang == 'fr' else 'FR' }}</a>
+        <a class="nav-cv" href="{{ back_href }}">{{ 'Retour' if lang == 'fr' else 'Back' }}</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="case-shell">
+    <header class="case-hero">
+      <p class="case-kicker">{{ kicker }}</p>
+      <h1>{{ heading }}</h1>
+      <p class="case-subtitle">{{ subtitle }}</p>
+      {% if meta %}
+      <div class="case-meta">
+        {% for item in meta %}
+        <div><strong>{{ item.label }}</strong>{{ item.value }}</div>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% if links %}
+      <div class="case-links">
+        {% for link in links %}
+        <a class="btn {{ 'btn-main' if loop.first else 'btn-outline' }}" href="{{ link.href }}" {% if link.external %}target="_blank" rel="noopener"{% endif %}>{{ link.label }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </header>
+
+    {% for section in sections %}
+    <section class="case-card">
+      <h2>{{ section.title }}</h2>
+      {{ section.body | safe }}
+    </section>
+    {% endfor %}
+
+    {% if limitations %}
+    <section class="case-card">
+      <h2>{{ 'Limites' if lang == 'fr' else 'Limitations' }}</h2>
+      <div class="limit-box">{{ limitations | safe }}</div>
+    </section>
+    {% endif %}
+  </main>
+
+  <footer class="container footer">
+    <span>© <span id="year">2026</span> Goua Beedi</span>
+    <div class="links">
+      <a href="{{ home_url }}">{{ 'Accueil' if lang == 'fr' else 'Home' }}</a>
+      <a href="{{ back_href }}">{{ 'Projets' if lang == 'fr' else 'Projects' }}</a>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
