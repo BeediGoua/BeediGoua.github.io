@@ -11,7 +11,7 @@
       },
       {
         "title": "2. Données",
-        "body": "<ul><li>532 567 comptes professionnels</li><li>143 variables initiales</li><li>cible : défaut dans les douze mois</li><li>taux de défaut : 12,76 %</li><li>informations clients, transactions et santé financière</li><li>70 % train / 30 % test stratifié</li><li>372 381 observations train et 159 845 test après traitement</li></ul><p><em>Note : La définition du défaut retenue repose notamment sur un franchissement prolongé d’un seuil d’arriérés.</em></p>"
+        "body": "<ul><li>532 567 comptes professionnels (effectif initial déclaré)</li><li>143 variables initiales</li><li>cible : défaut dans les douze mois</li><li>taux de défaut : 12,76 %</li><li>informations clients, transactions et santé financière</li><li>70 % train / 30 % test stratifié</li><li>372 381 observations train et 159 845 test après traitement (somme = 532 226)</li></ul><p><em>Note : La définition du défaut retenue repose notamment sur un franchissement prolongé d’un seuil d’arriérés. L’écart de 341 observations entre l’effectif initial (532 567) et la somme train+test (532 226) reste à expliquer à partir du rapport source ; aucune cause n’est inventée ici.</em></p>"
       },
       {
         "title": "3. Préparation des données",
@@ -27,7 +27,7 @@
       },
       {
         "title": "6. Limites",
-        "body": "<ul><li>Seuils de discrétisation perfectibles</li><li>Meilleure classification des non-défauts que des défauts</li><li>Faible amélioration des modèles complexes</li><li>Absence de validation en production</li><li>Risque d’évolution temporelle des modalités</li><li>Données confidentielles non publiables</li></ul>"
+        "body": "<ul><li>Seuils de discrétisation perfectibles</li><li>Meilleure classification des non-défauts que des défauts</li><li>Faible amélioration des modèles complexes</li><li>Absence de validation en production</li><li>Pas de courbe de calibration ni de Brier score documentés dans le rapport source — la calibration n’est pas affirmée</li><li>Risque d’évolution temporelle des modalités</li><li>Données confidentielles non publiables</li></ul>"
       }
     ]
   }

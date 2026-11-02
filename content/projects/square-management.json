@@ -1,0 +1,27 @@
+{
+  "id": "square-management",
+  "category_fr": "RAG / Retrieval / Evaluation",
+  "category_en": "RAG / Retrieval / Evaluation",
+  "featured_rank": 1,
+  "public_url_fr": "projects/square-management.html",
+  "public_url_en": "projects/square-management.html",
+  "claim_ids": ["square_189_configs"],
+  "text": {
+    "fr": {
+      "title": "Évaluer des systèmes RAG sur documents longs",
+      "question": "Comment les choix d'OCR, de découpage et de recherche affectent-ils la qualité d'un système sur documents longs ?",
+      "method": "Comparer les configurations dans un protocole documenté.",
+      "evidence": "189 configurations étudiées",
+      "limit": "Données et livrables internes non publics.",
+      "cta": "Lire l'étude de cas"
+    },
+    "en": {
+      "title": "Evaluating RAG systems on long documents",
+      "question": "How do OCR, chunking and retrieval choices affect system quality on long documents?",
+      "method": "Compare configurations under a documented protocol.",
+      "evidence": "189 configurations studied",
+      "limit": "Internal data and deliverables are not public.",
+      "cta": "Read the case study"
+    }
+  }
+}

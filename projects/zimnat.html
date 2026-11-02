@@ -61,88 +61,19 @@
 <div class="project-detail-container"><div data-lang="fr">
 <div class="case-study-card reveal-up"><h2>Le défi</h2><p>Les assureurs doivent identifier les produits réellement pertinents pour chaque client sans recommander des contrats déjà détenus. L’objectif était de construire un moteur de recommandation exploitable par les équipes commerciales, avec un niveau de confiance, une explication et une trace d’audit.</p></div>
 <div class="case-study-card reveal-up"><h2>La solution technique</h2><p>Le système combine une baseline statistique, un modèle CatBoost et des règles métier strictes. Les probabilités sont recalibrées, puis les produits déjà détenus sont exclus avant de générer un classement final explicable.</p><ul><li>Préparation et contrôle des données clients.</li><li>Modélisation multi-produit avec gestion du déséquilibre.</li><li>Règles métier appliquées après le modèle.</li><li>Interface Streamlit pour explorer les recommandations.</li></ul></div>
-<div class="case-study-card reveal-up"><h2>Résultats et valeur</h2><ul><li>Top de recommandations par client.</li><li>Niveau de confiance et motifs de recommandation.</li><li>Audit des décisions et filtrage des produits déjà détenus.</li><li>Architecture modulaire conçue pour être testée et enrichie.</li></ul></div>
+<div class="case-study-card reveal-up"><h2>Résultats, valeur et limites</h2><ul><li>Top de recommandations par client.</li><li>Niveau de confiance et motifs de recommandation.</li><li>Audit des décisions et filtrage des produits déjà détenus (règle d’exclusion, pas une garantie d’erreur commerciale nulle).</li><li>Architecture modulaire conçue pour être testée et enrichie.</li><li>Statut : prototype / démonstrateur Streamlit — non présenté comme déploiement validé en production.</li></ul></div>
 </div><div data-lang="en">
-<div class="case-study-card reveal-up">
-<h2>The Challenge</h2>
-<p>
-                Insurance companies face a critical challenge in identifying which products are most relevant to their
-                existing clients. Mass marketing is often inefficient and intrusive. The goal was to build a
-                recommendation engine for Zimnat Insurance that accurately predicts a client's "missing pieces" to
-                optimize cross-selling based on their current portfolio and profile.
-            </p>
-</div>
-<div class="case-study-card reveal-up">
-<h2>The Technical Solution</h2>
-<p>
-                The solution is a <strong>Hybrid Dual-Engine</strong> architecture designed for both robustness and high
-                personalization.
-            </p>
-<div class="architecture-viz">
-<div class="schema-placeholder">
-<div class="schema-node accent">Client Profile &amp; History</div>
-<div class="schema-arrow">↓</div>
-<div class="schema-row">
-<div class="schema-node">Bayesian Statistical Engine</div>
-<div class="schema-node">CatBoost Personalizer</div>
-</div>
-<div class="schema-arrow">↓</div>
-<div class="schema-node accent">Weighted Consensus Layer</div>
-<div class="schema-arrow">↓</div>
-<div class="schema-node">Anti-Cheat Product Filter</div>
-<div class="schema-arrow">↓</div>
-<div class="schema-node accent">Final Recommendations (Top K)</div>
-</div>
-</div>
-<p>
-                I chose <strong>CatBoost</strong> specifically to handle the high cardinality of categorical features
-                without the need for complex pre-processing. The <strong>Bayesian Engine</strong> acts as a
-                fallback/safety layer, ensuring that even for new clients with little history, the recommendations
-                remain statistically sound.
-            </p>
-</div>
-<div class="case-study-card reveal-up">
-<h2>The Results &amp; Impact</h2>
-<ul>
-<li><strong>Zero Commercial Error</strong>: The built-in anti-cheat system ensures 100% of
-                    recommendations are products not yet owned by the client.</li>
-<li><strong>Market Simulation</strong>: Developed a Streamlit tool for managers to simulate "what-if"
-                    scenarios for new product launches.</li>
-<li><strong>Precision Marketing</strong>: Enabled the transition from generic campaigns to
-                    hyper-personalized agent advice.</li>
-</ul>
-</div>
+<div class="case-study-card reveal-up"><h2>The challenge</h2><p>Insurers need to identify products that are actually relevant for each client without recommending contracts already held. The goal was to build a recommendation engine usable by sales teams, with a confidence level, an explanation and an audit trail.</p></div>
+<div class="case-study-card reveal-up"><h2>Technical approach</h2><p>The system combines a statistical baseline, a CatBoost model and strict business rules. Probabilities are recalibrated, then already-owned products are excluded before producing an explainable final ranking.</p><ul><li>Client data preparation and checks.</li><li>Multi-product modelling with class imbalance handling.</li><li>Business rules applied after the model (including exclusion of owned products).</li><li>Streamlit interface to explore recommendations.</li></ul></div>
+<div class="case-study-card reveal-up"><h2>Results, value and limitations</h2><ul><li>Top recommendations per client with confidence cues and recommendation motives.</li><li>Decision audit trail and filtering of already-owned products (rule-based exclusion, not a guarantee of zero commercial error).</li><li>Modular architecture designed to be tested and extended.</li><li>Status: prototype / demonstrator with Streamlit simulation — not presented as a production-validated deployment.</li></ul></div>
 <div class="tech-stack-section reveal-up">
-<h3 data-i18n="project_techs">Full Tech Stack</h3>
+<h3 data-i18n="project_techs">Tech stack</h3>
 <div class="tech-stack-grid">
-<span class="tech-badge-expert" data-tech="Python" title="Python"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/>
-
-                    Python
-                </span>
-<span class="tech-badge-expert" data-tech="CatBoost" title="CatBoost"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://avatars.githubusercontent.com/u/31257634?s=200&amp;v=4"/>
-
-                    CatBoost
-                </span>
-<span class="tech-badge-expert" data-tech="Streamlit" title="Streamlit"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"/>
-
-                    Streamlit
-                </span>
-<span class="tech-badge-expert" data-tech="Pandas" title="Pandas"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"/>
-
-                    Pandas
-                </span>
-<span class="tech-badge-expert" data-tech="Scikit-learn" title="Scikit-learn"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg"/>
-
-                    Scikit-learn
-                </span>
-<span class="tech-badge-expert" data-tech="Plotly" title="Plotly"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/plotly/plotly-original.svg"/>
-
-                    Plotly
-                </span>
-<span class="tech-badge-expert" data-tech="XGBoost" title="XGBoost"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="../assets/img/tech/xgboost.svg"/>
-
-                    XGBoost
-                </span>
+<span class="tech-badge-expert" data-tech="Python" title="Python"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/> Python</span>
+<span class="tech-badge-expert" data-tech="CatBoost" title="CatBoost"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://avatars.githubusercontent.com/u/31257634?s=200&amp;v=4"/> CatBoost</span>
+<span class="tech-badge-expert" data-tech="Streamlit" title="Streamlit"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"/> Streamlit</span>
+<span class="tech-badge-expert" data-tech="Pandas" title="Pandas"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"/> Pandas</span>
+<span class="tech-badge-expert" data-tech="Scikit-learn" title="Scikit-learn"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg"/> Scikit-learn</span>
 </div>
 </div>
 </div></div>

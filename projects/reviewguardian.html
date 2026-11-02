@@ -53,91 +53,18 @@
 <div class="case-study-card reveal-up"><h2>La solution technique</h2><p>ReviewGuardian combine des représentations TF-IDF, des variables structurées et plusieurs modèles de classification. LIME et SHAP fournissent des explications locales et globales, tandis que FastAPI, Streamlit et Docker rendent le système testable et déployable.</p><ul><li>Pipeline de préparation et d’entraînement.</li><li>Prédiction unitaire et traitement par lot.</li><li>Explicabilité locale avec LIME et SHAP.</li><li>API, interface de démonstration et monitoring.</li></ul></div>
 <div class="case-study-card reveal-up"><h2>Résultats et limites</h2><ul><li>Corpus équilibré de 7 296 avis documenté dans le dépôt.</li><li>Interface de modération et visualisation des explications.</li><li>Architecture locale limitant l’exposition des données.</li><li>Les performances doivent être interprétées dans le contexte du corpus utilisé.</li></ul></div>
 </div><div data-lang="en">
-<div class="case-study-card reveal-up">
-<h2>The Challenge</h2>
-<p>
-                E-commerce sellers and marketplace operators face a critical threat: <strong>malicious reviews</strong>.
-                Competitors, coordinated actors, and bots post fake 1-star or 5-star reviews to manipulate product
-                rankings or damage reputations. Traditional review moderation is manual, slow, and prone to errors.
-            </p>
-<p>
-                The goal was to create an intelligent system that detects suspicious review patterns-bots,
-                coordinated attacks, and fake accounts-without requiring extensive labeled training data.
-            </p>
-</div>
-<div class="case-study-card reveal-up">
-<h2>The Technical Solution</h2>
-<p>
-                ReviewGuardian combines <strong>behavioral analysis</strong>, <strong>NLP anomaly detection</strong>,
-                and <strong>graph-based clustering</strong> to identify suspicious review patterns without heavy
-                supervision.
-            </p>
-<div class="architecture-viz">
-<div class="schema-placeholder">
-<div class="schema-node accent">Review Stream (Scraped + Real-Time)</div>
-<div class="schema-arrow">↓</div>
-<div class="schema-row">
-<div class="schema-node">Behavioral Profiling</div>
-<div class="schema-node">NLP Embeddings (Outlier Detection)</div>
-</div>
-<div class="schema-arrow">↓</div>
-<div class="schema-row">
-<div class="schema-node">Account Clustering (Graph-Based)</div>
-<div class="schema-node">Temporal Pattern Analysis</div>
-</div>
-<div class="schema-arrow">↓</div>
-<div class="schema-node accent">Suspicion Score &amp; Alerts</div>
-<div class="schema-arrow">↓</div>
-<div class="schema-node">MongoDB Storage + Dashboard</div>
-</div>
-</div>
-<p>
-                Key innovations:
-            </p>
-<ul>
-<li><strong>Zero-Labeled Learning</strong>: Uses isolation forests and density estimation instead of
-                    supervised classification.</li>
-<li><strong>Cross-Platform Detection</strong>: Identifies coordinated campaigns across multiple
-                    accounts/platforms.</li>
-<li><strong>Temporal Awareness</strong>: Flags synchronized review posting (bot behavior).</li>
-</ul>
-</div>
-<div class="case-study-card reveal-up">
-<h2>The Results &amp; Impact</h2>
-<ul>
-<li><strong>70%+ Detection Rate</strong> on synthetic bot campaigns, minimal false positives.</li>
-<li><strong>Real-Time Alerting</strong>: Suspicious reviews flagged within minutes of posting.</li>
-<li><strong>Marketplace Trust</strong>: Businesses can now focus on genuine customer feedback.</li>
-<li><strong>Scalable &amp; Adaptable</strong>: Easily extended to new platforms and review types.</li>
-</ul>
-</div>
+<div class="case-study-card reveal-up"><h2>The challenge</h2><p>Platforms need to moderate large volumes of reviews while protecting user data. The goal was to detect toxic content locally, with understandable predictions and a simple integration path.</p></div>
+<div class="case-study-card reveal-up"><h2>Technical approach</h2><p>ReviewGuardian combines TF-IDF representations, structured features and several classification models. LIME and SHAP provide local and global explanations, while FastAPI, Streamlit and Docker make the system testable and deployable.</p><ul><li>Preparation and training pipeline.</li><li>Single-item and batch prediction.</li><li>Local explainability with LIME and SHAP.</li><li>API, demo interface and monitoring.</li></ul></div>
+<div class="case-study-card reveal-up"><h2>Results and limitations</h2><ul><li>Balanced corpus of 7,296 reviews documented in the repository (scope limited to that corpus).</li><li>Moderation interface with explanation visualizations.</li><li>Local architecture that limits data exposure.</li><li>Performance figures must be interpreted only in the context of the corpus used; no production detection-rate claim is published here.</li></ul></div>
 <div class="tech-stack-section reveal-up">
-<h3 data-i18n="project_techs">Full Tech Stack</h3>
+<h3 data-i18n="project_techs">Tech stack</h3>
 <div class="tech-stack-grid">
-<span class="tech-badge-expert" data-tech="Python" title="Python"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/>
-
-                    Python
-                </span>
-<span class="tech-badge-expert" data-tech="Node.js" title="Node.js"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"/>
-<img alt="Node.js" class="project-logo-sm" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg"/>
-                    Node.js
-                </span>
-<span class="tech-badge-expert" data-tech="MongoDB" title="MongoDB"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"/>
-
-                    MongoDB
-                </span>
-<span class="tech-badge-expert" data-tech="Selenium" title="Selenium"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg"/>
-
-                    Selenium
-                </span>
-<span class="tech-badge-expert" data-tech="Scikit-Learn" title="Scikit-Learn"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg"/>
-
-                    Scikit-Learn
-                </span>
-<span class="tech-badge-expert" data-tech="Isolation Forest"><i aria-hidden="true" class="tech-concept-icon" data-feather="git-branch"></i>
-
-                    Isolation Forest
-                </span>
+<span class="tech-badge-expert" data-tech="Python" title="Python"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/> Python</span>
+<span class="tech-badge-expert" data-tech="Scikit-Learn" title="Scikit-Learn"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg"/> Scikit-Learn</span>
+<span class="tech-badge-expert" data-tech="FastAPI" title="FastAPI"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"/> FastAPI</span>
+<span class="tech-badge-expert" data-tech="Streamlit" title="Streamlit"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"/> Streamlit</span>
+<span class="tech-badge-expert" data-tech="Docker" title="Docker"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"/> Docker</span>
+<span class="tech-badge-expert" data-tech="LIME / SHAP"><i aria-hidden="true" class="tech-concept-icon" data-feather="search"></i> LIME / SHAP</span>
 </div>
 </div>
 </div></div>

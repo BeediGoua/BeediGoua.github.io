@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  {% include "partials/head.html" %}
+</head>
+<body>
+  <a class="skip-link" href="#main-content">{{ 'Aller au contenu' if lang == 'fr' else 'Skip to content' }}</a>
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a class="logo" href="#top">GB<span>.</span></a>
+      <details class="mobile-menu">
+        <summary>{{ 'Menu' if lang == 'fr' else 'Menu' }}</summary>
+        <nav class="mobile-dropdown" aria-label="{{ 'Navigation mobile' if lang == 'fr' else 'Mobile navigation' }}">
+          <a href="#projects">{{ 'Travaux' if lang == 'fr' else 'Work' }}</a>
+          <a href="#experience">{{ 'Expérience' if lang == 'fr' else 'Experience' }}</a>
+          <a href="#method">{{ 'Méthode' if lang == 'fr' else 'Approach' }}</a>
+          <a href="#education">{{ 'Parcours' if lang == 'fr' else 'Education' }}</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </details>
+      <nav class="navlinks" aria-label="{{ 'Navigation principale' if lang == 'fr' else 'Primary navigation' }}">
+        <a href="#projects">{{ 'Travaux' if lang == 'fr' else 'Work' }}</a>
+        <a href="#experience">{{ 'Expérience' if lang == 'fr' else 'Experience' }}</a>
+        <a href="#method">{{ 'Méthode' if lang == 'fr' else 'Approach' }}</a>
+        <a href="#education">{{ 'Parcours' if lang == 'fr' else 'Education' }}</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="navtools">
+        {% if lang == 'fr' %}
+        <a class="lang-link" href="index-en.html" hreflang="en" lang="en">EN</a>
+        <span class="lang-link" aria-current="page">FR</span>
+        <a class="nav-cv" href="{{ profile.cv.fr }}">{{ t.cta_cv }}</a>
+        {% else %}
+        <a class="lang-link" href="index.html" hreflang="fr" lang="fr">FR</a>
+        <span class="lang-link" aria-current="page">EN</span>
+        <a class="nav-cv" href="{{ profile.cv.en }}">{{ t.cta_cv }}</a>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div id="top"></div>
+    <section class="hero container" id="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">{{ t.eyebrow }}</div>
+          <h1>{{ profile.name }}<span class="dot">.</span></h1>
+          <div class="headline">{{ t.headline }}</div>
+          <p class="intro lead">{{ t.intro }}</p>
+          <p class="intro proof">{{ t.proof }}</p>
+          <p class="meta">{{ t.availability }}</p>
+          <div class="hero-actions">
+            <a class="btn btn-main" href="#projects">{{ t.cta_work }}</a>
+            <a class="btn btn-outline" href="{{ profile.cv[lang] }}">{{ t.cta_cv }}</a>
+          </div>
+          <div class="hero-tags">
+            <a href="{{ profile.github }}">GitHub</a>
+            <a href="{{ profile.linkedin }}">LinkedIn</a>
+            <span>Sorbonne Université · ENSAI</span>
+          </div>
+        </div>
+        <figure class="photo-frame">
+          <div class="photo">
+            <img src="{{ profile.photo }}" alt="{{ 'Portrait de Goua Beedi' if lang == 'fr' else 'Portrait of Goua Beedi' }}" width="420" height="375" fetchpriority="high">
+            <figcaption>
+              <strong>Statistics &amp; Machine Learning</strong>
+              <span>{{ 'Recherche appliquée · Paris' if lang == 'fr' else 'Applied research · Paris' }}</span>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <div class="stats-rail">
+        <div><b>Statistical ML</b>{{ 'Modélisation & inférence' if lang == 'fr' else 'Modelling & inference' }}</div>
+        <div><b>Evaluation</b>{{ 'Protocoles & diagnostics' if lang == 'fr' else 'Protocols & diagnostics' }}</div>
+        <div><b>Engineering</b>{{ 'Pipelines & reproductibilité' if lang == 'fr' else 'Pipelines & reproducibility' }}</div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section container" id="projects">
+      <div class="section-head">
+        <span class="section-index">01 / WORK</span>
+        <div>
+          <h2>{{ 'Travaux sélectionnés' if lang == 'fr' else 'Selected work' }}</h2>
+          <p>{{ t.projects_intro }}</p>
+        </div>
+      </div>
+
+      {% set square = projects['square-management'].text[lang] %}
+      <article class="flagship">
+        <div>
+          <div class="project-meta">{{ projects['square-management']['category_' + lang] }} · Square Management</div>
+          <h3>{{ square.title }}</h3>
+          <p>{{ square.question }}</p>
+          <p>{{ square.method }}</p>
+          <div class="limit"><strong>{{ square.evidence }}</strong><br>{{ square.limit }}</div>
+          <a class="feature-link" href="{{ projects['square-management'].public_url_fr if lang == 'fr' else projects['square-management'].public_url_en }}">{{ square.cta }} ↗</a>
+        </div>
+        <div class="system-diagram" aria-label="{{ 'Schéma conceptuel d\'un pipeline d\'évaluation RAG' if lang == 'fr' else 'Conceptual diagram of a RAG evaluation pipeline' }}">
+          <div class="diagram-stage">{{ 'Documents & structure' if lang == 'fr' else 'Documents & structure' }}</div>
+          <div class="diagram-arrow">↓</div>
+          <div class="diagram-row">
+            <div class="diagram-stage">OCR &amp; extraction</div>
+            <div class="diagram-stage">Chunking</div>
+          </div>
+          <div class="diagram-arrow">↓</div>
+          <div class="diagram-row">
+            <div class="diagram-stage">Embeddings</div>
+            <div class="diagram-stage">Retrieval &amp; ranking</div>
+          </div>
+          <div class="diagram-arrow">↓</div>
+          <div class="diagram-stage highlight">{{ 'Évaluation comparative & analyse d\'erreurs' if lang == 'fr' else 'Comparative evaluation & error analysis' }}</div>
+          <div class="diagram-caption">{{ 'Schéma conceptuel, pas représentation d\'un résultat chiffré' if lang == 'fr' else 'Conceptual diagram, not a quantitative result' }}</div>
+        </div>
+      </article>
+
+      <div class="project-grid">
+        {% for slug in ['credit-scoring', 'brokerflow'] %}
+        {% set p = projects[slug] %}
+        {% set tx = p.text[lang] %}
+        <article class="project-card">
+          <div class="project-meta">{{ p['category_' + lang] }}</div>
+          <h3>{{ tx.title }}</h3>
+          <p>{{ tx.question }}</p>
+          <p class="evidence">{{ tx.evidence }}{% if tx.evidence_note %}<small>{{ tx.evidence_note }}</small>{% endif %}</p>
+          <p class="limit">{{ tx.limit }}</p>
+          <a class="feature-link" href="{{ p.public_url_fr if lang == 'fr' else p.public_url_en }}">{{ tx.cta }} ↗</a>
+        </article>
+        {% endfor %}
+      </div>
+      <a class="more-link" href="projects/autres-projets.html">{{ 'Autres travaux, dont la prévision de demande et l\'analyse de survie ↗' if lang == 'fr' else 'Other work, including demand forecasting and survival analysis ↗' }}</a>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section container" id="experience">
+      <div class="section-head">
+        <span class="section-index">02 / EXPERIENCE</span>
+        <div>
+          <h2>{{ 'Expériences' if lang == 'fr' else 'Experience' }}</h2>
+          <p>{{ 'Des situations concrètes, avec leurs contraintes : données réelles, décisions de modélisation et limites de ce qui peut être publié.' if lang == 'fr' else 'Concrete situations with their constraints: real data, modelling decisions and limits on what can be published.' }}</p>
+        </div>
+      </div>
+      <div class="experience-list">
+        {% for item in experiences %}
+        <article class="experience-entry">
+          <div class="date">{{ item.year }} · {{ item['sector_' + lang] }}</div>
+          <div>
+            <h3>{{ item.org }}</h3>
+            <p class="role">{{ item['role_' + lang] }}</p>
+            <p>{{ item['body_' + lang] }}</p>
+            <p class="tiny muted">{{ item['limit_' + lang] }}</p>
+            <a class="feature-link" href="{{ item.url_fr }}">{{ 'Voir les détails ↗' if lang == 'fr' else 'View details ↗' }}</a>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section container" id="method">
+      <div id="approach" aria-hidden="true"></div>
+      <div class="section-head">
+        <span class="section-index">03 / APPROACH</span>
+        <div>
+          <h2>{{ 'Comment j\'évalue les modèles' if lang == 'fr' else 'How I evaluate models' }}</h2>
+          <p>{{ t.method_intro }}</p>
+        </div>
+      </div>
+      <div class="method-grid">
+        <article class="method-item">
+          <div class="number">01 — PROTOCOL</div>
+          <h3>{{ 'Comparer équitablement' if lang == 'fr' else 'Compare fairly' }}</h3>
+          <p>{{ 'Définir le jeu de test, les baselines et les métriques avant de conclure à la supériorité d\'une approche.' if lang == 'fr' else 'Define the test set, baselines and metrics before claiming that one approach is superior.' }}</p>
+          <a href="projects/square-management.html" class="foot">{{ 'Exemple : évaluation RAG ↗' if lang == 'fr' else 'Example: RAG evaluation ↗' }}</a>
+        </article>
+        <article class="method-item">
+          <div class="number">02 — TRADE-OFFS</div>
+          <h3>{{ 'Justifier un modèle simple' if lang == 'fr' else 'Justify a simple model' }}</h3>
+          <p>{{ 'Une meilleure AUC ne suffit pas toujours à compenser la complexité, l\'opacité ou le coût de maintenance.' if lang == 'fr' else 'A better AUC does not always offset complexity, opacity or maintenance cost.' }}</p>
+          <a href="projects/credit-scoring.html" class="foot">{{ 'Exemple : credit scoring ↗' if lang == 'fr' else 'Example: credit scoring ↗' }}</a>
+        </article>
+        <article class="method-item">
+          <div class="number">03 — FAILURE MODES</div>
+          <h3>{{ 'Étudier les cas d\'échec' if lang == 'fr' else 'Study failure modes' }}</h3>
+          <p>{{ 'Ne pas confondre performance locale du modèle et fiabilité du système complet en situation de décision.' if lang == 'fr' else 'Do not confuse local model performance with full-system reliability in decision settings.' }}</p>
+          <a href="projects/brokerflow.html" class="foot">{{ 'Exemple : BrokerFlow AI ↗' if lang == 'fr' else 'Example: BrokerFlow AI ↗' }}</a>
+        </article>
+      </div>
+      <p class="muted reading" style="margin-top:28px">{{ t.method_quote }}</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section container" id="education">
+      <div class="section-head">
+        <span class="section-index">04 / EDUCATION</span>
+        <div>
+          <h2>{{ 'Parcours académique' if lang == 'fr' else 'Education' }}</h2>
+          <p>{{ 'Une base solide en statistique mathématique, puis en modélisation et en analyse de systèmes d\'IA.' if lang == 'fr' else 'A solid base in mathematical statistics, then modelling and AI system analysis.' }}</p>
+        </div>
+      </div>
+      <div class="education-grid">
+        {% for edu in profile.education %}
+        <div class="edu-item">
+          <div class="overline">{{ edu['status_' + lang] }}</div>
+          <h3>{{ edu['title_' + lang] }}</h3>
+          <p>{{ edu['body_' + lang] }}</p>
+          <p class="tiny">{{ edu['note_' + lang] }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section container" id="skills">
+      <div class="section-head">
+        <span class="section-index">05 / EXPERTISE</span>
+        <div>
+          <h2>{{ 'Compétences utiles' if lang == 'fr' else 'Useful expertise' }}</h2>
+          <p>{{ 'Les techniques que je peux expliquer et mettre en œuvre, plutôt qu\'une collection exhaustive de logos.' if lang == 'fr' else 'Techniques I can explain and implement, rather than an exhaustive logo collection.' }}</p>
+        </div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill">
+          <h3>Statistical Learning</h3>
+          <p>{{ 'Inférence · Régression · Validation · Python / R' if lang == 'fr' else 'Inference · Regression · Validation · Python / R' }}</p>
+        </div>
+        <div class="skill">
+          <h3>Machine Learning &amp; Evaluation</h3>
+          <p>{{ 'Classification · Ensembles · Calibration lorsqu\'elle est étudiée · Scikit-learn / XGBoost' if lang == 'fr' else 'Classification · Ensembles · Calibration when studied · Scikit-learn / XGBoost' }}</p>
+        </div>
+        <div class="skill">
+          <h3>LLM &amp; Retrieval</h3>
+          <p>{{ 'RAG · Embeddings · Recherche hybride · Évaluation des réponses' if lang == 'fr' else 'RAG · Embeddings · Hybrid search · Answer evaluation' }}</p>
+        </div>
+        <div class="skill">
+          <h3>ML Engineering</h3>
+          <p>{{ 'FastAPI · Docker · Tests · Pipelines reproductibles' if lang == 'fr' else 'FastAPI · Docker · Tests · Reproducible pipelines' }}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="eyebrow">LET'S TALK</div>
+        <h2>{{ t.contact_title }}</h2>
+        <p>{{ t.contact_body }}</p>
+        <a class="btn btn-main" href="mailto:{{ profile.email }}">{{ t.contact_cta }}</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <span>© <span id="year">2026</span> Goua Beedi</span>
+    <div class="links">
+      <a href="{{ profile.github }}">GitHub</a>
+      <a href="{{ profile.linkedin }}">LinkedIn</a>
+      <a href="{{ profile.cv[lang] }}">CV</a>
+      <a href="mailto:{{ profile.email }}">Email</a>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

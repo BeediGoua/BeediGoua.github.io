@@ -1,0 +1,259 @@
+.hero {
+  padding: 85px 0 78px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.85fr);
+  gap: 70px;
+  align-items: center;
+}
+
+.hero .intro {
+  font-size: clamp(1rem, 1.5vw, 1.16rem);
+  color: var(--text-muted);
+  max-width: 640px;
+  line-height: 1.75;
+}
+
+.hero h1 {
+  margin-top: 20px;
+}
+
+.hero h1 .dot {
+  color: var(--accent);
+}
+
+.headline {
+  font-size: clamp(1.38rem, 2.5vw, 2.08rem);
+  font-weight: 650;
+  letter-spacing: -0.035em;
+  color: #d5e0f0;
+  line-height: 1.23;
+  margin-bottom: 20px;
+}
+
+[data-theme="light"] .headline {
+  color: #24364f;
+}
+
+.hero .lead {
+  margin-bottom: 15px;
+}
+
+.hero .proof {
+  max-width: 590px;
+}
+
+.hero .meta {
+  margin-top: 21px;
+  color: #a8b7cc;
+  font-size: 0.86rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+}
+
+.hero-tags {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 23px;
+  color: var(--text-soft);
+  font-size: 0.83rem;
+}
+
+.hero-tags a {
+  color: var(--link);
+}
+
+.photo-frame {
+  border: 1px solid var(--border);
+  background: linear-gradient(160deg, #1b2c42, #102032 70%);
+  border-radius: var(--radius-lg);
+  padding: 13px;
+  position: relative;
+  max-width: 420px;
+  margin-inline: auto;
+}
+
+.photo {
+  height: 375px;
+  border-radius: 9px;
+  overflow: hidden;
+  background: #1d2b3c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.photo img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 28%;
+  filter: saturate(0.88) contrast(1.01);
+}
+
+.photo figcaption {
+  position: absolute;
+  bottom: 21px;
+  left: 24px;
+  background: rgba(10, 18, 28, 0.85);
+  padding: 8px 12px;
+  border: 1px solid #43576b;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  z-index: 2;
+}
+
+.photo figcaption strong {
+  display: block;
+}
+
+.photo figcaption span {
+  color: #bfccd9;
+  font-size: 0.72rem;
+}
+
+.stats-rail {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--border);
+  padding-top: 22px;
+  margin-top: 48px;
+  color: var(--text-soft);
+  font-size: 0.8rem;
+}
+
+.stats-rail b {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.flagship {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr);
+  gap: 34px;
+  padding: 34px;
+  border: 1px solid #38516a;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.flagship h3 {
+  font-size: clamp(1.55rem, 2.8vw, 2rem);
+  line-height: 1.2;
+  margin-bottom: 13px;
+}
+
+.flagship p {
+  color: var(--text-muted);
+}
+
+.system-diagram {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  max-width: 100%;
+}
+
+.diagram-stage {
+  padding: 14px 16px;
+  border: 1px solid #344963;
+  border-radius: 8px;
+  background: #172539;
+  font-size: 0.81rem;
+  text-align: center;
+  color: #deebf8;
+}
+
+.diagram-stage.highlight {
+  border-color: #4fae9d;
+  color: #c9fff1;
+}
+
+.diagram-arrow {
+  text-align: center;
+  color: var(--text-soft);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.diagram-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.diagram-caption {
+  font-size: 0.72rem;
+  color: var(--text-soft);
+  text-align: center;
+  margin-top: 3px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.more-link {
+  display: inline-block;
+  margin-top: 22px;
+  color: var(--link);
+  font-size: 0.9rem;
+}
+
+.method-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.education-grid,
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.skills-grid {
+  gap: 22px;
+}
+
+.contact {
+  text-align: center;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 80px 0;
+}
+
+.contact h2 {
+  font-size: clamp(2rem, 3.4vw, 2.8rem);
+  max-width: 800px;
+  margin: 0 auto 16px;
+}
+
+.contact p {
+  max-width: 650px;
+  margin: 0 auto 27px;
+  color: var(--text-muted);
+}
+
+#approach {
+  scroll-margin-top: 85px;
+}

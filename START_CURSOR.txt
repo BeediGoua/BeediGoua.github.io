@@ -1,0 +1,18 @@
+CURSOR — PROMPT DE DÉMARRAGE À COLLER DANS LE MODE « PLAN »
+
+Je veux refondre ce dépôt GitHub Pages selon le cahier des charges contenu dans AGENTS.md et docs/refonte. Lis d'abord :
+- docs/refonte/00_BRIEF.md
+- docs/refonte/01_DESIGN_SYSTEM.md
+- docs/refonte/02_PAGE_COPY_AND_UX.md
+- docs/refonte/03_FILE_MAP.md
+- docs/refonte/04_SCIENTIFIC_TRUTH.md
+- docs/refonte/05_TARGET_ARCHITECTURE.md
+- docs/refonte/06_QA.md
+- docs/refonte/07_PHASES.md
+- docs/refonte/09_REPO_BASELINE.md
+- docs/refonte/PROGRESS.md
+- docs/refonte/REFERENCE.html : référence VISUELLE de la future interface.
+
+Tu dois suivre les règles .cursor/rules/*.mdc. Le résultat visé est un portfolio Research Editorial sombre, élégant, personnel, axé sur des projets de Data Science et une évaluation scientifique réelle : pas de look template SaaS, pas de résultats inventés, pas de framework client lourd, pas de nouvelles couches CSS de rattrapage. Tous les fichiers actuels, leurs URLs historiques, les CV, le bilinguisme et l'accessibilité doivent être préservés ou migrés sans régression.
+
+IMPORTANT : commence UNIQUEMENT par la PHASE 0 d'audit comme elle est définie dans docs/refonte/08_PROMPTS_CURSOR.md. Ne modifie pas les pages de production en phase 0. Vérifie git status et travaille sur une branche non main. Mets à jour docs/refonte/PROGRESS.md avec tes résultats réellement constatés et les tests exécutés. Présente ensuite le diff/plan de la phase 1 avant de coder autre chose. N'enchaîne jamais toutes les phases d'un coup.

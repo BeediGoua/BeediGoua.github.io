@@ -24,42 +24,30 @@
         th { color: var(--text-color); }
         td { color: var(--text-secondary); }
     </style>
-
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="48x48" href="../assets/img/favicon-48.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png" />
 </head>
 <body class="project-detail-page">
     <div class="blob-container">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
     </div>
-
     <nav class="back-nav">
-        <a href="../index.html" class="btn-expert">
-            <i data-feather="arrow-left" style="width: 18px;"></i> Retour au portfolio
-        </a>
+        <a href="../index.html" class="btn-expert">← Retour au portfolio</a>
     </nav>
-
     <section class="project-detail-hero">
         <div class="project-header-container">
             <h1 class="project-title-xl">Credit Scoring - Modélisation du risque de défaut</h1>
             <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem;">Étude académique de scoring crédit menée dans le cadre du cursus ENSAI</p>
-            <div class="tech-badges-top">
-                <span class="tech-badge-expert">Régression logistique</span><span class="tech-badge-expert">Random Forest</span><span class="tech-badge-expert">XGBoost</span>
-            </div>
+            <div class="tech-badges-top"><span class="tech-badge-expert">Régression logistique</span><span class="tech-badge-expert">Random Forest</span><span class="tech-badge-expert">XGBoost</span></div>
         </div>
     </section>
-
     <div class="project-detail-container">
-        
         <div class="case-study-card reveal-up">
             <h2>1. Vue d'ensemble</h2>
             <p><strong>Problème</strong><br>Le système existant reposait principalement sur l’expertise métier et ne fournissait pas de mesure quantitative homogène du risque associé aux comptes professionnels.</p><p><strong>Approche</strong><br>Développer un modèle interprétable du défaut à douze mois, puis convertir ses coefficients en une grille de score comprise entre 0 et 1 000 et en sept classes homogènes de risque.</p><p><strong>Résultat principal</strong><br>La régression logistique atteint une AUC de 0,784 sur le jeu de test. Les modèles Random Forest et XGBoost améliorent légèrement la discrimination, avec des AUC respectives de 0,800 et 0,798, mais sans gain suffisant pour compenser la perte d’interprétabilité.</p>
         </div>
         <div class="case-study-card reveal-up">
             <h2>2. Données</h2>
-            <ul><li>532 567 comptes professionnels</li><li>143 variables initiales</li><li>cible : défaut dans les douze mois</li><li>taux de défaut : 12,76 %</li><li>informations clients, transactions et santé financière</li><li>70 % train / 30 % test stratifié</li><li>372 381 observations train et 159 845 test après traitement</li></ul><p><em>Note : La définition du défaut retenue repose notamment sur un franchissement prolongé d’un seuil d’arriérés.</em></p>
+            <ul><li>532 567 comptes professionnels (effectif initial déclaré)</li><li>143 variables initiales</li><li>cible : défaut dans les douze mois</li><li>taux de défaut : 12,76 %</li><li>informations clients, transactions et santé financière</li><li>70 % train / 30 % test stratifié</li><li>372 381 observations train et 159 845 test après traitement (somme = 532 226)</li></ul><p><em>Note : La définition du défaut retenue repose notamment sur un franchissement prolongé d’un seuil d’arriérés. L’écart de 341 observations entre l’effectif initial (532 567) et la somme train+test (532 226) reste à expliquer à partir du rapport source ; aucune cause n’est inventée ici.</em></p>
         </div>
         <div class="case-study-card reveal-up">
             <h2>3. Préparation des données</h2>
@@ -75,19 +63,10 @@
         </div>
         <div class="case-study-card reveal-up">
             <h2>6. Limites</h2>
-            <ul><li>Seuils de discrétisation perfectibles</li><li>Meilleure classification des non-défauts que des défauts</li><li>Faible amélioration des modèles complexes</li><li>Absence de validation en production</li><li>Risque d’évolution temporelle des modalités</li><li>Données confidentielles non publiables</li></ul>
-        </div>
-    </div>
-
+            <ul><li>Seuils de discrétisation perfectibles</li><li>Meilleure classification des non-défauts que des défauts</li><li>Faible amélioration des modèles complexes</li><li>Absence de validation en production</li><li>Pas de courbe de calibration ni de Brier score documentés dans le rapport source — la calibration n’est pas affirmée</li><li>Risque d’évolution temporelle des modalités</li><li>Données confidentielles non publiables</li></ul>
+        </div></div>
     <footer style="text-align: center; padding: 2rem; border-top: 1px solid var(--border); margin-top: 3rem;">
         <p style="color: var(--text-secondary);">&copy; 2026 Goua Beedi. Portfolio structuré.</p>
     </footer>
-
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            if (window.feather) { feather.replace(); }
-        });
-    </script>
 </body>
 </html>

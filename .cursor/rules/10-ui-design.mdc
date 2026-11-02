@@ -1,0 +1,18 @@
+---
+description: Design system et expérience utilisateur Research Editorial; applies on HTML, CSS, frontend JS and templates
+alwaysApply: false
+globs: "**/*.html,**/*.css,assets/js/*.js,templates/**/*.html"
+---
+# DIRECTION ARTISTIQUE
+
+Lire `docs/refonte/01_DESIGN_SYSTEM.md`, `02_PAGE_COPY_AND_UX.md` et ouvrir `docs/refonte/REFERENCE.html` avant de changer un composant. Maquette = cible visuelle, pas code de production à copier tel quel.
+
+Palette sombre : fond #0B1220, surface #111B2B, bordures #2D3B50, primaire #4866D6, accent #55D2BD, texte #F4F7FB, secondaire #B7C3D4, lien #80B8FF. Thème clair possible avec tokens dédiés et contrastes testés. Typo Inter texte, Bricolage Grotesque uniquement pour quelques grands titres (fallback robuste). Largeur contenu 1160 px, lecture 760 px, grille cohérente à 360/390/768/1024/1440/1920.
+
+Accueil : hero (un seul h1 = nom) -> projets sélectionnés -> expériences -> méthode démontrée -> formation -> compétences -> contact. L'action primaire du hero est `#projects`; contact, CV et liens restent utilisables.
+
+Cartes de projets : question, méthode, résultats sourcés, limite, lien. Le travail doit être montré avant la liste d'outils. Ne pas créer de statistiques visuelles fictives, de faux résultats ou de « jauges de compétence ».
+
+Supprimer décorations excessives (blobs, glows, gradients multiples, longues timelines, icônes répétées) quand elles sont effectivement inutiles. Conserver icônes fonctionnelles, identité photo, logos académiques de manière discrète. Préserver responsive et accessibilité.
+
+Utiliser semantic HTML (`main`, `section`, `nav`, `h1`-`h3`, `button`, `a`), `:focus-visible`, `prefers-reduced-motion`, taille de cible raisonnable et textes lisibles. Éviter les `style` inline en production. Tester avec un vrai navigateur avant suppression des anciennes règles.

@@ -1,0 +1,14 @@
+---
+description: Qualité des scripts, tests automatiques, CI et preuves de validation
+alwaysApply: false
+globs: "scripts/*.py,tests/**/*.py,.github/workflows/*.yml,requirements*.txt,README.md"
+---
+# QUALITÉ ET INTÉGRATION CONTINUE
+
+Lire `docs/refonte/06_QA.md` et `07_PHASES.md`. Déterminer l'outillage réellement installé. Utiliser des commandes Windows compatibles et chemins `pathlib.Path(__file__).resolve().parents[1]`. Ne jamais coder `/mnt/data/...` dans un script de production/test.
+
+Tests requis : liens et fragments, assets, unicité ids HTML, pages FR/EN, assertions de faits principaux, build idempotent (ne pas changer le résultat au second passage), fonctionnalités desktop/mobile, toggle thème/langue, erreurs console, focus clavier, reduced motion, baselines de captures, audit axe, Lighthouse quand disponibles.
+
+Ne pas ajouter de CI qui fait échouer chaque push faute d'une dépendance ou d'un navigateur absent. Installer les dépendances dans le workflow. Ne pas déclarer une mesure Lighthouse sans réellement la lancer. Gérer les URLs externes comme tests non bloquants avec redirections/timeouts/rate limits.
+
+Après chaque lot, mettre à jour `docs/refonte/PROGRESS.md` avec commandes et sorties pertinentes, captures et limites. Ne pas déployer/merger sans validation explicite de l'utilisateur.

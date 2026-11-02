@@ -1,0 +1,18 @@
+---
+description: Contrat global de la refonte Research Editorial du portfolio Goua Beedi
+alwaysApply: true
+---
+# CONTRAT DU PROJET
+
+Tu travailles dans le dépôt `BeediGoua/BeediGoua.github.io`. La documentation obligatoire est dans `docs/refonte/`, principalement `00_BRIEF.md`, `03_FILE_MAP.md`, `04_SCIENTIFIC_TRUTH.md`, `07_PHASES.md`. La maquette de direction artistique est `docs/refonte/REFERENCE.html`.
+
+- Avant toute modification, inspecter les fichiers et tester les hypothèses. Ne jamais remplacer aveuglément l'existant.
+- Travailler sur `refonte-research-portfolio` ou une autre branche non `main` explicitement approuvée. Jamais de push/merge sur `main` sans accord explicite. Préserver les modifications de l'utilisateur.
+- Une phase à la fois, avec tests ciblés et mise à jour de `docs/refonte/PROGRESS.md` ; ne pas lancer automatiquement les phases suivantes si les critères de sortie échouent.
+- Ne jamais inventer chiffres, expériences, architectures, technologies, responsabilités, résultats, diplômes, disponibilité, publications ou validations de production. En cas d'information insuffisante, écarter l'affirmation ou la qualifier, et documenter le blocage.
+- Respecter `content/source-of-truth.md`. Ne pas exposer de données internes/confidentielles (Square, LCL, Ville de Paris, HEGP, FINZUU) sans source publique ou autorisation explicite.
+- Conserver HTML/CSS/JS natifs, hébergement GitHub Pages, liens historiques et CV bilingues. Python/Jinja2 autorisés seulement comme générateur statique testé, sans serveur requis en production.
+- UI cible : Research Editorial sombre, sobriété, typographie forte, contenus techniques et preuves visibles, animations rares, contraste accessible. Éviter look template SaaS, gradients multiples, glow, badges à répétition et décoration sans valeur.
+- Pas de fichiers CSS de correctifs successifs. Migrer les styles vers un design system cohérent, retirer les anciens fichiers seulement après audit des usages.
+- Tester le fonctionnement réel. Une inspection du code seule n'est pas une preuve de compatibilité mobile, performance, accessibilité ou navigation.
+- Toutes les modifications doivent être expliquées avec chemins précis, commandes exécutées, résultats réels et limites.

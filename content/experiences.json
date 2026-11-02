@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "id": "finzuu",
+      "year": "2026",
+      "sector_fr": "Fintech",
+      "sector_en": "Fintech",
+      "org": "FINZUU",
+      "role_fr": "Data Scientist",
+      "role_en": "Data Scientist",
+      "url_fr": "projects/finzuu.html",
+      "body_fr": "Développement d'un cadre explicable d'analyse des risques agricoles et de la capacité de remboursement, avec contraintes métier et vérifications humaines.",
+      "body_en": "Development of an explainable framework for agricultural risk and repayment capacity analysis, with business constraints and human checks.",
+      "limit_fr": "Prototype / validation métier : ne pas présenter comme modèle de défaut certifié en production.",
+      "limit_en": "Prototype / business validation: not presented as a production-certified default model."
+    },
+    {
+      "id": "square",
+      "year": "2025",
+      "sector_fr": "Consulting",
+      "sector_en": "Consulting",
+      "org": "Square Management · Research Center",
+      "role_fr": "AI & Data Science Intern",
+      "role_en": "AI & Data Science Intern",
+      "url_fr": "projects/square-management.html",
+      "body_fr": "Évaluation comparative de systèmes RAG appliqués à des documents longs. Analyse de 189 configurations et de leurs compromis.",
+      "body_en": "Comparative evaluation of RAG systems on long documents. Analysis of 189 configurations and their trade-offs.",
+      "limit_fr": "Données et livrables internes non publics.",
+      "limit_en": "Internal data and deliverables are not public."
+    },
+    {
+      "id": "ville-de-paris",
+      "year": "2024",
+      "sector_fr": "Secteur public",
+      "sector_en": "Public sector",
+      "org": "Ville de Paris · Mobilité",
+      "role_fr": "Data Science Intern",
+      "role_en": "Data Science Intern",
+      "url_fr": "projects/ville-de-paris.html",
+      "body_fr": "Travail sur des sources de données hétérogènes, leur rapprochement et des indicateurs statistiques utiles à la décision.",
+      "body_en": "Work on heterogeneous data sources, entity reconciliation and statistical indicators useful for decision-making.",
+      "limit_fr": "Pas de données personnelles/opérationnelles confidentielles publiées.",
+      "limit_en": "No confidential personal or operational data published."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "credit-scoring",
+  "category_fr": "Statistical ML · Credit Scoring",
+  "category_en": "Statistical ML · Credit Scoring",
+  "featured_rank": 2,
+  "public_url_fr": "projects/credit-scoring.html",
+  "public_url_en": "projects/credit-scoring.html",
+  "claim_ids": ["credit_auc_logistic", "credit_auc_rf", "credit_auc_xgb"],
+  "text": {
+    "fr": {
+      "title": "Arbitrer performance et interprétabilité",
+      "question": "Comment arbitrer performance de discrimination, parcimonie et interprétabilité dans un score de risque ?",
+      "method": "Comparaison logistique vs Random Forest / XGBoost.",
+      "evidence": "AUC test 0,784 · 0,800 · 0,798",
+      "evidence_note": "Sous réserve de vérification source",
+      "limit": "Pas de validation de calibration ni de production attestée.",
+      "cta": "Lire l'étude de cas"
+    },
+    "en": {
+      "title": "Balancing performance and interpretability",
+      "question": "How to trade off discrimination performance, parsimony and interpretability in a risk score?",
+      "method": "Logistic regression vs Random Forest / XGBoost.",
+      "evidence": "Test AUC 0.784 · 0.800 · 0.798",
+      "evidence_note": "Subject to source verification",
+      "limit": "No published calibration validation or production attestation.",
+      "cta": "Read the case study"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "brokerflow",
+  "category_fr": "ML Systems · BrokerFlow AI",
+  "category_en": "ML Systems · BrokerFlow AI",
+  "featured_rank": 3,
+  "public_url_fr": "projects/brokerflow.html",
+  "public_url_en": "projects/brokerflow.html",
+  "claim_ids": ["brokerflow_auc", "brokerflow_brier"],
+  "text": {
+    "fr": {
+      "title": "Décider avec des modèles et des règles contrôlées",
+      "question": "Comment garder une décision explicable et contrôlée quand modèles, règles et composants agentiques interagissent ?",
+      "method": "Sous-systèmes séparés, fallback, cas annotés.",
+      "evidence": "Évaluation sur cas annotés",
+      "evidence_note": "Petit benchmark : ne pas généraliser à une production réelle",
+      "limit": "Validation externe et généralisation non démontrées.",
+      "cta": "Lire l'étude de cas"
+    },
+    "en": {
+      "title": "Decide with models and controlled rules",
+      "question": "How to keep decisions explainable and controlled when models, rules and agentic components interact?",
+      "method": "Separated subsystems, fallback, annotated cases.",
+      "evidence": "Evaluation on annotated cases",
+      "evidence_note": "Small benchmark: do not generalise to real production",
+      "limit": "External validation and generalisation not demonstrated.",
+      "cta": "Read the case study"
+    }
+  }
+}

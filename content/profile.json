@@ -1,0 +1,71 @@
+{
+  "name": "Goua Beedi",
+  "email": "gouabeedi@gmail.com",
+  "github": "https://github.com/BeediGoua",
+  "linkedin": "https://www.linkedin.com/in/goua-beedi-henri-a152bb1b2/",
+  "cv": {
+    "fr": "assets/CV_GouaHenri_FR.pdf",
+    "en": "assets/CV_GouaHenri_EN.pdf"
+  },
+  "photo": "assets/img/goua.png",
+  "site": {
+    "fr_home": "https://beedigoua.github.io/",
+    "en_home": "https://beedigoua.github.io/index-en.html"
+  },
+  "text": {
+    "fr": {
+      "eyebrow": "STATISTIQUES · MACHINE LEARNING · ÉVALUATION DE L'IA",
+      "headline": "Machine Learning & AI Evaluation",
+      "intro": "Je construis et j'évalue des modèles de machine learning, avec une attention particulière à la qualité des données, à la robustesse des résultats et aux erreurs.",
+      "proof": "En master MS2A à Sorbonne Université, après ma formation d'ingénieur à l'ENSAI. Chez Square Management, j'ai étudié 189 configurations de systèmes RAG sur documents longs.",
+      "availability": "À la recherche d'un stage en ML / Applied Research à partir d'avril 2027.",
+      "cta_work": "Explorer mes travaux",
+      "cta_cv": "Télécharger mon CV",
+      "projects_intro": "Une sélection de travaux où l'enjeu n'est pas seulement d'entraîner un modèle, mais de définir une évaluation crédible et de comprendre ses limites.",
+      "method_intro": "Les choix méthodologiques valent davantage qu'une accumulation de frameworks. Chaque principe renvoie à une expérience réelle.",
+      "method_quote": "Je privilégie les résultats que l'on peut expliquer et refaire à ceux qui paraissent simplement impressionnants.",
+      "contact_title": "Un projet de recherche appliquée ou un stage en ML ?",
+      "contact_body": "Je suis intéressé par les problèmes où la qualité d'une évaluation compte autant que les performances annoncées.",
+      "contact_cta": "Me contacter par email"
+    },
+    "en": {
+      "eyebrow": "STATISTICS · MACHINE LEARNING · AI EVALUATION",
+      "headline": "Machine Learning & AI Evaluation",
+      "intro": "I build and evaluate machine learning models, focusing on data quality, robustness, and understanding where systems fail.",
+      "proof": "Currently pursuing the MS2A master's programme at Sorbonne University after engineering studies at ENSAI. At Square Management, I investigated 189 RAG configurations for long-document processing.",
+      "availability": "Seeking an ML / Applied Research internship starting around April 2027.",
+      "cta_work": "Explore selected work",
+      "cta_cv": "Download CV",
+      "projects_intro": "Selected work where the challenge is not just training a model, but designing a credible evaluation and understanding its limits.",
+      "method_intro": "Methodological choices matter more than collecting frameworks. Each principle maps back to real work.",
+      "method_quote": "I favor results that can be explained and reproduced over numbers that merely look impressive.",
+      "contact_title": "An applied research project or an ML internship?",
+      "contact_body": "I am interested in problems where evaluation quality matters as much as advertised performance.",
+      "contact_cta": "Contact me by email"
+    }
+  },
+  "education": [
+    {
+      "id": "sorbonne-ms2a",
+      "status_fr": "MASTER · EN COURS",
+      "status_en": "MASTER · IN PROGRESS",
+      "title_fr": "Sorbonne Université — MS2A",
+      "title_en": "Sorbonne University — MS2A",
+      "body_fr": "Apprentissage statistique, optimisation stochastique, statistique en grande dimension et méthodes de simulation.",
+      "body_en": "Statistical learning, stochastic optimization, high-dimensional statistics and simulation methods.",
+      "note_fr": "Cours et situation académique à confirmer à la publication.",
+      "note_en": "Courses and academic status to confirm at publication time."
+    },
+    {
+      "id": "ensai",
+      "status_fr": "FORMATION D'INGÉNIEUR",
+      "status_en": "ENGINEERING DEGREE",
+      "title_fr": "ENSAI — Statistics & Data Science",
+      "title_en": "ENSAI — Statistics & Data Science",
+      "body_fr": "Inférence statistique, modélisation, apprentissage automatique, évaluation et analyse de données appliquée.",
+      "body_en": "Statistical inference, modelling, machine learning, evaluation and applied data analysis.",
+      "note_fr": "Statut du diplôme à vérifier avant d'employer le mot « diplômé ».",
+      "note_en": "Degree status to verify before using the word \"graduate\"."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+---
+description: Multilingue FR EN, préservation des URLs, SEO et liens internes
+alwaysApply: false
+globs: "**/*.html,assets/js/*language*.js,assets/js/i18n*.js,assets/lang/*.json,templates/**/*.html,scripts/*.py"
+---
+# BILINGUISME ET SEO
+
+Lire `docs/refonte/05_TARGET_ARCHITECTURE.md`. Préserver `index.html`, `index-en.html` et **tous les chemins historiques** des projets FR. Éviter les redirections cassant les liens existants.
+
+Cible : générer des pages FR et EN statiques depuis un contenu bilingue structuré. Lien de langue sous forme de vrais `a href`, fonctionnel sans JavaScript, conservant la page correspondante. Ne pas simplement traduire le texte avec des mutations DOM tardives. Supprimer les anciens mécanismes de langue seulement une fois la migration totale validée.
+
+Pour chaque page publique : `html lang`, `<title>`, description spécifique, canonical vers sa propre URL, `hreflang=fr` et `hreflang=en` réciproques quand les deux versions existent, Open Graph localisé, liens absolus adéquats, image OG existante. Ne pas créer de `-en.html` annonçant une traduction incomplète.
+
+Vérifier les liens relatifs depuis `projects/`, CV PDF `assets/CV_GouaHenri_FR.pdf` et `assets/CV_GouaHenri_EN.pdf`, ancres de sections et navigation par clavier. Ne pas introduire de boucles de redirection via localStorage/querystring.

@@ -41,8 +41,8 @@
 <h1 class="project-title-xl" data-i18n="project2_title">Music Recommender</h1>
 <div class="project-hero-meta project-hero-meta-spaced">
 <div class="project-badges-top project-badges-top-tight">
-<span class="tech-badge-expert" data-tech="Recommendation Engine"><i aria-hidden="true" class="tech-concept-icon" data-feather="shuffle"></i> <span data-i18n="music_badge_engine">Recommendation Engine</span></span>
-<span class="tech-badge-expert" data-tech="Collaborative Filtering"><i aria-hidden="true" class="tech-concept-icon" data-feather="users"></i> <span data-i18n="music_badge_collab">Collaborative Filtering</span></span>
+<span class="tech-badge-expert" data-tech="Recommendation Engine"><i aria-hidden="true" class="tech-concept-icon" data-feather="shuffle"></i> <span data-i18n="music_badge_engine">Hybrid recommender</span></span>
+<span class="tech-badge-expert" data-tech="Word2Vec"><i aria-hidden="true" class="tech-concept-icon" data-feather="layers"></i> <span data-i18n="music_badge_collab">Word2Vec + embeddings</span></span>
 <span class="tech-badge-expert" data-tech="Python" title="Python"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/> <span data-i18n="bf_stack_python">Python</span></span>
 <span class="tech-badge-expert" data-tech="NumPy" title="NumPy"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"/> <span data-i18n="retail_stack_numpy">NumPy</span></span>
 <span class="tech-badge-expert" data-tech="Pandas" title="Pandas"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"/> <span data-i18n="bf_stack_pandas">Pandas</span></span>
@@ -63,94 +63,18 @@
 <div class="case-study-card reveal-up"><h2>La solution technique</h2><p>Le moteur combine des signaux de cooccurrence appris avec Word2Vec et des embeddings de contenu issus des métadonnées. Une pondération interactive permet d’ajuster l’équilibre entre proximité comportementale et similarité sémantique.</p><ul><li>Prétraitement des métadonnées musicales.</li><li>Embeddings Word2Vec et SentenceTransformers.</li><li>Fusion hybride et filtres dynamiques.</li><li>Interface Streamlit pour explorer et construire des playlists.</li></ul></div>
 <div class="case-study-card reveal-up"><h2>Résultats et usages</h2><ul><li>Recherche par titre ou artiste.</li><li>Recommandations ajustables selon plusieurs signaux.</li><li>Filtres par genre, durée et caractéristiques musicales.</li><li>Export et exploration interactive des playlists.</li></ul></div>
 </div><div data-lang="en">
-<div class="case-study-card reveal-up">
-<h2>The Challenge</h2>
-<p>
-                Music streaming platforms (Spotify, Apple Music) face a fundamental problem: <strong>discovery at
-                    scale</strong>. With millions of songs and users, how do you recommend the right track to the right
-                person at the right time?
-            </p>
-<p>
-                Traditional approaches fail when there's limited user-song interaction data. The Music Recommender
-                project aimed to build a robust system that handles both <strong>popular and niche</strong> music using
-                <strong>hybrid recommendation techniques</strong>.
-            </p>
-</div>
-<div class="case-study-card reveal-up">
-<h2>The Technical Solution</h2>
-<p>
-                The system combines <strong>collaborative filtering</strong>, <strong>content-based filtering</strong>,
-                and <strong>matrix factorization</strong> to generate recommendations.
-            </p>
-<div class="architecture-viz">
-<div class="schema-placeholder">
-<div class="schema-node accent">User-Song Interaction Matrix</div>
-<div class="schema-arrow">↓</div>
-<div class="schema-row">
-<div class="schema-node">Collaborative Filtering (CF)</div>
-<div class="schema-node">Content-Based Filtering (CBF)</div>
-</div>
-<div class="schema-arrow">↓</div>
-<div class="schema-node">Matrix Factorization (SVD)</div>
-<div class="schema-arrow">↓</div>
-<div class="schema-row">
-<div class="schema-node">Cosine Similarity Scores</div>
-<div class="schema-node">Cold-Start Handling (Content)</div>
-</div>
-<div class="schema-arrow">↓</div>
-<div class="schema-node accent">Top K Recommendations</div>
-</div>
-</div>
-<p>
-<strong>Key Features:</strong>
-</p>
-<ul>
-<li><strong>SVD Matrix Factorization</strong>: Decomposes the user-song matrix to discover hidden
-                    features.
-                </li>
-<li><strong>Cold-Start Solution</strong>: For new users, content-based fallback ensures recommendations
-                    even without interaction history.</li>
-<li><strong>Scalable &amp; Fast</strong>: Optimized NumPy/Pandas for real-time inference on large datasets.
-                </li>
-</ul>
-</div>
-<div class="case-study-card reveal-up">
-<h2>The Results &amp; Impact</h2>
-<ul>
-<li><strong>Precision@10 Score: 0.78</strong> on held-out test set (strong by industry standards).</li>
-<li><strong>Cold-Start Handling</strong>: Successfully recommends songs to 100% of new users.</li>
-<li><strong>Serendipity Score: 0.65</strong>: 65% of recommendations are novel to the user (discovery!).
-                </li>
-<li><strong>Inference Latency: &lt;50ms</strong> even for large catalogs with millions of songs.</li>
-</ul>
-</div>
+<div class="case-study-card reveal-up"><h2>The challenge</h2><p>With very large catalogs, music discovery becomes difficult, especially when user–track interactions are sparse. The project aims to produce relevant recommendations for both popular and niche tracks.</p></div>
+<div class="case-study-card reveal-up"><h2>Technical approach</h2><p>The engine combines co-occurrence signals learned with Word2Vec and content embeddings derived from metadata. An interactive weighting control balances behavioral proximity and semantic similarity.</p><ul><li>Preprocessing of music metadata.</li><li>Word2Vec and SentenceTransformers embeddings.</li><li>Hybrid fusion and dynamic filters.</li><li>Streamlit interface to explore and build playlists.</li></ul></div>
+<div class="case-study-card reveal-up"><h2>Results, uses and limitations</h2><ul><li>Search by title or artist.</li><li>Recommendations adjustable across several signals.</li><li>Filters by genre, duration and musical features.</li><li>Interactive playlist exploration and export.</li><li>No Precision@10, serendipity or latency KPI is published here without a verified protocol and artifact.</li></ul></div>
 <div class="tech-stack-section reveal-up">
-<h3 data-i18n="project_techs">Full Tech Stack</h3>
+<h3 data-i18n="project_techs">Tech stack</h3>
 <div class="tech-stack-grid">
-<span class="tech-badge-expert" data-tech="Python" title="Python"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/>
-
-                    Python
-                </span>
-<span class="tech-badge-expert" data-tech="NumPy" title="NumPy"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"/>
-
-                    NumPy
-                </span>
-<span class="tech-badge-expert" data-tech="Pandas" title="Pandas"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"/>
-
-                    Pandas
-                </span>
-<span class="tech-badge-expert" data-tech="Scikit-Learn" title="Scikit-Learn"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg"/>
-
-                    Scikit-Learn
-                </span>
-<span class="tech-badge-expert" data-tech="SVD &amp; Matrix Factorization"><i aria-hidden="true" class="tech-concept-icon" data-feather="grid"></i>
-
-                    SVD &amp; Matrix Factorization
-                </span>
-<span class="tech-badge-expert" data-tech="Evaluation Metrics"><i aria-hidden="true" class="tech-concept-icon" data-feather="bar-chart-2"></i>
-
-                    Evaluation Metrics
-                </span>
+<span class="tech-badge-expert" data-tech="Python" title="Python"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/> Python</span>
+<span class="tech-badge-expert" data-tech="NumPy" title="NumPy"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"/> NumPy</span>
+<span class="tech-badge-expert" data-tech="Pandas" title="Pandas"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"/> Pandas</span>
+<span class="tech-badge-expert" data-tech="Streamlit" title="Streamlit"><img alt="" aria-hidden="true" class="tech-logo" loading="lazy" onerror="this.style.display='none'" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"/> Streamlit</span>
+<span class="tech-badge-expert" data-tech="Word2Vec"><i aria-hidden="true" class="tech-concept-icon" data-feather="layers"></i> Word2Vec</span>
+<span class="tech-badge-expert" data-tech="Embeddings"><i aria-hidden="true" class="tech-concept-icon" data-feather="cpu"></i> SentenceTransformers</span>
 </div>
 </div>
 </div></div>

@@ -1,0 +1,18 @@
+---
+description: Cohérence scientifique et absence de résultats inventés sur les études de cas et leurs contenus
+alwaysApply: false
+globs: "projects/*.html,content/**/*.json,content/*.md,templates/**/*.html,docs/refonte/*.md"
+---
+# POLITIQUE DE VÉRITÉ SCIENTIFIQUE
+
+Lire obligatoirement `content/source-of-truth.md` et `docs/refonte/04_SCIENTIFIC_TRUTH.md`.
+
+- Pour chaque chiffre affiché : preuve/source, nature de l'échantillon, métrique, protocole, intervalle temporel (si pertinent), limites, autorisation de diffusion.
+- Une valeur présente dans un ancien HTML/README n'est pas une validation. Rechercher notebooks, rapports, fichiers de métriques, tests ou code.
+- Les pages FR/EN doivent être des traductions du **même** modèle, du **même** résultat et de la **même** portée.
+- P0 : ReviewGuardian EN décrit actuellement détection de bots/fraude, FR décrit modération de toxicité ; Music Recommender EN inventorie SVD/latence/Precision@10 différents de FR ; Zimnat contient des affirmations absolues/production. Corriger d'après les dépôts et preuves accessibles, pas d'après intuition.
+- Credit Scoring : ne pas affirmer de calibration si aucun rapport ne la documente. Clarifier 532 567 comptes initiaux vs somme 372 381 + 159 845 (532 226) après traitement ; ne pas fabriquer la justification de l'écart.
+- Retail : WAPE 8 % non publié tant que protocole non confirmé. HEGP : pas de résultat médical chiffré sans rapport publiable.
+- FINZUU : ne pas présenter comme modèle de défaut validé en production. BrokerFlow : bien distinguer résultats prototypes, modèle et benchmark annoté de 50 cas.
+- Ne pas ajouter de graphique représentant des observations inexistantes; schémas d'architecture et illustrations **conceptuelles** clairement étiquetés sont possibles.
+- Ajouter une section `Limites et validation` honnête dans chaque étude de cas. Quand une information n'est pas démontrée, la laisser hors de la page et noter l'item dans `PROGRESS.md`.
