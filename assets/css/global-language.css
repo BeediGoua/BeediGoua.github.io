@@ -29,12 +29,12 @@ html[data-site-lang="en"] [data-lang="fr"] { display: none !important; }
   cursor: pointer;
 }
 .global-lang-switch button[aria-pressed="true"] {
-  background: linear-gradient(135deg, #18d1b0, #6675ff 72%, #9b5cff);
-  color: #fff;
+  background: var(--accent, #8ea2b5);
+  color: var(--bg, #0e1319);
 }
 [data-set-lang][aria-pressed="true"], .lang-chip[aria-current="true"] {
-  border-color: #19d1b0 !important;
-  color: #20d6b4 !important;
+  border-color: var(--accent, #8ea2b5);
+  color: var(--accent-strong, #a3b6c7);
 }
 @media (max-width: 720px) {
   .global-lang-switch { top: .65rem; right: .65rem; }
