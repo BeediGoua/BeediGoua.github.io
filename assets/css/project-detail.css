@@ -42,35 +42,32 @@ body.project-detail-page {
 
     /* Empêche les espaces vides de laisser apparaître le fond blanc */
     min-height: 100vh;
-    background-color: #0f0f23;
+    background-color: var(--bg, #0e1319);
     background-image: var(--background-mesh), var(--background-gradient);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 body.project-detail-page.light-theme {
-    --glass-border: rgba(15, 23, 42, 0.12);
-    --glass-bg: rgba(255, 255, 255, 0.72);
-    --project-sticky-bg: rgba(248, 250, 252, 0.88);
-    --project-sticky-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
-    --project-title-start: #0f172a;
-    --project-badge-bg: rgba(79, 70, 229, 0.08);
-    --project-badge-border: rgba(79, 70, 229, 0.16);
-    --project-badge-text: #1e293b;
-    --project-back-text: #0f172a;
-    --project-back-hover-bg: rgba(79, 70, 229, 0.12);
-    --project-architecture-bg: rgba(79, 70, 229, 0.04);
-    --project-schema-bg: rgba(248, 250, 252, 0.9);
-    --project-schema-border: rgba(148, 163, 184, 0.3);
-    --project-schema-text: #0f172a;
-    --project-placeholder-bg: rgba(241, 245, 249, 0.9);
+    --glass-border: color-mix(in srgb, var(--line) 80%, transparent);
+    --glass-bg: color-mix(in srgb, var(--surface) 92%, transparent);
+    --project-sticky-bg: color-mix(in srgb, var(--surface) 92%, transparent);
+    --project-sticky-shadow: var(--shadow-soft);
+    --project-title-start: var(--text);
+    --project-badge-bg: var(--surface-raised);
+    --project-badge-border: var(--line);
+    --project-badge-text: var(--text-muted);
+    --project-back-text: var(--text);
+    --project-back-hover-bg: color-mix(in srgb, var(--accent) 12%, transparent);
+    --project-architecture-bg: var(--surface-raised);
+    --project-schema-bg: var(--surface);
+    --project-schema-border: var(--line);
+    --project-schema-text: var(--text);
+    --project-placeholder-bg: var(--surface-raised);
 
-    /* La version claire doit aussi forcer un fond couvrant toute la page */
     min-height: 100vh;
-    background-color: var(--background-color);
-    background-image: var(--background-mesh), var(--background-gradient);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: var(--bg);
+    background-image: none;
 }
 
 .project-detail-hero {
@@ -217,27 +214,27 @@ body.project-detail-page.light-theme {
 }
 
 .btn-cyan-glow {
-    background: rgba(14, 165, 233, 0.1);
-    color: #38bdf8;
-    border-color: rgba(14, 165, 233, 0.4);
+    background: transparent;
+    color: var(--text-color, #e9edf2);
+    border-color: var(--border, #2b3541);
 }
 
 .btn-cyan-glow:hover {
-    background: rgba(14, 165, 233, 0.22);
-    box-shadow: 0 0 24px rgba(14, 165, 233, 0.35);
+    background: color-mix(in srgb, var(--accent, #8ea2b5) 10%, transparent);
+    box-shadow: none;
     transform: translateY(-1px);
 }
 
 .btn-purple-glow {
-    background: rgba(168, 85, 247, 0.1);
-    color: #c084fc;
-    border-color: rgba(168, 85, 247, 0.4);
+    background: transparent;
+    color: var(--text-color, #e9edf2);
+    border-color: var(--border, #2b3541);
 }
 
 .btn-purple-glow:hover {
-    background: rgba(168, 85, 247, 0.22);
-    box-shadow: 0 0 24px rgba(168, 85, 247, 0.35);
-    transform: translateY(-1px);
+    background: color-mix(in srgb, var(--accent, #8ea2b5) 10%, transparent);
+    box-shadow: none;
+    transform: none;
 }
 
 .tech-badge-expert {
@@ -407,9 +404,9 @@ body.project-detail-page.light-theme {
 }
 
 .schema-node.accent {
-    background: rgba(91, 115, 245, 0.14);
-    border-color: rgba(91, 115, 245, 0.35);
-    box-shadow: 0 10px 24px rgba(91, 115, 245, 0.12);
+    background: color-mix(in srgb, var(--accent) 14%, transparent);
+    border-color: color-mix(in srgb, var(--accent) 35%, transparent);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
 
 .schema-arrow {
@@ -721,7 +718,7 @@ body.project-detail-page.light-theme .project-page-footer {
   width: 1.08rem;
   height: 1.08rem;
   margin-right: .4rem;
-  color: var(--accent-mint, #20d6b5);
+  color: var(--accent);
   flex: 0 0 auto;
 }
 .tech-stack-row {
@@ -731,7 +728,7 @@ body.project-detail-page.light-theme .project-page-footer {
   margin-top: .9rem;
 }
 .tech-stack-chip {
-  border: 1px solid rgba(120,136,255,.28);
+  border: 1px solid var(--line);
   background: rgba(255,255,255,.045);
   border-radius: 999px;
   padding: .48rem .72rem;
@@ -745,8 +742,8 @@ body.project-detail-page.light-theme .project-page-footer {
 .logo-chip-row > span:hover,
 .compact-tech-badge:hover {
   transform: translateY(-2px);
-  border-color: rgba(32,214,181,.52);
-  background: rgba(32,214,181,.08);
+  border-color: color-mix(in srgb, var(--accent) 52%, transparent);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
 }
 .skill-category-logo {
   width: 2.15rem;

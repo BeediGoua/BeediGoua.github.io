@@ -1,16 +1,16 @@
 
 /* Unified visual language for professional experiences and selected projects */
-:root{--detail-mint:#19d3ae;--detail-mint-soft:rgba(25,211,174,.09);--detail-mint-border:rgba(25,211,174,.25)}
-.proj-section,.exp-section,.project-detail-section,.case-study-card{position:relative;overflow:hidden;border:1px solid var(--border);border-radius:22px;background:linear-gradient(145deg,rgba(255,255,255,.032),rgba(25,211,174,.022));box-shadow:0 14px 34px rgba(0,0,0,.12)}
-.proj-section:before,.exp-section:before,.project-detail-section:before,.case-study-card:before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,var(--detail-mint),var(--primary-color),var(--accent-purple));opacity:.92}
+:root{--detail-mint:var(--accent);--detail-mint-soft:rgba(142, 162, 181,.1);--detail-mint-border:rgba(142, 162, 181,.28)}
+.proj-section,.exp-section,.project-detail-section,.case-study-card{position:relative;overflow:hidden;border:1px solid var(--border);border-radius:18px;background:var(--surface);box-shadow:0 14px 34px rgba(0,0,0,.18)}
+.proj-section:before,.exp-section:before,.project-detail-section:before,.case-study-card:before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:var(--detail-mint);opacity:.9}
 .proj-section>h2,.exp-section h2,.project-detail-section>h2,.case-study-card>h2{display:flex;align-items:center;gap:12px}
-.proj-section>h2:before,.exp-section h2:before,.project-detail-section>h2:before,.case-study-card>h2:before{content:"✦";display:grid;place-items:center;width:38px;height:38px;flex:0 0 38px;border-radius:12px;background:linear-gradient(135deg,var(--detail-mint-soft),rgba(91,115,245,.15));border:1px solid var(--detail-mint-border);color:var(--detail-mint);font-size:1rem;box-shadow:0 8px 20px rgba(25,211,174,.08)}
-.proj-overview-card,.challenge-card,.metric-card,.proj-meta-card,.exp-meta-card{transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
-.proj-overview-card:hover,.challenge-card:hover,.metric-card:hover,.proj-meta-card:hover,.exp-meta-card:hover{transform:translateY(-3px);border-color:var(--detail-mint-border);box-shadow:0 14px 28px rgba(0,0,0,.12)}
-.workflow-step,.tech-pill{border-color:var(--detail-mint-border)!important}.workflow-step{background:linear-gradient(145deg,rgba(25,211,174,.075),rgba(91,115,245,.06))!important}.workflow-arrow{color:var(--detail-mint)!important}
-.notice-box,.notice{border-left-color:var(--detail-mint)!important;background:linear-gradient(90deg,rgba(25,211,174,.09),rgba(91,115,245,.04))!important}
+.proj-section>h2:before,.exp-section h2:before,.project-detail-section>h2:before,.case-study-card>h2:before{content:"";display:block;width:10px;height:10px;flex:0 0 10px;border-radius:50%;background:var(--detail-mint);border:0;box-shadow:none}
+.proj-overview-card,.challenge-card,.metric-card,.proj-meta-card,.exp-meta-card{transition:border-color .25s ease,box-shadow .25s ease}
+.proj-overview-card:hover,.challenge-card:hover,.metric-card:hover,.proj-meta-card:hover,.exp-meta-card:hover{transform:none;border-color:var(--detail-mint-border);box-shadow:0 14px 28px rgba(0,0,0,.18)}
+.workflow-step,.tech-pill{border-color:var(--detail-mint-border)!important}.workflow-step{background:var(--surface-raised)!important}.workflow-arrow{color:var(--detail-mint)!important}
+.notice-box,.notice{border-left-color:var(--detail-mint)!important;background:rgba(142, 162, 181,.08)!important}
 .lesson{border-left:3px solid var(--detail-mint);padding:1rem 1.2rem;border-radius:0 14px 14px 0;background:var(--detail-mint-soft)}
-body.light-theme .proj-section,body.light-theme .exp-section,body.light-theme .project-detail-section,body.light-theme .case-study-card{background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(25,211,174,.035))}
+body.light-theme .proj-section,body.light-theme .exp-section,body.light-theme .project-detail-section,body.light-theme .case-study-card{background:var(--surface)}
 @media(max-width:640px){.proj-section>h2:before,.exp-section h2:before,.project-detail-section>h2:before,.case-study-card>h2:before{width:32px;height:32px;flex-basis:32px;border-radius:10px}}
 
 
@@ -40,7 +40,7 @@ body.project-detail-page .project-detail-hero.is-sticky .btn-expert{padding:10px
 .legacy-sticky-titlebar.is-visible{opacity:1;transform:translateY(0);pointer-events:auto}
 .legacy-sticky-back{justify-self:start;display:inline-flex;align-items:center;gap:7px;min-height:40px;padding:8px 13px;border:1px solid var(--project-badge-border);border-radius:999px;background:var(--project-badge-bg);color:var(--project-badge-text);font-weight:800;text-decoration:none}
 .legacy-sticky-center{grid-column:2;min-width:0;display:flex;flex-direction:column;align-items:center;gap:5px}
-.legacy-sticky-heading{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:"Bricolage Grotesque",var(--font-main);font-size:clamp(1.05rem,2vw,1.35rem);font-weight:850;background:linear-gradient(135deg,var(--text-color) 10%,var(--primary-color) 72%,var(--accent-purple));-webkit-background-clip:text;background-clip:text;color:transparent}
+.legacy-sticky-heading{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:"Bricolage Grotesque",var(--font-main);font-size:clamp(1.05rem,2vw,1.35rem);font-weight:850;background:none;color:var(--text-color)}
 .legacy-sticky-techs{justify-content:center;flex-wrap:nowrap;max-width:100%;overflow:hidden}
 .legacy-sticky-techs .compact-tech-badge{min-height:27px;padding:5px 8px;font-size:.7rem}
 .legacy-sticky-techs .compact-tech-badge img,.legacy-sticky-techs .compact-tech-badge svg{width:13px;height:13px;flex-basis:13px}

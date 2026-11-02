@@ -77,40 +77,22 @@
     border: 1.5px solid transparent;
 }
 
-.btn-cyan-glow {
-    background: rgba(14, 165, 233, 0.1);
-    color: #38bdf8;
-    border-color: rgba(14, 165, 233, 0.4);
-}
-
-.btn-cyan-glow:hover {
-    background: rgba(14, 165, 233, 0.25);
-    box-shadow: 0 0 25px rgba(14, 165, 233, 0.6);
-    transform: scale(1.02);
-}
-
-.btn-green-glow {
-    background: rgba(34, 197, 94, 0.1);
-    color: #4ade80;
-    border-color: rgba(34, 197, 94, 0.4);
-}
-
-.btn-green-glow:hover {
-    background: rgba(34, 197, 94, 0.25);
-    box-shadow: 0 0 25px rgba(34, 197, 94, 0.6);
-    transform: scale(1.02);
-}
-
+.btn-cyan-glow,
+.btn-green-glow,
 .btn-purple-glow {
-    background: rgba(168, 85, 247, 0.1);
-    color: #c084fc;
-    border-color: rgba(168, 85, 247, 0.4);
+    background: rgba(142, 162, 181, 0.08);
+    color: #c5cdd8;
+    border-color: rgba(143, 154, 171, 0.22);
 }
 
+.btn-cyan-glow:hover,
+.btn-green-glow:hover,
 .btn-purple-glow:hover {
-    background: rgba(168, 85, 247, 0.25);
-    box-shadow: 0 0 25px rgba(168, 85, 247, 0.6);
-    transform: scale(1.02);
+    background: rgba(142, 162, 181, 0.16);
+    box-shadow: none;
+    border-color: rgba(142, 162, 181, 0.4);
+    color: #eef2f6;
+    transform: none;
 }
 
 /* Tech Badges (High-Fidelity) */

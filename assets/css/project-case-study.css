@@ -8,14 +8,14 @@
 .proj-control:hover{border-color:var(--primary-color);transform:translateY(-1px)}
 .proj-hero{padding:76px 0 38px;text-align:left}
 .proj-kicker{display:inline-flex;gap:8px;align-items:center;color:var(--accent-cool);font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;margin-bottom:14px}
-.proj-title{font-family:"Bricolage Grotesque",var(--font-main);font-size:clamp(2.5rem,6vw,5.2rem);line-height:.98;margin:0 0 18px;background:linear-gradient(135deg,var(--text-color) 10%,var(--primary-color) 72%,var(--accent-purple));-webkit-background-clip:text;background-clip:text;color:transparent}
+.proj-title{font-family:"Bricolage Grotesque",var(--font-main);font-size:clamp(2.5rem,6vw,5.2rem);line-height:.98;margin:0 0 18px;background:none;color:var(--text-color)}
 .proj-subtitle{font-size:clamp(1.08rem,2vw,1.35rem);line-height:1.65;color:var(--text-improved);max-width:850px;margin:0}
 .proj-meta-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:30px}
 .proj-meta-card{background:var(--card-bg);border:1px solid var(--border);border-radius:16px;padding:16px;box-shadow:var(--shadow-soft)}
 .proj-meta-label{display:block;color:var(--text-secondary);font-size:.77rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
 .proj-meta-value{color:var(--text-color);font-weight:750;line-height:1.35}
 .proj-section{margin-top:34px;background:var(--card-bg);border:1px solid var(--border);border-radius:22px;padding:clamp(22px,4vw,38px);box-shadow:var(--shadow-soft);position:relative;overflow:hidden}
-.proj-section:before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:linear-gradient(var(--primary-color),var(--accent-purple));opacity:.85}
+.proj-section:before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--primary-color);opacity:.85}
 .proj-section h2{font-family:"Bricolage Grotesque",var(--font-main);font-size:clamp(1.45rem,3vw,2rem);color:var(--text-color);margin:0 0 18px}
 .proj-section h3{color:var(--text-color);margin:22px 0 8px;font-size:1.08rem}
 .proj-section p,.proj-section li{color:var(--text-improved);line-height:1.75}
@@ -23,11 +23,11 @@
 .proj-section li+li{margin-top:8px}
 .proj-overview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .proj-overview-card{padding:18px;border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.025)}
-.light-theme .proj-overview-card{background:rgba(79,70,229,.025)}
+.light-theme .proj-overview-card{background:rgba(91,111,130,.025)}
 .proj-overview-card strong{display:block;color:var(--accent-cool);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
 .proj-role-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;list-style:none!important;padding:0!important}
 .proj-role-list li{position:relative;padding:14px 14px 14px 42px;border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.02)}
-.proj-role-list li:before{content:"✓";position:absolute;left:14px;top:12px;width:21px;height:21px;border-radius:50%;display:grid;place-items:center;background:rgba(0,212,170,.14);color:var(--accent-cool);font-weight:900}
+.proj-role-list li:before{content:"✓";position:absolute;left:14px;top:12px;width:21px;height:21px;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb, var(--accent) 14%, transparent);color:var(--accent-cool);font-weight:900}
 .workflow{display:flex;align-items:stretch;gap:10px;overflow-x:auto;padding:8px 2px 16px;scrollbar-width:thin}
 .workflow-step{min-width:130px;flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:center;gap:7px;padding:16px 12px;border:1px solid var(--border);border-radius:15px;background:var(--project-schema-bg);color:var(--project-schema-text);font-weight:750;line-height:1.25}
 .workflow-step small{font-weight:500;color:var(--text-secondary)}
@@ -37,12 +37,12 @@
 .challenge-card .challenge{color:var(--accent-warm);font-weight:800;margin-bottom:7px}
 .challenge-card .response{color:var(--accent-cool);font-weight:800;margin-top:14px;margin-bottom:7px}
 .metric-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
-.metric-card{text-align:center;border:1px solid var(--border);border-radius:16px;padding:19px 12px;background:linear-gradient(145deg,rgba(91,115,245,.08),rgba(139,92,246,.05))}
+.metric-card{text-align:center;border:1px solid var(--border);border-radius:16px;padding:19px 12px;background:linear-gradient(145deg,rgba(142, 162, 181,.08),rgba(142, 162, 181,.05))}
 .metric-card .number{display:block;color:var(--text-color);font-family:"Bricolage Grotesque",var(--font-main);font-size:clamp(1.45rem,3vw,2.2rem);font-weight:800}
 .metric-card .label{color:var(--text-secondary);font-size:.86rem;line-height:1.35}
 .tech-cloud{display:flex;gap:10px;flex-wrap:wrap}
 .tech-pill{display:inline-flex;align-items:center;gap:7px;padding:9px 13px;border-radius:999px;border:1px solid var(--project-badge-border);background:var(--project-badge-bg);color:var(--project-badge-text);font-weight:700;font-size:.88rem}
-.lesson{padding:20px;border-radius:16px;border:1px solid rgba(91,115,245,.3);background:linear-gradient(135deg,rgba(91,115,245,.11),rgba(139,92,246,.08));font-size:1.06rem;color:var(--text-color)!important}
+.lesson{padding:20px;border-radius:16px;border:1px solid rgba(142, 162, 181,.3);background:linear-gradient(135deg,rgba(142, 162, 181,.11),rgba(142, 162, 181,.08));font-size:1.06rem;color:var(--text-color)!important}
 .notice-box{padding:18px;border-radius:15px;border:1px solid rgba(245,158,11,.35);background:rgba(245,158,11,.08);color:var(--text-improved)}
 [data-lang]{display:none}
 html[data-proj-lang="fr"] [data-lang="fr"],html[data-proj-lang="en"] [data-lang="en"]{display:block}
@@ -98,10 +98,7 @@ html[data-proj-lang="fr"] span[data-lang="fr"],html[data-proj-lang="en"] span[da
   line-height: 1.15;
   font-weight: 800;
   letter-spacing: -.01em;
-  background: linear-gradient(135deg, var(--text-color) 10%, var(--primary-color) 72%, var(--accent-purple));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  background:none;color:var(--text-color);
 }
 .proj-sticky-heading > span {
   overflow: hidden;
@@ -151,7 +148,7 @@ html[data-proj-lang="fr"] span[data-lang="fr"],html[data-proj-lang="en"] span[da
 .proj-sticky-control[aria-pressed="true"] {
   transform: translateY(-1px);
   border-color: var(--primary-color);
-  background: rgba(91, 115, 245, .16);
+  background: rgba(142, 162, 181, .16);
 }
 
 /* Explicit safeguard: the hero badges and metadata cards always scroll normally. */
